@@ -101,3 +101,100 @@ permalink: /index.html
         </div>
     </div>
 </div>
+
+<div class="row mx-0 align-items-center filtered-info">
+    <div class="col">
+        <h2 class="title-light">
+            All Featured Properties
+            <span class="title-light-1">
+        (1027 projects)
+    </span>
+        </h2>
+
+    </div>
+    <div class="col-auto sort-menu-container">
+        <a>
+            Sort by:
+        </a>
+        <a class="active" href="#">
+            Relevance
+        </a>
+        <a href="#">
+            Price-Low
+        </a>
+        <a href="#">
+            Price-High
+        </a>
+        <a href="#">
+            Possession Date
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    {% include property_list_item.html %}
+    {% include property_list_item.html %}
+
+    {% include virtual_banner.html %}
+
+    {% include property_list_item.html %}
+
+    <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
+                <p class="title-light-1">
+                    Projects based on your preferred possession date
+                </p>
+            </div>
+            <div class="col-auto d-flex flex-column">
+                {% include rental_complete_btn.html %}
+            </div>
+        </div>
+
+        <div class="row justify-content-center content-row">
+
+            <div class="col-auto d-flex flex-column text-center">
+                <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
+                <h3>Most Appreciated</h3>
+                <p>Areas with higher than 50% price <br>
+                    appreciation</p>
+            </div>
+
+            <div class="col-auto d-flex flex-column text-center">
+                <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
+                <h3>Best Offers</h3>
+                <p>
+                    Projects with discounts <br>
+                    and offers
+                </p>
+            </div>
+
+            <div class="col-auto d-flex flex-column text-center">
+                <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
+                <h3>Apartment Finder</h3>
+                <p>
+                    Use our apartment finder to help you<br>
+                    with your search
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    {% include property_list_item.html %}
+    {% include property_list_item.html %}
+
+    <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
+        <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
+        <p class="title-light-1">
+            Projects based on your preferred possession date
+        </p>
+
+        <div class="row justify-content-center content-row">
+            slider
+        </div>
+    </div>
+
+
+</div>

@@ -289,9 +289,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'Rubik-Regular';
     src: url('../fonts/rubik-regular-webfont.woff2') format('woff2'),
@@ -301,3 +298,19 @@
 
 }
 
+@font-face {
+    font-family: 'FMBolyarPro-500';
+    src: url('../fonts/FMBolyarPro-500.woff2') format('woff2'),
+    url('../fonts/FMBolyarPro-500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GoodTimesRg-Regular';
+    src: url('../fonts/GoodTimesRg-Regular.woff2') format('woff2'),
+    url('../fonts/GoodTimesRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

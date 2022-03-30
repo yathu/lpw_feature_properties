@@ -22,6 +22,40 @@
   border-color: #029432;
 }
 
+.btn-link{
+  font-family: Rubik-Regular;
+  font-size: 14px;
+  color: #018E37;
+  line-height: 20px;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.btn-warning{
+  background: #F8990F !important;
+  border-radius: 3px !important;
+  border: 0!important;
+}
+.btn-danger{
+  color: #FFFFFF !important;
+  background: #FF4501 !important;
+  border-radius: 3px !important;
+  font-family: Rubik-Medium !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  border: 1px solid #FF4501;
+}
+.btn-outline-danger{
+  font-family: Rubik-Medium;
+  font-size: 14px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #FF4501;
+  border-radius: 3px;
+  color: #FF4501;
+}
 
 @mixin switch($res: 'sm') {
   $index: 1rem;
