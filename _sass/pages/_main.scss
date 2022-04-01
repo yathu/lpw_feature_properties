@@ -27,6 +27,18 @@
   font-size: 14px;
   color: #018E37;
   line-height: 20px;
+  background-color: white;
+}
+
+.btn-light{
+  font-family: Rubik-Medium;
+  font-size: 15px;
+  color: #018E37;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  line-height: 1;
 }
 
 a{
@@ -102,5 +114,62 @@ a{
 
 .form-switch.form-switch-xl {
   @include switch('xl');
+}
+
+.title-light {
+  font-family: Rubik-Light;
+  font-size: 35px;
+  color: #202330;
+  letter-spacing: 0;
+}
+
+.title-light-1 {
+  font-family: Rubik-Regular;
+  font-size: 18px;
+  color: #84888F;
+  line-height: 30px;
+}
+
+.title-content-1 {
+  font-family: Rubik-Medium;
+  font-size: 25px;
+  color: #202330;
+  letter-spacing: -0.46px;
+}
+
+.title-content-2 {
+  font-family: Rubik-Medium;
+  font-size: 21px;
+  line-height: 20px;
+}
+
+.text-body {
+  font-family: Rubik-Regular !important;
+  font-size: 15px !important;
+  color: #71757B !important;
+  line-height: 20px !important;
+}
+
+.text-body-b-1 {
+  font-family: Rubik-Medium;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.custom-swiper-nav{
+  border: 1px solid #F77A27;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+  margin-top: -17.5px !important;
+
+  &:after{
+    color: #F77A27;
+    font-size: 13px;
+
+  }
 }
 
