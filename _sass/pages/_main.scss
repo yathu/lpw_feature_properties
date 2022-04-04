@@ -1,3 +1,4 @@
+
 .justify-self-end {
   justify-self: self-end !important;
 }
@@ -22,7 +23,7 @@
   border-color: #029432;
 }
 
-.btn-link{
+.btn-link {
   font-family: Rubik-Regular;
   font-size: 14px;
   color: #018E37;
@@ -30,7 +31,7 @@
   background-color: white;
 }
 
-.btn-light{
+.btn-light {
   font-family: Rubik-Medium;
   font-size: 15px;
   color: #018E37;
@@ -41,16 +42,17 @@
   line-height: 1;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
-.btn-warning{
+.btn-warning {
   background: #F8990F !important;
   border-radius: 3px !important;
-  border: 0!important;
+  border: 0 !important;
 }
-.btn-danger{
+
+.btn-danger {
   color: #FFFFFF !important;
   background: #FF4501 !important;
   border-radius: 3px !important;
@@ -59,7 +61,8 @@ a{
   text-align: center !important;
   border: 1px solid #FF4501;
 }
-.btn-outline-danger{
+
+.btn-outline-danger {
   font-family: Rubik-Medium;
   font-size: 14px;
   text-align: center;
@@ -157,19 +160,84 @@ a{
   line-height: 20px;
 }
 
-.custom-swiper-nav{
+.custom-swiper-nav {
   border: 1px solid #F77A27;
   border-radius: 50%;
   width: 35px;
   height: 35px;
   background-color: #FFFFFF;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   margin-top: -17.5px !important;
 
-  &:after{
+  &:after {
     color: #F77A27;
     font-size: 13px;
 
   }
 }
+
+.slider-range-container {
+  padding-top: 50px;
+
+  .slider-range {
+    background: #E8E8E8;
+    border-radius: 5px;
+    border: 0 !important;
+    height: 9px;
+
+    .ui-slider-range {
+      background: #009831;
+      border-radius: 5px;
+      border: 0;
+      height: 9px;
+    }
+
+    .ui-slider-handle {
+      background: #009833;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+      border-radius: 50%;
+      border: 0;
+      top: -6px;
+
+      span {
+        position: absolute;
+        top: -30px;
+        color: #000;
+      }
+    }
+
+    span.ui-slider-handle:first-child>span {
+      left: 5px;
+      background-color: #0a58ca;
+    }
+
+    span.ui-slider-handle:last-child>span {
+      left: -10px;
+    }
+
+  }
+
+  .sliderLabels {
+    position: relative;
+    height: 35px;
+    margin-top: 5px;
+
+    .slider-label {
+      position: absolute;
+      width: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      i{
+        font-style: normal;
+        font-weight: 100;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+
 

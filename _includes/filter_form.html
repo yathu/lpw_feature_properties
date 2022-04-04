@@ -1,0 +1,140 @@
+<div class="filter-form-container row w-100 align-items-center mx-0">
+
+    <form class="col row align-items-center mx-0">
+
+        <div class="col row controls align-items-center mx-0">
+            <div class="col">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                    </select>
+                    <label for="floatingSelect">Bedrooms</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown budget-dropdown">
+                    <label>
+                        Budget
+                    </label>
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton12"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <span>0</span> <span>to Any</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
+                        <div class="info d-flex justify-content-between align-items-center">
+                            <label>
+                                Budget
+                            </label>
+
+                            <div class="switch-container">
+                                <span>
+                                    Selling Price
+                                </span>
+                                <div class="form-check form-switch form-switch-md">
+
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                           id="flexSwitchCheckDefault">
+                                </div>
+                                <span>
+                                    Price per SQFT
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="slider-range-container">
+                            <div class="slider-range" id="budgetRange">
+                            </div>
+                            <div id="budget-labels" class="sliderLabels">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
+                        <option value="1">1 year</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect1">POSSESSION WITHIN</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <label>
+                        Location
+                    </label>
+                    <button class="btn dropdown-toggle" type="button" id="locationDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        City, Area
+                    </button>
+
+                    <div class="dropdown-menu p-4" aria-labelledby="locationDropdown">
+
+                        <div class="mb-3">
+                            <label for="cityFilterInput" class="form-label ms-0">Email address</label>
+                            <input type="text" class="form-control" id="cityFilterInput" placeholder="Type city name">
+                        </div>
+
+                        <div class="row mx-0">
+                            {% for i in (1..24) %}
+                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="filter_location" value="colombo{{i}}" id="colombo{{i}}">
+                                <label class="form-check-label" for="colombo{{i}}">
+                                    Colombo {{i}}
+                                </label>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="dropdown">
+                    <label>
+                        MORE FILTERS
+                    </label>
+                    <button class="btn dropdown-toggle" type="button">
+                        Property Type, Amenities, etc…
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-auto">
+
+            <button type="button" class="btn">
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+                Reset All
+            </button>
+        </div>
+
+    </form>
+
+    <div class="map-btn-container">
+        <div class="form-check form-switch form-switch-md">
+
+            <label class="form-check-label" for="flexSwitchCheckDefault">
+                Shows on map
+            </label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        </div>
+    </div>
+</div>
