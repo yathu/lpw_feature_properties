@@ -5,6 +5,14 @@
     background: #FFFFFF;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 
+    @media (max-width: 575.98px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 15px;
+    }
+
     .row {
       padding-left: 0;
       padding-right: 0;
@@ -29,13 +37,14 @@
         top: 8px !important;
         min-width: 500px;
 
-        input{
+        input {
           font-family: Rubik-Regular;
           font-size: 16px;
           color: #4E5156;
           line-height: 20px;
         }
-        .form-check>label{
+
+        .form-check > label {
           font-family: Rubik-Regular;
           font-size: 16px;
           color: #171D1F;
@@ -70,15 +79,14 @@
               margin-left: 5px;
               margin-right: 5px;
 
-              input{
-                margin-top: 0!important;
+              input {
+                margin-top: 0 !important;
               }
 
             }
           }
         }
       }
-
 
       .controls {
         border: 1px solid #E0E0E0;
@@ -140,24 +148,74 @@
       }
     }
 
+    .filter-mobile-btn-container {
+      background: #E3F4EA;
+      border: 1px solid #B0D4BB;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 15px;
+      width: auto;
+      line-height: 1;
+
+      @media (max-width: 374.98px) {
+        width: auto;
+      }
+
+      @media (min-width: 375px) and (max-width: 575.98px) {
+        width: calc(50% - 7px);
+      }
+
+      i {
+        margin-top: 0 !important;
+        justify-self: start;
+        margin-right: 5px;
+      }
+
+      span {
+        font-family: Rubik-Regular;
+        font-size: 14px;
+        color: #171D1F;
+        text-align: center;
+        line-height: 1;
+      }
+    }
+
     .map-btn-container {
       width: auto;
-      flex: 1;
       min-width: fit-content;
       padding: 0;
+
+      @media (max-width: 575.98px) {
+        width: calc(50% - 7px);
+      }
+      @media (min-width: 992px) {
+        flex: 1;
+      }
 
       .form-switch {
         background: #E3F4EA;
         border: 1px solid #B0D4BB;
         padding: 9px 15px;
-        width: fit-content;
+        //width: 100%;
         border-radius: 50px;
+        display: flex;
+        align-items: center;
+
+
+        @media (max-width: 575.98px) {
+          width: 100%;
+        }
 
         label {
           font-family: Rubik-Regular;
           font-size: 15px;
           color: #171D1F;
           line-height: 20px;
+
+          @media (max-width: 575.98px) {
+            font-size: 14px;
+          }
         }
 
         .form-check-input {
@@ -166,6 +224,104 @@
           margin-top: 0;
         }
       }
+    }
+
+    .more-filter-modal {
+      .modal-dialog {
+        @media (min-width: 768px) {
+          max-width: 800px;
+        }
+
+        .modal-content {
+
+          .modal-header {
+            padding-left: 25px;
+            padding-top: 25px;
+
+            .btn-close {
+              font-size: 9px;
+              color: #000;
+              opacity: 1;
+
+            }
+          }
+
+          .modal-body {
+            padding-left: 25px;
+            padding-right: 45px;
+            padding-top: 0;
+
+            form {
+              .form-label {
+                font-family: Rubik-Medium;
+                font-size: 15px;
+                color: #A0A5AD;
+                line-height: 20px;
+              }
+            }
+          }
+
+          .modal-footer {
+            background: #F2F2F2;
+            border-radius: 0 4px 0 4px;
+            border: 0;
+
+            p {
+              font-family: Rubik-Regular;
+              font-size: 15px;
+              color: #4E5156;
+              line-height: 1;
+
+              b {
+                font-family: Rubik-Medium;
+              }
+            }
+          }
+        }
+
+      }
+
+
+      .chip-check {
+        display: flex;
+        flex-wrap: wrap;
+
+        .form-check {
+          padding-left: 0;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        input[type="checkbox"] + label {
+          -webkit-transition: all 500ms ease;
+          transition: all 500ms ease;
+          font-family: Rubik-Regular;
+          font-size: 15px;
+          color: #4E5156;
+          text-align: center;
+          background: #FFFFFF;
+          border: 1px solid #202330;
+          border-radius: 25px;
+          padding: 9px 15px;
+          line-height: 1;
+        }
+
+
+        input[type="checkbox"]:checked + label {
+          -webkit-transition: all 500ms ease;
+          transition: all 500ms ease;
+          background-color: #018E37;
+          color: white;
+          border: 1px solid #018E37;
+          border-radius: 18px;
+        }
+
+      }
+
     }
   }
 }

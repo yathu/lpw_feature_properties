@@ -20,6 +20,10 @@
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.10);
     line-height: 1;
     margin-bottom: 0;
+
+    @media (max-width: 575.98px) {
+      font-size: 20px;
+    }
   }
 
   .gradient {
@@ -34,6 +38,11 @@
     //text-shadow: 0 0 4px rgba(0,0,0,0.50);
     margin-top: 7px;
     margin-bottom: 5px;
+
+
+    @media (max-width: 575.98px) {
+      font-size: 20px;
+    }
   }
 
   .month {
@@ -61,6 +70,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: 575.98px) {
+        font-size: 20px;
+      }
     }
   }
 

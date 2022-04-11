@@ -1,6 +1,6 @@
 <div class="card property-list-item mb-3">
-    <div class="row">
-        <div class="col-4 col-lg-3 img-container pe-0">
+    <div class="row flex-column flex-md-row">
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
             <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
             <div class="icons-container">
@@ -16,9 +16,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-8 col-lg-9">
+        <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
-                <div class="row mb-3">
+                <div class="row mb-2 mb-md-3">
                     <div class="col">
                         <h5 class="title-content-1">Rush Reliance</h5>
                         <div class="location title-light-1 mb-2">
@@ -33,13 +33,13 @@
                             </sup>
                         </div>
                     </div>
-                    <div class="col-auto d-flex flex-column align-items-lg-end">
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
                         {% include rental_complete_btn.html %}
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col col-md-8">
                         <table class="table">
                             <tbody>
                             <tr>
@@ -73,19 +73,22 @@
                     </div>
                 </div>
 
-                <a class="btn btn-link mb-3" href="#">
+                <a class="btn btn-link mb-2 mb-md-3" href="#">
                     Show More
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </a>
 
-                <div class="row align-items-center btn-container">
-                    <div class="col img-container text-body">
-                        <img src="https://img.icons8.com/color/344/building.png" alt=""/>
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+                        <img src="/assets/img/most-apprecated.svg" alt=""/>
                         Rush Lanka Group
                     </div>
-                    <div class="col-auto text-end">
+                    <div class="col">
+                        {% include rental_complete_btn.html %}
+                    </div>
+                    <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger">GET CALLBACK</a>
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
                     </div>
                 </div>
 

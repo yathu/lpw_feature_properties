@@ -9,16 +9,22 @@
     position: relative;
 
     img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
+
+      @media (max-width: 575.98px) {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 4px;
+      }
     }
 
     span {
       position: absolute;
       left: 19px;
-      top: 7px;
+      top: 8px;
       border-radius: 50%;
       background-color: #FFFFFF;
       width: 34px;
@@ -32,27 +38,33 @@
       }
     }
 
-    .icons-container{
+    .icons-container {
       position: absolute;
       bottom: 0;
       right: 0;
       left: 12px;
       display: flex;
-      background-image: linear-gradient(180deg, rgba(32,35,48,0.00) 0%, rgba(32,35,48,0.90) 100%);
+      background-image: linear-gradient(180deg, rgba(32, 35, 48, 0.00) 0%, rgba(32, 35, 48, 0.90) 100%);
       padding-bottom: 10px;
       padding-top: 30px;
       justify-content: center;
       border-bottom-left-radius: 4px;
 
+      @media (max-width: 575.98px) {
+        right: 12px;
+        border-bottom-left-radius: 0px;
+      }
 
-      div{
+
+      div {
         margin-left: 15px;
         margin-right: 15px;
         color: #FFFFFF !important;
-        line-height: 1!important;
+        line-height: 1 !important;
         display: inline-flex;
         align-items: center;
-        img{
+
+        img {
           margin-right: 3px;
         }
       }
@@ -60,6 +72,10 @@
   }
 
   .card-body {
+    @media (max-width: 575.98px) {
+      padding: 10px;
+    }
+
     h5 {
       margin-bottom: 0;
     }
@@ -76,6 +92,10 @@
       .price-label {
         color: #71757B;
         font-size: 19px;
+
+        @media (max-width: 767.98px) {
+          font-size: 14px;
+        }
       }
 
       .sqft {
@@ -84,6 +104,11 @@
         color: #A0A4AA;
         line-height: 20px;
         display: inline-block;
+
+
+        @media (max-width: 767.98px) {
+          font-size: 13px;
+        }
       }
     }
 
@@ -93,6 +118,22 @@
       color: #333333;
       line-height: 20px;
       margin-bottom: 0;
+
+      @media (max-width: 575.98px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: 374.98px) {
+        font-size: 10px;
+      }
+
+      tr{
+        td,th{
+          @media (max-width: 575.98px) {
+            padding: 4px;
+          }
+        }
+      }
     }
 
     .btn-container {
@@ -110,6 +151,11 @@
         }
 
         color: #018E37 !important;
+      }
+      .btn-danger{
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
       }
     }
   }
