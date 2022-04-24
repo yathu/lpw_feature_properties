@@ -5,11 +5,16 @@
     background: #FFFFFF;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 991.98px) {
       justify-content: space-between;
     }
 
     @media (max-width: 767.98px) {
+      padding: 15px;
+    }
+
+
+    @media (min-width: 992px) and (max-width: 1199.8px) {
       padding: 15px;
     }
 
@@ -92,6 +97,34 @@
         border: 1px solid #E0E0E0;
         border-radius: 5px;
 
+
+        .col {
+          align-items: center;
+          display: flex;
+
+          @media (min-width: 992px) and (max-width: 1199.8px) {
+            //width: 20%;
+            overflow: hidden;
+            //width: min-content;
+            //flex: 0 0 min-content;
+          }
+
+          @media (min-width: 1200px) {
+            width: 20%;
+          }
+
+          .dropdown {
+            max-width: 100%;
+            overflow: hidden;
+          }
+
+          select, label, .btn {
+            padding-left: 0;
+            margin-left: 0;
+          }
+
+        }
+
         > div:not(:last-child) {
           border-right: 1px solid #E0E0E0;
         }
@@ -106,6 +139,11 @@
         font-size: 13px;
         color: #A0A5AD;
         line-height: 20px;
+
+        @media (min-width: 992px) and (max-width: 1199.8px) {
+          font-size: 11px;
+        }
+
       }
 
 
@@ -117,6 +155,11 @@
         //border: 0;
         &:focus {
 
+        }
+
+
+        @media (min-width: 992px) and (max-width: 1199.8px) {
+          font-size: 12px;
         }
       }
 
@@ -132,6 +175,19 @@
 
         .dropdown-toggle {
           padding: 0 12px;
+
+          &:after{
+            font-size: 17px;
+          }
+          @media (min-width: 992px) and (max-width: 1199.8px) {
+            padding-right: 5px;
+            span {
+              overflow: hidden;
+              width: 100%;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
         }
       }
 
@@ -139,12 +195,29 @@
         label {
           transform: scale(1) translateY(-0.5rem) translateX(0.15rem);
           opacity: 1;
+          padding-right: 0;
         }
 
         .form-select {
-          padding-top: 2rem;
+          padding-top: 29px;
         }
 
+        select {
+          background: transparent;
+          background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+          background-repeat: no-repeat;
+          background-position-x: 100%;
+          background-position-y: 77%;
+        }
+
+      }
+
+      .col-auto {
+        .btn-reset {
+          @media (min-width: 992px) and (max-width: 1199.8px) {
+            padding: 0;
+          }
+        }
       }
     }
 
@@ -162,7 +235,11 @@
         width: auto;
       }
 
-      @media (min-width: 375px) and (max-width: 575.98px) {
+      @media (min-width: 576px) {
+        padding: 13px 15px;
+      }
+
+      @media (min-width: 375px) and (max-width: 991.98px) {
         width: calc(50% - 7px);
       }
 
@@ -186,11 +263,17 @@
       min-width: fit-content;
       padding: 0;
 
-      @media (max-width: 575.98px) {
+      @media (max-width: 991.98px) {
         width: calc(50% - 7px);
       }
+      //@media (min-width: 576px) and (max-width: 991.98px) {
+      //  width: calc(50% - 7px);
+      //}
       @media (min-width: 992px) {
         flex: 1;
+      }
+      @media (min-width: 1200px) {
+        flex-grow: 2;
       }
 
       .form-switch {
@@ -201,21 +284,27 @@
         border-radius: 50px;
         display: flex;
         align-items: center;
+        justify-content: center;
 
-
-        @media (max-width: 575.98px) {
+        @media (max-width: 991.98px) {
           width: 100%;
         }
+
 
         label {
           font-family: Rubik-Regular;
           font-size: 15px;
           color: #171D1F;
-          line-height: 20px;
+          line-height: 1;
 
           @media (max-width: 575.98px) {
             font-size: 14px;
           }
+
+          @media (min-width: 992px) and (max-width: 1199.8px) {
+            font-size: 12px;
+          }
+
         }
 
         .form-check-input {

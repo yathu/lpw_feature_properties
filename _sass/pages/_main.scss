@@ -157,6 +157,9 @@ a {
   @media (max-width: 767.98px) {
     font-size: 20px;
   }
+  @media (min-width: 992px) and (max-width: 1199.8px) {
+    font-size: 30px;
+  }
 }
 
 .title-light-1 {
@@ -207,6 +210,10 @@ a {
   font-size: 16px;
   color: #FFFFFF;
   line-height: 20px;
+
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+  }
 }
 
 .custom-swiper-nav {
