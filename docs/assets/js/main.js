@@ -31,6 +31,9 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 // spaceBetween: 20
             },
+            768:{
+                slidesPerView: 'auto',
+            }
             // // when window width is >= 480px
             // 480: {
             //     slidesPerView: 3,
@@ -66,6 +69,9 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 // spaceBetween: 20
             },
+            768:{
+                slidesPerView: 'auto',
+            }
             // // when window width is >= 480px
             // 480: {
             //     slidesPerView: 3,
