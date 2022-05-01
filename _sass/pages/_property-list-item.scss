@@ -91,7 +91,7 @@
 
       .price-label {
         color: #71757B;
-        font-size: 19px;
+        font-size: 17px;
 
         @media (max-width: 767.98px) {
           font-size: 14px;
@@ -100,21 +100,21 @@
 
       .sqft {
         font-family: Rubik-Regular;
-        font-size: 17px;
+        font-size: 14px;
         color: #A0A4AA;
         line-height: 20px;
         display: inline-block;
 
 
         @media (max-width: 767.98px) {
-          font-size: 13px;
+          font-size: 12px;
         }
       }
     }
 
     table {
       font-family: Rubik-Regular;
-      font-size: 15px;
+      font-size: 13px;
       color: #333333;
       line-height: 20px;
       margin-bottom: 0;
@@ -129,6 +129,7 @@
 
       tr{
         td,th{
+          font-weight: normal;
           @media (max-width: 575.98px) {
             padding: 4px;
           }

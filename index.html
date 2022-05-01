@@ -5,7 +5,12 @@ class: feature_properties_index
 permalink: /index.html
 ---
 
+<video class="index-video-banner" playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
 {% include filter_form.html %}
+
 
 <div class="row mx-0 align-items-center filtered-info">
     <div class="col">
@@ -99,23 +104,21 @@ permalink: /index.html
             Projects based on your preferred possession date
         </p>
 
-        <div class="swiper priceRangeSwiper">
-            <div class="swiper-wrapper">
+        <div class="price-range-swiper-container">
+            <div class="swiper priceRangeSwiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..10) %}
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    {% endfor %}
 
-                {% for i in (1..10) %}
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                {% endfor %}
-
+                </div>
             </div>
-
-            <div class="price-range-swiper-button-next swiper-button-next">
-            </div>
+            <div class="price-range-swiper-button-next swiper-button-next"></div>
             <div class="price-range-swiper-button-prev swiper-button-prev"></div>
-
         </div>
 
     </div>
@@ -128,25 +131,25 @@ permalink: /index.html
         </h1>
 
 
-        <div class="swiper property-type-swiper">
-            <div class="swiper-wrapper">
+        <div class="property-type-swiper-box">
+            <div class="swiper property-type-swiper">
+                <div class="swiper-wrapper">
 
-                {% for i in (20..30) %}
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/{{i}}1/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                    {% for i in (20..30) %}
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/{{i}}1/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                {% endfor %}
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
             </div>
-
             <div class="property-type-swiper-button-next swiper-button-next"></div>
             <div class="property-type-swiper-button-prev swiper-button-prev"></div>
-
         </div>
 
     </div>
@@ -163,16 +166,18 @@ permalink: /index.html
             1348 Projects around the island
         </p>
 
-        <div class="swiper city-project-swiper">
-            <div class="swiper-wrapper">
+        <div class="city-swiper-box">
+            <div class="swiper city-project-swiper">
+                <div class="swiper-wrapper">
 
-                {% for i in (1..10) %}
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                {% endfor %}
+                    {% for i in (1..10) %}
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    {% endfor %}
 
+                </div>
             </div>
 
             <div class="city-swiper-button-next swiper-button-next">
@@ -180,6 +185,7 @@ permalink: /index.html
             <div class="city-swiper-button-prev swiper-button-prev"></div>
 
         </div>
+
 
     </div>
 
@@ -213,25 +219,24 @@ permalink: /index.html
             Make your property decisions smart and informed.
         </p>
 
-        <div class="swiper tool-swiper">
-            <div class="swiper-wrapper">
-
-                {% for i in (1..10) %}
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                {% endfor %}
-
+        <div class="tool-swiper-box">
+            <div class="swiper tool-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..10) %}
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
             </div>
 
-            <div class="tool-swiper-button-next swiper-button-next">
-            </div>
+            <div class="tool-swiper-button-next swiper-button-next"></div>
             <div class="tool-swiper-button-prev swiper-button-prev"></div>
 
         </div>
