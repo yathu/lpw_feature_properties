@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    $('#testpicker').selectpicker();
+    $('#possesionYear').selectpicker();
+
     new Swiper(".priceRangeSwiper", {
         slidesPerView: 'auto',
         spaceBetween: 15,
@@ -8,6 +11,8 @@ $(document).ready(function () {
             prevEl: ".price-range-swiper-button-prev",
         },
     });
+
+
 
     new Swiper(".property-type-swiper", {
         slidesPerView: 'auto',

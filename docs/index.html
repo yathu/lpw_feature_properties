@@ -26,23 +26,32 @@
 <body>
 
 <section class="feature_properties_index">
-    <div class="filter-form-container row w-100 align-items-center mx-0">
+    <video class="index-video-banner" playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
+<div class="filter-form-container row w-100 align-items-center mx-0 sticky-top">
 
     <form class="col row align-items-center mx-0 d-none d-lg-flex">
 
         <div class="col row controls align-items-stretch mx-0">
             <div class="col">
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                        <option value="1">1 Bedroom</option>
-                        <option value="2">2 Bedrooms</option>
-                        <option value="3">3 Bedrooms</option>
+
+                    <select id="bedroomSelect" class="form-control selectpicker">
+                        <option>1 Bedroom</option>
+                        <option>2 Bedrooms</option>
+                        <option>3 Bedrooms</option>
+                        <option>4 Bedrooms</option>
+                        <option>5 Bedrooms</option>
                     </select>
-                    <label for="floatingSelect">Bedrooms</label>
+
+                    <label for="bedroomSelect">Bedrooms</label>
                 </div>
             </div>
 
             <div class="col">
+
                 <div class="dropdown budget-dropdown">
                     <label>
                         Budget
@@ -52,7 +61,7 @@
                             aria-expanded="false">
                         <span>0</span> <span>to Any</span>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
+                    <div class="dropdown-menu dropdown-menu-expanded" aria-labelledby="dropdownMenuButton12">
                         <div class="info d-flex justify-content-between align-items-center">
                             <label>
                                 Budget
@@ -84,16 +93,18 @@
 
                     </div>
                 </div>
+
             </div>
 
             <div class="col">
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
+
+                    <select id="possesionYear" class="form-control selectpicker">
                         <option value="1">1 year</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="2">1 years</option>
                     </select>
-                    <label for="floatingSelect1">POSSESSION WITHIN</label>
+
+                    <label for="possesionYear">POSSESSION WITHIN</label>
                 </div>
             </div>
 
@@ -108,7 +119,7 @@
                         City, Area
                     </button>
 
-                    <div class="dropdown-menu p-4" aria-labelledby="locationDropdown">
+                    <div class="dropdown-menu dropdown-menu-expanded p-4" aria-labelledby="locationDropdown">
 
                         <div class="mb-3">
                             <label for="cityFilterInput" class="form-label ms-0">Email address</label>
@@ -318,7 +329,7 @@
             </div>
 
             <div class="col">
-                <div class="dropdown">
+                <div class="dropdown overflow-hidden">
                     <label>
                         MORE FILTERS
                     </label>
@@ -548,6 +559,7 @@
 </div>
 
 
+
 <div class="row mx-0 align-items-center filtered-info">
     <div class="col">
         <h2 class="title-light">
@@ -611,9 +623,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -723,9 +735,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -863,9 +875,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1025,9 +1037,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1137,9 +1149,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1226,77 +1238,75 @@
             Projects based on your preferred possession date
         </p>
 
-        <div class="swiper priceRangeSwiper">
-            <div class="swiper-wrapper">
+        <div class="price-range-swiper-container">
+            <div class="swiper priceRangeSwiper">
+                <div class="swiper-wrapper">
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <span class="range">Price range</span>
+                        <p class="price">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
 
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <span class="range">Price range</span>
-                    <p class="price">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-
+                </div>
             </div>
-
-            <div class="price-range-swiper-button-next swiper-button-next">
-            </div>
+            <div class="price-range-swiper-button-next swiper-button-next"></div>
             <div class="price-range-swiper-button-prev swiper-button-prev"></div>
-
         </div>
 
     </div>
@@ -1331,9 +1341,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1420,125 +1430,125 @@
         </h1>
 
 
-        <div class="swiper property-type-swiper">
-            <div class="swiper-wrapper">
+        <div class="property-type-swiper-box">
+            <div class="swiper property-type-swiper">
+                <div class="swiper-wrapper">
 
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/201/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/201/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/211/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/211/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/221/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/221/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/231/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/231/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/241/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/241/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/251/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/251/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/261/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/261/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/271/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/271/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/281/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/281/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/291/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/291/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="https://picsum.photos/id/301/270/300" alt="propertyType">
-                    <div class="content">
-                        <p>Residential Apartments</p>
-                        <span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="https://picsum.photos/id/301/270/300" alt="propertyType">
+                        <div class="content">
+                            <p>Residential Apartments</p>
+                            <span>
                             40 projects
                         </span>
-                    </div>
-                </a>
-                
+                        </div>
+                    </a>
+                    
+                </div>
             </div>
-
             <div class="property-type-swiper-button-next swiper-button-next"></div>
             <div class="property-type-swiper-button-prev swiper-button-prev"></div>
-
         </div>
 
     </div>
@@ -1573,9 +1583,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1666,61 +1676,63 @@
             1348 Projects around the island
         </p>
 
-        <div class="swiper city-project-swiper">
-            <div class="swiper-wrapper">
+        <div class="city-swiper-box">
+            <div class="swiper city-project-swiper">
+                <div class="swiper-wrapper">
 
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <p class="city">10M-20M</p>
-                    <span class="noOfProjects">87 projects</span>
-                </a>
-                
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <p class="city">10M-20M</p>
+                        <span class="noOfProjects">87 projects</span>
+                    </a>
+                    
 
+                </div>
             </div>
 
             <div class="city-swiper-button-next swiper-button-next">
@@ -1728,6 +1740,7 @@
             <div class="city-swiper-button-prev swiper-button-prev"></div>
 
         </div>
+
 
     </div>
 
@@ -1761,9 +1774,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -1873,9 +1886,9 @@
                         <div class="title-content-2 price-container">
                             Rs. 34.5 Mn
                             <span class="price-label">Upwards</span>
-                            <sup class="pt-md-2 pt-lg-0 sqft">
+                            <span class="pt-md-2 pt-lg-0 sqft">
                                 (Price per sqft Rs. 12000)
-                            </sup>
+                            </span>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
@@ -2007,115 +2020,114 @@
             Make your property decisions smart and informed.
         </p>
 
-        <div class="swiper tool-swiper">
-            <div class="swiper-wrapper">
-
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-                <a href="#" class="swiper-slide">
-                    <img src="./assets/img/tool-img-1.svg" alt="tool">
-                    <h4>
-                        Home Loan Calculator
-                    </h4>
-                    <p>
-                        Calculate your estimated monthly home loan payment.
-                    </p>
-                </a>
-                
-
+        <div class="tool-swiper-box">
+            <div class="swiper tool-swiper">
+                <div class="swiper-wrapper">
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                    <a href="#" class="swiper-slide">
+                        <img src="./assets/img/tool-img-1.svg" alt="tool">
+                        <h4>
+                            Home Loan Calculator
+                        </h4>
+                        <p>
+                            Calculate your estimated monthly home loan payment.
+                        </p>
+                    </a>
+                    
+                </div>
             </div>
 
-            <div class="tool-swiper-button-next swiper-button-next">
-            </div>
+            <div class="tool-swiper-button-next swiper-button-next"></div>
             <div class="tool-swiper-button-prev swiper-button-prev"></div>
 
         </div>
@@ -2126,15 +2138,20 @@
 
 </section>
 
+
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
 
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
 
+
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 
+
 <script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/bootstrap-select.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 
