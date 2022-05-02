@@ -5,16 +5,21 @@
         <div class="col row controls align-items-stretch mx-0">
             <div class="col">
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                        <option value="1">1 Bedroom</option>
-                        <option value="2">2 Bedrooms</option>
-                        <option value="3">3 Bedrooms</option>
+
+                    <select id="bedroomSelect" class="form-control selectpicker">
+                        <option>1 Bedroom</option>
+                        <option>2 Bedrooms</option>
+                        <option>3 Bedrooms</option>
+                        <option>4 Bedrooms</option>
+                        <option>5 Bedrooms</option>
                     </select>
-                    <label for="floatingSelect">Bedrooms</label>
+
+                    <label for="bedroomSelect">Bedrooms</label>
                 </div>
             </div>
 
             <div class="col">
+
                 <div class="dropdown budget-dropdown">
                     <label>
                         Budget
@@ -24,7 +29,7 @@
                             aria-expanded="false">
                         <span>0</span> <span>to Any</span>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
+                    <div class="dropdown-menu dropdown-menu-expanded" aria-labelledby="dropdownMenuButton12">
                         <div class="info d-flex justify-content-between align-items-center">
                             <label>
                                 Budget
@@ -56,16 +61,18 @@
 
                     </div>
                 </div>
+
             </div>
 
             <div class="col">
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
+
+                    <select id="possesionYear" class="form-control selectpicker">
                         <option value="1">1 year</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="2">1 years</option>
                     </select>
-                    <label for="floatingSelect1">POSSESSION WITHIN</label>
+
+                    <label for="possesionYear">POSSESSION WITHIN</label>
                 </div>
             </div>
 
@@ -80,7 +87,7 @@
                         City, Area
                     </button>
 
-                    <div class="dropdown-menu p-4" aria-labelledby="locationDropdown">
+                    <div class="dropdown-menu dropdown-menu-expanded p-4" aria-labelledby="locationDropdown">
 
                         <div class="mb-3">
                             <label for="cityFilterInput" class="form-label ms-0">Email address</label>
@@ -106,7 +113,7 @@
             </div>
 
             <div class="col">
-                <div class="dropdown">
+                <div class="dropdown overflow-hidden">
                     <label>
                         MORE FILTERS
                     </label>

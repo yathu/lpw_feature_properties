@@ -1,4 +1,6 @@
-
+.modal-backdrop{
+ z-index: 999;
+}
 .justify-self-end {
   justify-self: self-end !important;
 }
@@ -91,6 +93,10 @@ a {
   }
 
   color: #171D1F !important;
+}
+
+.dropdown-item.active{
+  background-color: #2a8e36;
 }
 
 @mixin switch($res: 'sm') {

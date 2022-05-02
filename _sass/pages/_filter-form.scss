@@ -40,7 +40,7 @@
         border: 0;
         left: -12px !important;
         top: 8px !important;
-        min-width: 500px;
+        width: calc(100% + 24px);
 
         input {
           font-family: Rubik-Regular;
@@ -55,6 +55,10 @@
           color: #171D1F;
           line-height: 20px;
         }
+      }
+
+      .dropdown-menu-expanded{
+        min-width: 500px;
       }
 
       .budget-dropdown {
@@ -115,7 +119,7 @@
 
           .dropdown {
             max-width: 100%;
-            overflow: hidden;
+            width: 100%;
           }
 
           select, label, .btn {
@@ -168,13 +172,19 @@
       }
 
       .dropdown {
+
         label {
           margin-left: 12px;
           display: block;
         }
 
         .dropdown-toggle {
-          padding: 0 12px;
+          padding: 0;
+          background-color: #FFFFFF;
+
+          &:focus{
+            outline: none !important;
+          }
 
           &:after{
             font-size: 17px;
@@ -193,7 +203,7 @@
 
       .form-floating {
         label {
-          transform: scale(1) translateY(-0.5rem) translateX(0.15rem);
+          transform: scale(1) translateY(-0.6rem) translateX(0);
           opacity: 1;
           padding-right: 0;
         }
