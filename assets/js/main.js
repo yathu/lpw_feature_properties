@@ -2,6 +2,12 @@ $(document).ready(function () {
 
     $('#testpicker').selectpicker();
     $('#possesionYear').selectpicker();
+    $('#bedroom_mobile').selectpicker();
+    $('#possession_mobile').selectpicker();
+
+    var myModal = new bootstrap.Modal(document.getElementById('mobModal'));
+
+    myModal.show();
 
     new Swiper(".priceRangeSwiper", {
         slidesPerView: 'auto',
@@ -11,8 +17,6 @@ $(document).ready(function () {
             prevEl: ".price-range-swiper-button-prev",
         },
     });
-
-
 
     new Swiper(".property-type-swiper", {
         slidesPerView: 'auto',
@@ -158,6 +162,7 @@ $(document).ready(function () {
         $("#areaSqftRange span.ui-slider-handle:last span").html(finalVal);
     }
 
+
     //budget slider labels
     for (let i = 0; i <= 20; i++) {
         var isOdd = (i % 2) !== 0;
@@ -166,12 +171,70 @@ $(document).ready(function () {
     }
 
 
+    //mobile sqft start
+    $("#areaSqftRangeMobile").slider({
+        range: true,
+        min: 0,
+        max: 5000,
+        // step:10,
+        values: [500, 3000],
+        slide: function (event, ui) {
+            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            appendSqftSliderFirstValMobile(ui.values[0]);
+            appendSqftSliderLastValMobile(ui.values[1]);
+        }
+    });
+
+    var sqftValMobile = $('#areaSqftRangeMobile').slider("values")[0];
+    var sqftVal2Mobile = $('#areaSqftRangeMobile').slider("values")[1];
+    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : sqftVal2Mobile + 'M';
+
+    $("#areaSqftRangeMobile span.ui-slider-handle:first").append("<span>" + sqftValMobile + "</span>");
+    $("#areaSqftRangeMobile span.ui-slider-handle:last").append("<span>" + SqftFinalVal2Mobile + "</span>");
+
+
+    function appendSqftSliderFirstValMobile(value) {
+        var finalVal = value == 0 ? 0 : value + 'M';
+        $("#areaSqftRangeMobile span.ui-slider-handle:first span").html(finalVal);
+    }
+
+    function appendSqftSliderLastValMobile(value) {
+        var finalVal = value == 0 ? 0 : value + 'M';
+        $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
+    }
+
+    for (let i = 0; i <= 10; i++) {
+        var isOdd = (i % 2) !== 0;
+        $("#areaSqftLabelsMobile").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i * 500)) + "</span>");
+    }
+
+    //end mobile sqft
+
+
+
+
+
     //city filter input related
     $('#cityFilterInput').on('keyup', function () {
         var value = this.value;
         console.log(value);
 
         $("input[name='filter_location']").each(function (index, obj) {
+            if ($(this).val().indexOf(value) != -1) {
+                $(this).parent('.form-check').show();
+            } else {
+                $(this).parent('.form-check').hide();
+            }
+        });
+
+    });
+
+    //city filter input related
+    $('#cityFilterInputMobile').on('keyup',function () {
+        var value = this.value;
+        console.log(value);
+
+        $("input[name='filter_location_mobile']").each(function (index, obj) {
             if ($(this).val().indexOf(value) != -1) {
                 $(this).parent('.form-check').show();
             } else {
