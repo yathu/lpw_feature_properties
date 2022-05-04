@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     var myModal = new bootstrap.Modal(document.getElementById('mobModal'));
 
-    myModal.show();
+    // myModal.show();
 
     new Swiper(".priceRangeSwiper", {
         slidesPerView: 'auto',

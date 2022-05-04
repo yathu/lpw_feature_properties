@@ -26,9 +26,11 @@
 <body>
 
 <section class="feature_properties_index">
-    <video class="index-video-banner" playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <!--
+<video class="index-video-banner" playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
     <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
 </video>
+-->
 
 <div class="filter-form-container row w-100 align-items-center mx-0 sticky-top">
 
@@ -122,7 +124,7 @@
                     <div class="dropdown-menu dropdown-menu-expanded p-4" aria-labelledby="locationDropdown">
 
                         <div class="mb-3">
-                            <label for="cityFilterInput" class="form-label ms-0">Email address</label>
+                            <label for="cityFilterInput" class="form-label ms-0">Location</label>
                             <input type="text" class="form-control" id="cityFilterInput" placeholder="Type city name">
                         </div>
 
@@ -351,7 +353,8 @@
 
     </form>
 
-    <div class="d-flex justify-content-center align-items-start d-lg-none filter-mobile-btn-container">
+    <div class="d-flex justify-content-center align-items-start d-lg-none filter-mobile-btn-container"
+         data-bs-toggle="modal" data-bs-target="#mobModal">
         <i class="fa fa-sliders mt-3" aria-hidden="true"></i>
         <span>Filters</span>
     </div>
@@ -378,8 +381,9 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="filterKeyword" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="filterKeyword">
+                            <label for="filterKeyword" class="form-label">KEYWORD SEARCH</label>
+                            <input type="text" class="form-control" placeholder="Enter search keywords"
+                                   id="filterKeyword">
                         </div>
                         <label class="form-label">
                             PROPERTY TYPE
@@ -554,6 +558,450 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!--mobile model-->
+
+<div class="modal fade mobile-search-modal" id="mobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title title-content-2" id="exampleModalLabel">Search Filters</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+
+                    <div class="mb-3">
+                        <div class="">
+                            <div class="mb-3">
+                                <label for="cityFilterInput" class="form-label ms-0">Location</label>
+                                <input type="text" class="form-control" id="cityFilterInputMobile"
+                                       placeholder="Type city name">
+                            </div>
+
+                            <div class="row mx-0">
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo1" id="mobile_colombo1">
+                                    <label class="form-check-label" for="colombo1">
+                                        Colombo 1
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo2" id="mobile_colombo2">
+                                    <label class="form-check-label" for="colombo2">
+                                        Colombo 2
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo3" id="mobile_colombo3">
+                                    <label class="form-check-label" for="colombo3">
+                                        Colombo 3
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo4" id="mobile_colombo4">
+                                    <label class="form-check-label" for="colombo4">
+                                        Colombo 4
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo5" id="mobile_colombo5">
+                                    <label class="form-check-label" for="colombo5">
+                                        Colombo 5
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo6" id="mobile_colombo6">
+                                    <label class="form-check-label" for="colombo6">
+                                        Colombo 6
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo7" id="mobile_colombo7">
+                                    <label class="form-check-label" for="colombo7">
+                                        Colombo 7
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo8" id="mobile_colombo8">
+                                    <label class="form-check-label" for="colombo8">
+                                        Colombo 8
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo9" id="mobile_colombo9">
+                                    <label class="form-check-label" for="colombo9">
+                                        Colombo 9
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo10" id="mobile_colombo10">
+                                    <label class="form-check-label" for="colombo10">
+                                        Colombo 10
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo11" id="mobile_colombo11">
+                                    <label class="form-check-label" for="colombo11">
+                                        Colombo 11
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo12" id="mobile_colombo12">
+                                    <label class="form-check-label" for="colombo12">
+                                        Colombo 12
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo13" id="mobile_colombo13">
+                                    <label class="form-check-label" for="colombo13">
+                                        Colombo 13
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo14" id="mobile_colombo14">
+                                    <label class="form-check-label" for="colombo14">
+                                        Colombo 14
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo15" id="mobile_colombo15">
+                                    <label class="form-check-label" for="colombo15">
+                                        Colombo 15
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo16" id="mobile_colombo16">
+                                    <label class="form-check-label" for="colombo16">
+                                        Colombo 16
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo17" id="mobile_colombo17">
+                                    <label class="form-check-label" for="colombo17">
+                                        Colombo 17
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo18" id="mobile_colombo18">
+                                    <label class="form-check-label" for="colombo18">
+                                        Colombo 18
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo19" id="mobile_colombo19">
+                                    <label class="form-check-label" for="colombo19">
+                                        Colombo 19
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo20" id="mobile_colombo20">
+                                    <label class="form-check-label" for="colombo20">
+                                        Colombo 20
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo21" id="mobile_colombo21">
+                                    <label class="form-check-label" for="colombo21">
+                                        Colombo 21
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo22" id="mobile_colombo22">
+                                    <label class="form-check-label" for="colombo22">
+                                        Colombo 22
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo23" id="mobile_colombo23">
+                                    <label class="form-check-label" for="colombo23">
+                                        Colombo 23
+                                    </label>
+                                </div>
+                                
+                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
+                                           value="colombo24" id="mobile_colombo24">
+                                    <label class="form-check-label" for="colombo24">
+                                        Colombo 24
+                                    </label>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="bedroom_mobile" class="form-label">BEDROOMS</label>
+                        <select id="bedroom_mobile" class="form-control selectpicker">
+                            <option>1 Bedroom</option>
+                            <option>2 Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bedroom_mobile" class="form-label">POSSESSION WITHIN</label>
+                        <select id="possession_mobile" class="form-control selectpicker">
+                            <option>1 Bedroom</option>
+                            <option>2 Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">BUDGET</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name"
+                                       aria-label="First name">
+                            </div>
+                            <div class="col-auto">
+                                To
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="keywordsMobile" class="form-label">KEYWORDS</label>
+                        <input type="text" class="form-control" id="keywordsMobile">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">PROPERTY TYPE</label>
+                        <div class="mb-1 chip-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault__1">
+                                <label class="form-check-label" for="flexCheckDefault__1">
+                                    Residential Apartment
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked__2">
+                                <label class="form-check-label" for="flexCheckChecked__2">
+                                    Residential Lands
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1__3">
+                                <label class="form-check-label" for="flexCheckChecked1__3">
+                                    Independent Houses/Villas
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked__4">
+                                <label class="form-check-label" for="flexCheckChecked__4">
+                                    Commercial Properties
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked__5">
+                                <label class="form-check-label" for="flexCheckChecked__5">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label mb-0">
+                            AREA SQFT
+                        </label>
+
+                        <div class="slider-range-container">
+                            <div class="slider-range" id="areaSqftRangeMobile">
+                            </div>
+                            <div id="areaSqftLabelsMobile" class="sliderLabels">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label mt-4">
+                            AMENITIES
+                        </label>
+
+                        <div class="mb-1 chip-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultm">
+                                <label class="form-check-label" for="flexCheckDefaultm">
+                                    Residential Apartment
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Residential Lands
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                                <label class="form-check-label" for="flexCheckChecked1">
+                                    Independent Houses/Villas
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Commercial Properties
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Office Spaces
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label mt-2 ">
+                            LOCATION & VIEW
+                        </label>
+
+                        <div class="mb-1 chip-check">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="seaView__1">
+                                <label class="form-check-label" for="seaView__1">
+                                    Sea View
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="greenView">
+                                <label class="form-check-label" for="greenView">
+                                    Green View
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="greenView">
+                                <label class="form-check-label" for="greenView">
+                                    Near School
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="modal-footer row mx-0 d-flex justify-content-between">
+                <div class="col-auto p-0">
+                    <a href="#" class="btn btn-link btn-reset me-3 bg-transparent">
+                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                        Reset All
+                    </a>
+                </div>
+                <div class="col-auto p-0">
+                    <a href="#" class="btn btn-custom-primary px-5">
+                        FILTER
+                    </a>
+                </div>
+            </div>
+
+            <!--            <div class="modal-footer">-->
+            <!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+            <!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--            </div>-->
         </div>
     </div>
 </div>
