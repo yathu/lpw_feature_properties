@@ -46,203 +46,212 @@ permalink: /index.html
     </div>
 </div>
 
-<div class="container">
-    {% include property_list_item.html %}
-    {% include property_list_item.html %}
+<div id="map-parent" class="container-fluid map-enabled">
 
-    {% include virtual_banner.html %}
-
-    {% include property_list_item.html %}
-
-    <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
-        <div class="row">
-            <div class="col">
-                <h1 class="title-content-1 mt-2 mx-4 mx-md-0">Own your dream property now, next year or later</h1>
-                <p class="title-light-1 mx-4 mx-md-0">
-                    Projects based on your preferred possession date
-                </p>
-            </div>
-            <div class="col-auto d-none d-md-flex flex-column">
-                {% include rental_complete_btn.html %}
-            </div>
-        </div>
-
-        <div class="row justify-content-center content-row pb-2">
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
-                <h3>Most Appreciated</h3>
-                <p>Areas with higher than 50% price <br>
-                    appreciation</p>
-            </div>
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
-                <h3>Best Offers</h3>
-                <p>
-                    Projects with discounts <br>
-                    and offers
-                </p>
-            </div>
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
-                <h3>Apartment Finder</h3>
-                <p>
-                    Use our apartment finder to help you<br>
-                    with your search
-                </p>
-            </div>
-
+    <div class="mapView">
+        <div class="map-box">
+            <div id="map"></div>
         </div>
     </div>
 
-    {% include property_list_item.html %}
-    {% include property_list_item.html %}
+    <div class="container">
+        {% include property_list_item.html %}
+        {% include property_list_item.html %}
 
-    <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
-        <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
-        <p class="title-light-1">
-            Projects based on your preferred possession date
-        </p>
+        {% include virtual_banner.html %}
 
-        <div class="price-range-swiper-container">
-            <div class="swiper priceRangeSwiper">
-                <div class="swiper-wrapper">
-                    {% for i in (1..10) %}
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    {% endfor %}
+        {% include property_list_item.html %}
 
+        <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
+            <div class="row">
+                <div class="col">
+                    <h1 class="title-content-1 mt-2 mx-4 mx-md-0">Own your dream property now, next year or later</h1>
+                    <p class="title-light-1 mx-4 mx-md-0">
+                        Projects based on your preferred possession date
+                    </p>
+                </div>
+                <div class="col-auto d-none d-md-flex flex-column">
+                    {% include rental_complete_btn.html %}
                 </div>
             </div>
-            <div class="price-range-swiper-button-next swiper-button-next"></div>
-            <div class="price-range-swiper-button-prev swiper-button-prev"></div>
+
+            <div class="row justify-content-center content-row pb-2">
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
+                    <h3>Most Appreciated</h3>
+                    <p>Areas with higher than 50% price <br>
+                        appreciation</p>
+                </div>
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
+                    <h3>Best Offers</h3>
+                    <p>
+                        Projects with discounts <br>
+                        and offers
+                    </p>
+                </div>
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
+                    <h3>Apartment Finder</h3>
+                    <p>
+                        Use our apartment finder to help you<br>
+                        with your search
+                    </p>
+                </div>
+
+            </div>
         </div>
 
-    </div>
+        {% include property_list_item.html %}
+        {% include property_list_item.html %}
 
-    {% include property_list_item.html %}
+        <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
+            <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
+            <p class="title-light-1">
+                Projects based on your preferred possession date
+            </p>
 
-    <div class="property-type-swiper-container px-3 px-lg-4">
-        <h1 class="title-content-1">
-            Own your dream property now, next year or later
-        </h1>
+            <div class="price-range-swiper-container">
+                <div class="swiper priceRangeSwiper">
+                    <div class="swiper-wrapper">
+                        {% for i in (1..10) %}
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="price-range-swiper-button-next swiper-button-next"></div>
+                <div class="price-range-swiper-button-prev swiper-button-prev"></div>
+            </div>
+
+        </div>
+
+        {% include property_list_item.html %}
+
+        <div class="property-type-swiper-container px-3 px-lg-4">
+            <h1 class="title-content-1">
+                Own your dream property now, next year or later
+            </h1>
 
 
-        <div class="property-type-swiper-box">
-            <div class="swiper property-type-swiper">
-                <div class="swiper-wrapper">
+            <div class="property-type-swiper-box">
+                <div class="swiper property-type-swiper">
+                    <div class="swiper-wrapper">
 
-                    {% for i in (20..30) %}
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/{{i}}1/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
+                        {% for i in (20..30) %}
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/{{i}}1/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
                             40 projects
                         </span>
-                        </div>
-                    </a>
-                    {% endfor %}
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
                 </div>
+                <div class="property-type-swiper-button-next swiper-button-next"></div>
+                <div class="property-type-swiper-button-prev swiper-button-prev"></div>
             </div>
-            <div class="property-type-swiper-button-next swiper-button-next"></div>
-            <div class="property-type-swiper-button-prev swiper-button-prev"></div>
+
         </div>
 
-    </div>
+        {% include property_list_item.html %}
 
-    {% include property_list_item.html %}
+        <div class="city-projects px-3 px-lg-4">
 
-    <div class="city-projects px-3 px-lg-4">
+            <h1 class="title-content-1 mt-2">
+                Find properties fromyour
+                closest city
+            </h1>
+            <p class="title-light-1">
+                1348 Projects around the island
+            </p>
 
-        <h1 class="title-content-1 mt-2">
-            Find properties fromyour
-            closest city
-        </h1>
-        <p class="title-light-1">
-            1348 Projects around the island
-        </p>
+            <div class="city-swiper-box">
+                <div class="swiper city-project-swiper">
+                    <div class="swiper-wrapper">
 
-        <div class="city-swiper-box">
-            <div class="swiper city-project-swiper">
+                        {% for i in (1..10) %}
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div class="city-swiper-button-next swiper-button-next">
+                </div>
+                <div class="city-swiper-button-prev swiper-button-prev"></div>
+
+            </div>
+
+
+        </div>
+
+        {% include property_list_item.html %}
+        {% include property_list_item.html %}
+
+        <div class="tour-project px-3 px-lg-4">
+
+            <div class="swiper tour-swiper ms-2 mt-3">
                 <div class="swiper-wrapper">
-
-                    {% for i in (1..10) %}
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    {% endfor %}
-
-                </div>
-            </div>
-
-            <div class="city-swiper-button-next swiper-button-next">
-            </div>
-            <div class="city-swiper-button-prev swiper-button-prev"></div>
-
-        </div>
-
-
-    </div>
-
-    {% include property_list_item.html %}
-    {% include property_list_item.html %}
-
-    <div class="tour-project px-3 px-lg-4">
-
-        <div class="swiper tour-swiper ms-2 mt-3">
-            <div class="swiper-wrapper">
-                {% for i in (1..5) %}
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div class="swiper-pagination tour-swiper-pagination"></div>
-
-    </div>
-
-    <div class="propertyTool px-3 px-lg-4">
-
-        <h1 class="title-content-1 mt-2">
-            Exclusive Property Tools
-        </h1>
-        <p class="title-light-1">
-            Make your property decisions smart and informed.
-        </p>
-
-        <div class="tool-swiper-box">
-            <div class="swiper tool-swiper">
-                <div class="swiper-wrapper">
-                    {% for i in (1..10) %}
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
+                    {% for i in (1..5) %}
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
 
-            <div class="tool-swiper-button-next swiper-button-next"></div>
-            <div class="tool-swiper-button-prev swiper-button-prev"></div>
+            <div class="swiper-pagination tour-swiper-pagination"></div>
+
+        </div>
+
+        <div class="propertyTool px-3 px-lg-4">
+
+            <h1 class="title-content-1 mt-2">
+                Exclusive Property Tools
+            </h1>
+            <p class="title-light-1">
+                Make your property decisions smart and informed.
+            </p>
+
+            <div class="tool-swiper-box">
+                <div class="swiper tool-swiper">
+                    <div class="swiper-wrapper">
+                        {% for i in (1..10) %}
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="tool-swiper-button-next swiper-button-next"></div>
+                <div class="tool-swiper-button-prev swiper-button-prev"></div>
+
+            </div>
 
         </div>
 
     </div>
-
 </div>

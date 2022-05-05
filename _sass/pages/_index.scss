@@ -75,6 +75,31 @@
   }
 }
 
+.map-enabled {
+  .map-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .mapView {
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 182px);
+    background-color: white;
+    z-index: 999;
+
+    #map {
+      height: 100%;
+    }
+  }
+
+  > .container {
+    width: 50%;
+    float: left;
+  }
+}
+
 .preferred-project {
   background-color: #FFFFFF;
   padding: 15px;

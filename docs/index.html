@@ -20,6 +20,9 @@
     <link rel="preload" as="font" href="assets/fonts/rubik-bold-webfont.woff2" type="font/woff2"
           crossorigin="anonymous">
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
     <title>index</title>
 </head>
 
@@ -362,10 +365,10 @@
     <div class="d-flex justify-content-end map-btn-container">
         <div class="form-check form-switch form-switch-md mb-0">
 
-            <label class="form-check-label" for="flexSwitchCheckDefault11">
+            <label class="form-check-label" for="showOnMap">
                 Shows on map
             </label>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault11">
+            <input class="form-check-input" type="checkbox" role="switch" id="showOnMap">
         </div>
     </div>
 
@@ -998,10 +1001,6 @@
                 </div>
             </div>
 
-            <!--            <div class="modal-footer">-->
-            <!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-            <!--                <button type="button" class="btn btn-primary">Save changes</button>-->
-            <!--            </div>-->
         </div>
     </div>
 </div>
@@ -1040,8 +1039,16 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="card property-list-item mb-3">
+<div id="map-parent" class="container-fluid map-enabled">
+
+    <div class="mapView">
+        <div class="map-box">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card property-list-item mb-3">
     <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
@@ -1153,7 +1160,7 @@
     </div>
 </div>
 
-    <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3">
     <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
@@ -1266,7 +1273,7 @@
 </div>
 
 
-    <div class="virtual-banner">
+        <div class="virtual-banner">
     <h1>
         LANKA PROPERTY <br>
         SHOW 2021
@@ -1293,7 +1300,7 @@
 </div>
 
 
-    <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3">
     <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
@@ -1406,56 +1413,56 @@
 </div>
 
 
-    <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
-        <div class="row">
-            <div class="col">
-                <h1 class="title-content-1 mt-2 mx-4 mx-md-0">Own your dream property now, next year or later</h1>
-                <p class="title-light-1 mx-4 mx-md-0">
-                    Projects based on your preferred possession date
-                </p>
-            </div>
-            <div class="col-auto d-none d-md-flex flex-column">
-                <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+        <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
+            <div class="row">
+                <div class="col">
+                    <h1 class="title-content-1 mt-2 mx-4 mx-md-0">Own your dream property now, next year or later</h1>
+                    <p class="title-light-1 mx-4 mx-md-0">
+                        Projects based on your preferred possession date
+                    </p>
+                </div>
+                <div class="col-auto d-none d-md-flex flex-column">
+                    <a href="#" class="btn btn-warning text-body-b-1 mb-2">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
     Completion: 2024
 </span>
 
+                </div>
+            </div>
+
+            <div class="row justify-content-center content-row pb-2">
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
+                    <h3>Most Appreciated</h3>
+                    <p>Areas with higher than 50% price <br>
+                        appreciation</p>
+                </div>
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
+                    <h3>Best Offers</h3>
+                    <p>
+                        Projects with discounts <br>
+                        and offers
+                    </p>
+                </div>
+
+                <div class="col-auto d-flex flex-column text-center">
+                    <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
+                    <h3>Apartment Finder</h3>
+                    <p>
+                        Use our apartment finder to help you<br>
+                        with your search
+                    </p>
+                </div>
+
             </div>
         </div>
 
-        <div class="row justify-content-center content-row pb-2">
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
-                <h3>Most Appreciated</h3>
-                <p>Areas with higher than 50% price <br>
-                    appreciation</p>
-            </div>
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
-                <h3>Best Offers</h3>
-                <p>
-                    Projects with discounts <br>
-                    and offers
-                </p>
-            </div>
-
-            <div class="col-auto d-flex flex-column text-center">
-                <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
-                <h3>Apartment Finder</h3>
-                <p>
-                    Use our apartment finder to help you<br>
-                    with your search
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3">
     <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
@@ -1567,7 +1574,7 @@
     </div>
 </div>
 
-    <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3">
     <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
@@ -1680,912 +1687,919 @@
 </div>
 
 
-    <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
-        <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
-        <p class="title-light-1">
-            Projects based on your preferred possession date
-        </p>
+        <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
+            <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
+            <p class="title-light-1">
+                Projects based on your preferred possession date
+            </p>
 
-        <div class="price-range-swiper-container">
-            <div class="swiper priceRangeSwiper">
+            <div class="price-range-swiper-container">
+                <div class="swiper priceRangeSwiper">
+                    <div class="swiper-wrapper">
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <span class="range">Price range</span>
+                            <p class="price">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+
+                    </div>
+                </div>
+                <div class="price-range-swiper-button-next swiper-button-next"></div>
+                <div class="price-range-swiper-button-prev swiper-button-prev"></div>
+            </div>
+
+        </div>
+
+        <div class="card property-list-item mb-3">
+    <div class="row flex-column flex-md-row">
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    6
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">1
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">3D
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <h5 class="title-content-1">Rush Reliance</h5>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/most-apprecated.svg" alt=""/>
+                        Rush Lanka Group
+                    </div>
+                    <div class="col d-md-none">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                    <div class="col col-md-auto text-end">
+                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="property-type-swiper-container px-3 px-lg-4">
+            <h1 class="title-content-1">
+                Own your dream property now, next year or later
+            </h1>
+
+
+            <div class="property-type-swiper-box">
+                <div class="swiper property-type-swiper">
+                    <div class="swiper-wrapper">
+
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/201/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/211/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/221/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/231/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/241/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/251/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/261/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/271/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/281/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/291/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="https://picsum.photos/id/301/270/300" alt="propertyType">
+                            <div class="content">
+                                <p>Residential Apartments</p>
+                                <span>
+                            40 projects
+                        </span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="property-type-swiper-button-next swiper-button-next"></div>
+                <div class="property-type-swiper-button-prev swiper-button-prev"></div>
+            </div>
+
+        </div>
+
+        <div class="card property-list-item mb-3">
+    <div class="row flex-column flex-md-row">
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    6
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">1
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">3D
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <h5 class="title-content-1">Rush Reliance</h5>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/most-apprecated.svg" alt=""/>
+                        Rush Lanka Group
+                    </div>
+                    <div class="col d-md-none">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                    <div class="col col-md-auto text-end">
+                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="city-projects px-3 px-lg-4">
+
+            <h1 class="title-content-1 mt-2">
+                Find properties fromyour
+                closest city
+            </h1>
+            <p class="title-light-1">
+                1348 Projects around the island
+            </p>
+
+            <div class="city-swiper-box">
+                <div class="swiper city-project-swiper">
+                    <div class="swiper-wrapper">
+
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <p class="city">10M-20M</p>
+                            <span class="noOfProjects">87 projects</span>
+                        </a>
+                        
+
+                    </div>
+                </div>
+
+                <div class="city-swiper-button-next swiper-button-next">
+                </div>
+                <div class="city-swiper-button-prev swiper-button-prev"></div>
+
+            </div>
+
+
+        </div>
+
+        <div class="card property-list-item mb-3">
+    <div class="row flex-column flex-md-row">
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    6
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">1
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">3D
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <h5 class="title-content-1">Rush Reliance</h5>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/most-apprecated.svg" alt=""/>
+                        Rush Lanka Group
+                    </div>
+                    <div class="col d-md-none">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                    <div class="col col-md-auto text-end">
+                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="card property-list-item mb-3">
+    <div class="row flex-column flex-md-row">
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    6
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">1
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">3D
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <h5 class="title-content-1">Rush Reliance</h5>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/most-apprecated.svg" alt=""/>
+                        Rush Lanka Group
+                    </div>
+                    <div class="col d-md-none">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                    <div class="col col-md-auto text-end">
+                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="tour-project px-3 px-lg-4">
+
+            <div class="swiper tour-swiper ms-2 mt-3">
                 <div class="swiper-wrapper">
                     
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <span class="range">Price range</span>
-                        <p class="price">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-
-                </div>
-            </div>
-            <div class="price-range-swiper-button-next swiper-button-next"></div>
-            <div class="price-range-swiper-button-prev swiper-button-prev"></div>
-        </div>
-
-    </div>
-
-    <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
-        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
-            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-            <div class="icons-container">
-                <div class="text-body">
-                    <img src="./assets/img/camera.svg" alt="camera">
-                    6
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/video-camera.svg" alt="video camera">1
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/rotation.svg" alt="rotate">3D
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <div class="card-body">
-                <div class="row mb-2 mb-md-3">
-                    <div class="col">
-                        <h5 class="title-content-1">Rush Reliance</h5>
-                        <div class="location title-light-1 mb-2">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Mount Lavinia
-                        </div>
-                        <div class="title-content-2 price-container">
-                            Rs. 34.5 Mn
-                            <span class="price-label">Upwards</span>
-                            <span class="pt-md-2 pt-lg-0 sqft">
-                                (Price per sqft Rs. 12000)
-                            </span>
-                        </div>
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
                     </div>
-                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                    
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-md-12 col-lg-9 col-xl-8">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
                     </div>
-                </div>
-
-                <a class="btn btn-link mb-2 mb-md-3" href="#">
-                    Show More
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </a>
-
-                <div class="row align-items-end align-items-md-center btn-container">
-                    <div class="col img-container text-body d-none d-md-block">
-
-                        <img src="./assets/img/most-apprecated.svg" alt=""/>
-                        Rush Lanka Group
+                    
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
                     </div>
-                    <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                    
+                    <div class="swiper-slide">
+                        <h1>Discover immersive 360 property tours</h1>
+                        <p>Explore properties from the comfort of your home</p>
+                        <a href="#" class="btn btn-link">VIEW MORE</a>
                     </div>
-                    <div class="col col-md-auto text-end">
-                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="property-type-swiper-container px-3 px-lg-4">
-        <h1 class="title-content-1">
-            Own your dream property now, next year or later
-        </h1>
-
-
-        <div class="property-type-swiper-box">
-            <div class="swiper property-type-swiper">
-                <div class="swiper-wrapper">
-
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/201/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/211/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/221/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/231/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/241/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/251/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/261/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/271/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/281/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/291/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="https://picsum.photos/id/301/270/300" alt="propertyType">
-                        <div class="content">
-                            <p>Residential Apartments</p>
-                            <span>
-                            40 projects
-                        </span>
-                        </div>
-                    </a>
                     
                 </div>
             </div>
-            <div class="property-type-swiper-button-next swiper-button-next"></div>
-            <div class="property-type-swiper-button-prev swiper-button-prev"></div>
-        </div>
 
-    </div>
-
-    <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
-        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
-            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-            <div class="icons-container">
-                <div class="text-body">
-                    <img src="./assets/img/camera.svg" alt="camera">
-                    6
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/video-camera.svg" alt="video camera">1
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/rotation.svg" alt="rotate">3D
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <div class="card-body">
-                <div class="row mb-2 mb-md-3">
-                    <div class="col">
-                        <h5 class="title-content-1">Rush Reliance</h5>
-                        <div class="location title-light-1 mb-2">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Mount Lavinia
-                        </div>
-                        <div class="title-content-2 price-container">
-                            Rs. 34.5 Mn
-                            <span class="price-label">Upwards</span>
-                            <span class="pt-md-2 pt-lg-0 sqft">
-                                (Price per sqft Rs. 12000)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-md-12 col-lg-9 col-xl-8">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <a class="btn btn-link mb-2 mb-md-3" href="#">
-                    Show More
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </a>
-
-                <div class="row align-items-end align-items-md-center btn-container">
-                    <div class="col img-container text-body d-none d-md-block">
-
-                        <img src="./assets/img/most-apprecated.svg" alt=""/>
-                        Rush Lanka Group
-                    </div>
-                    <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
-                    </div>
-                    <div class="col col-md-auto text-end">
-                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="city-projects px-3 px-lg-4">
-
-        <h1 class="title-content-1 mt-2">
-            Find properties fromyour
-            closest city
-        </h1>
-        <p class="title-light-1">
-            1348 Projects around the island
-        </p>
-
-        <div class="city-swiper-box">
-            <div class="swiper city-project-swiper">
-                <div class="swiper-wrapper">
-
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <p class="city">10M-20M</p>
-                        <span class="noOfProjects">87 projects</span>
-                    </a>
-                    
-
-                </div>
-            </div>
-
-            <div class="city-swiper-button-next swiper-button-next">
-            </div>
-            <div class="city-swiper-button-prev swiper-button-prev"></div>
+            <div class="swiper-pagination tour-swiper-pagination"></div>
 
         </div>
 
+        <div class="propertyTool px-3 px-lg-4">
 
-    </div>
+            <h1 class="title-content-1 mt-2">
+                Exclusive Property Tools
+            </h1>
+            <p class="title-light-1">
+                Make your property decisions smart and informed.
+            </p>
 
-    <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
-        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
-            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-            <div class="icons-container">
-                <div class="text-body">
-                    <img src="./assets/img/camera.svg" alt="camera">
-                    6
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/video-camera.svg" alt="video camera">1
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/rotation.svg" alt="rotate">3D
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <div class="card-body">
-                <div class="row mb-2 mb-md-3">
-                    <div class="col">
-                        <h5 class="title-content-1">Rush Reliance</h5>
-                        <div class="location title-light-1 mb-2">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Mount Lavinia
-                        </div>
-                        <div class="title-content-2 price-container">
-                            Rs. 34.5 Mn
-                            <span class="price-label">Upwards</span>
-                            <span class="pt-md-2 pt-lg-0 sqft">
-                                (Price per sqft Rs. 12000)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-md-12 col-lg-9 col-xl-8">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <a class="btn btn-link mb-2 mb-md-3" href="#">
-                    Show More
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </a>
-
-                <div class="row align-items-end align-items-md-center btn-container">
-                    <div class="col img-container text-body d-none d-md-block">
-
-                        <img src="./assets/img/most-apprecated.svg" alt=""/>
-                        Rush Lanka Group
-                    </div>
-                    <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
-                    </div>
-                    <div class="col col-md-auto text-end">
-                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
-        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
-            <span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-            <div class="icons-container">
-                <div class="text-body">
-                    <img src="./assets/img/camera.svg" alt="camera">
-                    6
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/video-camera.svg" alt="video camera">1
-                </div>
-                <div class="text-body">
-                    <img src="./assets/img/rotation.svg" alt="rotate">3D
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <div class="card-body">
-                <div class="row mb-2 mb-md-3">
-                    <div class="col">
-                        <h5 class="title-content-1">Rush Reliance</h5>
-                        <div class="location title-light-1 mb-2">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            Mount Lavinia
-                        </div>
-                        <div class="title-content-2 price-container">
-                            Rs. 34.5 Mn
-                            <span class="price-label">Upwards</span>
-                            <span class="pt-md-2 pt-lg-0 sqft">
-                                (Price per sqft Rs. 12000)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+            <div class="tool-swiper-box">
+                <div class="swiper tool-swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
+                        <a href="#" class="swiper-slide">
+                            <img src="./assets/img/tool-img-1.svg" alt="tool">
+                            <h4>
+                                Home Loan Calculator
+                            </h4>
+                            <p>
+                                Calculate your estimated monthly home loan payment.
+                            </p>
+                        </a>
+                        
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col col-md-12 col-lg-9 col-xl-8">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
-                                </th>
-                                <td>
-                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
-                                </td>
-                                <td>
-                                    <i class="fa fa-car" aria-hidden="true"></i> 1
-                                </td>
-                                <td>680 - 725 sqft</td>
-                                <td>Rs. 34.5Mn - 46.5Mn</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <a class="btn btn-link mb-2 mb-md-3" href="#">
-                    Show More
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </a>
-
-                <div class="row align-items-end align-items-md-center btn-container">
-                    <div class="col img-container text-body d-none d-md-block">
-
-                        <img src="./assets/img/most-apprecated.svg" alt=""/>
-                        Rush Lanka Group
-                    </div>
-                    <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
-                    </div>
-                    <div class="col col-md-auto text-end">
-                        <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
-                    </div>
-                </div>
+                <div class="tool-swiper-button-next swiper-button-next"></div>
+                <div class="tool-swiper-button-prev swiper-button-prev"></div>
 
             </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="tour-project px-3 px-lg-4">
-
-        <div class="swiper tour-swiper ms-2 mt-3">
-            <div class="swiper-wrapper">
-                
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                
-                <div class="swiper-slide">
-                    <h1>Discover immersive 360 property tours</h1>
-                    <p>Explore properties from the comfort of your home</p>
-                    <a href="#" class="btn btn-link">VIEW MORE</a>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="swiper-pagination tour-swiper-pagination"></div>
-
-    </div>
-
-    <div class="propertyTool px-3 px-lg-4">
-
-        <h1 class="title-content-1 mt-2">
-            Exclusive Property Tools
-        </h1>
-        <p class="title-light-1">
-            Make your property decisions smart and informed.
-        </p>
-
-        <div class="tool-swiper-box">
-            <div class="swiper tool-swiper">
-                <div class="swiper-wrapper">
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                    <a href="#" class="swiper-slide">
-                        <img src="./assets/img/tool-img-1.svg" alt="tool">
-                        <h4>
-                            Home Loan Calculator
-                        </h4>
-                        <p>
-                            Calculate your estimated monthly home loan payment.
-                        </p>
-                    </a>
-                    
-                </div>
-            </div>
-
-            <div class="tool-swiper-button-next swiper-button-next"></div>
-            <div class="tool-swiper-button-prev swiper-button-prev"></div>
 
         </div>
 
     </div>
-
 </div>
 
 </section>
 
+
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&v=weekly"
+        defer
+></script>
 
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
 
@@ -2601,6 +2615,9 @@
 
 <script src="assets/js/bootstrap-select.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+
+<script src="assets/js/map.js"></script>
 </body>
 
 </html>

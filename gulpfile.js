@@ -17,6 +17,7 @@ const files = {
     scssPath: '_sass/**/*.scss',
     cssPath: 'assets/css/**/*.scss',
     jsPath: 'assets/js/main.js',
+    jsPath1: 'assets/js/map.js',
     imgPath: 'assets/img/**/*'
 }
 
@@ -34,7 +35,8 @@ function scssTask() {
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
     return src([
-        files.jsPath
+        files.jsPath,
+        files.jsPath1
     ])
         .pipe(uglify())
         .pipe(dest('_site/assets/js/'))
@@ -62,7 +64,7 @@ function jekyllStart() {
 
 function watchTask() {
     watch(files.scssPath, scssTask);
-    watch(files.jsPath, jsTask);
+    watch([files.jsPath,files.jsPath1], jsTask);
     watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll, browserSyncReload));
     watch(files.imgPath, imgTask);
 }
