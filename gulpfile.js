@@ -85,7 +85,7 @@ function browserSyncServe(done) {
 }
 
 function browserSyncReload(done) {
-    browserSync.reload();
+    browserSync.reload({});
     done();
 }
 

@@ -32,9 +32,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
 
       i {
         color: #018E37;
+      }
+      .fa-heart{
+        display: none;
+      }
+    }
+
+    span.active{
+      .fa-heart{
+        display: inline-block;
+      }
+      .fa-heart-o{
+        display: none;
       }
     }
 

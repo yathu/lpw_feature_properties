@@ -85,9 +85,10 @@
     position: fixed;
     right: 0;
     width: 50%;
-    height: calc(100vh - 182px);
+    height: calc(100vh - 88px);
     background-color: white;
     z-index: 999;
+    bottom: 0;
 
     #map {
       height: 100%;

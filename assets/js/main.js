@@ -146,19 +146,19 @@ $(document).ready(function () {
 
     var sqftVal = $('#areaSqftRange').slider("values")[0];
     var sqftVal2 = $('#areaSqftRange').slider("values")[1];
-    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : sqftVal2 + 'M';
+    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : sqftVal2;
 
     $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + sqftVal + "</span>");
     $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + SqftFinalVal2 + "</span>");
 
 
     function appendSqftSliderFirstVal(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
+        var finalVal = value == 0 ? 0 : value;
         $("#areaSqftRange span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastVal(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
+        var finalVal = value == 0 ? 0 : value;
         $("#areaSqftRange span.ui-slider-handle:last span").html(finalVal);
     }
 
@@ -187,31 +187,29 @@ $(document).ready(function () {
 
     var sqftValMobile = $('#areaSqftRangeMobile').slider("values")[0];
     var sqftVal2Mobile = $('#areaSqftRangeMobile').slider("values")[1];
-    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : sqftVal2Mobile + 'M';
+    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : sqftVal2Mobile;
 
     $("#areaSqftRangeMobile span.ui-slider-handle:first").append("<span>" + sqftValMobile + "</span>");
     $("#areaSqftRangeMobile span.ui-slider-handle:last").append("<span>" + SqftFinalVal2Mobile + "</span>");
 
 
     function appendSqftSliderFirstValMobile(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
+        var finalVal = value == 0 ? 0 : value;
         $("#areaSqftRangeMobile span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastValMobile(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
+        var finalVal = value == 0 ? 0 : value;
         $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
     }
+
+
 
     for (let i = 0; i <= 10; i++) {
         var isOdd = (i % 2) !== 0;
         $("#areaSqftLabelsMobile").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i * 500)) + "</span>");
     }
-
     //end mobile sqft
-
-
-
 
 
     //city filter input related
@@ -245,5 +243,12 @@ $(document).ready(function () {
     });
 
     //city filter input related
+
+
+
+    //like property
+    $('.property-love').on('click',function (){
+        $(this).toggleClass('active');
+    });
 
 });
