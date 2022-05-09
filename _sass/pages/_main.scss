@@ -1,6 +1,7 @@
-.modal-backdrop{
- z-index: 999;
+.modal-backdrop {
+  z-index: 999;
 }
+
 .justify-self-end {
   justify-self: self-end !important;
 }
@@ -95,7 +96,7 @@ a {
   color: #171D1F !important;
 }
 
-.dropdown-item.active{
+.dropdown-item.active {
   background-color: #2a8e36;
 }
 
@@ -157,15 +158,17 @@ a {
   color: #202330;
   letter-spacing: 0;
 
-  @media (max-width: 575.98px) {
-    font-size: 18px;
+  @media (min-width: 992px) and (max-width: 1199.8px) {
+    font-size: 30px;
   }
   @media (max-width: 767.98px) {
     font-size: 20px;
   }
-  @media (min-width: 992px) and (max-width: 1199.8px) {
-    font-size: 30px;
+
+  @media (max-width: 575.98px) {
+    font-size: 18px;
   }
+
 }
 
 .title-light-1 {
