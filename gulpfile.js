@@ -79,7 +79,8 @@ function browserSyncServe(done) {
     browserSync.init({
         server: {
             baseDir: "_site"
-        }
+        },
+        online: true
     });
     done();
 }

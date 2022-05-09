@@ -76,11 +76,6 @@
 }
 
 .map-enabled {
-  .map-box{
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
   .mapView {
     position: fixed;
     right: 0;
@@ -90,9 +85,17 @@
     z-index: 999;
     bottom: 0;
 
-    #map {
+
+    .map-box {
+      position: relative;
+      width: 100%;
       height: 100%;
+
+      #map {
+        height: 100%;
+      }
     }
+
   }
 
   > .container {

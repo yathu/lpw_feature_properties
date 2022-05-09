@@ -1,11 +1,11 @@
-$(document).ready(()=>{
-    $('#showOnMap').change((value)=>{
+$(document).ready(() => {
+    $('#showOnMap').change((value) => {
         if ($('#showOnMap').is(':checked')) {
             console.log('checked');
 
             $('#map-parent').addClass('map-enabled');
 
-        }else {
+        } else {
             console.log('not checked');
             $('#map-parent').removeClass('map-enabled');
 
@@ -62,12 +62,45 @@ function initMap() {
         }
     ];
 
+
+    const contentString =
+        '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;">' +
+        '<img style="width: 100%;width: 250px; height: 150px; object-fit: cover;margin-bottom: 15px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
+        '<h1 style="font-family: Rubik-Medium; line-height:1;' + 'font-size: 20px;' + 'color: #202330;' + 'letter-spacing: -0.37px;">JAT - 146 Residents</h1>' +
+        '<p style="font-family: Rubik-Regular; font-size: 16px; color: #71757B; line-height: 1; margin-bottom: 0;"> Thalawathugoda</p>' +
+        '<div style="display: flex; flex-wrap: nowrap; margin-top: 15px; align-items: flex-end">' +
+        '<div style="width: 50%;">' +
+        '<h2 style="font-family: Rubik-Medium; font-size: 18px; color: #029432; line-height: 20px;margin-bottom: 0;">Rs. 34.5 Mn</h2>' +
+        '<h2 style="font-family: Rubik-Medium; font-size: 18px; color: #71757B; line-height: 20px;margin-bottom: 0;">Upwards</h2>' +
+        '</div>' +
+        '<div style="width: 50%;"> ' +
+        '<a href="#" style="text-decoration: none;background-color: #FF4501;width: 100%;font-family: Rubik-Medium;font-size: 14px;color: #FFFFFF;text-align: center; display: block; border-radius: 4px; padding: 10px 15px;">VIEW MORE</a> </div>' +
+        '</div>' +
+        "</div>";
+
+
+
+    const infowindow = new google.maps.InfoWindow({
+        content: contentString,
+    });
+
     // Create markers.
     for (let i = 0; i < features.length; i++) {
         const marker = new google.maps.Marker({
             position: features[i].position,
             map: map,
         });
+
+
+        marker.addListener("click", (val) => {
+            console.log("click", val);
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+        });
+
     }
 }
 
