@@ -76,6 +76,7 @@
 }
 
 .map-enabled {
+
   .mapView {
     position: fixed;
     right: 0;
@@ -84,6 +85,17 @@
     background-color: white;
     z-index: 999;
     bottom: 0;
+
+
+    @media (max-width: 991.98px) {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 74px);
+      margin-bottom: 20px;
+      max-height: 400px;
+
+
+    }
 
 
     .map-box {
@@ -99,8 +111,10 @@
   }
 
   > .container {
-    width: 50%;
-    float: left;
+    @media (min-width: 992px) {
+      width: 50%;
+      float: left;
+    }
   }
 }
 

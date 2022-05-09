@@ -36,6 +36,5 @@ plugins:
 # exclude:
 #   - docs
 
-exclude: [docs]
-
+exclude: [docs, node_modules, Gemfile, Gemfile.lock, feed.xml, gulpfile.js, package.json, package-lock.json,README.md]
 keep_files: [assets]
