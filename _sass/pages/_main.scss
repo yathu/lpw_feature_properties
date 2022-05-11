@@ -45,6 +45,12 @@
   line-height: 1;
 }
 
+.swiper-button-next,.swiper-button-prev {
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+}
+
 a {
   text-decoration: none !important;
 }
@@ -53,6 +59,10 @@ a {
   background: #F8990F !important;
   border-radius: 3px !important;
   border: 0 !important;
+
+  &:hover{
+    color: #FFFFFF;
+  }
 }
 
 .btn-danger {

@@ -41,7 +41,7 @@
 
             <div class="col">
                 <div class="form-floating">
-                    <select id="bedroomSelect" class="form-control selectpicker">
+                    <select id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms">
                         <option>1 Bedroom</option>
                         <option>2 Bedrooms</option>
                         <option>3 Bedrooms</option>
@@ -61,7 +61,9 @@
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton12"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                        <span>0</span> <span>to Any</span>
+                        <span id="budgetStart">0</span>
+                        to
+                        <span id="budgetEnd">Any</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-expanded" aria-labelledby="dropdownMenuButton12">
                         <div class="info d-flex justify-content-between align-items-center">
@@ -100,231 +102,21 @@
 
             <div class="col">
                 <div class="form-floating">
-                    <select id="possesionYear" class="form-control selectpicker">
+                    <select id="possesionYear" class="form-control selectpicker" title="in years">
                         <option value="1">1 year</option>
-                        <option value="2">1 years</option>
+                        <option value="2">2 years</option>
                     </select>
                     <label for="possesionYear">POSSESSION WITHIN</label>
                 </div>
             </div>
 
             <div class="col">
-                <div class="dropdown">
-                    <label>
-                        Location
-                    </label>
-                    <button class="btn dropdown-toggle" type="button" id="locationDropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        City, Area
-                    </button>
-
-                    <div class="dropdown-menu dropdown-menu-expanded p-4" aria-labelledby="locationDropdown">
-
-                        <div class="mb-3">
-                            <label for="cityFilterInput" class="form-label ms-0">Location</label>
-                            <input type="text" class="form-control" id="cityFilterInput" placeholder="Type city name">
-                        </div>
-
-                        <div class="row mx-0">
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo1" id="colombo1">
-                                <label class="form-check-label" for="colombo1">
-                                    Colombo 1
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo2" id="colombo2">
-                                <label class="form-check-label" for="colombo2">
-                                    Colombo 2
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo3" id="colombo3">
-                                <label class="form-check-label" for="colombo3">
-                                    Colombo 3
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo4" id="colombo4">
-                                <label class="form-check-label" for="colombo4">
-                                    Colombo 4
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo5" id="colombo5">
-                                <label class="form-check-label" for="colombo5">
-                                    Colombo 5
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo6" id="colombo6">
-                                <label class="form-check-label" for="colombo6">
-                                    Colombo 6
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo7" id="colombo7">
-                                <label class="form-check-label" for="colombo7">
-                                    Colombo 7
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo8" id="colombo8">
-                                <label class="form-check-label" for="colombo8">
-                                    Colombo 8
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo9" id="colombo9">
-                                <label class="form-check-label" for="colombo9">
-                                    Colombo 9
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo10" id="colombo10">
-                                <label class="form-check-label" for="colombo10">
-                                    Colombo 10
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo11" id="colombo11">
-                                <label class="form-check-label" for="colombo11">
-                                    Colombo 11
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo12" id="colombo12">
-                                <label class="form-check-label" for="colombo12">
-                                    Colombo 12
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo13" id="colombo13">
-                                <label class="form-check-label" for="colombo13">
-                                    Colombo 13
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo14" id="colombo14">
-                                <label class="form-check-label" for="colombo14">
-                                    Colombo 14
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo15" id="colombo15">
-                                <label class="form-check-label" for="colombo15">
-                                    Colombo 15
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo16" id="colombo16">
-                                <label class="form-check-label" for="colombo16">
-                                    Colombo 16
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo17" id="colombo17">
-                                <label class="form-check-label" for="colombo17">
-                                    Colombo 17
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo18" id="colombo18">
-                                <label class="form-check-label" for="colombo18">
-                                    Colombo 18
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo19" id="colombo19">
-                                <label class="form-check-label" for="colombo19">
-                                    Colombo 19
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo20" id="colombo20">
-                                <label class="form-check-label" for="colombo20">
-                                    Colombo 20
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo21" id="colombo21">
-                                <label class="form-check-label" for="colombo21">
-                                    Colombo 21
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo22" id="colombo22">
-                                <label class="form-check-label" for="colombo22">
-                                    Colombo 22
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo23" id="colombo23">
-                                <label class="form-check-label" for="colombo23">
-                                    Colombo 23
-                                </label>
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-lg-4 form-check mb-2">
-                                <input class="form-check-input" type="checkbox" name="filter_location"
-                                       value="colombo24" id="colombo24">
-                                <label class="form-check-label" for="colombo24">
-                                    Colombo 24
-                                </label>
-                            </div>
-                            
-
-                        </div>
-
-                    </div>
-
+                <div class="form-floating">
+                    <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area" multiple>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                    </select>
+                    <label for="possesionYear">Location</label>
                 </div>
             </div>
 
@@ -343,7 +135,7 @@
 
         <div class="col-auto">
 
-            <button type="reset" class="btn btn-reset">
+            <button id="btnResetDesktop" type="reset" class="btn btn-reset">
                 <i class="fa fa-repeat" aria-hidden="true"></i>
                 Reset All
             </button>
@@ -1035,7 +827,7 @@
     </div>
 </div>
 
-<div id="map-parent" class="container-fluid">
+<div id="map-parent" class="container-fluid px-0">
 
     <div class="mapView">
         <div class="map-box">
@@ -1045,9 +837,11 @@
 
     <div class="container">
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1065,6 +859,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1140,13 +941,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -1160,9 +957,11 @@
 </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1180,6 +979,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1255,13 +1061,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -1303,9 +1105,11 @@
 
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1323,6 +1127,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1398,13 +1209,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -1468,9 +1275,11 @@
         </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1488,6 +1297,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1563,13 +1379,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -1583,9 +1395,11 @@
 </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1603,6 +1417,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1678,13 +1499,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -1778,9 +1595,11 @@
         </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -1798,6 +1617,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -1873,13 +1699,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -2023,9 +1845,11 @@
         </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -2043,6 +1867,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -2118,13 +1949,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -2217,9 +2044,11 @@
         </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -2237,6 +2066,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -2312,13 +2148,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
@@ -2332,9 +2164,11 @@
 </div>
 
         <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -2352,6 +2186,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -2427,13 +2268,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
-    8% rental yield
-</a>
-<span class="text-body d-inline-block">
-    Completion: 2024
-</span>
-
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>

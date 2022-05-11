@@ -1,7 +1,9 @@
 <div class="card property-list-item mb-3">
-    <div class="row flex-column flex-md-row">
+    <div class="row flex-column flex-md-row position-relative">
+
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
             <img src="assets/img/building.png" class="img-fluid" alt="property">
+
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -19,6 +21,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
         <div class="col-12 col-md-8 col-lg-9">
             <div class="card-body">
                 <div class="row mb-2 mb-md-3">
@@ -88,7 +97,9 @@
                         Rush Lanka Group
                     </div>
                     <div class="col d-md-none">
-                        {% include rental_complete_btn.html %}
+                        <span class="text-body d-inline-block">
+                            Completion: 2024
+                         </span>
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>

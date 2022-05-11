@@ -21,6 +21,7 @@ $(document).ready(function () {
     new Swiper(".property-type-swiper", {
         slidesPerView: 'auto',
         spaceBetween: 15,
+        centeredSlides: false,
         navigation: {
             nextEl: ".property-type-swiper-button-next",
             prevEl: ".property-type-swiper-button-prev",
@@ -34,13 +35,17 @@ $(document).ready(function () {
             nextEl: ".city-swiper-button-next",
             prevEl: ".city-swiper-button-prev",
         },
+        centeredSlides: false,
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 2,
+                slidesPerView: 'auto',
                 // spaceBetween: 20
             },
-            768:{
+            576: {
+                slidesPerView: 'auto',
+            },
+            768: {
                 slidesPerView: 'auto',
             }
             // // when window width is >= 480px
@@ -63,6 +68,9 @@ $(document).ready(function () {
             el: ".tour-swiper-pagination",
             clickable: true,
         },
+        autoplay: {
+            delay: 10000,
+        }
     });
 
     new Swiper(".tool-swiper", {
@@ -75,10 +83,13 @@ $(document).ready(function () {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 2,
+                slidesPerView: 'auto',
                 // spaceBetween: 20
             },
-            768:{
+            576: {
+                slidesPerView: 'auto',
+            },
+            768: {
                 slidesPerView: 'auto',
             }
             // // when window width is >= 480px
@@ -99,7 +110,7 @@ $(document).ready(function () {
         range: true,
         min: 0,
         max: 100,
-        step:5,
+        step: 5,
         values: [0, 5],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
@@ -110,7 +121,7 @@ $(document).ready(function () {
     });
 
     var val = $('#budgetRange').slider("values")[0];
-    var finalVal1 = val == 0 ? 0 : (val+'M');
+    var finalVal1 = val == 0 ? 0 : (val + 'M');
 
     $("#budgetRange span.ui-slider-handle:first").append("<span>" + finalVal1 + "</span>");
     var val2 = $('#budgetRange').slider("values")[1];
@@ -118,7 +129,7 @@ $(document).ready(function () {
     $("#budgetRange span.ui-slider-handle:last").append("<span>" + finalVal2 + "</span>");
 
     $('#budgetStart').html(finalVal1);
-    $('#budgetEnd').html(val2+'M');
+    $('#budgetEnd').html(val2 + 'M');
 
     function appendSliderFirstVal(value) {
         var finalVal = value == 0 ? 0 : value + 'M';
@@ -212,7 +223,6 @@ $(document).ready(function () {
     }
 
 
-
     for (let i = 0; i <= 10; i++) {
         var isOdd = (i % 2) !== 0;
         $("#areaSqftLabelsMobile").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i * 500)) + "</span>");
@@ -253,19 +263,18 @@ $(document).ready(function () {
     //city filter input related
 
 
-
     //like property
-    $('.property-love').on('click',function (){
+    $('.property-love').on('click', function () {
         $(this).toggleClass('active');
     });
 
 
     //reset desktop
-    $('#btnResetDesktop').on("click",function () {
+    $('#btnResetDesktop').on("click", function () {
         $('.selectpicker').selectpicker('deselectAll');
         $('.selectpicker').selectpicker('val', '');
 
-        $('#budgetRange').slider('option',{values: [0, 5]});
+        $('#budgetRange').slider('option', {values: [0, 5]});
         $('#budgetStart').html('0');
         $('#budgetEnd').html('5M');
 
