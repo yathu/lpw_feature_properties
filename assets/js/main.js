@@ -99,30 +99,38 @@ $(document).ready(function () {
         range: true,
         min: 0,
         max: 100,
-        // step:10,
-        values: [25, 75],
+        step:5,
+        values: [0, 5],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             appendSliderFirstVal(ui.values[0]);
             appendSliderLastVal(ui.values[1]);
+
         }
     });
 
     var val = $('#budgetRange').slider("values")[0];
-    $("#budgetRange span.ui-slider-handle:first").append("<span>" + val + "</span>");
+    var finalVal1 = val == 0 ? 0 : (val+'M');
+
+    $("#budgetRange span.ui-slider-handle:first").append("<span>" + finalVal1 + "</span>");
     var val2 = $('#budgetRange').slider("values")[1];
     var finalVal2 = val2 == 0 ? 0 : val2 + 'M';
     $("#budgetRange span.ui-slider-handle:last").append("<span>" + finalVal2 + "</span>");
 
+    $('#budgetStart').html(finalVal1);
+    $('#budgetEnd').html(val2+'M');
 
     function appendSliderFirstVal(value) {
         var finalVal = value == 0 ? 0 : value + 'M';
         $("#budgetRange span.ui-slider-handle:first span").html(finalVal);
+        $('#budgetStart').html(finalVal);
+
     }
 
     function appendSliderLastVal(value) {
         var finalVal = value == 0 ? 0 : value + 'M';
         $("#budgetRange span.ui-slider-handle:last span").html(finalVal);
+        $('#budgetEnd').html(finalVal);
     }
 
     //budget slider labels
@@ -213,34 +221,34 @@ $(document).ready(function () {
 
 
     //city filter input related
-    $('#cityFilterInput').on('keyup', function () {
-        var value = this.value;
-        console.log(value);
-
-        $("input[name='filter_location']").each(function (index, obj) {
-            if ($(this).val().indexOf(value) != -1) {
-                $(this).parent('.form-check').show();
-            } else {
-                $(this).parent('.form-check').hide();
-            }
-        });
-
-    });
+    // $('#cityFilterInput').on('keyup', function () {
+    //     var value = this.value;
+    //     console.log(value);
+    //
+    //     $("input[name='filter_location']").each(function (index, obj) {
+    //         if ($(this).val().indexOf(value) != -1) {
+    //             $(this).parent('.form-check').show();
+    //         } else {
+    //             $(this).parent('.form-check').hide();
+    //         }
+    //     });
+    //
+    // });
 
     //city filter input related
-    $('#cityFilterInputMobile').on('keyup',function () {
-        var value = this.value;
-        console.log(value);
-
-        $("input[name='filter_location_mobile']").each(function (index, obj) {
-            if ($(this).val().indexOf(value) != -1) {
-                $(this).parent('.form-check').show();
-            } else {
-                $(this).parent('.form-check').hide();
-            }
-        });
-
-    });
+    // $('#cityFilterInputMobile').on('keyup',function () {
+    //     var value = this.value;
+    //     console.log(value);
+    //
+    //     $("input[name='filter_location_mobile']").each(function (index, obj) {
+    //         if ($(this).val().indexOf(value) != -1) {
+    //             $(this).parent('.form-check').show();
+    //         } else {
+    //             $(this).parent('.form-check').hide();
+    //         }
+    //     });
+    //
+    // });
 
     //city filter input related
 
@@ -252,6 +260,16 @@ $(document).ready(function () {
     });
 
 
-    //
+    //reset desktop
+    $('#btnResetDesktop').on("click",function () {
+        $('.selectpicker').selectpicker('deselectAll');
+        $('.selectpicker').selectpicker('val', '');
+
+        $('#budgetRange').slider('option',{values: [0, 5]});
+        $('#budgetStart').html('0');
+        $('#budgetEnd').html('5M');
+
+
+    });
 
 });

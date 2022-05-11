@@ -42,8 +42,17 @@
         top: 8px !important;
         width: calc(100% + 24px);
 
+        input:focus{
+          box-shadow: none !important;
+        }
+
         .inner,.show{
           overflow: hidden;
+          width: 100% !important;
+
+          span.check-mark:after{
+            color: #018e37;
+          }
         }
 
         input {
