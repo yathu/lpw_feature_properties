@@ -281,4 +281,15 @@ $(document).ready(function () {
 
     });
 
+
+    $('#btnResetMobile').on('click',function () {
+        $('.selectpicker').selectpicker('deselectAll');
+        $('.selectpicker').selectpicker('val', '');
+
+        $('#areaSqftRangeMobile').slider('option', {values: [0, 0]});
+
+        appendSqftSliderFirstValMobile(0);
+        appendSqftSliderLastValMobile(0);
+    });
+
 });

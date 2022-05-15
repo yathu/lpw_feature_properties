@@ -41,6 +41,7 @@
         left: -12px !important;
         top: 8px !important;
         width: calc(100% + 24px);
+        padding: 10px 0;
 
         input:focus{
           box-shadow: none !important;
@@ -53,6 +54,9 @@
           span.check-mark:after{
             color: #018e37;
           }
+          .dropdown-item{
+            padding: 0.5rem 1rem;
+          }
         }
 
         input {
@@ -60,6 +64,9 @@
           font-size: 16px;
           color: #4E5156;
           line-height: 20px;
+          &:hover{
+            border: 1px solid #ced4da;
+          }
         }
 
         .form-check > label {
@@ -451,6 +458,17 @@
     }
     .modal-body{
       overflow-y: scroll;
+      overflow-x: hidden;
+      padding: 25px;
+
+      .form-control,.form-control:focus{
+        font-family: Rubik-Regular;
+        font-size: 15px;
+        color: #4E5156;
+        line-height: 20px;
+        border: 1px solid #ced4da !important;
+        box-shadow: none!important;
+      }
 
       .chip-check {
         display: flex;
@@ -493,11 +511,41 @@
           border: 1px solid #018E37;
           border-radius: 18px;
         }
-
-
-
       }
 
+      label{
+        font-family: Rubik-Medium;
+        font-size: 13px;
+        color: #A0A5AD;
+        line-height: 25px;
+      }
+
+      .form-control{
+          box-shadow: none!important;
+        }
+
+        .dropdown-toggle{
+          font-family: Rubik-Regular;
+          font-size: 15px;
+          color: #4e5156;
+          line-height: 20px;
+
+          &:focus{
+            outline: none !important;
+          }
+        }
+        input{
+          box-shadow: none !important;
+        }
+
+
+
+    }
+
+    .modal-footer{
+      button{
+        text-decoration: none !important;
+      }
     }
   }
 }

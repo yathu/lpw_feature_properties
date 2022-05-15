@@ -75,9 +75,10 @@
 
             <div class="col">
                 <div class="form-floating">
-                    <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area" multiple>
-                        <option value="1">1 year</option>
-                        <option value="2">2 years</option>
+                    <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area"
+                            multiple>
+                        <option value="1">Colombo 1</option>
+                        <option value="2">Colombo 2</option>
                     </select>
                     <label for="possesionYear">Location</label>
                 </div>
@@ -322,67 +323,73 @@
 <div class="modal fade mobile-search-modal" id="mobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
+        <form>
         <div class="modal-content">
+
             <div class="modal-header">
                 <h5 class="modal-title title-content-2" id="exampleModalLabel">Search Filters</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
-                <form>
+                    <div class="mb-3">
+                        <label for="possesionYear">Location</label>
+                        <select id="cityMobile" class="form-control selectpicker" data-live-search="true"
+                                title="City, Area" multiple>
+                            <option value="1">Colombo 1</option>
+                            <option value="2">Colombo 2</option>
+                        </select>
+                    </div>
+
 
                     <div class="mb-3">
-                        <div class="">
-                            <div class="mb-3">
-                                <label for="cityFilterInput" class="form-label ms-0">Location</label>
-                                <input type="text" class="form-control" id="cityFilterInputMobile"
-                                       placeholder="Type city name">
+                        <label class="form-label">BEDROOMS</label>
+                        <div class="mb-1 chip-check">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="anyBedroom">
+                                <label class="form-check-label" for="anyBedroom">
+                                    Any
+                                </label>
                             </div>
 
-                            <div class="row mx-0">
-                                {% for i in (1..24) %}
-                                <div class="col-6 col-sm-6 col-lg-4 form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" name="filter_location_mobile"
-                                           value="colombo{{i}}" id="mobile_colombo{{i}}">
-                                    <label class="form-check-label" for="colombo{{i}}">
-                                        Colombo {{i}}
-                                    </label>
-                                </div>
-                                {% endfor %}
-
+                            {% for i in (1..5) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="{{i}}Room">
+                                <label class="form-check-label" for="{{i}}Room">
+                                    {{i}} + Rooms
+                                </label>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
 
-
                     <div class="mb-3">
-                        <label for="bedroom_mobile" class="form-label">BEDROOMS</label>
-                        <select id="bedroom_mobile" class="form-control selectpicker">
-                            <option>1 Bedroom</option>
-                            <option>2 Bedrooms</option>
-                        </select>
+                        <label class="form-label">POSSESSION WITHIN</label>
+                        <div class="mb-1 chip-check">
+
+                            {% for i in (1..5) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="{{i}}year">
+                                <label class="form-check-label" for="{{i}}year">
+                                    {{i}} + year
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="bedroom_mobile" class="form-label">POSSESSION WITHIN</label>
-                        <select id="possession_mobile" class="form-control selectpicker">
-                            <option>1 Bedroom</option>
-                            <option>2 Bedrooms</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">BUDGET</label>
+                        <label class="form-label">BUDGET</label>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name"
-                                       aria-label="First name">
+                                <input type="text" class="form-control" placeholder="0">
                             </div>
                             <div class="col-auto">
                                 To
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                <input type="text" class="form-control" placeholder="any">
                             </div>
                         </div>
                     </div>
@@ -549,17 +556,14 @@
                             </div>
                         </div>
                     </div>
-
-                </form>
             </div>
-
-
             <div class="modal-footer row mx-0 d-flex justify-content-between">
                 <div class="col-auto p-0">
-                    <a href="#" class="btn btn-link btn-reset me-3 bg-transparent">
+
+                    <button type="reset" id="btnResetMobile" href="#" class="btn btn-link btn-reset me-3 bg-transparent">
                         <i class="fa fa-repeat" aria-hidden="true"></i>
                         Reset All
-                    </a>
+                    </button>
                 </div>
                 <div class="col-auto p-0">
                     <a href="#" class="btn btn-custom-primary px-5">
@@ -569,5 +573,6 @@
             </div>
 
         </div>
+        </form>
     </div>
 </div>
