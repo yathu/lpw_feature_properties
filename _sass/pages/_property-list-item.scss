@@ -76,6 +76,7 @@
         line-height: 1 !important;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
 
         img {
           margin-right: 3px;
@@ -143,6 +144,7 @@
       tr{
         td,th{
           font-weight: normal;
+          padding: 5px;
           @media (max-width: 575.98px) {
             padding: 4px;
           }

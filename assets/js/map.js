@@ -1,4 +1,6 @@
+
 $(document).ready(() => {
+
     $('#showOnMap').change((value) => {
         if ($('#showOnMap').is(':checked')) {
             console.log('checked');
@@ -14,13 +16,12 @@ $(document).ready(() => {
 
 });
 
-
 let map;
-
 function initMap() {
+
     map = new google.maps.Map(document.getElementById("map"), {
         center: new google.maps.LatLng(-33.91722, 151.23064),
-        zoom: 16,
+        zoom: 10,
     });
 
     const features = [
@@ -85,23 +86,44 @@ function initMap() {
     });
 
     // Create markers.
-    for (let i = 0; i < features.length; i++) {
+   const markers = features.map((data,i)=>{
         const marker = new google.maps.Marker({
-            position: features[i].position,
+            position: data.position,
             map: map,
         });
 
 
-        marker.addListener("click", (val) => {
-            console.log("click", val);
-            infowindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
-            });
-        });
+        // marker.addListener("click", (val) => {
+        //     console.log("click", val);
+        //     infowindow.open({
+        //         anchor: marker,
+        //         map,
+        //         shouldFocus: false,
+        //     });
+        // });
 
-    }
+       marker.addListener('mouseover', function() {
+           infowindow.open({
+               anchor: marker,
+               map,
+               shouldFocus: false,
+           });
+       });
+
+// assuming you also want to hide the infowindow when user mouses-out
+       marker.addListener('mouseout', function() {
+           infowindow.close();
+       });
+
+        return marker;
+    });
+
+   console.log(markers);
+
+    // new MarkerClusterer({ markers, map });
+    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
+
+
 }
 
 window.initMap = initMap;

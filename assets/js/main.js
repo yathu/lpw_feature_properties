@@ -282,7 +282,7 @@ $(document).ready(function () {
     });
 
 
-    $('#btnResetMobile').on('click',function () {
+    $('#btnResetMobile').on('click', function () {
         $('.selectpicker').selectpicker('deselectAll');
         $('.selectpicker').selectpicker('val', '');
 
@@ -291,5 +291,56 @@ $(document).ready(function () {
         appendSqftSliderFirstValMobile(0);
         appendSqftSliderLastValMobile(0);
     });
+
+
+    // function solution(message, K) {
+    //     var trimmedString = message.substr(0, K);
+    //
+    //     if (message.charAt(K - 1) == ' ' || message.charAt(K + 1) == ' ' || message.charAt(K).toString() == ' ' || message.length < K) {
+    //         return trimmedString.trim();
+    //     } else {
+    //         trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
+    //         return trimmedString;
+    //     }
+    // }
+    //
+    // var msg = "Codility We test coders";
+    // var msg2 = "Why not";
+    //
+    // var output = solution(msg2, 100);
+    //
+    // console.log("==>", output);
+
+    // function solution(A) {
+    //
+    //     const array = A.sort(function(a, b) {
+    //         return b - a;
+    //     });
+    //
+    //     var sumofArr = array.reduce((firstNum, nextNum) => firstNum + nextNum, 0);
+    //
+    //     let filters = 0;
+    //     let newArr = [...array];
+    //
+    //     for (let i = 0; i<array.length; i++){
+    //
+    //         var sumofnewArr = newArr.reduce((firstNum, nextNum) => firstNum + nextNum, 0);
+    //         var nextindex = i == array.length -1 ? i : i+1;
+    //
+    //         while (newArr[i] >= array[nextindex] && sumofnewArr >= (sumofArr/2)) {
+    //             console.log('...................................');
+    //             newArr[i] = newArr[i]/2;
+    //             filters = filters + 1;
+    //         }
+    //     }
+    //
+    //     console.log('filters==>',filters);
+    //     return filters;
+    //
+    // }
+    //
+    // var arr = [5, 19, 8, 1];
+    //
+    // solution(arr);
 
 });

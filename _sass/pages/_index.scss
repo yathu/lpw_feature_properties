@@ -80,7 +80,7 @@
   .mapView {
     position: fixed;
     right: 0;
-    width: 50%;
+    width: 30%;
     height: calc(100vh - 88px);
     background-color: white;
     z-index: 999;
@@ -112,7 +112,7 @@
 
   > .container {
     @media (min-width: 992px) {
-      width: 50%;
+      width: 70%;
       float: left;
     }
   }
