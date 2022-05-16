@@ -118,7 +118,19 @@ function initMap() {
         return marker;
     });
 
-   console.log(markers);
+   // console.log(markers);
+
+    $( ".property-list-item" ).hover(
+        function() {
+            const index = $(this).data("index");
+            google.maps.event.trigger(markers[index], 'mouseover');
+            }, function() {
+
+            const index = $(this).data("index");
+            google.maps.event.trigger(markers[index], 'mouseout');
+
+        }
+    );
 
     // new MarkerClusterer({ markers, map });
     const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });

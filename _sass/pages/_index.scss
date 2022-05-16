@@ -105,6 +105,11 @@
 
       #map {
         height: 100%;
+
+        .gm-ui-hover-effect {
+          display: none !important;
+        }
+
       }
     }
 
@@ -240,7 +245,7 @@
       }
     }
 
-    .price-range-swiper-button-next, .price-range-swiper-button-prev {
+    .swiper-button-next, .swiper-button-prev {
       @extend .custom-swiper-nav;
     }
 
@@ -256,6 +261,17 @@
       display: none;
     }
 
+  }
+
+  .location-swiper-container{
+    span.range,p.price,span.noOfProjects{
+      color: #f54505 !important;
+    }
+  }
+  .type-swiper-container{
+    span.range,p.price,span.noOfProjects{
+      color: #2c9431 !important;
+    }
   }
 
 }

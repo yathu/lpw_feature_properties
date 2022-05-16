@@ -713,7 +713,7 @@
     </div>
 
     <div class="container">
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -833,7 +833,7 @@
     </div>
 </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -981,7 +981,7 @@
 </div>
 
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -1151,7 +1151,7 @@
             </div>
         </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -1271,7 +1271,7 @@
     </div>
 </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -1394,84 +1394,259 @@
 
         <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
             <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
-            <p class="title-light-1">
+            <p class="title-light-1 mb-3">
                 Projects based on your preferred possession date
             </p>
 
-            <div class="price-range-swiper-container">
-                <div class="swiper priceRangeSwiper">
-                    <div class="swiper-wrapper">
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
-                        <a href="#" class="swiper-slide">
-                            <span class="range">Price range</span>
-                            <p class="price">10M-20M</p>
-                            <span class="noOfProjects">87 projects</span>
-                        </a>
-                        
+            <!--            <div class="mb-4">-->
+            <!--                <button class="btn btn-outline-danger">-->
+            <!--                    price-->
+            <!--                </button>-->
+            <!--                <button class="btn btn-outline-danger mx-2">-->
+            <!--                    Location-->
+            <!--                </button>-->
+            <!--                <button class="btn btn-outline-danger">-->
+            <!--                    Other-->
+            <!--                </button>-->
+            <!--            </div>-->
 
+            <nav class="mb-4">
+                <div class="nav nav-pills" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Price
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Location
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Other
+                    </button>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="price-range-swiper-container">
+                        <div id="priceRangeSwiper" class="swiper priceRangeSwiper">
+                            <div class="swiper-wrapper">
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">1M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">2M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">3M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">4M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">5M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">6M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">7M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">8M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">9M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+
+                            </div>
+                        </div>
+                        <div class="price-range-swiper-button-next swiper-button-next"></div>
+                        <div class="price-range-swiper-button-prev swiper-button-prev"></div>
                     </div>
                 </div>
-                <div class="price-range-swiper-button-next swiper-button-next"></div>
-                <div class="price-range-swiper-button-prev swiper-button-prev"></div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="price-range-swiper-container location-swiper-container">
+                        <div id="locationRangeSwiper" class="swiper priceRangeSwiper">
+                            <div class="swiper-wrapper">
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+
+                            </div>
+                        </div>
+                        <div class="price-range-swiper-button-next-1 swiper-button-next"></div>
+                        <div class="price-range-swiper-button-prev-1 swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="price-range-swiper-container type-swiper-container">
+                        <div id="otherRangeSwiper" class="swiper priceRangeSwiper">
+                            <div class="swiper-wrapper">
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+                                <a href="#" class="swiper-slide">
+                                    <span class="range">Price range</span>
+                                    <p class="price">10M-20M</p>
+                                    <span class="noOfProjects">87 projects</span>
+                                </a>
+                                
+
+                            </div>
+                        </div>
+                        <div class="price-range-swiper-button-next-2 swiper-button-next"></div>
+                        <div class="price-range-swiper-button-prev-2 swiper-button-prev"></div>
+                    </div>
+                </div>
             </div>
+
 
         </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -1721,7 +1896,7 @@
 
         </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -1920,7 +2095,7 @@
 
         </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
@@ -2040,7 +2215,7 @@
     </div>
 </div>
 
-        <div class="card property-list-item mb-3">
+        <div class="card property-list-item mb-3" data-index="5">
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">

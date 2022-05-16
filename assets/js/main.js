@@ -9,12 +9,30 @@ $(document).ready(function () {
 
     // myModal.show();
 
-    new Swiper(".priceRangeSwiper", {
+    new Swiper("#priceRangeSwiper", {
         slidesPerView: 'auto',
         spaceBetween: 15,
         navigation: {
             nextEl: ".price-range-swiper-button-next",
             prevEl: ".price-range-swiper-button-prev",
+        },
+    });
+
+    new Swiper("#locationRangeSwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        navigation: {
+            nextEl: ".price-range-swiper-button-next-1",
+            prevEl: ".price-range-swiper-button-prev-1",
+        },
+    });
+
+    new Swiper("#otherRangeSwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        navigation: {
+            nextEl: ".price-range-swiper-button-next-2",
+            prevEl: ".price-range-swiper-button-prev-2",
         },
     });
 
