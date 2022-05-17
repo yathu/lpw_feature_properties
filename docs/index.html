@@ -39,6 +39,18 @@
     <form class="col row align-items-center mx-0 d-none d-lg-flex">
         <div class="col row controls align-items-stretch mx-0">
 
+
+            <div class="col">
+                <div class="form-floating">
+                    <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area"
+                            multiple>
+                        <option value="1">Colombo 1</option>
+                        <option value="2">Colombo 2</option>
+                    </select>
+                    <label for="possesionYear">Location</label>
+                </div>
+            </div>
+
             <div class="col">
                 <div class="form-floating">
                     <select id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms">
@@ -65,35 +77,67 @@
                         to
                         <span id="budgetEnd">Any</span>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-expanded" aria-labelledby="dropdownMenuButton12">
-                        <div class="info d-flex justify-content-between align-items-center">
-                            <label>
-                                Budget
-                            </label>
 
-                            <div class="switch-container">
-                                <span>
-                                    Selling Price
-                                </span>
-                                <div class="form-check form-switch form-switch-md">
+                    <div class="dropdown-menu dropdown-menu-expanded" aria-labelledby="dropdownMenuButton12" onclick="event.stopPropagation()">
 
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                        <div class="row g-0 button-container">
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="budgetType" id="option1" autocomplete="off" checked>
+                                <label class="btn btn-success w-100" for="option1">Total</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="budgetType" id="option2" autocomplete="off">
+                                <label class="btn btn-success w-100" for="option2">Per SQFT</label>
+                            </div>
+                        </div>
+
+                        <div class="row g-0 mt-2">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Min Price">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Min Price">
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label rubik-light mt-1" for="gridCheck" style="color: #000 !important; text-transform: none; font-size: 14px;">
+                                        Includes Ads without price
                                     </label>
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                           id="flexSwitchCheckDefault">
                                 </div>
-                                <span>
-                                    Price per SQFT
-                                </span>
                             </div>
                         </div>
 
-                        <div class="slider-range-container">
-                            <div class="slider-range" id="budgetRange">
-                            </div>
-                            <div id="budget-labels" class="sliderLabels">
-                            </div>
-                        </div>
+
+                        <!--                        <div class="info d-flex justify-content-between align-items-center">-->
+                        <!--                            <label>-->
+                        <!--                                Budget-->
+                        <!--                            </label>-->
+
+                        <!--                            <div class="switch-container">-->
+                        <!--                                <span>-->
+                        <!--                                    Selling Price-->
+                        <!--                                </span>-->
+                        <!--                                <div class="form-check form-switch form-switch-md">-->
+
+                        <!--                                    <label class="form-check-label" for="flexSwitchCheckDefault">-->
+                        <!--                                    </label>-->
+                        <!--                                    <input class="form-check-input" type="checkbox" role="switch"-->
+                        <!--                                           id="flexSwitchCheckDefault">-->
+                        <!--                                </div>-->
+                        <!--                                <span>-->
+                        <!--                                    Price per SQFT-->
+                        <!--                                </span>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+
+                        <!--                        <div class="slider-range-container">-->
+                        <!--                            <div class="slider-range" id="budgetRange">-->
+                        <!--                            </div>-->
+                        <!--                            <div id="budget-labels" class="sliderLabels">-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
                     </div>
                 </div>
@@ -110,16 +154,7 @@
                 </div>
             </div>
 
-            <div class="col">
-                <div class="form-floating">
-                    <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area"
-                            multiple>
-                        <option value="1">Colombo 1</option>
-                        <option value="2">Colombo 2</option>
-                    </select>
-                    <label for="possesionYear">Location</label>
-                </div>
-            </div>
+
 
             <div class="col">
                 <div class="dropdown overflow-hidden">
@@ -361,13 +396,13 @@
      aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <form>
-        <div class="modal-content">
+            <div class="modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title title-content-2" id="exampleModalLabel">Search Filters</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+                <div class="modal-header">
+                    <h5 class="modal-title title-content-2" id="exampleModalLabel">Search Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
                     <div class="mb-3">
                         <label for="possesionYear">Location</label>
@@ -649,23 +684,24 @@
                             </div>
                         </div>
                     </div>
-            </div>
-            <div class="modal-footer row mx-0 d-flex justify-content-between">
-                <div class="col-auto p-0">
-
-                    <button type="reset" id="btnResetMobile" href="#" class="btn btn-link btn-reset me-3 bg-transparent">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        Reset All
-                    </button>
                 </div>
-                <div class="col-auto p-0">
-                    <a href="#" class="btn btn-custom-primary px-5">
-                        FILTER
-                    </a>
-                </div>
-            </div>
+                <div class="modal-footer row mx-0 d-flex justify-content-between">
+                    <div class="col-auto p-0">
 
-        </div>
+                        <button type="reset" id="btnResetMobile" href="#"
+                                class="btn btn-link btn-reset me-3 bg-transparent">
+                            <i class="fa fa-repeat" aria-hidden="true"></i>
+                            Reset All
+                        </button>
+                    </div>
+                    <div class="col-auto p-0">
+                        <a href="#" class="btn btn-custom-primary px-5">
+                            FILTER
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </form>
     </div>
 </div>
@@ -717,7 +753,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -761,7 +798,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -837,7 +874,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -881,7 +919,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -985,7 +1023,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -1029,7 +1068,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -1111,7 +1150,7 @@
                     </p>
                 </div>
                 <div class="col-auto d-none d-md-flex flex-column">
-                    <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                    <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -1155,7 +1194,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -1199,7 +1239,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -1275,7 +1315,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -1319,7 +1360,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -1650,7 +1691,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -1694,7 +1736,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -1900,7 +1942,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -1944,7 +1987,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -2099,7 +2142,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -2143,7 +2187,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -2219,7 +2263,8 @@
     <div class="row flex-column flex-md-row position-relative">
 
         <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
-            <img src="assets/img/building.png" class="img-fluid" alt="property">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
 
             <span class="property-love">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -2263,7 +2308,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
-                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
     8% rental yield
 </a>
 <span class="text-body d-inline-block">
@@ -2336,7 +2381,7 @@
 </div>
 
 
-        <div class="tour-project px-3 px-lg-4">
+        <div class="tour-project px-3 px-lg-4 d-none d-md-block">
 
             <div class="swiper tour-swiper ms-2 mt-3">
                 <div class="swiper-wrapper">

@@ -162,6 +162,10 @@ a {
   @include switch('xl');
 }
 
+.rubik-light{
+  font-family: Rubik-Light !important;
+}
+
 .title-light {
   font-family: Rubik-Light;
   font-size: 35px;
@@ -179,6 +183,10 @@ a {
     font-size: 18px;
   }
 
+}
+
+.cursor-auto{
+  cursor: auto !important;
 }
 
 .title-light-1 {

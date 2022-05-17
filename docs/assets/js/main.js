@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    // $('#budgetDropMenu').on('click',function (){
+    //     e.stopPropagation();
+    // });
+
     $('#testpicker').selectpicker();
     $('#possesionYear').selectpicker();
     $('#bedroom_mobile').selectpicker();

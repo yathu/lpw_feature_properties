@@ -61,7 +61,7 @@
 
         input {
           font-family: Rubik-Regular;
-          font-size: 16px;
+          font-size: 15px;
           color: #4E5156;
           line-height: 20px;
           &:hover{
@@ -83,7 +83,7 @@
 
       .budget-dropdown {
         .dropdown-menu {
-          padding: 15px 45px 15px 25px;
+          padding: 15px;
 
           label {
             font-family: Rubik-Medium;
@@ -91,6 +91,47 @@
             color: #A0A5AD;
             line-height: 20px;
             text-transform: uppercase;
+          }
+
+          .button-container{
+
+            .col:nth-child(1){
+              label{
+                border-right: 0px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+            }
+            .col:nth-child(2){
+              label{
+                border-left: 0px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+              }
+            }
+
+            label{
+              color: #FFFFFF;
+              padding: 10px 10px;
+              font-family: Rubik-Regular;
+              font-size: 14px;
+              text-transform: none;
+            }
+
+            .btn.btn-success{
+              background-color: #24c87c;
+              border-color: #2a8e36;
+              box-shadow: none !important;
+              color: #000;
+
+            }
+
+            .btn-check:checked+.btn-success{
+              color: #fff;
+              background-color: #2a8e36;
+              border-color: #2a8e36;
+            }
+
           }
 
           div.switch-container {
@@ -162,6 +203,7 @@
         font-size: 13px;
         color: #A0A5AD;
         line-height: 20px;
+        text-transform: uppercase;
 
         @media (min-width: 992px) and (max-width: 1199.8px) {
           font-size: 11px;
@@ -500,6 +542,7 @@
           border-radius: 25px;
           padding: 9px 15px;
           line-height: 1;
+          text-transform: capitalize;
         }
 
 
@@ -518,6 +561,7 @@
         font-size: 13px;
         color: #A0A5AD;
         line-height: 25px;
+        text-transform: uppercase;
       }
 
       .form-control{
