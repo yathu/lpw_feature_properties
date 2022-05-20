@@ -1,6 +1,10 @@
 
 $(document).ready(() => {
 
+    $(".mapView").scroll(function() {
+        console.log('scrool.....');
+    });
+
     $('#showOnMap').change((value) => {
         if ($('#showOnMap').is(':checked')) {
             console.log('checked');
@@ -132,8 +136,7 @@ function initMap() {
         }
     );
 
-    // new MarkerClusterer({ markers, map });
-    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
+    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers});
 
 
 }

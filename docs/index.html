@@ -35,7 +35,7 @@
 </video>
 -->
 
-<div class="filter-form-container row w-100 align-items-center mx-0 sticky-top">
+<div class="filter-form-container row w-100 align-items-center mx-0">
     <form class="col row align-items-center mx-0 d-none d-lg-flex">
         <div class="col row controls align-items-stretch mx-0">
 
@@ -91,12 +91,58 @@
                             </div>
                         </div>
 
-                        <div class="row g-0 mt-2">
+                        <div class="row g-0 gx-1 mt-2">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Min Price">
+                                <select id="minPrice" class="form-select">
+                                    <option value="0">0</option>
+                                    
+                                    <option value="1M">1M</option>
+                                    
+                                    <option value="2M">2M</option>
+                                    
+                                    <option value="3M">3M</option>
+                                    
+                                    <option value="4M">4M</option>
+                                    
+                                    <option value="5M">5M</option>
+                                    
+                                    <option value="6M">6M</option>
+                                    
+                                    <option value="7M">7M</option>
+                                    
+                                    <option value="8M">8M</option>
+                                    
+                                    <option value="9M">9M</option>
+                                    
+                                    <option value="10M">10M</option>
+                                    
+                                </select>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Min Price">
+                                <select id="maxPrice" class="form-select">
+                                    <option value="any" selected>any</option>
+                                    
+                                    <option value="1M">1M</option>
+                                    
+                                    <option value="2M">2M</option>
+                                    
+                                    <option value="3M">3M</option>
+                                    
+                                    <option value="4M">4M</option>
+                                    
+                                    <option value="5M">5M</option>
+                                    
+                                    <option value="6M">6M</option>
+                                    
+                                    <option value="7M">7M</option>
+                                    
+                                    <option value="8M">8M</option>
+                                    
+                                    <option value="9M">9M</option>
+                                    
+                                    <option value="10M">10M</option>
+                                    
+                                </select>
                             </div>
 
                             <div class="col-12">
@@ -509,7 +555,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">BUDGET</label>
-                        <div class="row">
+                        <div class="row gx-2">
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="0">
                             </div>
@@ -861,7 +907,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -982,7 +1029,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -1131,7 +1179,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -1302,7 +1351,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -1423,7 +1473,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -1799,7 +1850,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -2050,7 +2102,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -2250,7 +2303,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -2371,7 +2425,8 @@
                     </div>
                     <div class="col col-md-auto text-end">
                         <a href="#" class="btn btn-danger me-lg-2">VIEW MORE</a>
-                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block">GET CALLBACK</a>
+
+                        <a href="#" class="btn btn-outline-danger d-none d-md-inline-block" data-bs-toggle="modal" data-bs-target="#callbackModal">GET CALLBACK</a>
                     </div>
                 </div>
 
@@ -2546,6 +2601,61 @@
 
         </div>
 
+    </div>
+</div>
+
+
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 pt-1">
+
+                <div class="content">
+                    <h5 class="title-content-1 text-center mb-3">Please enter your details</h5>
+
+                    <p class="mb-0 pt-1">
+                        To view the seller’s number, please enter your name, email and contact number. This will help
+                        the
+                        seller to follow up on your inquiry.
+                    </p>
+                </div>
+
+                <div class="form-container">
+                    <form>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name *" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="E-mail Address">
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <div class="col-3">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom-primary w-100 py-2">
+                            SHOW PHONE NUMBER
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

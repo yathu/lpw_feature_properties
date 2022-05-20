@@ -4,6 +4,20 @@ $(document).ready(function () {
     //     e.stopPropagation();
     // });
 
+    // $('#callbackModal').modal('show');
+
+
+    let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+        let currentScroll = window.pageYOffset;
+        if (currentScroll - lastScroll > 0) {
+            $('.filter-form-container').removeClass('sticky-top');
+        } else {
+            $('.filter-form-container').addClass('sticky-top');
+        }
+        lastScroll = currentScroll;
+    })
+
     $('#testpicker').selectpicker();
     $('#possesionYear').selectpicker();
     $('#bedroom_mobile').selectpicker();
@@ -128,48 +142,65 @@ $(document).ready(function () {
     });
 
 
-    $("#budgetRange").slider({
-        range: true,
-        min: 0,
-        max: 100,
-        step: 5,
-        values: [0, 5],
-        slide: function (event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-            appendSliderFirstVal(ui.values[0]);
-            appendSliderLastVal(ui.values[1]);
+    // $("#budgetRange").slider({
+    //     range: true,
+    //     min: 0,
+    //     max: 100,
+    //     step: 5,
+    //     values: [0, 5],
+    //     slide: function (event, ui) {
+    //         // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+    //         appendSliderFirstVal(ui.values[0]);
+    //         appendSliderLastVal(ui.values[1]);
+    //
+    //     }
+    // });
 
-        }
-    });
+    // var val = $('#budgetRange').slider("values")[0];
+    // var finalVal1 = val == 0 ? 0 : (val + 'M');
 
-    var val = $('#budgetRange').slider("values")[0];
-    var finalVal1 = val == 0 ? 0 : (val + 'M');
+    // $("#budgetRange span.ui-slider-handle:first").append("<span>" + finalVal1 + "</span>");
+    // var val2 = $('#budgetRange').slider("values")[1];
+    // var finalVal2 = val2 == 0 ? 0 : val2 + 'M';
+    // $("#budgetRange span.ui-slider-handle:last").append("<span>" + finalVal2 + "</span>");
 
-    $("#budgetRange span.ui-slider-handle:first").append("<span>" + finalVal1 + "</span>");
-    var val2 = $('#budgetRange').slider("values")[1];
-    var finalVal2 = val2 == 0 ? 0 : val2 + 'M';
-    $("#budgetRange span.ui-slider-handle:last").append("<span>" + finalVal2 + "</span>");
+    // $('#budgetStart').html(finalVal1);
+    // $('#budgetEnd').html(val2 + 'M');
 
-    $('#budgetStart').html(finalVal1);
-    $('#budgetEnd').html(val2 + 'M');
+    // function appendSliderFirstVal(value) {
+    //     var finalVal = value == 0 ? 0 : value + 'M';
+    //     $("#budgetRange span.ui-slider-handle:first span").html(finalVal);
+    //     $('#budgetStart').html(finalVal);
+    //
+    // }
 
-    function appendSliderFirstVal(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
-        $("#budgetRange span.ui-slider-handle:first span").html(finalVal);
-        $('#budgetStart').html(finalVal);
-
-    }
-
-    function appendSliderLastVal(value) {
-        var finalVal = value == 0 ? 0 : value + 'M';
-        $("#budgetRange span.ui-slider-handle:last span").html(finalVal);
-        $('#budgetEnd').html(finalVal);
-    }
+    // function appendSliderLastVal(value) {
+    //     var finalVal = value == 0 ? 0 : value + 'M';
+    //     $("#budgetRange span.ui-slider-handle:last span").html(finalVal);
+    //     $('#budgetEnd').html(finalVal);
+    // }
 
     //budget slider labels
-    for (let i = 0; i <= 10; i++) {
-        $("#budget-labels").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + i + "</span>");
-    }
+    // for (let i = 0; i <= 10; i++) {
+    //     $("#budget-labels").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + i + "</span>");
+    // }
+
+
+
+    let minPrice = $('#minPrice').val();
+    let maxPrice = $('#MaxPrice').val();
+
+    $('#budgetStart').html(minPrice);
+    $('#maxPrice').html(maxPrice);
+
+
+    $('#minPrice').on('change',function () {
+        $('#budgetStart').html(this.value);
+    });
+
+    $('#maxPrice').on('change',function () {
+        $('#budgetEnd').html(this.value);
+    });
 
 
     $("#areaSqftRange").slider({

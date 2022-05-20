@@ -1,4 +1,4 @@
-<div class="filter-form-container row w-100 align-items-center mx-0 sticky-top">
+<div class="filter-form-container row w-100 align-items-center mx-0">
     <form class="col row align-items-center mx-0 d-none d-lg-flex">
         <div class="col row controls align-items-stretch mx-0">
 
@@ -54,12 +54,22 @@
                             </div>
                         </div>
 
-                        <div class="row g-0 mt-2">
+                        <div class="row g-0 gx-1 mt-2">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Min Price">
+                                <select id="minPrice" class="form-select">
+                                    <option value="0">0</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i}}M">{{i}}M</option>
+                                    {% endfor %}
+                                </select>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Min Price">
+                                <select id="maxPrice" class="form-select">
+                                    <option value="any" selected>any</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i}}M">{{i}}M</option>
+                                    {% endfor %}
+                                </select>
                             </div>
 
                             <div class="col-12">
@@ -416,7 +426,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">BUDGET</label>
-                        <div class="row">
+                        <div class="row gx-2">
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="0">
                             </div>
