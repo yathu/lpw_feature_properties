@@ -428,14 +428,28 @@
                         <label class="form-label">BUDGET</label>
                         <div class="row gx-2">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="0">
+                                <select class="form-select">
+                                    <option value="0">0</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i}}M">{{i}}M</option>
+                                    {% endfor %}
+                                </select>
                             </div>
+
                             <div class="col-auto">
                                 To
                             </div>
+
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="any">
+                                <select class="form-select">
+                                    <option value="any" selected>any</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i}}M">{{i}}M</option>
+                                    {% endfor %}
+                                </select>
                             </div>
+
+
                         </div>
                     </div>
 

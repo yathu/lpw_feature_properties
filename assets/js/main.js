@@ -16,7 +16,7 @@ $(document).ready(function () {
             $('.filter-form-container').addClass('sticky-top');
         }
         lastScroll = currentScroll;
-    })
+    });
 
     $('#testpicker').selectpicker();
     $('#possesionYear').selectpicker();
@@ -26,6 +26,13 @@ $(document).ready(function () {
     var myModal = new bootstrap.Modal(document.getElementById('mobModal'));
 
     // myModal.show();
+
+    // new Swiper('#sortSwiper', {
+    //     loop: false,
+    //     // slidesPerView: 'auto',
+    //     slidesPerView: 4,
+    //     spaceBetween: 0,
+    // });
 
     new Swiper("#priceRangeSwiper", {
         slidesPerView: 'auto',
@@ -186,7 +193,6 @@ $(document).ready(function () {
     // }
 
 
-
     let minPrice = $('#minPrice').val();
     let maxPrice = $('#MaxPrice').val();
 
@@ -194,11 +200,11 @@ $(document).ready(function () {
     $('#maxPrice').html(maxPrice);
 
 
-    $('#minPrice').on('change',function () {
+    $('#minPrice').on('change', function () {
         $('#budgetStart').html(this.value);
     });
 
-    $('#maxPrice').on('change',function () {
+    $('#maxPrice').on('change', function () {
         $('#budgetEnd').html(this.value);
     });
 

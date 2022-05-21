@@ -37,6 +37,12 @@
       @media (max-width: 767.98px) {
         overflow-x: auto
       }
+
+      a {
+        @media (min-width: 320px) {
+          //min-width: calc((100vw-104px)/2);
+        }
+      }
     }
 
     div::-webkit-scrollbar {
@@ -121,6 +127,40 @@
       float: left;
     }
   }
+
+  @media (max-width: 767.98px) {
+    .filtered-info {
+      .sort-menu-container {
+        display: none;
+      }
+    }
+
+    .virtual-banner, .preferred-project, .property-type-swiper-container,.city-projects, .propertyTool {
+      display: none;
+    }
+
+    .listing-container{
+      display: flex;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+
+      *::-webkit-scrollbar {
+        height: 4px;              /* height of horizontal scrollbar ← You're missing this */
+        width: 4px;               /* width of vertical scrollbar */
+        border: 1px solid #d5d5d5;
+      }
+
+      .property-list-item{
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 15px;
+      }
+    }
+
+  }
 }
 
 .preferred-project {
@@ -204,7 +244,7 @@
         }
 
         @media (max-width: 575.98px) {
-          width: 85%;
+          width: 60%;
         }
 
         @media (min-width: 1200px) {
@@ -263,13 +303,14 @@
 
   }
 
-  .location-swiper-container{
-    span.range,p.price,span.noOfProjects{
+  .location-swiper-container {
+    span.range, p.price, span.noOfProjects {
       color: #f54505 !important;
     }
   }
-  .type-swiper-container{
-    span.range,p.price,span.noOfProjects{
+
+  .type-swiper-container {
+    span.range, p.price, span.noOfProjects {
       color: #2c9431 !important;
     }
   }
@@ -387,7 +428,8 @@
           width: 45%;
         }
         @media (max-width: 575.98px) {
-          width: 85%;
+          width: 35%;
+          height: 125px;
         }
 
         @media (min-width: 1200px) {
@@ -572,22 +614,24 @@
   }
 }
 
-#callbackModal{
-  .modal-header{
+#callbackModal {
+  .modal-header {
     font-size: 11px;
     color: #000;
   }
-  .content{
+
+  .content {
     padding: 0 40px 25px;
 
-    p{
+    p {
       font-family: Rubik-Regular;
       font-size: 16px;
       color: #71757B;
       line-height: 25px;
     }
   }
-  .form-container{
+
+  .form-container {
     background-color: #202330;
     padding: 25px 40px 40px;
   }

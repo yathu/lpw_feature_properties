@@ -1,7 +1,6 @@
-
 $(document).ready(() => {
 
-    $(".mapView").scroll(function() {
+    $(".mapView").scroll(function () {
         console.log('scrool.....');
     });
 
@@ -21,11 +20,172 @@ $(document).ready(() => {
 });
 
 let map;
+
 function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: new google.maps.LatLng(-33.91722, 151.23064),
         zoom: 10,
+        styles: [
+            {
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#f5f5f5"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#f5f5f5"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#bdbdbd"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#eeeeee"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#e5e5e5"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#9e9e9e"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#dadada"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#9e9e9e"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#e5e5e5"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#eeeeee"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#c9c9c9"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#9e9e9e"
+                    }
+                ]
+            }
+        ],
     });
 
     const features = [
@@ -84,16 +244,27 @@ function initMap() {
         "</div>";
 
 
-
     const infowindow = new google.maps.InfoWindow({
         content: contentString,
     });
 
+    const svgMarker = {
+        path: "M16.4678684,0 C7.38765789,0 0,6.72916992 0,15.0000293 C0,17.4829395 0.681517544,19.9447559 1.97710526,22.1283105 L15.5673158,44.5166016 C15.7482368,44.8150781 16.093,45 16.4678684,45 C16.8427368,45 17.1875,44.8150781 17.3684211,44.5166016 L30.9636491,22.1209277 C32.2542193,19.9447559 32.9357368,17.4828516 32.9357368,14.9999414 C32.9357368,6.72916992 25.5480789,0 16.4678684,0 Z M16.4678684,22.5 C11.9277632,22.5 8.23398246,19.135459 8.23398246,15.0000293 C8.23398246,10.8645996 11.9277632,7.50005859 16.4678684,7.50005859 C21.0079737,7.50005859 24.7017544,10.8645996 24.7017544,15.0000293 C24.7017544,19.135459 21.0079737,22.5 16.4678684,22.5 Z",
+        fillColor: "#2a8e36",
+        fillOpacity: 0.8,
+        strokeWeight: 0,
+        rotation: 0,
+        scale: 1,
+        anchor: new google.maps.Point(15, 30),
+    };
+
     // Create markers.
-   const markers = features.map((data,i)=>{
+    const markers = features.map((data, i) => {
         const marker = new google.maps.Marker({
             position: data.position,
             map: map,
+            icon: svgMarker,
+            // icon:'assets/img/marker.svg',
         });
 
 
@@ -106,29 +277,29 @@ function initMap() {
         //     });
         // });
 
-       marker.addListener('mouseover', function() {
-           infowindow.open({
-               anchor: marker,
-               map,
-               shouldFocus: false,
-           });
-       });
+        marker.addListener('mouseover', function () {
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+        });
 
 // assuming you also want to hide the infowindow when user mouses-out
-       marker.addListener('mouseout', function() {
-           infowindow.close();
-       });
+        marker.addListener('mouseout', function () {
+            infowindow.close();
+        });
 
         return marker;
     });
 
-   // console.log(markers);
+    // console.log(markers);
 
-    $( ".property-list-item" ).hover(
-        function() {
+    $(".property-list-item").hover(
+        function () {
             const index = $(this).data("index");
             google.maps.event.trigger(markers[index], 'mouseover');
-            }, function() {
+        }, function () {
 
             const index = $(this).data("index");
             google.maps.event.trigger(markers[index], 'mouseout');
@@ -136,7 +307,19 @@ function initMap() {
         }
     );
 
-    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers});
+    mcOptions = {
+        styles: [{
+            height: 54,
+            url: "assets/img/cluster.svg",
+            width: 54,
+            textColor: '#fff',
+        }
+        ]
+    };
+
+    var mc = new MarkerClusterer(map, markers,mcOptions);
+
+    // const markerCluster = new markerClusterer.MarkerClusterer({ map, markers});
 
 
 }
