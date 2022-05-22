@@ -11,12 +11,14 @@ permalink: /index.html
 </video>
 -->
 
-{% include filter_form.html %}
 
 <div id="map-parent" class="container-fluid px-0">
 
-    <div class="row mx-0 align-items-center filtered-info">
-        <div class="col">
+    {% include filter_form.html %}
+
+
+    <div class="row mx-0 align-items-center filtered-info justify-content-between">
+        <div class="col-12 col-lg-auto">
             <h2 class="title-light">
                 All Featured Properties
                 <span class="title-light-1">
@@ -148,7 +150,7 @@ permalink: /index.html
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
                             type="button" role="tab" aria-controls="nav-home" aria-selected="true">Price
                     </button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                             type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Location
                     </button>
                     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
@@ -337,6 +339,47 @@ permalink: /index.html
 
         </div>
 
+    </div>
+
+    <div class="row mx-0 align-items-center filtered-info justify-content-between mobile-filter py-0">
+
+        <div class="col-auto sort-menu-container">
+        <span>
+            Sort by:
+        </span>
+
+            <!--        <div id="sortSwiper" class="swiper">-->
+            <!--            <div class="swiper-wrapper">-->
+            <!--                <a class="swiper-slide active" href="#">-->
+            <!--                    Relevance-->
+            <!--                </a>-->
+            <!--                <a class="swiper-slide" href="#">-->
+            <!--                    Price-Low-->
+            <!--                </a>-->
+            <!--                <a class="swiper-slide" href="#">-->
+            <!--                    Price-High-->
+            <!--                </a>-->
+            <!--                <a class="swiper-slide" href="#">-->
+            <!--                    Possession Date-->
+            <!--                </a>-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <div>
+                <a class="active" href="#">
+                    Relevance
+                </a>
+                <a href="#">
+                    Price-Low
+                </a>
+                <a href="#">
+                    Price-High
+                </a>
+                <a href="#">
+                    Possession Date
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
