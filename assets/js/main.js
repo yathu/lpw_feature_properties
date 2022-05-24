@@ -208,6 +208,15 @@ $(document).ready(function () {
         $('#budgetEnd').html(this.value);
     });
 
+    $('input[name="budgetType"]').on('change',function () {
+        // var value = $(this).val();
+        $("#minPrice").val('0');
+        $("#maxPrice").val('any');
+
+    });
+
+    // $('input[name="budgetType"]:checked').val();
+
 
     $("#areaSqftRange").slider({
         range: true,
@@ -277,6 +286,8 @@ $(document).ready(function () {
     }
 
     function appendSqftSliderLastValMobile(value) {
+        console.log("value==>",value);
+
         var finalVal = value == 0 ? 0 : value;
         $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
     }
@@ -333,12 +344,24 @@ $(document).ready(function () {
         $('.selectpicker').selectpicker('deselectAll');
         $('.selectpicker').selectpicker('val', '');
 
-        $('#budgetRange').slider('option', {values: [0, 5]});
+        // $('#budgetRange').slider('option', {values: [0, 5]});
         $('#budgetStart').html('0');
-        $('#budgetEnd').html('5M');
+        $('#budgetEnd').html('any');
 
 
     });
+
+    //reset desktop modal
+    $('#desktopModalBtnReset').on("click", function () {
+        $('#areaSqftRange').slider('option', {values: [0, 0]});
+
+        appendSqftSliderFirstVal(0);
+        appendSqftSliderLastVal(0);
+        // $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + 0 + "</span>");
+        // $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + 500 + "</span>");
+    });
+
+
 
 
     $('#btnResetMobile').on('click', function () {

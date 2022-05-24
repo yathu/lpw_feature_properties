@@ -9,6 +9,7 @@ $(document).ready(() => {
             console.log('checked');
 
             $('#map-parent').addClass('map-enabled');
+            $('.filter-form-container').addClass('sticky-top');
 
         } else {
             console.log('not checked');
@@ -232,7 +233,7 @@ function initMap() {
 
 
     const contentString =
-        '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;">' +
+        '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;min-width: 250px;min-height: 264px;">' +
         '<img style="width: 100%;width: 250px; height: 150px; object-fit: cover;margin-bottom: 15px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
         '<h1 style="font-family: Rubik-Medium; line-height:1;' + 'font-size: 20px;' + 'color: #202330;' + 'letter-spacing: -0.37px;">JAT - 146 Residents</h1>' +
         '<p style="font-family: Rubik-Regular; font-size: 16px; color: #71757B; line-height: 1; margin-bottom: 0;"> Thalawathugoda</p>' +
@@ -271,16 +272,14 @@ function initMap() {
         });
 
 
-        // marker.addListener("click", (val) => {
-        //     console.log("click", val);
-        //     infowindow.open({
-        //         anchor: marker,
-        //         map,
-        //         shouldFocus: false,
-        //     });
-        // });
+        marker.addListener("click", (val) => {
+            console.log("click", val);
 
-        marker.addListener('mouseover', function () {
+            infowindow.setOptions({maxWidth:285});
+            infowindow.setOptions({minWidth:285});
+            infowindow.setOptions({maxHeight:293});
+            infowindow.setOptions({minHeight:293});
+
             infowindow.open({
                 anchor: marker,
                 map,
@@ -288,9 +287,18 @@ function initMap() {
             });
         });
 
+        //
+        // marker.addListener('mouseover', function () {
+        //     infowindow.open({
+        //         anchor: marker,
+        //         map,
+        //         shouldFocus: false,
+        //     });
+        // });
+
 // assuming you also want to hide the infowindow when user mouses-out
         marker.addListener('mouseout', function () {
-            infowindow.close();
+            // infowindow.close();
         });
 
         return marker;
