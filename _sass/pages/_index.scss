@@ -40,15 +40,19 @@
 
       a {
         @media (min-width: 320px) and (max-width: 399.98px) {
-          min-width: calc(((100vw-105px)/3)*2);
+          min-width: calc(((100vw-105px)/5)*2);
           text-align: center;
         }
-        @media (min-width: 400px) and (max-width: 575.98px) {
-          min-width: calc(((100vw-105px)/10)*4);
+        @media (min-width: 400px) and (max-width: 475.98px) {
+          min-width: calc(((100vw-105px)/10 * 3.5);
+          text-align: center;
+        }
+        @media (min-width: 476px) and (max-width: 575.98px) {
+          min-width: calc(((100vw-105px)/10)*2.8);
           text-align: center;
         }
         @media (min-width: 576px) and (max-width: 767.98px) {
-          min-width: calc(((100vw-105px)/10)*3);
+          min-width: calc(((100vw-105px)/10)*2);
           text-align: center;
         }
       }

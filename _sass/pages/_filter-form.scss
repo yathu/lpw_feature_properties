@@ -501,6 +501,7 @@
   }
 
   .mobile-search-modal {
+    z-index: 9999    ;
     .modal-header {
       button {
         font-size: 12px;
