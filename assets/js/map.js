@@ -272,23 +272,14 @@ function initMap() {
         });
 
 
-        marker.addListener("click", (val) => {
-            console.log("click", val);
-
-            infowindow.setOptions({maxWidth:285});
-            infowindow.setOptions({minWidth:285});
-            infowindow.setOptions({maxHeight:293});
-            infowindow.setOptions({minHeight:293});
-
-            infowindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
-            });
-        });
-
+        // marker.addListener("click", (val) => {
+        //     console.log("click", val);
         //
-        // marker.addListener('mouseover', function () {
+        //     infowindow.setOptions({maxWidth: 285});
+        //     infowindow.setOptions({minWidth: 285});
+        //     infowindow.setOptions({maxHeight: 293});
+        //     infowindow.setOptions({minHeight: 293});
+        //
         //     infowindow.open({
         //         anchor: marker,
         //         map,
@@ -296,9 +287,18 @@ function initMap() {
         //     });
         // });
 
+        //
+        marker.addListener('mouseover', function () {
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+        });
+
 // assuming you also want to hide the infowindow when user mouses-out
         marker.addListener('mouseout', function () {
-            // infowindow.close();
+            infowindow.close();
         });
 
         return marker;
@@ -308,8 +308,18 @@ function initMap() {
 
     $(".property-list-item").hover(
         function () {
-            const index = $(this).data("index");
-            google.maps.event.trigger(markers[index], 'mouseover');
+
+            try {
+                console.log(map.controls);
+
+
+                const index = $(this).data("index");
+                google.maps.event.trigger(markers[index], 'mouseover');
+
+            } catch (e) {
+                console.log('error==>', e);
+            }
+
         }, function () {
 
             const index = $(this).data("index");
@@ -328,7 +338,7 @@ function initMap() {
         ]
     };
 
-    var mc = new MarkerClusterer(map, markers,mcOptions);
+    var mc = new MarkerClusterer(map, markers, mcOptions);
 
     // const markerCluster = new markerClusterer.MarkerClusterer({ map, markers});
 

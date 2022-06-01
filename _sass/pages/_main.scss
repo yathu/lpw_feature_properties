@@ -26,13 +26,20 @@
   border-color: #029432;
 }
 
-.btn-link {
+.btn-link-custom {
   font-family: Rubik-Regular;
   font-size: 14px;
   color: #018E37;
   line-height: 20px;
   background-color: white;
 }
+
+.btn-link{
+  font-family: Rubik-Regular;
+  font-size: 13px;
+  padding: 0;
+}
+
 
 .btn-light {
   font-family: Rubik-Medium;

@@ -27,12 +27,16 @@ $(document).ready(function () {
 
     // myModal.show();
 
-    // new Swiper('#sortSwiper', {
-    //     loop: false,
-    //     // slidesPerView: 'auto',
-    //     slidesPerView: 4,
-    //     spaceBetween: 0,
-    // });
+    new Swiper('#sortSwiper', {
+        loop: false,
+        slidesPerView: 'auto',
+        // slidesPerView: 4,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".sort-swiper-next",
+            prevEl: ".sort-swiper-prev",
+        },
+    });
 
     new Swiper("#priceRangeSwiper", {
         slidesPerView: 'auto',
@@ -208,10 +212,13 @@ $(document).ready(function () {
         $('#budgetEnd').html(this.value);
     });
 
-    $('input[name="budgetType"]').on('change',function () {
+    $('input[name="budgetType"]').on('change', function () {
         // var value = $(this).val();
         $("#minPrice").val('0');
         $("#maxPrice").val('any');
+
+        $('#budgetStart').html('0');
+        $('#budgetEnd').html('Any');
 
     });
 
@@ -223,7 +230,7 @@ $(document).ready(function () {
         min: 0,
         max: 5000,
         // step:10,
-        values: [500, 3000],
+        values: [0, 5000],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             appendSqftSliderFirstVal(ui.values[0]);
@@ -233,19 +240,19 @@ $(document).ready(function () {
 
     var sqftVal = $('#areaSqftRange').slider("values")[0];
     var sqftVal2 = $('#areaSqftRange').slider("values")[1];
-    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : sqftVal2;
+    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : (sqftVal2 == 5000 ? '5000+' : sqftVal2);
 
     $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + sqftVal + "</span>");
     $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + SqftFinalVal2 + "</span>");
 
 
     function appendSqftSliderFirstVal(value) {
-        var finalVal = value == 0 ? 0 : value;
+        var finalVal = value == 0 ? 0 : (value == 5000 ? '5000+' : value);
         $("#areaSqftRange span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastVal(value) {
-        var finalVal = value == 0 ? 0 : value;
+        var finalVal = value == 0 ? 0 : (value == 5000 ? '5000+' : value);
         $("#areaSqftRange span.ui-slider-handle:last span").html(finalVal);
     }
 
@@ -254,7 +261,7 @@ $(document).ready(function () {
     for (let i = 0; i <= 20; i++) {
         var isOdd = (i % 2) !== 0;
         console.log(isOdd);
-        $("#areaSqftLabels").append("<span class='slider-label' style='left: calc(" + (i * 5) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i * 250)) + "</span>");
+        $("#areaSqftLabels").append("<span class='slider-label' style='left: calc(" + (i * 5) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i == 20 ? "Any" : i * 250)) + "</span>");
     }
 
 
@@ -264,7 +271,7 @@ $(document).ready(function () {
         min: 0,
         max: 5000,
         // step:10,
-        values: [500, 3000],
+        values: [0, 5000],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             appendSqftSliderFirstValMobile(ui.values[0]);
@@ -274,28 +281,28 @@ $(document).ready(function () {
 
     var sqftValMobile = $('#areaSqftRangeMobile').slider("values")[0];
     var sqftVal2Mobile = $('#areaSqftRangeMobile').slider("values")[1];
-    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : sqftVal2Mobile;
+    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : (sqftVal2Mobile == 5000 ? '5000+' : sqftVal2Mobile);
 
     $("#areaSqftRangeMobile span.ui-slider-handle:first").append("<span>" + sqftValMobile + "</span>");
     $("#areaSqftRangeMobile span.ui-slider-handle:last").append("<span>" + SqftFinalVal2Mobile + "</span>");
 
 
     function appendSqftSliderFirstValMobile(value) {
-        var finalVal = value == 0 ? 0 : value;
+        var finalVal = value == 0 ? 0 : (value == 5000 ? '5000+' : value);
         $("#areaSqftRangeMobile span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastValMobile(value) {
-        console.log("value==>",value);
+        console.log("value==>", value);
 
-        var finalVal = value == 0 ? 0 : value;
+        var finalVal = value == 0 ? 0 : (value == 5000 ? '5000+' : value);
         $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
     }
 
 
     for (let i = 0; i <= 10; i++) {
         var isOdd = (i % 2) !== 0;
-        $("#areaSqftLabelsMobile").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i * 500)) + "</span>");
+        $("#areaSqftLabelsMobile").append("<span class='slider-label' style='left: calc(" + (i * 10) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i == 10 ? "Any" : i * 500)) + "</span>");
     }
     //end mobile sqft
 
@@ -360,8 +367,6 @@ $(document).ready(function () {
         // $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + 0 + "</span>");
         // $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + 500 + "</span>");
     });
-
-
 
 
     $('#btnResetMobile').on('click', function () {

@@ -178,9 +178,9 @@
 
         color: #018E37 !important;
       }
-      .btn-danger{
+      .btn-danger,.btn-outline-danger{
         @media (max-width: 767.98px) {
-          width: 100%;
+          width: calc(50% - 7.5px);
         }
       }
     }

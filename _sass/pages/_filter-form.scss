@@ -98,22 +98,10 @@
           }
 
           .button-container {
-
-            .col:nth-child(1) {
-              label {
-                border-right: 0px;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-              }
-            }
-
-            .col:nth-child(2) {
-              label {
-                border-left: 0px;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-              }
-            }
+            background-color: #e0e0e0;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #c5c5c5;
 
             label {
               color: #FFFFFF;
@@ -124,8 +112,9 @@
             }
 
             .btn.btn-success {
-              background-color: #24c87c;
-              border-color: #2a8e36;
+              background-color: #e0e0e0;
+              //border-color: #2a8e36;
+              border: 0;
               box-shadow: none !important;
               color: #000;
 
@@ -134,7 +123,7 @@
             .btn-check:checked + .btn-success {
               color: #fff;
               background-color: #2a8e36;
-              border-color: #2a8e36;
+              //border-color: #2a8e36;
             }
 
           }
@@ -513,7 +502,7 @@
     .modal-body {
       overflow-y: scroll;
       overflow-x: hidden;
-      padding: 25px;
+      padding: 25px 25px 65px;
 
       .form-control, .form-control:focus {
         font-family: Rubik-Regular;
@@ -591,6 +580,38 @@
         }
       }
 
+      .mobile-possession{
+        display: flex;
+
+        .btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus{
+          box-shadow: none;
+          outline: none;
+        }
+        .check-box{
+          .btn{
+            border-radius: 0px;
+            font-family: Rubik-Regular;
+            font-size: 14px;
+            color: #4e5156;
+            line-height: 20px;
+          }
+
+          .btn-check:checked+.btn-outline-secondary{
+            background-color: #2a8e36;
+            color: #fff;
+          }
+
+          .dropdown{
+            border-color: #6c757d !important;
+            box-shadow: none;
+            border-radius: 0;
+            .btn{
+              border: 0;
+            }
+          }
+        }
+      }
+
       input {
         box-shadow: none !important;
       }
@@ -635,12 +656,15 @@
         }
 
       }
-
-
-
     }
 
     .modal-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 999;
+
       button {
         text-decoration: none !important;
       }
