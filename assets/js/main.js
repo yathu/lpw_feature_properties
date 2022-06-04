@@ -6,6 +6,15 @@ $(document).ready(function () {
 
     // $('#callbackModal').modal('show');
 
+    // $('.filter-form-container .controls>div.col').addEventListener("click",function () {
+    //     console.log('click');
+    // });
+
+    $('.filter-form-container .controls>div.col').on("click",function (e) {
+       // var id = $(this).find('button').data("id");
+       // console.log("id==>",id);
+    });
+
 
     let lastScroll = 0;
     window.addEventListener("scroll", () => {

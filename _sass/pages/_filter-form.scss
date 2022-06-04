@@ -275,7 +275,26 @@
           background-position-x: 100%;
           background-position-y: 77%;
         }
+      }
 
+      button.dropdown-toggle:before{
+        content: "";
+        position: absolute;
+        width: calc(100% + 25px);
+        height: 56px;
+        top: -26px;
+        left: -12px;
+      }
+      .budget-dropdown button:before,.more-dropdown button:before{
+        top: -8px;
+      }
+
+      .more-dropdown{
+        button{
+          span{
+            overflow: hidden;
+          }
+        }
       }
 
       .col-auto {
