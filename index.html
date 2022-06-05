@@ -33,41 +33,41 @@ permalink: /index.html
             Sort by:
         </span>
 
-                    <div id="sortSwiper" class="swiper">
-                        <div class="swiper-wrapper">
-                            <a class="swiper-slide active" href="#">
-                                Relevance
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Price-Low
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Price-High
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Possession Date
-                            </a>
-                        </div>
+            <div id="sortSwiper" class="swiper">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide active" href="#">
+                        Relevance
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Price-Low
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Price-High
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Possession Date
+                    </a>
+                </div>
 
-                        <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
-                        <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
+                <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
+                <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
 
-                    </div>
+            </div>
 
-<!--            <div>-->
-<!--                <a class="active" href="#">-->
-<!--                    Relevance-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Price-Low-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Price-High-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Possession Date-->
-<!--                </a>-->
-<!--            </div>-->
+            <!--            <div>-->
+            <!--                <a class="active" href="#">-->
+            <!--                    Relevance-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Price-Low-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Price-High-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Possession Date-->
+            <!--                </a>-->
+            <!--            </div>-->
         </div>
     </div>
 
@@ -75,6 +75,24 @@ permalink: /index.html
         <div class="map-box">
             <div id="map"></div>
         </div>
+    </div>
+
+    <div class="container mobile-listing-container">
+        <div class="swiper mobileListingSwiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {% include property_list_item.html %}
+                </div>
+                <div class="swiper-slide">
+                    {% include property_list_item.html %}
+                </div>
+            </div>
+
+            <!-- If we need scrollbar -->
+            <!--            <div class="swiper-scrollbar"></div>-->
+        </div>
+
     </div>
 
     <div class="container listing-container">
@@ -154,7 +172,8 @@ permalink: /index.html
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
                             type="button" role="tab" aria-controls="nav-home" aria-selected="true">Price
                     </button>
-                    <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile"
                             type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Location
                     </button>
                     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"

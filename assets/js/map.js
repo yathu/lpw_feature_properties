@@ -310,7 +310,7 @@ function initMap() {
         function () {
 
             try {
-                console.log(map.controls);
+                console.log(markers.length);
 
 
                 const index = $(this).data("index");

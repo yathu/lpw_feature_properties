@@ -91,68 +91,127 @@
                             <div class="col">
                                 <input type="radio" class="btn-check" value="total" name="budgetType" id="option1"
                                        autocomplete="off" checked>
-                                <label class="btn btn-success w-100" for="option1">Total</label>
+                                <label id="totalTab" class="btn btn-success w-100" for="option1">Total</label>
                             </div>
                             <div class="col">
                                 <input type="radio" class="btn-check" value="sqft" name="budgetType" id="option2"
                                        autocomplete="off">
-                                <label class="btn btn-success w-100" for="option2">Per SQFT</label>
+                                <label id="sqftTab" class="btn btn-success w-100" for="option2">Per SQFT</label>
                             </div>
                         </div>
 
-                        <div class="row g-0 gx-1 mt-2">
-                            <div class="col">
-                                <select id="minPrice" class="form-select">
-                                    <option value="0">0</option>
-                                    
-                                    <option value="1M">1M</option>
-                                    
-                                    <option value="2M">2M</option>
-                                    
-                                    <option value="3M">3M</option>
-                                    
-                                    <option value="4M">4M</option>
-                                    
-                                    <option value="5M">5M</option>
-                                    
-                                    <option value="6M">6M</option>
-                                    
-                                    <option value="7M">7M</option>
-                                    
-                                    <option value="8M">8M</option>
-                                    
-                                    <option value="9M">9M</option>
-                                    
-                                    <option value="10M">10M</option>
-                                    
-                                </select>
+                        <div class="row g-0 mt-2">
+                            <div class="row g-0 gx-1">
+                                <div class="col">
+                                    <select id="totalMinPrice" class="form-select">
+                                        <option value="0">0</option>
+                                        
+                                        <option value="1M">1M</option>
+                                        
+                                        <option value="2M">2M</option>
+                                        
+                                        <option value="3M">3M</option>
+                                        
+                                        <option value="4M">4M</option>
+                                        
+                                        <option value="5M">5M</option>
+                                        
+                                        <option value="6M">6M</option>
+                                        
+                                        <option value="7M">7M</option>
+                                        
+                                        <option value="8M">8M</option>
+                                        
+                                        <option value="9M">9M</option>
+                                        
+                                        <option value="10M">10M</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select id="totalMaxPrice" class="form-select">
+                                        <option value="any" selected>any</option>
+                                        
+                                        <option value="1M">1M</option>
+                                        
+                                        <option value="2M">2M</option>
+                                        
+                                        <option value="3M">3M</option>
+                                        
+                                        <option value="4M">4M</option>
+                                        
+                                        <option value="5M">5M</option>
+                                        
+                                        <option value="6M">6M</option>
+                                        
+                                        <option value="7M">7M</option>
+                                        
+                                        <option value="8M">8M</option>
+                                        
+                                        <option value="9M">9M</option>
+                                        
+                                        <option value="10M">10M</option>
+                                        
+
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col">
-                                <select id="maxPrice" class="form-select">
-                                    <option value="any" selected>any</option>
-                                    
-                                    <option value="1M">1M</option>
-                                    
-                                    <option value="2M">2M</option>
-                                    
-                                    <option value="3M">3M</option>
-                                    
-                                    <option value="4M">4M</option>
-                                    
-                                    <option value="5M">5M</option>
-                                    
-                                    <option value="6M">6M</option>
-                                    
-                                    <option value="7M">7M</option>
-                                    
-                                    <option value="8M">8M</option>
-                                    
-                                    <option value="9M">9M</option>
-                                    
-                                    <option value="10M">10M</option>
-                                    
-                                </select>
+
+                            <div class="row g-0 gx-1" style="display: none">
+                                <div class="col">
+                                    <select id="sqftMinPrice" class="form-select">
+                                        <option value="0">0</option>
+                                        
+                                        <option value="5000">5000</option>
+                                        
+                                        <option value="10000">10000</option>
+                                        
+                                        <option value="15000">15000</option>
+                                        
+                                        <option value="20000">20000</option>
+                                        
+                                        <option value="25000">25000</option>
+                                        
+                                        <option value="30000">30000</option>
+                                        
+                                        <option value="35000">35000</option>
+                                        
+                                        <option value="40000">40000</option>
+                                        
+                                        <option value="45000">45000</option>
+                                        
+                                        <option value="50000">50000</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select id="sqftMaxPrice" class="form-select">
+                                        <option value="any" selected>any</option>
+                                        
+                                        <option value="5000">5000</option>
+                                        
+                                        <option value="10000">10000</option>
+                                        
+                                        <option value="15000">15000</option>
+                                        
+                                        <option value="20000">20000</option>
+                                        
+                                        <option value="25000">25000</option>
+                                        
+                                        <option value="30000">30000</option>
+                                        
+                                        <option value="35000">35000</option>
+                                        
+                                        <option value="40000">40000</option>
+                                        
+                                        <option value="45000">45000</option>
+                                        
+                                        <option value="50000">50000</option>
+                                        
+                                    </select>
+                                </div>
                             </div>
+
 
                             <div class="col-12">
                                 <div class="form-check">
@@ -212,7 +271,7 @@
 
 
             <div class="col">
-                <div class="dropdown overflow-hidden">
+                <div class="dropdown more-dropdown">
                     <label>
                         MORE FILTERS
                     </label>
@@ -582,12 +641,14 @@
                             </div>
                             
 
+
                             <div class="check-box">
                                 <select id="possessionPlus" class="form-control selectpicker"
-                                        title="5+">
-                                    <option value="1">6</option>
-                                    <option value="2">7</option>
-                                    <option value="2">8</option>
+                                        title="5+ Yr">
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
                                 </select>
                             </div>
 
@@ -651,9 +712,9 @@
                             </div>
                         </div>
 
-                        <div class="row gx-2 align-items-center">
+                        <div id="totalBudgetMobile" class="row gx-2 align-items-center">
                             <div class="col">
-                                <select class="form-select">
+                                <select id="totalMinPriceMobile" class="form-select">
                                     <option value="0">0</option>
                                     
                                     <option value="1M">1M</option>
@@ -684,7 +745,7 @@
                             </div>
 
                             <div class="col">
-                                <select class="form-select">
+                                <select id="totalMaxPriceMobile" class="form-select">
                                     <option value="any" selected>any</option>
                                     
                                     <option value="1M">1M</option>
@@ -709,9 +770,69 @@
                                     
                                 </select>
                             </div>
-
-
                         </div>
+
+                        <div id="totalSqftMobile" class="row gx-2 align-items-center" style="display: none">
+                            <div class="col">
+                                <select id="sqftMinPriceMobile" class="form-select">
+                                    <option value="0">0</option>
+                                    
+                                    <option value="5000">5000</option>
+                                    
+                                    <option value="10000">10000</option>
+                                    
+                                    <option value="15000">15000</option>
+                                    
+                                    <option value="20000">20000</option>
+                                    
+                                    <option value="25000">25000</option>
+                                    
+                                    <option value="30000">30000</option>
+                                    
+                                    <option value="35000">35000</option>
+                                    
+                                    <option value="40000">40000</option>
+                                    
+                                    <option value="45000">45000</option>
+                                    
+                                    <option value="50000">50000</option>
+                                    
+                                </select>
+                            </div>
+
+                            <div class="col-auto">
+                                To
+                            </div>
+
+                            <div class="col">
+                                <select id="sqftMaxPriceMobile" class="form-select">
+                                    <option value="any" selected>any</option>
+                                    
+                                    <option value="5000">5000</option>
+                                    
+                                    <option value="10000">10000</option>
+                                    
+                                    <option value="15000">15000</option>
+                                    
+                                    <option value="20000">20000</option>
+                                    
+                                    <option value="25000">25000</option>
+                                    
+                                    <option value="30000">30000</option>
+                                    
+                                    <option value="35000">35000</option>
+                                    
+                                    <option value="40000">40000</option>
+                                    
+                                    <option value="45000">45000</option>
+                                    
+                                    <option value="50000">50000</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <div class="mb-3">
@@ -936,41 +1057,41 @@
             Sort by:
         </span>
 
-                    <div id="sortSwiper" class="swiper">
-                        <div class="swiper-wrapper">
-                            <a class="swiper-slide active" href="#">
-                                Relevance
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Price-Low
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Price-High
-                            </a>
-                            <a class="swiper-slide" href="#">
-                                Possession Date
-                            </a>
-                        </div>
+            <div id="sortSwiper" class="swiper">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide active" href="#">
+                        Relevance
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Price-Low
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Price-High
+                    </a>
+                    <a class="swiper-slide" href="#">
+                        Possession Date
+                    </a>
+                </div>
 
-                        <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
-                        <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
+                <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
+                <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
 
-                    </div>
+            </div>
 
-<!--            <div>-->
-<!--                <a class="active" href="#">-->
-<!--                    Relevance-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Price-Low-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Price-High-->
-<!--                </a>-->
-<!--                <a href="#">-->
-<!--                    Possession Date-->
-<!--                </a>-->
-<!--            </div>-->
+            <!--            <div>-->
+            <!--                <a class="active" href="#">-->
+            <!--                    Relevance-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Price-Low-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Price-High-->
+            <!--                </a>-->
+            <!--                <a href="#">-->
+            <!--                    Possession Date-->
+            <!--                </a>-->
+            <!--            </div>-->
         </div>
     </div>
 
@@ -978,6 +1099,290 @@
         <div class="map-box">
             <div id="map"></div>
         </div>
+    </div>
+
+    <div class="container mobile-listing-container">
+        <div class="swiper mobileListingSwiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card property-list-item mb-3" data-index="5">
+    <div class="row flex-column flex-md-row position-relative">
+
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
+
+            <span class="property-love">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+            </span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    <b>6</b>
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">
+                    <b>1</b>
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">
+                    <b>3D</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <div class="row gx-0">
+                            <div class="col"><h5 class="title-content-1">Rush Reliance</h5></div>
+                            <div class="col-auto d-md-none">
+                                <span class="text-body d-inline-block">
+                                    Completion: 2024
+                                </span>
+                            </div>
+                        </div>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3 mt-2" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/rush-logo.png" alt=""/>
+                        <a class="btn-link">Rush Lanka Group</a>
+                    </div>
+<!--                    <div class="col d-md-none">-->
+<!--                        <span class="text-body d-inline-block">-->
+<!--                            Completion: 2024-->
+<!--                         </span>-->
+<!--                    </div>-->
+                    <div class="col col-md-auto text-end d-flex justify-content-between flex-row-reverse flex-md-row">
+                        <a href="#" class="btn btn-danger me-md-2">VIEW MORE</a>
+
+                        <a href="#" class="btn btn-outline-danger" data-bs-toggle="modal"
+                           data-bs-target="#callbackModal">
+                            CONTACT
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="card property-list-item mb-3" data-index="5">
+    <div class="row flex-column flex-md-row position-relative">
+
+        <div class="col-12 col-md-4 col-lg-3 img-container pe-lg-0">
+            <a href="#">
+                <img src="assets/img/building.png" class="img-fluid" alt="property"></a>
+
+            <span class="property-love">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+            </span>
+            <div class="icons-container">
+                <div class="text-body">
+                    <img src="./assets/img/camera.svg" alt="camera">
+                    <b>6</b>
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/video-camera.svg" alt="video camera">
+                    <b>1</b>
+                </div>
+                <div class="text-body">
+                    <img src="./assets/img/rotation.svg" alt="rotate">
+                    <b>3D</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-absolute text-end d-md-none">
+            <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                8% rental yield
+            </a>
+        </div>
+
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="card-body">
+                <div class="row mb-2 mb-md-3">
+                    <div class="col">
+                        <div class="row gx-0">
+                            <div class="col"><h5 class="title-content-1">Rush Reliance</h5></div>
+                            <div class="col-auto d-md-none">
+                                <span class="text-body d-inline-block">
+                                    Completion: 2024
+                                </span>
+                            </div>
+                        </div>
+                        <div class="location title-light-1 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Mount Lavinia
+                        </div>
+                        <div class="title-content-2 price-container">
+                            Rs. 34.5 Mn
+                            <span class="price-label">Upwards</span>
+                            <span class="pt-md-2 pt-lg-0 sqft">
+                                (Price per sqft Rs. 12000)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex flex-column align-items-lg-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2 cursor-auto">
+    8% rental yield
+</a>
+<span class="text-body d-inline-block">
+    Completion: 2024
+</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 col-lg-9 col-xl-8">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <i class="fa fa-bed" aria-hidden="true"></i> 2
+                                </th>
+                                <td>
+                                    <i class="fa fa-bath" aria-hidden="true"></i> 2
+                                </td>
+                                <td>
+                                    <i class="fa fa-car" aria-hidden="true"></i> 1
+                                </td>
+                                <td>680 - 725 sqft</td>
+                                <td>Rs. 34.5Mn - 46.5Mn</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <a class="btn btn-link mb-2 mb-md-3 mt-2" href="#">
+                    Show More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+
+                <div class="row align-items-end align-items-md-center btn-container">
+                    <div class="col img-container text-body d-none d-md-block">
+
+                        <img src="./assets/img/rush-logo.png" alt=""/>
+                        <a class="btn-link">Rush Lanka Group</a>
+                    </div>
+<!--                    <div class="col d-md-none">-->
+<!--                        <span class="text-body d-inline-block">-->
+<!--                            Completion: 2024-->
+<!--                         </span>-->
+<!--                    </div>-->
+                    <div class="col col-md-auto text-end d-flex justify-content-between flex-row-reverse flex-md-row">
+                        <a href="#" class="btn btn-danger me-md-2">VIEW MORE</a>
+
+                        <a href="#" class="btn btn-outline-danger" data-bs-toggle="modal"
+                           data-bs-target="#callbackModal">
+                            CONTACT
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- If we need scrollbar -->
+            <!--            <div class="swiper-scrollbar"></div>-->
+        </div>
+
     </div>
 
     <div class="container listing-container">
@@ -1753,7 +2158,8 @@
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
                             type="button" role="tab" aria-controls="nav-home" aria-selected="true">Price
                     </button>
-                    <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile"
                             type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Location
                     </button>
                     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"

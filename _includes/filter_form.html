@@ -48,32 +48,55 @@
                             <div class="col">
                                 <input type="radio" class="btn-check" value="total" name="budgetType" id="option1"
                                        autocomplete="off" checked>
-                                <label class="btn btn-success w-100" for="option1">Total</label>
+                                <label id="totalTab" class="btn btn-success w-100" for="option1">Total</label>
                             </div>
                             <div class="col">
                                 <input type="radio" class="btn-check" value="sqft" name="budgetType" id="option2"
                                        autocomplete="off">
-                                <label class="btn btn-success w-100" for="option2">Per SQFT</label>
+                                <label id="sqftTab" class="btn btn-success w-100" for="option2">Per SQFT</label>
                             </div>
                         </div>
 
-                        <div class="row g-0 gx-1 mt-2">
-                            <div class="col">
-                                <select id="minPrice" class="form-select">
-                                    <option value="0">0</option>
-                                    {% for i in (1..10) %}
-                                    <option value="{{i}}M">{{i}}M</option>
-                                    {% endfor %}
-                                </select>
+                        <div class="row g-0 mt-2">
+                            <div class="row g-0 gx-1">
+                                <div class="col">
+                                    <select id="totalMinPrice" class="form-select">
+                                        <option value="0">0</option>
+                                        {% for i in (1..10) %}
+                                        <option value="{{i}}M">{{i}}M</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select id="totalMaxPrice" class="form-select">
+                                        <option value="any" selected>any</option>
+                                        {% for i in (1..10) %}
+                                        <option value="{{i}}M">{{i}}M</option>
+                                        {% endfor %}
+
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col">
-                                <select id="maxPrice" class="form-select">
-                                    <option value="any" selected>any</option>
-                                    {% for i in (1..10) %}
-                                    <option value="{{i}}M">{{i}}M</option>
-                                    {% endfor %}
-                                </select>
+
+                            <div class="row g-0 gx-1" style="display: none">
+                                <div class="col">
+                                    <select id="sqftMinPrice" class="form-select">
+                                        <option value="0">0</option>
+                                        {% for i in (1..10) %}
+                                        <option value="{{i | times: 5000}}">{{i | times: 5}}000</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select id="sqftMaxPrice" class="form-select">
+                                        <option value="any" selected>any</option>
+                                        {% for i in (1..10) %}
+                                        <option value="{{i | times: 5000}}">{{i | times: 5}}000</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
                             </div>
+
 
                             <div class="col-12">
                                 <div class="form-check">
@@ -453,10 +476,11 @@
 
                             <div class="check-box">
                                 <select id="possessionPlus" class="form-control selectpicker"
-                                        title="5+">
-                                    <option value="1">6</option>
-                                    <option value="2">7</option>
-                                    <option value="2">8</option>
+                                        title="5+ Yr">
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
                                 </select>
                             </div>
 
@@ -492,9 +516,9 @@
                             </div>
                         </div>
 
-                        <div class="row gx-2 align-items-center">
+                        <div id="totalBudgetMobile" class="row gx-2 align-items-center">
                             <div class="col">
-                                <select class="form-select">
+                                <select id="totalMinPriceMobile" class="form-select">
                                     <option value="0">0</option>
                                     {% for i in (1..10) %}
                                     <option value="{{i}}M">{{i}}M</option>
@@ -507,16 +531,40 @@
                             </div>
 
                             <div class="col">
-                                <select class="form-select">
+                                <select id="totalMaxPriceMobile" class="form-select">
                                     <option value="any" selected>any</option>
                                     {% for i in (1..10) %}
                                     <option value="{{i}}M">{{i}}M</option>
                                     {% endfor %}
                                 </select>
                             </div>
-
-
                         </div>
+
+                        <div id="totalSqftMobile" class="row gx-2 align-items-center" style="display: none">
+                            <div class="col">
+                                <select id="sqftMinPriceMobile" class="form-select">
+                                    <option value="0">0</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i | times: 5000}}">{{i | times: 5000}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <div class="col-auto">
+                                To
+                            </div>
+
+                            <div class="col">
+                                <select id="sqftMaxPriceMobile" class="form-select">
+                                    <option value="any" selected>any</option>
+                                    {% for i in (1..10) %}
+                                    <option value="{{i | times: 5000}}">{{i | times: 5000}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <div class="mb-3">
