@@ -635,46 +635,78 @@
         box-shadow: none !important;
       }
 
-      .button-container{
+      //.button-container{
+      //
+      //  .col:nth-child(1){
+      //    label{
+      //      border-right: 0px;
+      //      border-top-right-radius: 0;
+      //      border-bottom-right-radius: 0;
+      //    }
+      //  }
+      //  .col:nth-child(2){
+      //    label{
+      //      border-left: 0px;
+      //      border-top-left-radius: 0;
+      //      border-bottom-left-radius: 0;
+      //    }
+      //  }
+      //
+      //  label{
+      //    color: #FFFFFF;
+      //    padding: 10px 10px;
+      //    font-family: Rubik-Regular;
+      //    font-size: 14px;
+      //    text-transform: none;
+      //  }
+      //
+      //  .btn.btn-success{
+      //    background-color: #24c87c;
+      //    border-color: #2a8e36;
+      //    box-shadow: none !important;
+      //    color: #000;
+      //
+      //  }
+      //
+      //  .btn-check:checked+.btn-success{
+      //    color: #fff;
+      //    background-color: #2a8e36;
+      //    border-color: #2a8e36;
+      //  }
+      //
+      //}
 
-        .col:nth-child(1){
-          label{
-            border-right: 0px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-          }
-        }
-        .col:nth-child(2){
-          label{
-            border-left: 0px;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-          }
-        }
+      .button-container {
+        background-color: #e0e0e0;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #c5c5c5;
 
-        label{
+        label {
           color: #FFFFFF;
-          padding: 10px 10px;
+          padding: 5px 10px;
           font-family: Rubik-Regular;
           font-size: 14px;
           text-transform: none;
         }
 
-        .btn.btn-success{
-          background-color: #24c87c;
-          border-color: #2a8e36;
+        .btn.btn-success {
+          background-color: #e0e0e0;
+          //border-color: #2a8e36;
+          border: 0;
           box-shadow: none !important;
           color: #000;
 
         }
 
-        .btn-check:checked+.btn-success{
+        .btn-check:checked + .btn-success {
           color: #fff;
           background-color: #2a8e36;
-          border-color: #2a8e36;
+          //border-color: #2a8e36;
         }
 
       }
+
     }
 
     .modal-footer {

@@ -22,6 +22,12 @@ $(document).ready(() => {
 
 let map;
 
+var mobileListingSwiper = new Swiper('.mobileListingSwiper', {
+    loop: false,
+    slidesPerView: '1.2',
+    spaceBetween: 12,
+});
+
 function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
@@ -309,24 +315,83 @@ function initMap() {
     $(".property-list-item").hover(
         function () {
 
-            try {
-                console.log(markers.length);
+            var width = $(window).width();
+            var mapActive = $('#showOnMap').prop("checked") ? 1 : 0 ;
+            //showOnMap
 
-
-                const index = $(this).data("index");
-                google.maps.event.trigger(markers[index], 'mouseover');
-
-            } catch (e) {
-                console.log('error==>', e);
+            if (width < 768 || !mapActive) {
+                console.log("return");
+                return;
             }
+
+            setTimeout(() => {
+
+                try {
+                    console.log(markers.length);
+                    const index = $(this).data("index");
+                    google.maps.event.trigger(markers[index], 'mouseover');
+
+                } catch (e) {
+                    console.log('error==>', e);
+                }
+
+            }, 500);
 
         }, function () {
 
-            const index = $(this).data("index");
-            google.maps.event.trigger(markers[index], 'mouseout');
+            setTimeout(() => {
+                try {
+                    const index = $(this).data("index");
+                    google.maps.event.trigger(markers[index], 'mouseout');
+                } catch (e) {
+                    console.log(e, "error==>")
+                }
+            }, 0);
 
         }
     );
+
+    let currentIndex;
+    mobileListingSwiper.on('transitionEnd', function () {
+        console.log('*** mySwiper.realIndex==>', mobileListingSwiper.realIndex);
+        const index = $('.mobileListingSwiper').find('.swiper-slide-active').children('.property-list-item').data("index");
+        console.log("index ==>", index);
+        console.log("currentIndex ==>", currentIndex);
+
+        try {
+            if (currentIndex) {
+                google.maps.event.trigger(markers[currentIndex], 'mouseout');
+            }
+
+        } catch (e) {
+            console.log(e, "error==>")
+        }
+
+
+        currentIndex = index;
+
+
+        // let previousIndex = this.previousIndex - 1;
+        // if (previousIndex == -1) {
+        //     previousIndex = 0;
+        // } else if (previousIndex == document.querySelectorAll('mobileListingSwiper>.swiper-slide').length) { // When swiper loops, slideChange gets fired twice and messes up animations. This prevents it from doing so.
+        //     return;
+        // }
+
+        // const previndex = $('.mobileListingSwiper>.swiper-slide-active').index(previousIndex).data("index");
+
+        // console.log("previndex==>",previndex);
+
+        setTimeout(() => {
+            try {
+                google.maps.event.trigger(markers[index], 'mouseover');
+            } catch (e) {
+                console.log(e, "error==>")
+            }
+        }, 500);
+
+
+    });
 
     mcOptions = {
         styles: [{

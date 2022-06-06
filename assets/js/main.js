@@ -1,5 +1,25 @@
 $(document).ready(function () {
 
+    var input = document.querySelector("#phoneNo");
+    window.intlTelInput(input, {
+        initialCountry: "lk",
+        allowDropdown:true,
+    });
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        var width = $(window).width();
+
+        console.log(width,scroll);
+        if(scroll > 60 && width <768){
+            $('.map-enabled>.filter-form-container').addClass('top-0');
+        }else {
+            $('.map-enabled>.filter-form-container').removeClass('top-0');
+        }
+        // if window < 768
+        // Do something
+    });
+
     // $('#budgetDropMenu').on('click',function (){
     //     e.stopPropagation();
     // });
@@ -45,11 +65,6 @@ $(document).ready(function () {
 
     // myModal.show();
 
-    new Swiper('.mobileListingSwiper', {
-        loop: true,
-        slidesPerView: '1.2',
-        spaceBetween: 12,
-    });
 
     new Swiper('#sortSwiper', {
         loop: false,
@@ -413,10 +428,10 @@ $(document).ready(function () {
 
     //reset desktop modal
     $('#desktopModalBtnReset').on("click", function () {
-        $('#areaSqftRange').slider('option', {values: [0, 0]});
+        $('#areaSqftRange').slider('option', {values: [0, 5000]});
 
         appendSqftSliderFirstVal(0);
-        appendSqftSliderLastVal(0);
+        appendSqftSliderLastVal(5000);
         // $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + 0 + "</span>");
         // $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + 500 + "</span>");
     });
@@ -426,10 +441,10 @@ $(document).ready(function () {
         $('.selectpicker').selectpicker('deselectAll');
         $('.selectpicker').selectpicker('val', '');
 
-        $('#areaSqftRangeMobile').slider('option', {values: [0, 0]});
+        $('#areaSqftRangeMobile').slider('option', {values: [0, 5000]});
 
         appendSqftSliderFirstValMobile(0);
-        appendSqftSliderLastValMobile(0);
+        appendSqftSliderLastValMobile(5000);
     });
 
 
