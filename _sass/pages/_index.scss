@@ -171,8 +171,14 @@
       #map {
         height: 100%;
 
+        .gm-style .gm-style-iw-c{
+          padding: 10px;
+        }
+
         .gm-ui-hover-effect {
-          display: none !important;
+          //display: none !important;
+          top: -5px !important;
+          right: -5px !important;
         }
 
       }
@@ -304,8 +310,7 @@
 
       img {
         width: 60px;
-        margin: auto;
-        margin-bottom: 15px;
+        margin: 0 auto 15px;
       }
 
       h3 {
@@ -321,6 +326,30 @@
         text-align: center;
         line-height: 20px;
         margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+.map-enabled{
+  .preferred-project .content-row {
+
+    @media (min-width: 1200px) {
+    }
+
+    div.col-auto{
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        width: 30%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @media (min-width: 1200px) {
+        width: 30%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @media (min-width: 2000px) {
+        width: 25%;
       }
     }
   }

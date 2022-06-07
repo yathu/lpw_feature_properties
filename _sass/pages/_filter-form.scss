@@ -624,6 +624,13 @@
             border-color: #6c757d !important;
             box-shadow: none;
             border-radius: 0;
+
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
             .btn{
               border: 0;
             }
