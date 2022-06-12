@@ -171,7 +171,7 @@
       #map {
         height: 100%;
 
-        .gm-style .gm-style-iw-c{
+        .gm-style .gm-style-iw-c {
           padding: 10px;
         }
 
@@ -331,13 +331,13 @@
   }
 }
 
-.map-enabled{
+.map-enabled {
   .preferred-project .content-row {
 
     @media (min-width: 1200px) {
     }
 
-    div.col-auto{
+    div.col-auto {
       @media (min-width: 992px) and (max-width: 1199.98px) {
         width: 30%;
         margin-left: 0;
@@ -761,6 +761,13 @@
 
 #callbackModal {
   z-index: 99999;
+  @media (max-width: 767.98px) {
+
+    .modal-dialog {
+      transition: transform .2s ease-out;
+      transform: translateY(100%);
+    }
+  }
 
   .modal-header {
     font-size: 11px;
@@ -779,7 +786,7 @@
   }
 
   .modal-body {
-    .country-list{
+    .country-list {
       white-space: normal;
     }
   }
@@ -787,6 +794,18 @@
   .form-container {
     background-color: #202330;
     padding: 25px 40px 40px;
+  }
+}
+
+#callbackModal[class~="show"] {
+  @media (max-width: 767.98px) {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .modal-dialog{
+    transform: none !important;
+    margin: 0;
   }
 }
 

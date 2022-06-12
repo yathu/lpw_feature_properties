@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="row g-0 mt-2">
-                            <div class="row g-0 gx-1">
+                            <div id="totalTabContent" class="row g-0 gx-1">
                                 <div class="col">
                                     <select id="totalMinPrice" class="form-select">
                                         <option value="0">0</option>
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
 
-                            <div class="row g-0 gx-1" style="display: none">
+                            <div id="sqftTabContent" class="row g-0 gx-1" style="display: none">
                                 <div class="col">
                                     <select id="sqftMinPrice" class="form-select">
                                         <option value="0">0</option>
@@ -147,6 +147,7 @@
             <div class="col">
                 <div class="form-floating">
                     <select id="possesionYear" class="form-control selectpicker" title="in years">
+                        <option value="any" selected>any</option>
                         <option value="1">1 year</option>
                         <option value="2">2 years</option>
                     </select>
@@ -217,7 +218,7 @@
                         <div class="mb-1 chip-check">
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Residential Apartment"
+                                <input class="form-check-input" type="checkbox" value="Residential Apartment"
                                        name="propertyType" id="propertyType1">
                                 <label class="form-check-label" for="propertyType1">
                                     Residential Apartment
@@ -225,7 +226,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Residential Lands"
+                                <input class="form-check-input" type="checkbox" value="Residential Lands"
                                        name="propertyType" id="propertyType2">
                                 <label class="form-check-label" for="propertyType2">
                                     Residential Lands
@@ -233,7 +234,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Independent Houses/Villas"
+                                <input class="form-check-input" type="checkbox" value="Independent Houses/Villas"
                                        name="propertyType" id="propertyType3">
                                 <label class="form-check-label" for="propertyType3">
                                     Independent Houses/Villas
@@ -241,7 +242,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Commercial Properties"
+                                <input class="form-check-input" type="checkbox" value="Commercial Properties"
                                        name="propertyType" id="propertyType4">
                                 <label class="form-check-label" for="propertyType4">
                                     Commercial Properties
@@ -249,7 +250,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Office Spaces" name="propertyType"
+                                <input class="form-check-input" type="checkbox" value="Office Spaces" name="propertyType"
                                        id="propertyType5">
                                 <label class="form-check-label" for="propertyType5">
                                     Office Spaces
@@ -577,7 +578,7 @@
                         <div class="mb-1 chip-check">
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Residential Apartment"
+                                <input class="form-check-input" type="checkbox" value="Residential Apartment"
                                        name="propertyTypeMobile" id="propertyTypeMobile1">
                                 <label class="form-check-label" for="propertyTypeMobile1">
                                     Residential Apartment
@@ -585,7 +586,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Residential Lands"
+                                <input class="form-check-input" type="checkbox" value="Residential Lands"
                                        name="propertyTypeMobile" id="propertyTypeMobile2">
                                 <label class="form-check-label" for="propertyTypeMobile2">
                                     Residential Lands
@@ -593,7 +594,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Independent Houses/Villas"
+                                <input class="form-check-input" type="checkbox" value="Independent Houses/Villas"
                                        name="propertyTypeMobile" id="propertyTypeMobile3">
                                 <label class="form-check-label" for="propertyTypeMobile3">
                                     Independent Houses/Villas
@@ -601,7 +602,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Commercial Properties"
+                                <input class="form-check-input" type="checkbox" value="Commercial Properties"
                                        name="propertyTypeMobile" id="propertyTypeMobile4">
                                 <label class="form-check-label" for="propertyTypeMobile4">
                                     Commercial Properties
@@ -609,7 +610,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="Office Spaces"
+                                <input class="form-check-input" type="checkbox" value="Office Spaces"
                                        name="propertyTypeMobile" id="propertyTypeMobile5">
                                 <label class="form-check-label" for="propertyTypeMobile5">
                                     Office Spaces

@@ -32,7 +32,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: new google.maps.LatLng(-33.91722, 151.23064),
-        zoom: 10,
+        zoom: 12,
         // streetViewControl: false,
         mapTypeControl: false,
         fullscreenControl: false,
@@ -240,13 +240,13 @@ function initMap() {
 
     const contentString =
         '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;overflow: hidden">' +
-        '<img style="width: 100%;height: 110px; object-fit: cover;margin-bottom: 15px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
-        '<h1 style="font-family: Rubik-Medium; line-height:1;' + 'font-size: 16px;' + 'color: #202330;' + 'letter-spacing: -0.37px;">JAT - 146 Residents</h1>' +
+        '<img style="width: 100%;height: 85px; object-fit: cover;margin-bottom: 10px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
+        '<h1 style="margin-bottom:2px; font-family: Rubik-Medium; line-height:1;' + 'font-size: 16px;' + 'color: #202330;' + 'letter-spacing: -0.37px;">JAT - 146 Residents</h1>' +
         '<p style="font-family: Rubik-Regular; font-size: 13px; color: #71757B; line-height: 1; margin-bottom: 0;"> Thalawathugoda</p>' +
-        '<div style="display: flex; flex-wrap: wrap; margin-top: 9px; align-items: flex-end; justify-content: space-between;">' +
+        '<div style="display: flex; flex-wrap: wrap; margin-top: 3px; align-items: flex-end; justify-content: space-between;">' +
         '<div style="width: 50%;padding: 0px;">' +
         '<h2 style="font-family: Rubik-Medium; font-size: 12px; color: #029432; line-height: 20px;margin-bottom: 0;">Rs. 34.5 Mn</h2>' +
-        '<h2 style="font-family: Rubik-Medium; font-size: 12px; color: #71757B; line-height: 20px;margin-bottom: 0;">Upwards</h2>' +
+        '<h2 style="font-family: Rubik-Medium; font-size: 12px; color: #71757B;margin-bottom: 0;">Upwards</h2>' +
         '</div>' +
         '<div style="width:50%;padding: 0px"> ' +
         '<a href="#" style="text-decoration: none;background-color: #FF4501;width: 100%;font-family: Rubik-Medium;font-size: 11px;color: #FFFFFF;text-align: center; display: block; border-radius: 4px; padding: 8px 4px;">VIEW MORE</a> </div>' +
@@ -278,20 +278,13 @@ function initMap() {
         });
 
 
-        // marker.addListener("click", (val) => {
-        //     console.log("click", val);
-        //
-        //     infowindow.setOptions({maxWidth: 285});
-        //     infowindow.setOptions({minWidth: 285});
-        //     infowindow.setOptions({maxHeight: 293});
-        //     infowindow.setOptions({minHeight: 293});
-        //
-        //     infowindow.open({
-        //         anchor: marker,
-        //         map,
-        //         shouldFocus: false,
-        //     });
-        // });
+        marker.addListener("click", (val) => {
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+        });
 
         //
         marker.addListener('mouseover', function () {
@@ -303,9 +296,9 @@ function initMap() {
         });
 
 // assuming you also want to hide the infowindow when user mouses-out
-        marker.addListener('mouseout', function () {
-            infowindow.close();
-        });
+//         marker.addListener('mouseout', function () {
+//             infowindow.close();
+//         });
 
         return marker;
     });
