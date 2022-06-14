@@ -1,5 +1,17 @@
 $(document).ready(function () {
 
+
+
+    var phoneNoModal = new bootstrap.Modal(document.getElementById('phoneNoModal'),)
+    var callbackModal = new bootstrap.Modal(document.getElementById('callbackModal'),)
+
+    phoneNoModal.show();
+
+    $('#btnShowPhone').on("click",function () {
+        callbackModal.hide();
+        setTimeout(()=> phoneNoModal.show(),100);
+    });
+
     var input = document.querySelector("#phoneNo");
     window.intlTelInput(input, {
         initialCountry: "lk",
