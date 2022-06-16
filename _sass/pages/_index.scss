@@ -9,6 +9,7 @@
 .index-video-banner {
   height: 400px;
   object-fit: cover;
+  z-index: 9999;
 }
 
 .filtered-info {
@@ -146,6 +147,7 @@
     right: 0;
     width: 40%;
     //height: calc(100vh - 88px);
+    top: 0;
     height: calc(100vh);
     background-color: white;
     z-index: 0;
@@ -768,6 +770,9 @@
       transform: translateY(100%);
       width: 100%;
       max-width: 100% !important;
+    }
+    .modal-content{
+      border-radius: 13px 13px 0 0;
     }
   }
 

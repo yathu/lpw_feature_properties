@@ -5,7 +5,7 @@ $(document).ready(function () {
     var phoneNoModal = new bootstrap.Modal(document.getElementById('phoneNoModal'),)
     var callbackModal = new bootstrap.Modal(document.getElementById('callbackModal'),)
 
-    phoneNoModal.show();
+    // phoneNoModal.show();
 
     $('#btnShowPhone').on("click",function () {
         callbackModal.hide();
@@ -60,7 +60,10 @@ $(document).ready(function () {
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
         let currentScroll = window.pageYOffset;
-        if (currentScroll - lastScroll > 0) {
+
+        console.log("currentScroll==>",currentScroll);
+
+        if ((currentScroll - lastScroll > 0) && currentScroll > 480) {
             $('.filter-form-container').removeClass('sticky-top');
         } else {
             $('.filter-form-container').addClass('sticky-top');

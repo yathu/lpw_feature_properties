@@ -16,7 +16,7 @@
 
             <div class="col">
                 <div class="form-floating">
-                    <select id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms">
+                    <select id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms" multiple>
                         <option>1 Bedroom</option>
                         <option>2 Bedrooms</option>
                         <option>3 Bedrooms</option>
@@ -442,7 +442,7 @@
                         <div class="mb-1 chip-check">
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="" name="bedroomMobile"
+                                <input class="form-check-input" type="checkbox" value="" name="bedroomMobile"
                                        id="anyBedroom">
                                 <label class="form-check-label" for="anyBedroom">
                                     Any
@@ -451,7 +451,7 @@
 
                             {% for i in (1..5) %}
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="" name="bedroomMobile"
+                                <input class="form-check-input" type="checkbox" value="" name="bedroomMobile"
                                        id="{{i}}Room">
                                 <label class="form-check-label" for="{{i}}Room">
                                     {{i}} + Rooms
