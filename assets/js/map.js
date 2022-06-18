@@ -28,11 +28,14 @@ var mobileListingSwiper = new Swiper('.mobileListingSwiper', {
     spaceBetween: 12,
 });
 
+let features;
+let markers;
+
 function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
         center: new google.maps.LatLng(-33.91722, 151.23064),
-        zoom: 12,
+        zoom: 16,
         // streetViewControl: false,
         mapTypeControl: false,
         fullscreenControl: false,
@@ -198,7 +201,7 @@ function initMap() {
         ],
     });
 
-    const features = [
+    features = [
         {
             position: new google.maps.LatLng(-33.91721, 151.2263),
             type: "info",
@@ -237,7 +240,6 @@ function initMap() {
         }
     ];
 
-
     const contentString =
         '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;overflow: hidden">' +
         '<img style="width: 100%;height: 85px; object-fit: cover;margin-bottom: 10px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
@@ -269,7 +271,7 @@ function initMap() {
     };
 
     // Create markers.
-    const markers = features.map((data, i) => {
+    markers = features.map((data, i) => {
         const marker = new google.maps.Marker({
             position: data.position,
             map: map,
@@ -284,6 +286,7 @@ function initMap() {
                 map,
                 shouldFocus: false,
             });
+            // map.panTo(marker.position);
         });
 
         //
@@ -293,6 +296,9 @@ function initMap() {
                 map,
                 shouldFocus: false,
             });
+
+            // map.panTo(marker.position);
+
         });
 
 // assuming you also want to hide the infowindow when user mouses-out
@@ -317,18 +323,34 @@ function initMap() {
                 return;
             }
 
+            var index = $(this).data("index");
+            var pos = features[index].position;
+
+            // setTimeout(()=>{
+            //     infowindow.open({
+            //         anchor: markers[index],
+            //         map,
+            //         shouldFocus: false,
+            //     });
+            // },0);
+            //
+            // // google.maps.event.trigger(map, "resize");
+            // map.panTo(pos);
+
             setTimeout(() => {
 
                 try {
                     console.log(markers.length);
                     const index = $(this).data("index");
                     google.maps.event.trigger(markers[index], 'mouseover');
+                    map.panTo(pos);
+
 
                 } catch (e) {
                     console.log('error==>', e);
                 }
 
-            }, 500);
+            }, 0);
 
         }, function () {
 
@@ -343,6 +365,7 @@ function initMap() {
 
         }
     );
+
 
     let currentIndex;
     mobileListingSwiper.on('transitionEnd', function () {
@@ -378,10 +401,12 @@ function initMap() {
         setTimeout(() => {
             try {
                 google.maps.event.trigger(markers[index], 'mouseover');
+                map.panTo(pos);
+
             } catch (e) {
                 console.log(e, "error==>")
             }
-        }, 500);
+        }, 0);
 
 
     });
@@ -392,8 +417,8 @@ function initMap() {
             url: "assets/img/cluster.svg",
             width: 54,
             textColor: '#fff',
-        }
-        ]
+        }],
+        // zoomOnClick: false
     };
 
     var mc = new MarkerClusterer(map, markers, mcOptions);

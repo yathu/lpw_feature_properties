@@ -22,7 +22,7 @@ $(document).ready(function () {
         var scroll = $(window).scrollTop();
         var width = $(window).width();
 
-        console.log(width,scroll);
+        // console.log(width,scroll);
         if(scroll > 60 && width <768){
             $('.map-enabled>.filter-form-container').addClass('top-0');
         }else {
@@ -61,7 +61,7 @@ $(document).ready(function () {
     window.addEventListener("scroll", () => {
         let currentScroll = window.pageYOffset;
 
-        console.log("currentScroll==>",currentScroll);
+        // console.log("currentScroll==>",currentScroll);
 
         if ((currentScroll - lastScroll > 0) && currentScroll > 480) {
             $('.filter-form-container').removeClass('sticky-top');
@@ -343,7 +343,7 @@ $(document).ready(function () {
     //budget slider labels
     for (let i = 0; i <= 20; i++) {
         var isOdd = (i % 2) !== 0;
-        console.log(isOdd);
+        // console.log(isOdd);
         $("#areaSqftLabels").append("<span class='slider-label' style='left: calc(" + (i * 5) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i == 20 ? "Any" : i * 250)) + "</span>");
     }
 
@@ -376,7 +376,7 @@ $(document).ready(function () {
     }
 
     function appendSqftSliderLastValMobile(value) {
-        console.log("value==>", value);
+        // console.log("value==>", value);
 
         var finalVal = value == 0 ? 0 : (value == 5000 ? 'any' : value);
         $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
