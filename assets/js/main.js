@@ -8,6 +8,7 @@ $(document).ready(function () {
     // phoneNoModal.show();
 
     $('#btnShowPhone').on("click",function () {
+
         callbackModal.hide();
         // setTimeout(()=> phoneNoModal.show(),100);
     });
