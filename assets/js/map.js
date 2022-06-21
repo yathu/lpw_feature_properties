@@ -400,6 +400,12 @@ function initMap() {
 
         setTimeout(() => {
             try {
+                var mapActive = $('#showOnMap').prop("checked") ? 1 : 0;
+
+                if (!mapActive) {
+                    return;
+                }
+
                 google.maps.event.trigger(markers[index], 'mouseover');
                 map.panTo(pos);
 
