@@ -795,6 +795,10 @@
       //transform: translateY(100%);
       width: 100%;
       max-width: 100% !important;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      min-height: calc(100% - 0rem);
     }
     .modal-content {
       border-radius: 13px 13px 0 0;
@@ -831,13 +835,13 @@
 
 #callbackModal[class~="show"] {
   @media (max-width: 767.98px) {
-    display: flex !important;
-    align-items: flex-end;
-    justify-content: center;
-
+    //display: flex !important;
+    //align-items: flex-end;
+    //justify-content: center;
+    //
     .modal-dialog {
-      transform: none !important;
-      margin: 0;
+      //transform: none !important;
+      //margin: 0;
     }
   }
 
@@ -846,9 +850,9 @@
 
 #phoneNoModal {
   z-index: 10000;
-  height: auto !important;
-  bottom: 0 !important;
-  top: auto;
+  //height: auto !important;
+  //bottom: 0 !important;
+  //top: auto;
 
   .modal-header {
     .btn-close {
@@ -896,10 +900,14 @@
 
   @media (max-width: 767.98px) {
     .modal-dialog {
-      transition: transform .2s ease-out;
-      transform: translateY(100%);
+      //transition: transform .2s ease-out;
+      //transform: translateY(100%);
       width: 100%;
       max-width: 100% !important;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      min-height: calc(100% - 0rem);
     }
 
     .modal-content {
