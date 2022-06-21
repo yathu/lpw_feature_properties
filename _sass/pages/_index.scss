@@ -783,6 +783,10 @@
 
 #callbackModal {
   z-index: 99999;
+  height: auto !important;
+  bottom: 0 !important;
+  top: auto;
+
   @media (max-width: 767.98px) {
 
     .modal-dialog {
@@ -841,6 +845,9 @@
 
 #phoneNoModal {
   z-index: 10000;
+  height: auto !important;
+  bottom: 0 !important;
+  top: auto;
 
   .modal-header {
     .btn-close {
@@ -896,7 +903,7 @@
 
     .modal-content {
       background-color: transparent;
-
+      border: 0;
     }
     .modal-header {
       .btn-close {
