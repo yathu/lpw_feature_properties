@@ -406,6 +406,8 @@ function initMap() {
                     return;
                 }
 
+                console.log("swiper mouseover...");
+
                 google.maps.event.trigger(markers[index], 'mouseover');
                 map.panTo(pos);
 
