@@ -401,6 +401,7 @@ function initMap() {
         setTimeout(() => {
             try {
                 var mapActive = $('#showOnMap').prop("checked") ? 1 : 0;
+                var pos = features[index].position;
 
                 if (!mapActive) {
                     return;
