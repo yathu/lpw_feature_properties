@@ -791,8 +791,8 @@
     //top: auto;
 
     .modal-dialog {
-      //transition: none !important;
-      //transform: translateY(100%);
+      transition: none !important;
+      transform: none !important;
       width: 100%;
       max-width: 100% !important;
       margin: 0;
