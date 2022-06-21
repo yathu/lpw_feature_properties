@@ -9,9 +9,8 @@ $(document).ready(function () {
 
     $('#btnShowPhone').on("click",function () {
 
-
         $('#callbackBtnClose').trigger("click");
-        setTimeout(()=> phoneNoModal.show(),5000);
+        setTimeout(()=> phoneNoModal.show(),0);
     });
 
     var input = document.querySelector("#phoneNo");
