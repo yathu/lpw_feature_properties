@@ -406,7 +406,7 @@ function initMap() {
             } catch (e) {
                 console.log(e, "error==>")
             }
-        }, 0);
+        }, 300);
 
 
     });
