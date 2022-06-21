@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     $('#btnShowPhone').on("click",function () {
 
-        callbackModal.hide();
+        callbackModal.dispose();
         // setTimeout(()=> phoneNoModal.show(),100);
     });
 
