@@ -241,7 +241,7 @@ function initMap() {
     ];
 
     const contentString =
-        '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;overflow: hidden;min-width:145px;max-width: 146px;">' +
+        '<div id="content" style="background: #FFFFFF;border-radius: 4px; margin-left: 5px;margin-top: 5px;overflow: hidden;min-width:145px;max-width: 146px;min-height: 164px;">' +
         '<img style="width: 100%;max-width:145px;height: 85px; object-fit: cover;margin-bottom: 10px;" src="https://i.picsum.photos/id/201/270/300.jpg?hmac=eUPYnIrqhvHmZB0_vluUvJSEHy7HLvIvvsc8V8V3a98"/>' +
         '<h1 style="margin-bottom:2px; font-family: Rubik-Medium; line-height:1;' + 'font-size: 16px;' + 'color: #202330;' + 'letter-spacing: -0.37px;">JAT - 146 Residents</h1>' +
         '<p style="font-family: Rubik-Regular; font-size: 13px; color: #71757B; line-height: 1; margin-bottom: 0;"> Thalawathugoda</p>' +
@@ -407,11 +407,10 @@ function initMap() {
                     return;
                 }
 
-                console.log("swiper mouseover...");
+                console.log("swiper mouseover...1");
 
                 google.maps.event.trigger(markers[index], 'mouseover');
-
-                // map.panTo(pos);
+                map.panTo(pos);
 
             } catch (e) {
                 console.log(e, "error==>")
