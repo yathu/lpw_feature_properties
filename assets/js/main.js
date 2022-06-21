@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 
         $('#callbackBtnClose').trigger("click");
-        setTimeout(()=> phoneNoModal.show(),100);
+        setTimeout(()=> phoneNoModal.show(),5000);
     });
 
     var input = document.querySelector("#phoneNo");
