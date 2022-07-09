@@ -2,7 +2,9 @@ var { src, dest, watch, series, parallel } = require('gulp');
 
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
+
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -27,7 +29,7 @@ const files = {
 function scssTask() {
     return src(files.scssPath)
         .pipe(sourcemaps.init()) // initialize sourcemaps first
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass.on('error', ()=>sass.logError)) // scss to css
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(dest('_site/assets/css/')) // put final CSS in dist folder
