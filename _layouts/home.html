@@ -37,10 +37,13 @@
 </section>
 
 
+
+{% if page.title == "home" %}
 <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&v=weekly"
         defer
 ></script>
+{% endif %}
 
 
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
@@ -58,11 +61,20 @@
 
 <script src="assets/js/bootstrap.min.js"></script>
 
+{% if page.title == "home" %}
 <script src="assets/js/bootstrap-select.min.js"></script>
+{% endif %}
+
+
+{% if page.title == "home" %}
 <script src="assets/js/main.js"></script>
-
-
 <script src="assets/js/map.js"></script>
+{% else %}
+<script src="assets/js/details.js"></script>
+{% endif %}
+
+
+
 </body>
 
 </html>
