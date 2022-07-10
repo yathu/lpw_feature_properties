@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
+    {% if page.title == "details" %}
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    {% endif %}
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/css/intlTelInput.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -46,6 +50,7 @@
 {% endif %}
 
 
+
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
 
 <script src="assets/js/jquery-3.6.0.js"></script>
@@ -71,6 +76,10 @@
 <script src="assets/js/map.js"></script>
 {% else %}
 <script src="assets/js/details.js"></script>
+{% endif %}
+
+{% if page.title == "details" %}
+<script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 {% endif %}
 
 
