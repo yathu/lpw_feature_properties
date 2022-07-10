@@ -9,4 +9,8 @@ $(document).ready(function () {
         $('.about-container>div').toggleClass('hide-text');
     });
 
+    $('.showFeatures').on("click",()=>{
+        $('.features-container').toggleClass('show-less');
+    });
+
 });

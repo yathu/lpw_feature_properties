@@ -87,12 +87,19 @@ a {
 
 .btn-outline-danger {
   font-family: Rubik-Medium;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   background: #FFFFFF;
   border: 1px solid #FF4501;
   border-radius: 3px;
   color: #FF4501;
+  line-height: 1;
+  padding: 11px 12px 8px 12px;
+
+  &:hover{
+    background-color: #FF4501;
+    color: #FFFFFF;
+  }
 }
 
 .btn-custom-primary, btn-custom-primary:hover, btn-custom-primary:focus {
@@ -147,6 +154,10 @@ a {
       width: 38px;
     }
   }
+}
+
+.lh-0{
+  line-height: 0 !important;
 }
 
 .form-check-input {
@@ -375,6 +386,53 @@ body  ::-webkit-scrollbar-track {
   top: 0px !important;
 }
 
+.custom-chip-checks {
+  display: flex;
+  flex-wrap: wrap;
+
+  .form-check {
+    padding-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label, input[type="radio"] + label {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    font-family: Rubik-Regular;
+    font-size: 15px;
+    color: #4E5156;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #202330;
+    border-radius: 25px;
+    padding: 9px 15px;
+    line-height: 1;
+  }
+
+
+  input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    background-color: #018E37;
+    color: white;
+    border: 1px solid #018E37;
+    border-radius: 18px;
+  }
+
+}
 
 
 
