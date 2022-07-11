@@ -33,4 +33,14 @@ $(document).ready(function () {
         spaceBetween: 10,
     });
 
+    new Swiper('.mapview-swiper', {
+        loop: true,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: '.mapView-next',
+            prevEl: '.mapView-prev',
+        },
+        spaceBetween: 10,
+    });
+
 });
