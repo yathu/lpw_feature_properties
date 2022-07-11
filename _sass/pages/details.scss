@@ -503,6 +503,143 @@
     }
   }
 
+  .enquire-container{
+    padding: 20px;
+    background: #202330;
+    border-radius: 4px;
+
+    .info{
+      span{
+        font-family: Rubik-Regular;
+        font-size: 15px;
+        color: #A0A5AD;
+        line-height: 30px;
+      }
+      .phone-info{
+        font-family: Rubik-Regular;
+        font-size: 22px;
+        color: #FFFFFF;
+        a{
+          font-family: Rubik-Medium;
+          font-size: 16px;
+          color: #018E37;
+          line-height: 20px;
+        }
+      }
+    }
+
+    form{
+      font-family: Rubik-Regular;
+      font-size: 15px;
+      color: #71757B;
+      line-height: 30px;
+
+      .form-control,select{
+        padding: 7px 12px;
+      }
+      textarea.form-control{
+        padding: 11px 12px;
+      }
+
+      label{
+        color: #A0A5AD;
+      }
+      a{
+        color: #018E37;
+      }
+    }
+
+
+  }
+
+  .payment-plan-container{
+    .swiper-wrapper{
+      .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+        position: relative;
+        height: auto;
+
+        &:after{
+          content: '';
+          position: absolute;
+          right: 0;
+          height: 50px;
+          width: 1px;
+          background-color: #D8D8D8;
+        }
+
+        span{
+          font-family: Rubik-Light;
+          font-size: 22px;
+          color: #018E37;
+          text-align: center;
+        }
+        p{
+          font-family: Rubik-Regular;
+          font-size: 15px;
+          color: #000000;
+          text-align: center;
+          line-height: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .custom-swiper-nav{
+      margin-top: -10.5 !important;
+      border: 1px solid #f77a27 !important;
+    }
+
+    .swiper-button-next{
+      right: -17px;
+    }
+    .swiper-button-prev{
+
+    }
+
+  }
+
+  .bank-loan-container{
+    @extend .payment-plan-container;
+
+    img{
+      max-width: 100%;
+      max-height: 75px;
+    }
+    label{
+      font-family: Rubik-Medium;
+      font-size: 13px;
+      color: #A0A5AD;
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 3px;
+    }
+    .value{
+      font-family: Rubik-Medium;
+      font-size: 17px;
+      color: #202330;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+
+  .chat-container{
+    background-image: url("/assets/img/details/chat-bg.png");
+    padding: 35px 20px;
+    display: flex;
+    align-items: center;
+    a{
+      font-family: Rubik-Medium;
+      font-size: 16px;
+      color: #018E37;
+      line-height: 20px;
+    }
+  }
+
 
   .contact-form {
     background: #F6F6F6;
