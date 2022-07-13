@@ -508,6 +508,10 @@
     background: #202330;
     border-radius: 4px;
 
+    h2{
+      color: #FFFFFF;
+    }
+
     .info{
       span{
         font-family: Rubik-Regular;
@@ -549,6 +553,104 @@
       }
     }
 
+
+  }
+
+  .the-team-container{
+    .content{
+      h3{
+        font-family: Rubik-Light;
+        font-size: 22px;
+        color: #202330;
+      }
+      p{
+        font-family: Rubik-Regular;
+        font-size: 15px;
+        color: #71757B;
+        line-height: 30px;
+      }
+    }
+    .numbers{
+      div.col-4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        span{
+          font-family: Rubik-Light;
+          font-size: 22px;
+          color: #018E37;
+          text-align: center;
+        }
+        div{
+          font-family: Rubik-Regular;
+          font-size: 15px;
+          color: #000000;
+          text-align: center;
+          line-height: 22px;
+        }
+
+        &:not(:last-child):after{
+          content: '';
+          position: absolute;
+          right: 0;
+          height: 100%;
+          width: 1px;
+          background-color: #D8D8D8;
+        }
+      }
+    }
+
+    .other-project-swiper-container{
+      h3{
+        color: #4C4F5F;
+      }
+
+      .other-project-swiper{
+        .swiper-slide{
+          box-shadow: 0px 2px 6px 0px rgb(210, 210, 210);
+          border-radius: 4px;
+          overflow: hidden;
+
+          img{
+            margin-bottom: 10px;
+            width: 100%;
+          }
+          ul{
+            margin-left: 12px;
+            margin-bottom: 7px;
+          }
+          .title{
+            font-family: Rubik-Medium;
+            font-size: 15px;
+            color: #202330;
+            letter-spacing: -0.31px;
+            margin-bottom: 3px;
+          }
+          .location{
+            font-family: Rubik-Regular;
+            font-size: 15px;
+            color: #71757B;
+            i{
+              color: #029432;
+              font-size: 17px;
+            }
+          }
+          .price{
+            font-family: Rubik-Medium;
+            font-size: 15px;
+            color: #029432;
+
+            span{
+              font-size: 13px;
+              color: #71757B;
+            }
+          }
+        }
+      }
+    }
 
   }
 
@@ -640,7 +742,7 @@
   }
 
   .chat-container{
-    background-image: url("./assets/img/details/chat-bg.png");
+    background-image: url("./../../assets/img/details/chat-bg.png");
     padding: 35px 20px;
     display: flex;
     align-items: center;
@@ -737,6 +839,67 @@
     }
   }
 
+  .property-rate-chart-container{
+    .form-check{
+      label{
+        font-family: Rubik-Regular;
+        font-size: 14px;
+        color: #171D1F;
+      }
+    }
+    #propertyRateChart{
+      max-height: 400px;
+    }
+  }
+
+  .brochure-container{
+    background: #202330;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 20px;
+    h2{
+      color: #FFFFFF;
+    }
+    span{
+      font-family: Rubik-Light;
+      font-size: 16px;
+    }
+
+    .brochure-swiper-container{
+      .swiper-button{
+        &:after{
+          font-size: 14px;
+          color: #FFFFFF;
+        }
+      }
+      .brochure-prev{
+        margin-left: -25px;
+      }
+      .brochure-next{
+        margin-right: -25px;
+      }
+      .pagination-container{
+        span{
+          font-family: Rubik-Light;
+          font-size: 14px;
+          color: #FFFFFF;
+          text-align: center;
+        }
+      }
+      .swiper-pagination-progressbar-fill{
+        background-color: #8B8E98;
+      }
+    }
+  }
+
+  .special-note-container{
+    p{
+      font-family: Rubik-Regular;
+      font-size: 16px;
+      color: #71757B;
+      line-height: 30px;
+    }
+  }
 
   .contact-form {
     background: #F6F6F6;

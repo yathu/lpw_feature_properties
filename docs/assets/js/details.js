@@ -33,6 +33,16 @@ $(document).ready(function () {
         spaceBetween: 10,
     });
 
+    new Swiper('.other-project-swiper', {
+        loop: true,
+        navigation: {
+            nextEl: '.loan-next',
+            prevEl: '.loan-prev',
+        },
+        slidesPerView: 3,
+        spaceBetween: 10,
+    });
+
     new Swiper('.mapview-swiper', {
         loop: true,
         slidesPerView: "auto",
@@ -41,6 +51,48 @@ $(document).ready(function () {
             prevEl: '.mapView-prev',
         },
         spaceBetween: 10,
+    });
+
+
+    //property rate chart
+
+    const ctx = document.getElementById('propertyRateChart').getContext('2d');
+
+    var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+
+
+    var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+            datasets: [
+                {
+                    label: "Price range",
+                    data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560],
+                    tension: 0.3,
+                    fill:true,
+                    // backgroundColor: 'rgb(255, 99, 132)',
+                    backgroundColor: gradient,
+                    borderColor: '#ECA743',
+                },
+            ],
+        },
+    });
+
+
+    var swiper = new Swiper(".brochure-swiper", {
+        // slidesPerView: 3,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        loop:false,
+        navigation: {
+            nextEl: ".brochure-next",
+            prevEl: ".brochure-prev",
+        },
     });
 
 });
