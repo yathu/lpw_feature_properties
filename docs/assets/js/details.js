@@ -99,4 +99,13 @@ $(document).ready(function () {
         },
     });
 
+    var swiper = new Swiper(".banner-swiper", {
+        // slidesPerView: 3,
+        loop:true,
+        navigation: {
+            nextEl: ".banner-next",
+            prevEl: ".banner-prev",
+        },
+    });
+
 });

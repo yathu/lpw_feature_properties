@@ -1,10 +1,18 @@
 {
   "menu_items": [
-    {"name": "overview"},
-    {"name": "Highlights"},
-    {"name": "About"},
-    {"name": "Features"},
-    {"name": "Floor Plans"},
-    {"name": "Amenities"}
+    {"name": "Overview","link": "Overview"},
+    {"name": "Highlights","link": "Highlights"},
+    {"name": "About","link": "About"},
+    {"name": "Features","link": "Features"},
+    {"name": "Floor Plans","link": "Floor_plans"},
+    {"name": "Amenities","link": "Amenities"},
+    {"name": "Specifications","link": "Specifications"},
+    {"name": "Video","link": "Video"},
+    {"name": "Developer","link": "Developer"},
+    {"name": "Enquiry","link": "Enquiry"},
+    {"name": "Finance","link": "Finance"},
+    {"name": "Nearby","link": "Nearby"},
+    {"name": "Nearby","link": "Rates"},
+    {"name": "Special Notes","link": "Special_Notes"}
   ]
 }

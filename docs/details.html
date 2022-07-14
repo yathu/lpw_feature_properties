@@ -45,14 +45,48 @@
                 <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
                 Back to List
             </a>
+            <div class="image-btns">
+                <a href="#">
+                    <img src="./assets/img/details/btnIcons/camera.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="./assets/img/details/btnIcons/rotation.svg" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="./assets/img/details/btnIcons/heart.svg" alt="">
+                </a>
+
+            </div>
         </div>
         <div class="col-3">
-            <div class="row h-100 row-cols-1 gy-3 mt-0">
-                <div class="col mt-0">
-                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+            <div class="row h-100 row-cols-1 gy-0 mt-0">
+                <div class="col mt-0 h-50 video-cont pb-lg-2">
+                    <!--                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">-->
+                    <video
+                            id="banner-video"
+                            class="video-js vjs-default-skin vjs-big-play-centered"
+                            preload="auto"
+                            width="auto"
+                            height="auto"
+                            controls
+                            poster="./assets/img/details/banner_1.jpg"
+                            data-setup="{
+                            fill: true
+                            }"
+                    >
+                        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
+                    </video>
                 </div>
-                <div class="col">
+                <div class="col h-50 pt-lg-2 images">
                     <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+                    <div class="overlay">
+                        <span data-bs-toggle="modal" data-bs-target="#bannerModal">
+                            + <br>
+                            19 more
+                        </span>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +95,7 @@
 
 <div class="container px-0">
 
-    <div class="row title-container my-4">
+    <div class="row title-container mt-4">
         <div class="col pt-2">
             <h1>Marina Square</h1>
             <div class="location title-light-1 mt-1">
@@ -79,23 +113,23 @@
 
         </div>
         <div class="col-auto d-flex flex-column text-end">
-            <a href="#" class="btn-link-custom">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-                Share
-            </a>
-            <span>
+            <!--            <a href="#" class="btn-link-custom">-->
+            <!--                <i class="fa fa-share-alt" aria-hidden="true"></i>-->
+            <!--                Share-->
+            <!--            </a>-->
+            <span class="est">
                 Est. Completion: May 2024
             </span>
         </div>
     </div>
 
-    <div class="menuContainer mb-4">
+    <div class="menuContainer py-4 sticky-lg-top bg-white">
 
         <div class="swiper detailsMenuSwiper">
             <div class="swiper-wrapper">
                 
-                <a href="#overview" class="swiper-slide">
-                    overview
+                <a href="#Overview" class="swiper-slide">
+                    Overview
                 </a>
                 
                 <a href="#Highlights" class="swiper-slide">
@@ -110,12 +144,44 @@
                     Features
                 </a>
                 
-                <a href="#Floor Plans" class="swiper-slide">
+                <a href="#Floor_plans" class="swiper-slide">
                     Floor Plans
                 </a>
                 
                 <a href="#Amenities" class="swiper-slide">
                     Amenities
+                </a>
+                
+                <a href="#Specifications" class="swiper-slide">
+                    Specifications
+                </a>
+                
+                <a href="#Video" class="swiper-slide">
+                    Video
+                </a>
+                
+                <a href="#Developer" class="swiper-slide">
+                    Developer
+                </a>
+                
+                <a href="#Enquiry" class="swiper-slide">
+                    Enquiry
+                </a>
+                
+                <a href="#Finance" class="swiper-slide">
+                    Finance
+                </a>
+                
+                <a href="#Nearby" class="swiper-slide">
+                    Nearby
+                </a>
+                
+                <a href="#Rates" class="swiper-slide">
+                    Nearby
+                </a>
+                
+                <a href="#Special_Notes" class="swiper-slide">
+                    Special Notes
                 </a>
                 
             </div>
@@ -124,8 +190,9 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-8 col-xl-9">
-            <div class="overview mb-3">
+        <div class="col-12 col-lg-8 col-xl-8">
+
+            <div id="Overview" class="overview mb-3">
                 <h2 class="title-content-1 mb-3">
                     Overview
                 </h2>
@@ -181,7 +248,7 @@
 
             </div>
 
-            <div class="highlights">
+            <div id="Highlights" class="highlights">
                 <h2 class="title-content-1 mb-3">
                     Highlights
                 </h2>
@@ -243,7 +310,7 @@
 
             </div>
 
-            <div class="about-container mb-3">
+            <div id="About" class="about-container mb-3">
                 <h2 class="title-content-1 mb-3">
                     About
                 </h2>
@@ -271,7 +338,7 @@
                 </div>
             </div>
 
-            <div class="features-container show-less">
+            <div id="Features" class="features-container show-less">
                 <h2 class="title-content-1 mb-3 mt-4 pt-1">
                     Features
                 </h2>
@@ -344,7 +411,7 @@
 
             </div>
 
-            <div class="floor-plan-container mb-4">
+            <div id="Floor_plans" class="floor-plan-container mb-4">
 
                 <h2 class="title-content-1">
                     Configurations & Floor Plans
@@ -369,19 +436,19 @@
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                                         data-bs-target="#home" type="button" role="tab"
-                                                        aria-controls="home" aria-selected="true">Home
+                                                        aria-controls="home" aria-selected="true">2420 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                                         data-bs-target="#profile" type="button" role="tab"
-                                                        aria-controls="profile" aria-selected="false">Profile
+                                                        aria-controls="profile" aria-selected="false">3220 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                                         data-bs-target="#contact" type="button" role="tab"
-                                                        aria-controls="contact" aria-selected="false">Contact
+                                                        aria-controls="contact" aria-selected="false">3620 sqft
                                                 </button>
                                             </li>
                                         </ul>
@@ -392,121 +459,331 @@
                                         </button>
                                     </div>
                                 </div>
-
-
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="home" role="tabpanel"
                                          aria-labelledby="home-tab">
                                         <div class="row">
-                                            <div class="col-12 col-lg-5 col-xl-4 info-container">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        FLOOR AREA
-                                                    </label>
-                                                    <b>568 sqft</b>
-                                                </div>
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        BEDROOMS
-                                                    </label>
-                                                    <b>1</b>
-                                                </div>
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        BATHROOMS
-                                                    </label>
-                                                    <b>1</b>
-                                                </div>
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        PARKING SPACES
-                                                    </label>
-                                                    <b>2</b>
-                                                </div>
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        UNITS AVAILABLE
-                                                    </label>
-                                                    <div class="lh-0">
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
                                                         <span class="text-decoration-line-through">
                                                         20
                                                     </span>
-                                                        <b>12</b></div>
-                                                </div>
+                <b>12</b></div>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        PRICE
-                                                    </label>
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
 
-                                                    <b class="primary">Rs. 24,700,000</b>
-                                                </div>
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
 
-                                                <div class="info-item mb-2">
-                                                    <label>
-                                                        VIEWS
-                                                    </label>
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
 
-                                                    <div class="custom-chip-checks">
+            <div class="custom-chip-checks">
 
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                   value="Residential Apartment"
-                                                                   name="propertyType" id="view_1">
-                                                            <label class="form-check-label" for="view_1">
-                                                                Sea View
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                   value="Residential Apartment"
-                                                                   name="propertyType" id="view_2">
-                                                            <label class="form-check-label" for="view_2">
-                                                                City View
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                   value="Residential Apartment"
-                                                                   name="propertyType" id="view_3">
-                                                            <label class="form-check-label" for="view_3">
-                                                                Beach Front
-                                                            </label>
-                                                        </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
 
-                                                    </div>
+            </div>
 
-                                                </div>
+        </div>
 
-                                                <div class="info-item">
-                                                    <label>
-                                                        ADDITIONAL FEATURES
-                                                    </label>
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
 
-                                                    <b>Lorem ipsum dolor sit amet</b>
-                                                </div>
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
 
-                                            </div>
-                                            <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
-                                                <img class="img-fluid"
-                                                     src="./assets/img/details/features/building-view.png"
-                                                     alt="building view">
-                                                <span>
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
                                                     3D aerial view
                                                 </span>
-                                            </div>
-                                        </div>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
                                     </div>
                                     <div class="tab-pane fade" id="profile" role="tabpanel"
-                                         aria-labelledby="profile-tab">...
+                                         aria-labelledby="profile-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+
                                     </div>
                                     <div class="tab-pane fade" id="contact" role="tabpanel"
-                                         aria-labelledby="contact-tab">...
+                                         aria-labelledby="contact-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
                                     </div>
                                 </div>
 
@@ -519,14 +796,370 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                     aria-controls="flush-collapseTwo">
-                                Accordion Item #2
+                                1BR - 1.5A / 1.5B / 1.5C / 1.5D SOLD OUT
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                              aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                                body. Let's imagine this being filled with some actual content.
+                            <div class="accordion-body">
+
+                                <div class="row border-bottom gx-0">
+                                    <div class="col">
+                                        <ul class="nav nav-pills" id="myTab2" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#home" type="button" role="tab"
+                                                        aria-controls="home" aria-selected="true">2420 sqft
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#profile" type="button" role="tab"
+                                                        aria-controls="profile" aria-selected="false">3220 sqft
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#contact" type="button" role="tab"
+                                                        aria-controls="contact" aria-selected="false">3620 sqft
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <button class="btn btn-outline-danger">
+                                            REQUEST A CALL BACK
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="myTabContent2">
+                                    <div class="tab-pane fade show active" id="home2" role="tabpanel"
+                                         aria-labelledby="home-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile2" role="tabpanel"
+                                         aria-labelledby="profile-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="contact2" role="tabpanel"
+                                         aria-labelledby="contact-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -535,16 +1168,372 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseThree" aria-expanded="false"
                                     aria-controls="flush-collapseThree">
-                                Accordion Item #3
+                                2BR - 2S
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
                              aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                                body. Nothing more exciting happening here in terms of content, but just filling up the
-                                space to make it look, at least at first glance, a bit more representative of how this
-                                would look in a real-world application.
+                            <div class="accordion-body">
+
+
+                                <div class="row border-bottom gx-0">
+                                    <div class="col">
+                                        <ul class="nav nav-pills" id="myTab2" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#home" type="button" role="tab"
+                                                        aria-controls="home" aria-selected="true">2420 sqft
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#profile" type="button" role="tab"
+                                                        aria-controls="profile" aria-selected="false">3220 sqft
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#contact" type="button" role="tab"
+                                                        aria-controls="contact" aria-selected="false">3620 sqft
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <button class="btn btn-outline-danger">
+                                            REQUEST A CALL BACK
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="myTabContent2">
+                                    <div class="tab-pane fade show active" id="home2" role="tabpanel"
+                                         aria-labelledby="home-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile2" role="tabpanel"
+                                         aria-labelledby="profile-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="contact2" role="tabpanel"
+                                         aria-labelledby="contact-tab">
+                                        <div class="row">
+    <div class="col-12 col-lg-5 col-xl-4 info-container">
+
+        <div class="info-item">
+            <label>
+                FLOOR AREA
+            </label>
+            <b>568 sqft</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BEDROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                BATHROOMS
+            </label>
+            <b>1</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PARKING SPACES
+            </label>
+            <b>2</b>
+        </div>
+
+        <div class="info-item">
+            <label>
+                UNITS AVAILABLE
+            </label>
+            <div class="lh-0">
+                                                        <span class="text-decoration-line-through">
+                                                        20
+                                                    </span>
+                <b>12</b></div>
+        </div>
+
+        <div class="info-item">
+            <label>
+                PRICE
+            </label>
+
+            <b class="primary">Rs. 24,700,000</b>
+        </div>
+
+        <div class="info-item mb-2">
+            <label>
+                VIEWS
+            </label>
+
+            <div class="custom-chip-checks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_1">
+                    <label class="form-check-label" for="view_1">
+                        Sea View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_2">
+                    <label class="form-check-label" for="view_2">
+                        City View
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           value="Residential Apartment"
+                           name="propertyType" id="view_3">
+                    <label class="form-check-label" for="view_3">
+                        Beach Front
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-item">
+            <label>
+                ADDITIONAL FEATURES
+            </label>
+
+            <b>Lorem ipsum dolor sit amet</b>
+        </div>
+
+    </div>
+    <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
+        <img class="img-fluid"
+             src="./assets/img/details/features/building-view.png"
+             alt="building view">
+        <span>
+                                                    3D aerial view
+                                                </span>
+        <img class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+    </div>
+</div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -552,7 +1541,7 @@
 
             </div>
 
-            <div class="amenities-container mb-4">
+            <div id="Amenities" class="amenities-container mb-4">
                 <h2 class="title-content-1 mb-3">
                     Amenities
                 </h2>
@@ -699,7 +1688,7 @@
 
             </div>
 
-            <div class="specification-container mb-4">
+            <div id="Specifications" class="specification-container mb-4">
 
                 <h2 class="title-content-1 mb-3">
                     Specifications
@@ -871,7 +1860,7 @@
 
             </div>
 
-            <div class="videos-container mb-4">
+            <div id="Video" class="videos-container mb-4">
                 <h2 class="title-content-1 mb-3">
                     Videos
                 </h2>
@@ -883,25 +1872,28 @@
                                 aria-selected="true">Key Features
                         </button>
                         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile
+                                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Facilities
                         </button>
                         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Nearby Amenities
+                        </button>
+                        <button class="nav-link" id="nav-360" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">360/Walk Through
+                        </button>
+                        <button class="nav-link" id="nav-brochure" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Brochure
                         </button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <!--                        <video class="" playsinline muted loop poster="polina.jpg" id="bgvid">-->
-                        <!--                            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">-->
-                        <!--                        </video>-->
 
                         <video
                                 id="my-video"
                                 class="video-js vjs-default-skin vjs-big-play-centered"
                                 preload="auto"
                                 width="auto"
-                                height="auto"
+                                height="400"
                                 controls
                                 poster="./assets/img/details/video-poster.png"
                                 data-setup="{}"
@@ -919,7 +1911,7 @@
 
             </div>
 
-            <div class="the-team-container mb-4">
+            <div id="Developer" class="the-team-container mb-4">
                 <h2 class="title-content-1 mb-3">The Team</h2>
 
                 <div class="row mb-3 content">
@@ -1014,7 +2006,7 @@
 
             </div>
 
-            <div class="enquire-container mb-4">
+            <div id="Enquiry" class="enquire-container mb-4">
                 <h2 class="title-content-1 mb-3">
                     Enquire
                 </h2>
@@ -1074,7 +2066,7 @@
 
             </div>
 
-            <div class="chat-container mb-4">
+            <div id="Finance" class="chat-container mb-4">
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <img src="./assets/img/details/chatImg.png" alt="chat">
@@ -1196,7 +2188,7 @@
                 </div>
             </div>
 
-            <div class="map-view mb-4">
+            <div id="Nearby" class="map-view mb-4">
                 <h2 class="title-content-1 mb-3">Explore Neighbourhood - Map View</h2>
 
                 <div class="position-relative mb-3">
@@ -1385,7 +2377,7 @@
                 </div>
             </div>
 
-            <div class="property-rate-chart-container pt-1 mb-4">
+            <div id="Rates" class="property-rate-chart-container pt-1 mb-4">
 
                 <h2 class="title-content-1 mb-3">Property Rates in Colombo 03 - 2021</h2>
 
@@ -1524,7 +2516,7 @@
 
             </div>
 
-            <div class="special-note-container">
+            <div id="Special_Notes" class="special-note-container">
                 <h2 class="title-content-1 mb-2">Special Notes</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -1535,76 +2527,152 @@
             </div>
 
         </div>
-        <div class="col-12 col-lg-4 col-xl-3 pt-4">
+        <div class="col-12 col-lg-4 col-xl-4 pt-4 px-xl-5">
             <div class="contact-form">
-                <div class="row align-items-center logo-row mb-4">
+                <div class="row align-items-center logo-row mb-3 gx-3">
                     <div class="col d-flex align-items-center">
                         <img class="me-2" src="./assets/img/details/access-e.jpg" alt="">
                         Access
                         Engineering
                     </div>
-                    <div class="col-auto"></div>
+                    <div class="col d-flex justify-content-end">
+                        <a href="#" class="btn btn-warning text-body-b-1 mb-2">
+                            Sale 20% Today
+                        </a>
+                    </div>
                 </div>
-                <div class="title-box">
+
+                <div class="title-box border-bottom pb-2 mb-3">
                     <div class="title-content-2 price-container">
                         Rs. 34.5 Mn
                         <span class="price-label">Upwards</span>
-                        <span class="pt-md-2 pt-lg-0 sqft">
+                        <span class="pt-md-2 pt-lg-0 d-block mt-2 sqft">
                             (Price per sqft Rs. 12000)
                         </span>
                     </div>
                 </div>
 
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                <h2 class="title-content-1 mb-3">
+                    Check Availability
+                </h2>
+
+                <div class="row btn-row">
+                    <div class="col-6">
+                        <button class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
+                            <i class="fa fa-phone me-1"></i>
+                            +94 123…
+                        </button>
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary d-flex align-items-center justify-content-center w-100">
+                            <i class="fa fa-whatsapp me-1"></i>
+                            +94 123…
+                        </button>
+                    </div>
+                </div>
+
+                <form class="row g-3 mt-0">
+                    <div class="col-12">
+                        <label>
+                            Or send us your inquiry.
+                        </label>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                               placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="name"
+                               placeholder="Your Name *" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="contactNo" placeholder="Contact Number">
                     </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="email" placeholder="Email Address *">
                     </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                    <div class="col-12">
+                        <input type="date" class="form-control" id="date" placeholder="Move-in Date">
                     </div>
+                    <div class="col-12">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+
                     <div class="col-12">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
-                                Check me out
+                                Create an alert for listing like this.
                             </label>
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-custom-primary w-100">SEND</button>
+                        <div class="border-bottom my-3"></div>
                     </div>
                 </form>
+
+                <div class="row gx-2 share-btn-row">
+                    <div class="col-3">
+                        <a class="btn-outline-primary d-block w-100" href="#"><img
+                                src="./assets/img/details/btnIcons/comment.svg" alt="comment"></a>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn-outline-primary d-block w-100" href="#"><img
+                                src="./assets/img/details/btnIcons/share.svg" alt="comment"></a>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn-outline-primary d-block w-100" href="#"><img
+                                src="./assets/img/details/btnIcons/envelope.svg" alt="comment"></a>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn-outline-primary d-block w-100" href="#"><img
+                                src="./assets/img/details/btnIcons/printer.svg" alt="comment"></a>
+                    </div>
+
+                </div>
 
             </div>
         </div>
     </div>
 
+</div>
+
+<div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="position-relative">
+                    <div class="swiper banner-swiper mx-3">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">
+                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev banner-prev swiper-button"></div>
+                    <div class="swiper-button-next banner-next swiper-button"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 </section>
