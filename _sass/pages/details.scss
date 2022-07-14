@@ -847,8 +847,66 @@
         color: #171D1F;
       }
     }
-    #propertyRateChart{
-      max-height: 400px;
+    .by-price-container{
+      >div{
+        .row{
+          background: #FBF6F3;
+          border: 1px solid #E3CBBF;
+          border-radius: 4px;
+          padding: 15px;
+          div.col{
+            border-right: 1px solid #DABEB0;
+            span{
+              font-family: Rubik-Medium;
+              font-size: 13px;
+              color: #9A735F;
+              line-height: 20px;
+            }
+
+            div{
+              span{
+                font-family: Rubik-Regular;
+                font-size: 16px;
+                color: #512E1B;
+                line-height: 25px;
+              }
+              b{
+                font-family: Rubik-Medium;
+                font-size: 16px;
+                color: #512E1B;
+                line-height: 25px;
+              }
+            }
+          }
+
+          .col-auto{
+            padding-left: 15px;
+
+            a{
+              font-family: Rubik-Regular;
+              font-size: 14px;
+              color: #018E37;
+              line-height: 20px;
+            }
+          }
+
+        }
+      }
+    }
+    .hike{
+      font-family: Rubik-Regular;
+      font-size: 15px;
+      color: #71757B;
+      line-height: 30px;
+      margin-bottom: 3px;
+      span{
+        color: #4C9B1A;
+      }
+    }
+    .propertyRateChart-container{
+      border: 1px solid #E3CBBF;
+      border-radius: 4px;
+      padding: 15px;
     }
   }
 
@@ -906,11 +964,22 @@
     border: 1px solid #E1E1E1;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    padding: 15px;
+    padding: 20px;
+
+    .logo-row{
+      img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      font-family: Rubik-Regular;
+      font-size: 14px;
+      color: #018E37;
+      line-height: 18px;
+    }
 
     .title-box {
       @extend .title-container;
-
     }
   }
 }
