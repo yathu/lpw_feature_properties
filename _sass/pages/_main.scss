@@ -102,6 +102,23 @@ a {
   }
 }
 
+.btn-outline-primary {
+  font-family: Rubik-Medium;
+  font-size: 13px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #018E37;
+  border-radius: 3px;
+  color: #018E37;
+  line-height: 1;
+  padding: 11px 12px 8px 12px;
+
+  &:hover{
+    background-color: #018E37;
+    color: #FFFFFF;
+  }
+}
+
 .btn-custom-primary, btn-custom-primary:hover, btn-custom-primary:focus {
   background: #018E37;
   border-radius: 4px;
