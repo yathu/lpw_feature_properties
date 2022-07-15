@@ -2,7 +2,13 @@
   padding-top: var(--bs-gutter-x, .75rem);
 
   .banner-img-container {
-    height: 500px;
+    @media (min-width: 576px) and(max-width: 767.98px) {
+      height: 350px;
+    }
+
+    @media (min-width: 768px) {
+      height: 500px;
+    }
 
     > .row {
       max-height: 100%;
@@ -71,6 +77,10 @@
         max-height: 100%;
         border-radius: 4px;
 
+        @media (max-width: 575.98px) {
+          height: 200px;
+        }
+
       }
 
       video[poster]{
@@ -98,7 +108,7 @@
       position: relative;
       .overlay{
         position: absolute;
-        top: 8px;
+        top: 7px;
         left: 12px;
         right: 12px;
         bottom: 0;
@@ -107,6 +117,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        //@media (max-width: 575.98px) {
+        //  top: 0px;
+        //}
+
         span{
           font-family: Rubik-Regular;
           font-size: 18px;
