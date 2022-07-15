@@ -181,6 +181,10 @@
       text-align: center;
       line-height: 20px;
       padding: 5px 10px;
+
+      @media (max-width: 575.98px) {
+        margin: auto;
+      }
     }
 
   }
@@ -496,6 +500,13 @@
         width: 25%;
         margin-bottom: 20px;
 
+        @media (max-width: 575.98px) {
+          width: 100%;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          width: 33%;
+        }
+
         img {
           width: 25px;
           height: 25px;
@@ -525,6 +536,13 @@
         font-family: Rubik-Regular;
         font-size: 15px;
         color: #71757B;
+
+        @media (max-width: 575.98px) {
+          width: 100%;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          width: 33%;
+        }
 
       }
     }
