@@ -47,8 +47,8 @@ permalink: /details.html
                 </div>
                 <div class="col h-50 pt-2 images">
                     <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
-                    <div class="overlay">
-                        <span data-bs-toggle="modal" data-bs-target="#bannerModal">
+                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#bannerModal">
+                        <span>
                             + <br>
                             19 more
                         </span>
@@ -90,8 +90,11 @@ permalink: /details.html
         </div>
     </div>
 
-    <div class="menuContainer py-4 sticky-lg-top bg-white">
+</div>
 
+<div class="menuContainer py-4 sticky-lg-top bg-white">
+
+    <div class="container px-0">
         <div class="swiper detailsMenuSwiper">
             <div class="swiper-wrapper">
                 {% for menu_items in site.data.details.menu_items %}
@@ -101,8 +104,11 @@ permalink: /details.html
                 {% endfor %}
             </div>
         </div>
-
     </div>
+
+</div>
+
+<div class="container px-0">
 
     <div class="row">
         <div class="col-12 col-lg-8 col-xl-8">
@@ -329,7 +335,7 @@ permalink: /details.html
                                         </ul>
                                     </div>
                                     <div class="col-auto d-flex align-items-center">
-                                        <button class="btn btn-outline-danger">
+                                        <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal" class="btn btn-outline-danger">
                                             REQUEST A CALL BACK
                                         </button>
                                     </div>
@@ -1417,13 +1423,13 @@ permalink: /details.html
 
                 <div class="row btn-row">
                     <div class="col-6">
-                        <button class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
+                        <button id="contactNum" data-num="+94777235353" class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
                             <i class="fa fa-phone me-1"></i>
                             +94 123…
                         </button>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-outline-primary d-flex align-items-center justify-content-center w-100">
+                        <button id="contactWhatsapp" data-num="+94777828282" class="btn btn-outline-primary d-flex align-items-center justify-content-center w-100">
                             <i class="fa fa-whatsapp me-1"></i>
                             +94 123…
                         </button>
@@ -1447,10 +1453,10 @@ permalink: /details.html
                         <input type="text" class="form-control" id="email" placeholder="Email Address *">
                     </div>
                     <div class="col-12">
-                        <input type="date" class="form-control" id="date" placeholder="Move-in Date">
+                        <input type="date" class="form-control position-relative" id="date" placeholder="Move-in Date">
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="I am interested in this rental and would like to schedule a viewing. Please let me know when this would be possible."></textarea>
                     </div>
 
                     <div class="col-12">
@@ -1525,6 +1531,100 @@ permalink: /details.html
 
                 <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detailsCallbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" id="callbackBtnClose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 pt-1">
+
+                <div class="content">
+                    <h5 class="title-content-1 text-center mb-3">Please enter your details</h5>
+
+                    <p class="mb-0 pt-1">
+                        To view the seller’s number, please enter your name, email and contact number. This will help
+                        the
+                        seller to follow up on your inquiry.
+                    </p>
+                </div>
+
+                <div class="form-container">
+                    <form>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name *" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="E-mail Address">
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="detailContactPhoneNo" placeholder="Phone Number"
+                                       required>
+                            </div>
+                        </div>
+
+                        <button id="btnShowPhone" type="button" class="btn btn-custom-primary w-100 py-2">
+                            SHOW PHONE NUMBER
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detailsPopup" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" id="callbackBtnClose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 pt-1">
+
+                <div class="content">
+                    <h5 class="title-content-1 text-center mb-3">Please enter your details</h5>
+
+                    <p class="mb-0 pt-1">
+                        To view the seller’s number, please enter your name, email and contact number. This will help
+                        the
+                        seller to follow up on your inquiry.
+                    </p>
+                </div>
+
+                <div class="form-container">
+                    <form>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name *" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="E-mail Address">
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="detailIndexPhoneNo" placeholder="Phone Number"
+                                       required>
+                            </div>
+                        </div>
+
+                        <button id="btnShowPhone" type="button" class="btn btn-custom-primary w-100 py-2">
+                            SHOW PHONE NUMBER
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

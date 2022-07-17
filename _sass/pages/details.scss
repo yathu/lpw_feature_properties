@@ -117,7 +117,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        cursor: pointer;
         //@media (max-width: 575.98px) {
         //  top: 0px;
         //}
@@ -128,7 +128,6 @@
           color: #FFFFFF;
           text-align: center;
           line-height: 20px;
-          cursor: pointer;
         }
       }
     }
@@ -193,20 +192,22 @@
     z-index: 100;
     .detailsMenuSwiper {
       border-bottom: 1px solid #D9D9D9;
-      padding-bottom: 7px;
+      //padding-bottom: 7px;
 
       .swiper-slide {
         width: auto;
-        font-family: Rubik-Regular;
+        font-family: Rubik-Medium;
         font-size: 14px;
         color: #000000;
         line-height: 20px;
         text-decoration: none !important;
         cursor: pointer;
+        padding-bottom: 7px;
       }
 
       .swiper-slide-active {
         color: #018E37;
+        border-bottom: 2px solid #018E37;
       }
     }
   }
@@ -465,6 +466,12 @@
 
           .image-container {
             position: relative;
+            .form-check-label{
+              font-family: Rubik-Regular;
+              font-size: 15px;
+              color: #171D1F;
+              line-height: 20px;
+            }
             span {
               font-family: Rubik-Italic;
               font-size: 15px;
@@ -472,6 +479,11 @@
               line-height: 30px;
               margin-top: 10px;
             }
+            .floor-img{
+              flex: 1;
+              object-fit: contain;
+            }
+
             img.zoom{
               width: 30px;
               position: absolute;
@@ -1186,6 +1198,25 @@
         color: #71757B;
         line-height: 30px;
       }
+
+      input:focus,textarea:focus,select:focus{
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: #ced4da;
+      }
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        background: transparent;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+      }
     }
 
     .share-btn-row {
@@ -1193,6 +1224,11 @@
         padding: 7px 12px !important;
         img{
           height: 20px;
+        }
+
+        &:hover{
+          background-color: white;
+          border: 1px solid #018e37;
         }
       }
     }
@@ -1228,4 +1264,9 @@
     opacity: 1;
     border: 1px solid #9b9b9b;
   }
+}
+
+#detailsCallbackModal{
+  @extend #callbackModal;
+
 }

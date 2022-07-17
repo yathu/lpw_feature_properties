@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    $('#contactNum').on("click",function (){
+        var num = $(this).data("num");
+        if(num) $(this).html(num);
+    });
+    $('#contactWhatsapp').on("click",function (){
+        var num = $(this).data("num");
+        if(num) $(this).html(num);
+    });
+
     new Swiper(".detailsMenuSwiper", {
         slidesPerView: "auto",
         spaceBetween: 20,
@@ -106,6 +115,23 @@ $(document).ready(function () {
             nextEl: ".banner-next",
             prevEl: ".banner-prev",
         },
+    });
+
+    var myModalEl = document.querySelector('#zoomModal')
+    myModalEl.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const img_path = $(button).data("img");
+        console.log(img_path);
+
+        let zoomImg = $(event.target).find('img');
+
+        $(zoomImg).attr("src",img_path);
+    });
+
+    var input = document.querySelector("#detailContactPhoneNo");
+    window.intlTelInput(input, {
+        initialCountry: "lk",
+        allowDropdown:true,
     });
 
 });
