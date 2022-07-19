@@ -2,11 +2,25 @@ $(document).ready(function () {
 
     $('#contactNum').on("click",function (){
         var num = $(this).data("num");
-        if(num) $(this).html(num);
+        if(num) $(this).find('span').html(num);
+
+        $('#contactWhatsapp').removeClass('d-none');
+        $('#contactWhatsapp').addClass('d-flex');
+
     });
-    $('#contactWhatsapp').on("click",function (){
-        var num = $(this).data("num");
-        if(num) $(this).html(num);
+    // $('#contactWhatsapp').on("click",function (){
+    //     var num = $(this).data("num");
+    //     if(num) $(this).find('span').html(num);
+    // });
+
+    $('.floor-view-switch').change(function (){
+        if(this.checked){
+            $(this).closest('.image-container').find(".img-2d").addClass('d-none');
+            $(this).closest('.image-container').find(".img-3d").removeClass('d-none');
+        }else {
+            $(this).closest('.image-container').find(".img-2d").removeClass('d-none');
+            $(this).closest('.image-container').find(".img-3d").addClass('d-none');
+        }
     });
 
     new Swiper(".detailsMenuSwiper", {
@@ -207,7 +221,16 @@ $(document).ready(function () {
     var myModalEl = document.querySelector('#zoomModal')
     myModalEl.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
-        const img_path = $(button).data("img");
+        let img_path = $(button).data("img");
+
+        const checked = $(button).parent().find('.floor-view-switch').prop('checked');
+
+        console.log(checked);
+
+        if(checked){
+            img_path = $(button).data("3d-img");
+        }
+
         console.log(img_path);
 
         let zoomImg = $(event.target).find('img');
@@ -322,6 +345,8 @@ $(document).ready(function () {
         // document.getElementById('page_num').textContent = num;
         var progressWidth = ((num/pdfDoc.numPages)*100) + '%';
         $('#brochureProgressBar').width(progressWidth);
+
+        $('#pageNumbers').html(`${num} / ${pdfDoc.numPages}`);
     }
 
     /**

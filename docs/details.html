@@ -112,20 +112,22 @@
             </div>
 
         </div>
-        <div class="col-auto d-flex flex-column text-end pt-3 pt-sm-0">
-            <!--            <a href="#" class="btn-link-custom">-->
-            <!--                <i class="fa fa-share-alt" aria-hidden="true"></i>-->
-            <!--                Share-->
-            <!--            </a>-->
+        <div class="col-auto d-flex flex-md-column justify-content-between justify-content-lg-center text-start text-md-end pt-3 pt-sm-0 flex-md-column-reverse">
+
             <span class="est">
                 Est. Completion: May 2024
             </span>
+
+            <a href="#" class="btn-link-custom mb-md-3">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                Share
+            </a>
         </div>
     </div>
 
 </div>
 
-<div class="menuContainer py-4 sticky-lg-top bg-white">
+<div class="menuContainer py-4 sticky-top bg-white">
 
     <div class="container px-0">
         <div class="swiper detailsMenuSwiper">
@@ -249,7 +251,8 @@
                 </div>
 
                 <div class="offer-container py-3 px-3">
-                    <img class="img-fluid" src="./assets/img/details/overview/offerwithText.svg" alt="offer">
+                    <img class="img-fluid d-md-none" src="./assets/img/details/overview/OFFERWITHTEXT-MOBILE.png" alt="offer">
+                    <img class="img-fluid d-none d-md-block" src="./assets/img/details/overview/offerwithText.svg" alt="offer">
                 </div>
 
             </div>
@@ -336,7 +339,7 @@
                         possibilities
                         and unmatched rental opportunities.
                     </p>
-                    <div class="position-absolute bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-3 pb-2">
+                    <div class="position-absolute bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-4 pb-2">
                         <button type="button" class="btn btn-light bg-transparent border-0 showAbout">
                             Show More <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </button>
@@ -409,7 +412,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="position-absolute bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-3 pb-2">
+                <div class="position-absolute bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-4 pb-2">
                     <button type="button" class="btn btn-light bg-transparent border-0 showFeatures">
                         Show More <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
@@ -459,8 +462,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-auto d-flex align-items-center">
-                                        <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal" class="btn btn-outline-danger">
+                                    <div class="col-auto d-none d-md-flex d-flex align-items-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                                                class="btn btn-outline-danger">
                                             REQUEST A CALL BACK
                                         </button>
                                     </div>
@@ -471,26 +475,42 @@
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -593,26 +613,42 @@
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -716,26 +752,42 @@
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -853,59 +905,76 @@
 
                                 <div class="row border-bottom gx-0">
                                     <div class="col">
-                                        <ul class="nav nav-pills" id="myTab2" role="tablist">
+                                        <ul class="nav nav-pills" id="myTab" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="home-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                                         data-bs-target="#home" type="button" role="tab"
                                                         aria-controls="home" aria-selected="true">2420 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                                         data-bs-target="#profile" type="button" role="tab"
                                                         aria-controls="profile" aria-selected="false">3220 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                                         data-bs-target="#contact" type="button" role="tab"
                                                         aria-controls="contact" aria-selected="false">3620 sqft
                                                 </button>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-auto d-flex align-items-center">
-                                        <button class="btn btn-outline-danger">
+                                    <div class="col-auto d-none d-md-flex d-flex align-items-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                                                class="btn btn-outline-danger">
                                             REQUEST A CALL BACK
                                         </button>
                                     </div>
                                 </div>
-                                <div class="tab-content" id="myTabContent2">
-                                    <div class="tab-pane fade show active" id="home2" role="tabpanel"
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
                                          aria-labelledby="home-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1003,31 +1072,47 @@
     </div>
 </div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile2" role="tabpanel"
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
                                          aria-labelledby="profile-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1126,31 +1211,47 @@
 </div>
 
                                     </div>
-                                    <div class="tab-pane fade" id="contact2" role="tabpanel"
+                                    <div class="tab-pane fade" id="contact" role="tabpanel"
                                          aria-labelledby="contact-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1265,62 +1366,78 @@
                              aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
 
-
                                 <div class="row border-bottom gx-0">
                                     <div class="col">
-                                        <ul class="nav nav-pills" id="myTab2" role="tablist">
+                                        <ul class="nav nav-pills" id="myTab" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="home-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                                         data-bs-target="#home" type="button" role="tab"
                                                         aria-controls="home" aria-selected="true">2420 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                                         data-bs-target="#profile" type="button" role="tab"
                                                         aria-controls="profile" aria-selected="false">3220 sqft
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                                         data-bs-target="#contact" type="button" role="tab"
                                                         aria-controls="contact" aria-selected="false">3620 sqft
                                                 </button>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-auto d-flex align-items-center">
-                                        <button class="btn btn-outline-danger">
+                                    <div class="col-auto d-none d-md-flex d-flex align-items-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                                                class="btn btn-outline-danger">
                                             REQUEST A CALL BACK
                                         </button>
                                     </div>
                                 </div>
-                                <div class="tab-content" id="myTabContent2">
-                                    <div class="tab-pane fade show active" id="home2" role="tabpanel"
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
                                          aria-labelledby="home-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1418,31 +1535,47 @@
     </div>
 </div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile2" role="tabpanel"
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
                                          aria-labelledby="profile-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1541,31 +1674,47 @@
 </div>
 
                                     </div>
-                                    <div class="tab-pane fade" id="contact2" role="tabpanel"
+                                    <div class="tab-pane fade" id="contact" role="tabpanel"
                                          aria-labelledby="contact-tab">
                                         <div class="row flex-lg-row-reverse">
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
-        <div class="w-100 d-flex justify-content-end pb-3">
+        <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
             <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
 
                 <label class="form-check-label" for="showOnMap">
                     2D
                 </label>
-                <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
+                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
                 <label class="form-check-label" for="showOnMap">
                     3D
                 </label>
             </div>
+
+            <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
+                    class="btn btn-outline-danger d-md-none">
+                REQUEST A CALL BACK
+            </button>
+
         </div>
 
-        <img class="img-fluid floor-img"
+        <img class="img-fluid floor-img img-2d"
              src="./assets/img/details/features/building-view.png"
              alt="building view">
+
+        <img class="img-fluid floor-img d-none img-3d"
+             src="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             alt="building view">
+
         <span>
-                                                    3D aerial view
-                                                </span>
-        <img data-img="./assets/img/details/features/building-view.png" class="zoom" src="./assets/img/details/zoom-in(1).svg" alt=""  data-bs-toggle="modal" data-bs-target="#zoomModal">
+            3D aerial view
+        </span>
+        <img data-img="./assets/img/details/features/building-view.png"
+             data-3d-img="https://foyr.com/learn/wp-content/uploads/2020/10/shutterstock_1010700475-scaled-1.jpg"
+             class="zoom"
+             src="./assets/img/details/zoom-in(1).svg" alt=""
+             data-bs-toggle="modal" data-bs-target="#zoomModal">
+
     </div>
     <div class="col-12 col-lg-5 col-xl-4 info-container">
 
@@ -1664,7 +1813,6 @@
 </div>
                                     </div>
                                 </div>
-
 
                             </div>
                         </div>
@@ -1990,7 +2138,7 @@
                         </div>
                     </div>
 
-                    <div class="bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-3 pb-2">
+                    <div class="bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-4 pb-2">
                         <button type="button" class="btn btn-light bg-transparent border-0" id="showSpecification">
                             <span id="specMore">Show More</span> <span id="SpecLess">Show Less</span>
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -2017,13 +2165,12 @@
                                 type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Facilities
                         </button>
                         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Nearby Amenities
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Nearby
+                            Amenities
                         </button>
                         <button class="nav-link" id="nav-360" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">360/Walk Through
-                        </button>
-                        <button class="nav-link" id="nav-brochure" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Brochure
+                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">360/Walk
+                            Through
                         </button>
                     </div>
                 </nav>
@@ -2046,8 +2193,32 @@
 
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...
+                        <video
+                                id="my-video"
+                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                preload="auto"
+                                width="auto"
+                                height="400"
+                                controls
+                                poster="./assets/img/details/video-poster.png"
+                                data-setup="{}"
+                        >
+                            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
+                        </video>
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
+                        <video
+                                id="my-video"
+                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                preload="auto"
+                                width="auto"
+                                height="400"
+                                controls
+                                poster="./assets/img/details/video-poster.png"
+                                data-setup="{}"
+                        >
+                            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
+                        </video>
                     </div>
                 </div>
 
@@ -2171,7 +2342,8 @@
                 <div id="teamShowMoreContent" class="position-relative show-less">
                     <div class="row mb-md-3 content pt-2">
                         <div class="col-12 col-md-4 col-xl-3">
-                            <img class="img-fluid w-100 mb-3 mb-md-0" src="./assets/img/details/other-projects/other2.png" alt="">
+                            <img class="img-fluid w-100 mb-3 mb-md-0"
+                                 src="./assets/img/details/other-projects/other2.png" alt="">
                         </div>
                         <div class="col-12 col-md-8 col-xl-9">
                             <h3>The Developer: Access Engineering</h3>
@@ -2189,7 +2361,8 @@
 
                     <div class="row mb-md-4 content pt-2">
                         <div class="col-12 col-md-4 col-xl-3">
-                            <img class="img-fluid w-100 mb-3 mb-md-0" src="./assets/img/details/other-projects/other1.png" alt="">
+                            <img class="img-fluid w-100 mb-3 mb-md-0"
+                                 src="./assets/img/details/other-projects/other1.png" alt="">
                         </div>
                         <div class="col-12 col-md-8 col-xl-9">
                             <h3>The Developer: Access Engineering</h3>
@@ -2205,7 +2378,7 @@
                         </div>
                     </div>
 
-                    <div class="bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-3 pb-2">
+                    <div class="bottom-0 w-100 d-flex justify-content-center hide-btn-container pt-4 pb-2">
                         <button type="button" class="btn btn-light bg-transparent border-0" id="showTeam">
                             <span id="teamMore">Show More</span> <span id="teamLess">Show Less</span>
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -2231,12 +2404,12 @@
 
                             <span>+940777123457</span>
 
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
+                            <a href="#" class="btn btn-success">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="btn btn-success">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
 
                             <a id="showEnquireNum" class="btn btn-link">Click to view Telephone Number</a>
                         </div>
@@ -2264,9 +2437,10 @@
                         <div class="form-check mb-0">
                             <input class="form-check-input" type="checkbox" id="check1">
                             <label class="form-check-label" for="check1">
-                                I confirm that I have read and agree to Lanka Property Web’s <a>Terms & Conditions</a>
+                                I confirm that I have read and agree to Lanka Property Web’s <a href="#">Terms &
+                                Conditions</a>
                                 and
-                                <a>Privacy Policy.</a>
+                                <a href="#">Privacy Policy.</a>
                             </label>
                         </div>
                     </div>
@@ -2695,87 +2869,88 @@
                     <i id="brochurePrev" class="fa fa-angle-left" aria-hidden="true"></i>
                     <i id="brochureNext" class="fa fa-angle-right" aria-hidden="true"></i>
 
-<!--                    <div>-->
-<!--                        <button id="prev">Previous</button>-->
-<!--                        <button id="next">Next</button>-->
-<!--                        &nbsp; &nbsp;-->
-<!--                        <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>-->
-<!--                    </div>-->
+                    <!--                    <div>-->
+                    <!--                        <button id="prev">Previous</button>-->
+                    <!--                        <button id="next">Next</button>-->
+                    <!--                        &nbsp; &nbsp;-->
+                    <!--                        <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>-->
+                    <!--                    </div>-->
 
                     <canvas id="the-canvas"></canvas>
                 </div>
 
                 <div class="row gx-0 mt-3 align-items-center pagination-container">
                     <div class="col-auto pe-2">
-                        <span>1-2 / 24</span>
+                        <span id="pageNumbers">1-2 / 24</span>
                     </div>
                     <div class="col position-relative pe-3">
                         <div class="progress" style="height: 4px;">
-                            <div id="brochureProgressBar" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div id="brochureProgressBar" class="progress-bar" role="progressbar" style="width: 25%;"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
 
-<!--                <div class="brochure-swiper-container pt-2 mt-1">-->
-<!--                    <div class="position-relative">-->
-<!--                        <div class="swiper brochure-swiper mx-3">-->
-<!--                            <div class="swiper-wrapper">-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                                <div class="swiper-slide">-->
-<!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-<!--                                </div>-->
-<!--                                -->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="swiper-button-prev brochure-prev swiper-button"></div>-->
-<!--                        <div class="swiper-button-next brochure-next swiper-button"></div>-->
-<!--                    </div>-->
+                <!--                <div class="brochure-swiper-container pt-2 mt-1">-->
+                <!--                    <div class="position-relative">-->
+                <!--                        <div class="swiper brochure-swiper mx-3">-->
+                <!--                            <div class="swiper-wrapper">-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
+                <!--                                </div>-->
+                <!--                                -->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <div class="swiper-button-prev brochure-prev swiper-button"></div>-->
+                <!--                        <div class="swiper-button-next brochure-next swiper-button"></div>-->
+                <!--                    </div>-->
 
-<!--                    <div class="row gx-0 mt-3 align-items-center pagination-container">-->
-<!--                        <div class="col-auto pe-2">-->
-<!--                            <span>1-2 / 24</span>-->
-<!--                        </div>-->
-<!--                        <div class="col position-relative">-->
-<!--                            <div class="swiper-pagination"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                    <div class="row gx-0 mt-3 align-items-center pagination-container">-->
+                <!--                        <div class="col-auto pe-2">-->
+                <!--                            <span>1-2 / 24</span>-->
+                <!--                        </div>-->
+                <!--                        <div class="col position-relative">-->
+                <!--                            <div class="swiper-pagination"></div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
 
             </div>
 
@@ -2790,8 +2965,8 @@
             </div>
 
         </div>
-        <div class="col-12 col-lg-4 col-xl-4 pt-4 px-xl-5">
-            <div class="contact-form">
+        <div class="col-12 col-lg-4 col-xl-4 pt-4 px-xl-4 position-relative">
+            <div class="contact-form position-sticky">
                 <div class="row align-items-center logo-row mb-3 gx-3">
                     <div class="col d-flex align-items-center">
                         <img class="me-2" src="./assets/img/details/access-e.jpg" alt="">
@@ -2821,15 +2996,20 @@
 
                 <div class="row btn-row">
                     <div class="col-6">
-                        <button id="contactNum" data-num="+94777235353" class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
+                        <button id="contactNum" data-num="+94777235353"
+                                class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
                             <i class="fa fa-phone me-1"></i>
-                            +94 123…
+                            <span>+94 123…</span>
                         </button>
                     </div>
                     <div class="col-6">
-                        <button id="contactWhatsapp" data-num="+94777828282" class="btn btn-outline-primary d-flex align-items-center justify-content-center w-100">
+                        <button id="contactWhatsapp" data-num="+94777828282"
+                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">
                             <i class="fa fa-whatsapp me-1"></i>
-                            +94 123…
+                            <span class="text-uppercase">
+                                Whatsapp
+                            </span>
+                            <!--                            <span>+94 123…</span>-->
                         </button>
                     </div>
                 </div>
@@ -2854,7 +3034,8 @@
                         <input type="date" class="form-control position-relative" id="date" placeholder="Move-in Date">
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control" rows="3" placeholder="I am interested in this rental and would like to schedule a viewing. Please let me know when this would be possible."></textarea>
+                        <textarea class="form-control" rows="3"
+                                  placeholder="I am interested in this rental and would like to schedule a viewing. Please let me know when this would be possible."></textarea>
                     </div>
 
                     <div class="col-12">
@@ -2942,7 +3123,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header border-0">
-                <button type="button" id="detailsCallbackBtnClose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" id="detailsCallbackBtnClose" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body p-0 pt-1">
 
@@ -2970,7 +3152,8 @@
 
                         <div class="row gx-3 mb-3">
                             <div class="col-12">
-                                <input type="text" class="form-control" id="detailContactPhoneNo" placeholder="Phone Number"
+                                <input type="text" class="form-control" id="detailContactPhoneNo"
+                                       placeholder="Phone Number"
                                        required>
                             </div>
                         </div>
@@ -3062,11 +3245,13 @@
 </div>
 
 
-<div class="modal fade" id="detailsPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel" aria-hidden="true">
+<div class="modal fade" id="detailsPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header border-0">
-                <button type="button" id="callbackBtnClose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" id="callbackBtnClose" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body p-0 pt-1">
 
@@ -3079,7 +3264,8 @@
                     <form>
 
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="initName" placeholder="Enter Full Name" required>
+                            <input type="text" class="form-control" id="initName" placeholder="Enter Full Name"
+                                   required>
                         </div>
 
                         <div class="mb-3">
@@ -3095,16 +3281,17 @@
                         </div>
 
 
-                        <div class="mb-3">
-                            <select id="inputState" class="form-select">
-                                <option selected disabled>Unit Types</option>
-                                <option>unit 1</option>
-                                <option>unit 1</option>
-                            </select>
-                        </div>
+                        <!--                        <div class="mb-3">-->
+                        <!--                            <select id="inputState" class="form-select">-->
+                        <!--                                <option selected disabled>Unit Types</option>-->
+                        <!--                                <option>unit 1</option>-->
+                        <!--                                <option>unit 1</option>-->
+                        <!--                            </select>-->
+                        <!--                        </div>-->
 
                         <div class="mb-3">
-                           <textarea rows="3" class="form-control" placeholder="I found Marina Square on Lanka Property Web and would like to know more. Please send me more details."></textarea>
+                            <textarea rows="3" class="form-control"
+                                      placeholder="I found Marina Square on Lanka Property Web and would like to know more. Please send me more details."></textarea>
                         </div>
 
                         <div class="mb-3">
