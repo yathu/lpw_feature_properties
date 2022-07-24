@@ -4,6 +4,7 @@ layout: home
 class: devDetails container-fluid
 permalink: /details.html
 ---
+
 <div class="banner-img-container">
     <div class="row gx-3">
         <div class="col-12 col-sm-7 col-md-8 col-lg-9 position-relative">
@@ -20,8 +21,10 @@ permalink: /details.html
                     <img src="./assets/img/details/btnIcons/rotation.svg" alt="">
                 </a>
 
-                <a href="#">
-                    <img src="./assets/img/details/btnIcons/heart.svg" alt="">
+                <a id="love" class="" href="#">
+                    <!--                    <img src="./assets/img/details/btnIcons/heart.svg" alt="">-->
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
                 </a>
 
             </div>
@@ -166,8 +169,10 @@ permalink: /details.html
                 </div>
 
                 <div class="offer-container py-3 px-3">
-                    <img class="img-fluid d-md-none" src="./assets/img/details/overview/OFFERWITHTEXT-MOBILE.png" alt="offer">
-                    <img class="img-fluid d-none d-md-block" src="./assets/img/details/overview/offerwithText.svg" alt="offer">
+                    <img class="img-fluid d-md-none" src="./assets/img/details/overview/OFFERWITHTEXT-MOBILE.png"
+                         alt="offer">
+                    <img class="img-fluid d-none d-md-block" src="./assets/img/details/overview/offerwithText.svg"
+                         alt="offer">
                 </div>
 
             </div>
@@ -796,15 +801,15 @@ permalink: /details.html
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <!--                                poster="./assets/img/details/video-poster.png"-->
 
                         <video
                                 id="my-video"
-                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
                                 preload="auto"
-                                width="auto"
-                                height="400"
+                                width="640"
+                                height="264"
                                 controls
-                                poster="./assets/img/details/video-poster.png"
                                 data-setup="{}"
                         >
                             <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
@@ -815,12 +820,11 @@ permalink: /details.html
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...
                         <video
                                 id="my-video"
-                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
                                 preload="auto"
-                                width="auto"
-                                height="400"
+                                width="640"
+                                height="264"
                                 controls
-                                poster="./assets/img/details/video-poster.png"
                                 data-setup="{}"
                         >
                             <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
@@ -829,12 +833,11 @@ permalink: /details.html
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
                         <video
                                 id="my-video"
-                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
                                 preload="auto"
-                                width="auto"
-                                height="400"
+                                width="640"
+                                height="264"
                                 controls
-                                poster="./assets/img/details/video-poster.png"
                                 data-setup="{}"
                         >
                             <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
@@ -1014,7 +1017,7 @@ permalink: /details.html
                     Enquire
                 </h2>
 
-                <div class="row info mb-4">
+                <div class="row align-items-center info mb-4">
                     <div class="col-auto">
                         <img class="" src="./assets/img/details/access-e.jpg" alt="engineer">
                     </div>
@@ -1164,49 +1167,55 @@ permalink: /details.html
 
                             <div class="swiper-slide">
                                 <img src="./assets/img/details/banks/Bitmap.jpg" alt="bank">
-                                <label>
-                                    FLOATING
-                                </label>
-                                <div class="value">
-                                    6.50%
+                                <div>
+                                    <label>
+                                        FLOATING
+                                    </label>
+                                    <div class="value">
+                                        6.50%
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./assets/img/details/banks/boc.jpg" alt="bank">
-                                <label>
+                                <div><label>
                                     FLOATING
                                 </label>
-                                <div class="value">
-                                    5.75%
+                                    <div class="value">
+                                        5.75%
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./assets/img/details/banks/SAMPATH-BANK.jpg" alt="bank">
-                                <label>
+                                <div><label>
                                     FLOATING
                                 </label>
-                                <div class="value">
-                                    5.75%
+                                    <div class="value">
+                                        5.75%
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./assets/img/details/banks/commercial-bank-of-ceylon-plc-vector-logo.jpg"
                                      alt="bank">
-                                <label>
+                                <div><label>
                                     FLOATING
                                 </label>
-                                <div class="value">
-                                    5.75%
+                                    <div class="value">
+                                        5.75%
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./assets/img/details/banks/commercial-bank-of-ceylon-plc-vector-logo.jpg"
                                      alt="bank">
-                                <label>
+                                <div><label>
                                     FLOATING
                                 </label>
-                                <div class="value">
-                                    5.75%
+                                    <div class="value">
+                                        5.75%
+                                    </div>
                                 </div>
                             </div>
 
@@ -1292,9 +1301,12 @@ permalink: /details.html
                 </div>
 
                 <div class="googlemap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.815297917005!2d79.82110019170285!3d6.921837363357458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1657570629365!5m2!1sen!2slk"
-                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div id="map">
+
+                    </div>
+<!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.815297917005!2d79.82110019170285!3d6.921837363357458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1657570629365!5m2!1sen!2slk"-->
+<!--                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"-->
+<!--                            referrerpolicy="no-referrer-when-downgrade"></iframe>-->
                 </div>
 
             </div>
@@ -1412,16 +1424,35 @@ permalink: /details.html
 
                 <h2 class="title-content-1 mb-3">Property Rates in Colombo 03 - 2021</h2>
 
-                <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
+                <form>
+                    <div class="custom-switch-container">
 
-                    <label class="form-check-label" for="showOnMap">
-                        Buy
-                    </label>
-                    <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">
-                    <label class="form-check-label" for="showOnMap">
-                        Rent
-                    </label>
-                </div>
+                        <div class="col">
+                            <input checked type="radio" class="btn-check" value="total" name="budgetTypeMobile"
+                                   id="buy"
+                                   autocomplete="off">
+                            <label class="btn w-100" for="buy">Buy</label>
+                        </div>
+                        <div class="col">
+                            <input type="radio" class="btn-check" value="sqft" name="budgetTypeMobile"
+                                   id="rent"
+                                   autocomplete="off">
+                            <label class="btn w-100" for="rent">Rent</label>
+                        </div>
+
+                    </div>
+                </form>
+
+                <!--                <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">-->
+
+                <!--                    <label class="form-check-label" for="showOnMap">-->
+                <!--                        Buy-->
+                <!--                    </label>-->
+                <!--                    <input class="form-check-input mx-2 mt-0" type="checkbox" role="switch" id="showOnMap">-->
+                <!--                    <label class="form-check-label" for="showOnMap">-->
+                <!--                        Rent-->
+                <!--                    </label>-->
+                <!--                </div>-->
 
                 <div class="row gx-3 my-4 by-price-container">
 
@@ -1551,7 +1582,7 @@ permalink: /details.html
         </div>
         <div class="col-12 col-lg-4 col-xl-4 pt-4 px-xl-4 position-relative">
             <div class="contact-form position-sticky">
-                <div class="row align-items-center logo-row mb-3 gx-3">
+                <div class="row align-items-center logo-row mb-2 gx-3">
                     <div class="col d-flex align-items-center">
                         <img class="me-2" src="./assets/img/details/access-e.jpg" alt="">
                         Access
@@ -1564,7 +1595,7 @@ permalink: /details.html
                     </div>
                 </div>
 
-                <div class="title-box border-bottom pb-2 mb-3">
+                <div class="title-box border-bottom pb-2">
                     <div class="title-content-2 price-container">
                         Rs. 34.5 Mn
                         <span class="price-label">Upwards</span>
@@ -1574,11 +1605,11 @@ permalink: /details.html
                     </div>
                 </div>
 
-                <h2 class="title-content-1 mb-3">
+                <h2 class="avail">
                     Check Availability
                 </h2>
 
-                <div class="row btn-row">
+                <div class="row btn-row gx-3">
                     <div class="col-6">
                         <button id="contactNum" data-num="+94777235353"
                                 class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
@@ -1596,30 +1627,51 @@ permalink: /details.html
                             <!--                            <span>+94 123…</span>-->
                         </button>
                     </div>
+
+                    <div class="col-6">
+                        <button data-num="+94777235353"
+                                class="btn btn-outline-danger d-none align-items-center justify-content-center w-100">
+                            <i class="fa fa-phone me-1"></i>
+                            <span>+94 123…</span>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button data-num="+94777828282"
+                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">
+                            <i class="fa fa-whatsapp me-1"></i>
+                            <span class="text-uppercase">
+                                Whatsapp
+                            </span>
+                            <!--                            <span>+94 123…</span>-->
+                        </button>
+                    </div>
                 </div>
 
                 <form class="row g-3 mt-0">
-                    <div class="col-12">
+                    <div class="col-12 mt-0">
                         <label>
                             Or send us your inquiry.
                         </label>
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" id="name"
+                        <input type="text" class="form-control form-control-sm" id="contactName"
                                placeholder="Your Name *" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="contactNo" placeholder="Contact Number">
+                        <input type="text" class="form-control form-control-sm" id="contactNo"
+                               placeholder="Contact Number">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="email" placeholder="Email Address *">
+                        <input type="text" class="form-control form-control-sm" id="email"
+                               placeholder="Email Address *">
                     </div>
                     <div class="col-12">
-                        <input type="date" class="form-control position-relative" id="date" placeholder="Move-in Date">
+                        <input type="date" class="form-control form-control-sm position-relative" id="date"
+                               placeholder="Move-in Date">
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control" rows="3"
-                                  placeholder="I am interested in this rental and would like to schedule a viewing. Please let me know when this would be possible."></textarea>
+                        <textarea class="form-control form-control-sm" rows="2"
+                                  placeholder="I am interested in this rental and would like to schedule a viewing."></textarea>
                     </div>
 
                     <div class="col-12">
@@ -1641,10 +1693,31 @@ permalink: /details.html
                         <a class="btn-outline-primary d-block w-100" href="#"><img
                                 src="./assets/img/details/btnIcons/comment.svg" alt="comment"></a>
                     </div>
+
                     <div class="col-3">
-                        <a class="btn-outline-primary d-block w-100" href="#"><img
-                                src="./assets/img/details/btnIcons/share.svg" alt="comment"></a>
+                        <!--                        <a class="btn-outline-primary d-block w-100" href="#">-->
+                        <!--                            <img src="./assets/img/details/btnIcons/share.svg" alt="comment">-->
+                        <!--                        </a>-->
+
+                        <a class="btn-outline-primary d-block w-100 dropdown-toggle" href="#" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <img src="./assets/img/details/btnIcons/share.svg" alt="comment">
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <div><i class="fa fa-facebook"></i></div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div><i class="fa fa-twitter"></i></div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div><i class="fa fa-instagram"></i></div>
+                            </a>
+                        </div>
+
                     </div>
+
                     <div class="col-3">
                         <a class="btn-outline-primary d-block w-100" href="#"><img
                                 src="./assets/img/details/btnIcons/envelope.svg" alt="comment"></a>
@@ -1824,7 +1897,6 @@ permalink: /details.html
     </div>
 </div>
 
-
 <div class="modal fade" id="detailsPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel"
      aria-hidden="true">
     <div class="modal-dialog">
@@ -1891,4 +1963,10 @@ permalink: /details.html
             </div>
         </div>
     </div>
+</div>
+
+<div class="bottomFloat row gx-2">
+    <div class="col"><a class="btn btn-danger" href="#">CALL</a></div>
+    <div class="col"><a class="btn btn-outline-danger" href="#">WHATSAPP</a></div>
+    <div class="col"><a class="btn btn-outline-danger" href="#">EMAIL</a></div>
 </div>

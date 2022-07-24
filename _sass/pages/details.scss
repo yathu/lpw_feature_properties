@@ -56,6 +56,21 @@
           max-width: 100%;
           object-fit: contain;
         }
+        i{
+          color: #018e37;
+          font-size: 20px;
+        }
+        .fa-heart{
+          display: none;
+        }
+      }
+      .active{
+        .fa-heart-o{
+          display: none;
+        }
+        .fa-heart{
+          display: inline-block;
+        }
       }
     }
 
@@ -165,7 +180,7 @@
       font-family: Rubik-Medium;
       font-size: 26px;
       color: #029432;
-      line-height: 20px;
+      line-height: 1;
 
       @media (max-width: 767.98px) {
         font-size: 22px;
@@ -177,7 +192,7 @@
 
       .sqft {
         font-family: Rubik-Regular;
-        font-size: 16px;
+        font-size: 14px;
         color: #A0A4AA;
         //line-height: 20px;
 
@@ -185,7 +200,9 @@
           font-size: 14px;
         }
       }
+
     }
+
 
     .est {
       background: #E3F4EA;
@@ -716,13 +733,8 @@
     .show-less {
       max-height: 250px;
       overflow: hidden;
-
-      .hide-btn-container {
-        background-color: #ddf4f3;
+      .hide-btn-container{
         position: absolute;
-        background: rgb(221, 244, 243) !important;
-        background: linear-gradient(0deg, rgba(221, 244, 243, 1) 0%, rgba(221, 244, 243, 0.8547794117647058) 95%, rgba(221, 244, 243, 0.6306897759103641) 100%) !important;
-
 
         #specMore {
           display: inline-block;
@@ -732,6 +744,13 @@
           display: none;
         }
       }
+    }
+
+    .hide-btn-container {
+      background-color: #ddf4f3;
+      background: rgb(221, 244, 243) !important;
+      background: linear-gradient(0deg, rgba(221, 244, 243, 1) 0%, rgba(221, 244, 243, 0.8547794117647058) 95%, rgba(221, 244, 243, 0.6306897759103641) 100%) !important;
+
     }
 
   }
@@ -784,9 +803,13 @@
 
     .tab-content {
       video {
-        //object-fit: cover;
+        object-fit: contain;
         max-width: 100%;
         width: 100%;
+
+        @media (min-width: 768px) {
+          //min-height: 400px;
+        }
       }
 
       .video-js {
@@ -1122,7 +1145,7 @@
       border-radius: 3px;
       padding: 20px 15px !important;
       box-shadow: 0px 2px 6px 0px rgb(210, 210, 210);
-
+      justify-content: space-between !important;
       &:after {
         display: none;
       }
@@ -1131,6 +1154,8 @@
     img {
       max-width: 100%;
       max-height: 75px;
+      flex: 1;
+      object-fit: contain;
     }
 
     label {
@@ -1207,10 +1232,16 @@
     }
 
     .googlemap {
-      position: relative;
-      padding-bottom: 45%; /* 4:3 ratio*/
-      height: 0;
-      overflow: hidden;
+      //position: relative;
+      //padding-bottom: 45%; /* 4:3 ratio*/
+      //height: 0;
+      //overflow: hidden;
+
+      #map{
+        //height: 100%;
+        min-height: 500px;
+        height: 500px;
+      }
     }
 
     .googlemap iframe {
@@ -1267,6 +1298,9 @@
   }
 
   .property-rate-chart-container {
+    .custom-switch-container{
+      max-width: 150px;
+    }
     .form-check {
       label {
         font-family: Rubik-Regular;
@@ -1466,14 +1500,14 @@
     border: 1px solid #E1E1E1;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    padding: 20px;
+    padding: 15px 20px;
     top: 80px;
     max-width: 350px;
 
     .logo-row {
       img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
       }
 
@@ -1484,11 +1518,23 @@
     }
 
     .title-box {
+      margin-bottom: 10px;
       @extend .title-container;
+      .price-container{
+        font-size: 20px;
+      }
     }
+    .avail{
+      font-size: 18px !important;
+      font-family: Rubik-Medium;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
 
     .btn-row {
       button {
+        margin-bottom: 12px;
         i {
           font-size: 16px;
         }
@@ -1510,7 +1556,6 @@
         font-family: Rubik-Regular;
         font-size: 15px;
         color: #71757B;
-        line-height: 30px;
 
         @media (max-width: 767.98px) {
           font-size: 14px;
@@ -1542,12 +1587,50 @@
         padding: 7px 12px !important;
 
         img {
-          height: 20px;
+          height: 15px;
         }
 
         &:hover {
           background-color: white;
           border: 1px solid #018e37;
+        }
+      }
+
+      .dropdown-toggle{
+        &:after{
+          display: none !important;
+        }
+      }
+
+      .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+        color: #fff;
+        background-color: #ffffff;
+        border-color: #2a8d36;
+      }
+      .btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus{
+        box-shadow: none !important;
+        outline: none;
+      }
+
+      .dropdown-menu{
+        min-width: auto;
+        padding: 5px 0;
+
+        .dropdown-item{
+          padding: 5px 10px !important;
+          div{
+            background-color: #018e37;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            min-width: 55px;
+            color: #fff;
+            height: 33px;
+          }
+          &:hover{
+            border: 0!important;
+          }
         }
       }
     }
@@ -1655,5 +1738,54 @@ input[type="date"]:focus:before {
 
 .hide-btn-container {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.97) 91%, rgba(255, 255, 255, 0.8883928571428571) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 91%, rgba(255, 255, 255, 0.8883928571428571) 100%);
+}
+
+.custom-switch-container {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  display: flex;
+
+  input + label {
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-family: Rubik-Regular;
+    font-size: 14px;
+    text-transform: none;
+  }
+
+
+  input:checked + label {
+    color: #fff;
+    background-color: #2a8e36 !important;
+    outline: none!important;
+    box-shadow: none;
+  }
+
+  input:focus + label {
+    outline: none!important;
+    box-shadow: none !important;
+  }
+}
+
+.bottomFloat{
+  position: fixed;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+  background-color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 15px;
+  display: flex;
+  box-shadow: 0 0 30px #00000040;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  a{
+    max-width: 100% !important;
+    width: 100%;
+  }
 }

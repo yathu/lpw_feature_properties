@@ -50,6 +50,22 @@
 {% endif %}
 
 
+{% if page.title == "details" %}
+
+<!--<script-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&v=weekly"-->
+<!--        defer-->
+<!--&gt;</script>-->
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">
+</script>
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>-->
+
+
+{% endif %}
+
 
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
 
@@ -82,6 +98,7 @@
 <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
 {% endif %}
 
 

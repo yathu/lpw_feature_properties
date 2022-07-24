@@ -2,16 +2,24 @@
     <div class="col-12 col-lg-7 col-xl-8 p-xl-3 d-flex flex-column justify-content-center align-items-center image-container">
 
         <div class="w-100 d-flex justify-content-between justify-content-md-end pb-3">
-            <div class="form-check form-switch form-switch-md mb-0 d-flex align-items-center ps-0">
+            <form>
+                <div class="custom-switch-container">
 
-                <label class="form-check-label" for="showOnMap">
-                    2D
-                </label>
-                <input class="form-check-input mx-2 mt-0 floor-view-switch" type="checkbox" role="switch" id="showOnMap">
-                <label class="form-check-label" for="showOnMap">
-                    3D
-                </label>
-            </div>
+                    <div class="col">
+                        <input checked type="radio" class="btn-check" value="total" name="budgetTypeMobile"
+                               id="2d"
+                               autocomplete="off">
+                        <label class="btn w-100" for="2d">2D</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" class="btn-check" value="sqft" name="budgetTypeMobile"
+                               id="3d"
+                               autocomplete="off">
+                        <label class="btn w-100" for="3d">3D</label>
+                    </div>
+
+                </div>
+            </form>
 
             <button data-bs-toggle="modal" data-bs-target="#detailsCallbackModal"
                     class="btn btn-outline-danger d-md-none">

@@ -1,23 +1,40 @@
-$(document).ready(function () {
+$(document).ready(() => {
 
-    $('#contactNum').on("click",function (){
-        var num = $(this).data("num");
-        if(num) $(this).find('span').html(num);
+    $('.dropdown-toggle').dropdown();
 
-        $('#contactWhatsapp').removeClass('d-none');
-        $('#contactWhatsapp').addClass('d-flex');
-
+    $('.banner-img-container #love').on("click", function () {
+        $(this).toggleClass('active');
     });
+
+    $('#contactNum').on("click", function () {
+        console.log(1);
+
+        var parent = $(this).parents('.btn-row');
+
+        $(this).parents('.btn-row').find('.btn').each(function () {
+            console.log(2);
+            console.log($(this));
+
+
+            var num = $(this).data("num");
+            if (num) $(this).find('span').html(num);
+
+
+            $(this).removeClass('d-none');
+            $(this).addClass('d-flex');
+        });
+    });
+
     // $('#contactWhatsapp').on("click",function (){
     //     var num = $(this).data("num");
     //     if(num) $(this).find('span').html(num);
     // });
 
-    $('.floor-view-switch').change(function (){
-        if(this.checked){
+    $('.floor-view-switch').change(function () {
+        if (this.checked) {
             $(this).closest('.image-container').find(".img-2d").addClass('d-none');
             $(this).closest('.image-container').find(".img-3d").removeClass('d-none');
-        }else {
+        } else {
             $(this).closest('.image-container').find(".img-2d").removeClass('d-none');
             $(this).closest('.image-container').find(".img-3d").addClass('d-none');
         }
@@ -28,11 +45,11 @@ $(document).ready(function () {
         spaceBetween: 20,
     });
 
-    $('.showAbout').on("click",()=>{
+    $('.showAbout').on("click", () => {
         $('.about-container>div').toggleClass('hide-text');
     });
 
-    $('.showFeatures').on("click",()=>{
+    $('.showFeatures').on("click", () => {
         $('.features-container').toggleClass('show-less');
     });
 
@@ -118,16 +135,19 @@ $(document).ready(function () {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
             },
             576: {
-                slidesPerView: 1,
+                slidesPerView: 2.5,
             },
             768: {
-                slidesPerView: 2,
+                slidesPerView: 2.5,
             },
             992: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
+            },
+            1200: {
+                slidesPerView: 3.5,
             }
         }
     });
@@ -182,7 +202,7 @@ $(document).ready(function () {
                     label: "Price range",
                     data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560],
                     tension: 0.3,
-                    fill:true,
+                    fill: true,
                     // backgroundColor: 'rgb(255, 99, 132)',
                     backgroundColor: gradient,
                     borderColor: '#ECA743',
@@ -211,7 +231,7 @@ $(document).ready(function () {
 
     var swiper = new Swiper(".banner-swiper", {
         // slidesPerView: 3,
-        loop:true,
+        loop: true,
         navigation: {
             nextEl: ".banner-next",
             prevEl: ".banner-prev",
@@ -227,7 +247,7 @@ $(document).ready(function () {
 
         console.log(checked);
 
-        if(checked){
+        if (checked) {
             img_path = $(button).data("3d-img");
         }
 
@@ -235,46 +255,62 @@ $(document).ready(function () {
 
         let zoomImg = $(event.target).find('img');
 
-        $(zoomImg).attr("src",img_path);
+        $(zoomImg).attr("src", img_path);
     });
 
     var input = document.querySelector("#detailContactPhoneNo");
     window.intlTelInput(input, {
         initialCountry: "lk",
-        allowDropdown:true,
+        allowDropdown: true,
     });
 
     var initPhoneNo = document.querySelector("#initPhoneNo");
     window.intlTelInput(initPhoneNo, {
         initialCountry: "lk",
-        allowDropdown:true,
+        allowDropdown: true,
     });
 
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
 
-    $('#btnShowPhone').on("click",function () {
+    $('#btnShowPhone').on("click", function () {
 
         $('#detailsCallbackBtnClose').trigger("click");
-        setTimeout(()=> DetailsPhoneNoModal.show(),0);
+        setTimeout(() => DetailsPhoneNoModal.show(), 0);
     });
 
-    setTimeout(()=>{
-        detailsInitPopup.show();
-    },30000);
+    // setTimeout(() => {
+    //     detailsInitPopup.show();
+    // }, 30000);
 
-    $('#showSpecification').on("click",function (){
+    $('#showSpecification').on("click", function () {
         $('#specContent').toggleClass('show-less');
     });
 
 
-    $('#showTeam').on("click",function (){
+    $('#showTeam').on("click", function () {
         $('#teamShowMoreContent').toggleClass('show-less');
     });
 
-    $('#showEnquireNum').on("click",function (){
-       $('.phone-info').removeClass('hide');
-       $(this).hide();
+    $('#showEnquireNum').on("click", function () {
+        $('.phone-info').removeClass('hide');
+        $(this).hide();
+    });
+
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            // downscroll code
+        } else {
+
+            if (localStorage.getItem("popupShowed") === null) {
+                detailsInitPopup.show();
+                window.localStorage.setItem('popupShowed', true);
+            }
+        }
+        lastScrollTop = st;
     });
 
 
@@ -307,7 +343,7 @@ $(document).ready(function () {
     function renderPage(num) {
         pageRendering = true;
         // Using promise to fetch the page
-        pdfDoc.getPage(num).then(function(page) {
+        pdfDoc.getPage(num).then(function (page) {
 
             var viewport = page.getViewport({scale: scale});
 
@@ -317,10 +353,10 @@ $(document).ready(function () {
 
             // canvas.height = viewport.height;
 
-          const containerWidth = document.getElementById("broucher-pdf-container").offsetWidth;
+            const containerWidth = document.getElementById("broucher-pdf-container").offsetWidth;
 
             canvas.height = 400;
-            canvas.width = containerWidth -32 ;
+            canvas.width = containerWidth - 32;
             // canvas.width = viewport.width;
 
             // Render PDF page into canvas context
@@ -331,7 +367,7 @@ $(document).ready(function () {
             var renderTask = page.render(renderContext);
 
             // Wait for rendering to finish
-            renderTask.promise.then(function() {
+            renderTask.promise.then(function () {
                 pageRendering = false;
                 if (pageNumPending !== null) {
                     // New page rendering is pending
@@ -343,7 +379,7 @@ $(document).ready(function () {
 
         // Update page counters
         // document.getElementById('page_num').textContent = num;
-        var progressWidth = ((num/pdfDoc.numPages)*100) + '%';
+        var progressWidth = ((num / pdfDoc.numPages) * 100) + '%';
         $('#brochureProgressBar').width(progressWidth);
 
         $('#pageNumbers').html(`${num} / ${pdfDoc.numPages}`);
@@ -371,6 +407,7 @@ $(document).ready(function () {
         pageNum--;
         queueRenderPage(pageNum);
     }
+
     document.getElementById('brochurePrev').addEventListener('click', onPrevPage);
 
     /**
@@ -383,12 +420,13 @@ $(document).ready(function () {
         pageNum++;
         queueRenderPage(pageNum);
     }
+
     document.getElementById('brochureNext').addEventListener('click', onNextPage);
 
     /**
      * Asynchronously downloads PDF.
      */
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+    pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
         pdfDoc = pdfDoc_;
         // document.getElementById('page_count').textContent = pdfDoc.numPages;
 
@@ -397,4 +435,51 @@ $(document).ready(function () {
     });
 
 
+    //detail map code
+
+    var map;
+    var infowindow;
+
+    function initMap() {
+        var pyrmont = new google.maps.LatLng(6.927079, 79.861244), // sample location to start with: Mumbai, India
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: pyrmont,
+            zoom: 15
+        });
+
+        var request = {
+            location: pyrmont,
+            radius: 200,
+            types: ['bakery'] // this is where you set the map to get the hospitals and health related places
+        };
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, callback);
+    }
+
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+            }
+        }
+    }
+
+    function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            // infowindow.setContent(place.name);
+            infowindow.setContent('test');
+            infowindow.open(map, this);
+        });
+    }
+
+
+    initMap();
 });
