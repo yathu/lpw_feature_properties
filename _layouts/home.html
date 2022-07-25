@@ -31,6 +31,21 @@
 
     <!--    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>-->
 
+    {% if page.title == "details" %}
+
+    <!--<script-->
+    <!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&v=weekly"-->
+    <!--        defer-->
+    <!--&gt;</script>-->
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">
+    </script>
+
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>-->
+
+    {% endif %}
+
     <title>{{ page.title }}</title>
 </head>
 
@@ -47,23 +62,6 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&v=weekly"
         defer
 ></script>
-{% endif %}
-
-
-{% if page.title == "details" %}
-
-<!--<script-->
-<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&v=weekly"-->
-<!--        defer-->
-<!--&gt;</script>-->
-
-<script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">
-</script>
-
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>-->
-
-
 {% endif %}
 
 

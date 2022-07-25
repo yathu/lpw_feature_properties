@@ -729,6 +729,11 @@
     #specMore {
       display: none;
     }
+    .fa-caret-down{
+      display: none;
+    }
+
+
 
     .show-less {
       max-height: 250px;
@@ -736,11 +741,10 @@
       .hide-btn-container{
         position: absolute;
 
-        #specMore {
+        #specMore,.fa-caret-down {
           display: inline-block;
         }
-
-        #SpecLess {
+        #SpecLess,.fa-caret-up {
           display: none;
         }
       }
@@ -1202,6 +1206,7 @@
       color: #018E37;
       text-align: center;
       line-height: 20px;
+      overflow: hidden;
       //width: auto;
 
       div {
@@ -1781,11 +1786,17 @@ input[type="date"]:focus:before {
   padding: 15px;
   display: flex;
   box-shadow: 0 0 30px #00000040;
+  z-index: 999;
   @media (min-width: 768px) {
     display: none;
   }
   a{
     max-width: 100% !important;
     width: 100%;
+  }
+
+  .btn-outline-danger:hover {
+    background-color: #FFFFFF;
+    color: #ff4501;
   }
 }

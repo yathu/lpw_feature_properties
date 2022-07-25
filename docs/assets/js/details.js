@@ -7,13 +7,13 @@ $(document).ready(() => {
     });
 
     $('#contactNum').on("click", function () {
-        console.log(1);
+        // console.log(1);
 
         var parent = $(this).parents('.btn-row');
 
         $(this).parents('.btn-row').find('.btn').each(function () {
-            console.log(2);
-            console.log($(this));
+            // console.log(2);
+            // console.log($(this));
 
 
             var num = $(this).data("num");
@@ -30,8 +30,12 @@ $(document).ready(() => {
     //     if(num) $(this).find('span').html(num);
     // });
 
-    $('.floor-view-switch').change(function () {
-        if (this.checked) {
+    $('.floorViewOption').change(function () {
+
+        var name = $(this).attr('name');
+        var value = $( 'input[name='+name+']:checked' ).val();
+
+        if (value == '3d') {
             $(this).closest('.image-container').find(".img-2d").addClass('d-none');
             $(this).closest('.image-container').find(".img-3d").removeClass('d-none');
         } else {
@@ -40,9 +44,10 @@ $(document).ready(() => {
         }
     });
 
-    new Swiper(".detailsMenuSwiper", {
+    var detailsMenuSwiper = new Swiper(".detailsMenuSwiper", {
         slidesPerView: "auto",
         spaceBetween: 20,
+        loop:true,
     });
 
     $('.showAbout').on("click", () => {
@@ -163,7 +168,16 @@ $(document).ready(() => {
         breakpoints: {
             // when window width is >= 320px
             320: {
+                slidesPerView: 2.5,
+            },
+            375: {
+                slidesPerView: 3.2,
+            },
+            450: {
                 slidesPerView: 3.5,
+            },
+            485: {
+                slidesPerView: 4.2  ,
             },
             576: {
                 slidesPerView: 4.5,
@@ -192,15 +206,24 @@ $(document).ready(() => {
     gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
     gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
 
+    var buyData = {
+        labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+        data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
+    };
+
+    var rentData = {
+        labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
+        data: [850, 1120, 750, 1050, 1320, 1220, 1390, 1560]
+    };
 
     var myChart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+            labels: buyData.labels ,
             datasets: [
                 {
                     label: "Price range",
-                    data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560],
+                    data: buyData.data,
                     tension: 0.3,
                     fill: true,
                     // backgroundColor: 'rgb(255, 99, 132)',
@@ -213,6 +236,37 @@ $(document).ready(() => {
             responsive: true,
             maintainAspectRatio: false,
         }
+    });
+
+
+    $('input[name=chartType]').change(function(){
+        var value = $( 'input[name=chartType]:checked' ).val();
+
+        var data = buyData;
+
+        if (value == 'rent'){
+            data = rentData;
+        }
+
+        // myChart.data.datasets = data.data;
+        // myChart.data.labels = data.labels;
+
+
+        myChart.data.labels = data.labels;
+
+        myChart.data.datasets.pop();
+        myChart.data.datasets.push({
+            label: "Price range",
+            data: data.data,
+            tension: 0.3,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: '#ECA743',
+        });
+
+
+        myChart.update();
+
     });
 
 
@@ -245,13 +299,13 @@ $(document).ready(() => {
 
         const checked = $(button).parent().find('.floor-view-switch').prop('checked');
 
-        console.log(checked);
+        // console.log(checked);
 
         if (checked) {
             img_path = $(button).data("3d-img");
         }
 
-        console.log(img_path);
+        // console.log(img_path);
 
         let zoomImg = $(event.target).find('img');
 
@@ -299,9 +353,9 @@ $(document).ready(() => {
 
 
     var lastScrollTop = 0;
-    $(window).scroll(function(event){
+    $(window).scroll(function (event) {
         var st = $(this).scrollTop();
-        if (st > lastScrollTop){
+        if (st > lastScrollTop) {
             // downscroll code
         } else {
 
@@ -312,6 +366,73 @@ $(document).ready(() => {
         }
         lastScrollTop = st;
     });
+
+    //menu activate when scroll
+
+    $(document).on("scroll", onScroll);
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+        // console.log("scrollPos==>",scrollPos);
+
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            // var totalSlides =  detailsMenuSwiper.slides.length - 2;
+
+            var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
+
+
+            // console.log("totalSlides=>",totalSlides);
+
+            detailsMenuSwiper.slideTo(totalSlides-1);
+        }
+
+        $('.detailsMenuSwiper a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+
+            var elementHeight = refElement.height();
+            var elementPosition = refElement.position().top;
+
+            elementPosition -= (vh/2);
+
+            // if(elementHeight < vh){
+            //      elementHeight += (vh/2);
+            // }
+
+            // console.log("refElement==>",refElement);
+            // console.log("refElement.position().top==>",refElement.position().top);
+            // console.log("refElement.height()==>",refElement.height());
+            // console.log("------scrollPos==>",scrollPos);
+
+
+            if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
+
+
+
+
+                // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
+                var nextIndex = currLink.data('swiper-slide-index');
+                // console.log("nextIndex==>",nextIndex);
+
+                if(nextIndex != detailsMenuSwiper.activeIndex){
+                    // console.log(nextIndex);
+                    detailsMenuSwiper.slideTo(nextIndex);
+
+                    $('a').removeClass("active");
+                    currLink.addClass("active");
+                }
+
+
+            } else {
+                // console.log("currLink==>",currLink);
+                // currLink.removeClass("active");
+
+                // console.log("else...");
+            }
+        });
+    }
 
 
     //pdf broucher
@@ -443,14 +564,14 @@ $(document).ready(() => {
     function initMap() {
         var pyrmont = new google.maps.LatLng(6.927079, 79.861244), // sample location to start with: Mumbai, India
 
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: pyrmont,
-            zoom: 15
-        });
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: pyrmont,
+                zoom: 15
+            });
 
         var request = {
             location: pyrmont,
-            radius: 200,
+            radius: 4000,
             types: ['bakery'] // this is where you set the map to get the hospitals and health related places
         };
         infowindow = new google.maps.InfoWindow();
@@ -473,7 +594,7 @@ $(document).ready(() => {
             position: place.geometry.location
         });
 
-        google.maps.event.addListener(marker, 'click', function() {
+        google.maps.event.addListener(marker, 'click', function () {
             // infowindow.setContent(place.name);
             infowindow.setContent('test');
             infowindow.open(map, this);
@@ -482,4 +603,12 @@ $(document).ready(() => {
 
 
     initMap();
+
+    const showPhoneNoModal = ()=>{
+        setTimeout(() => DetailsPhoneNoModal.show(), 0);
+    }
+
+    $('.bottomFloat .openPopUP').on("click",function (){
+        showPhoneNoModal();
+    });
 });
