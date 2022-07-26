@@ -33,7 +33,7 @@ $(document).ready(() => {
     $('.floorViewOption').change(function () {
 
         var name = $(this).attr('name');
-        var value = $( 'input[name='+name+']:checked' ).val();
+        var value = $('input[name=' + name + ']:checked').val();
 
         if (value == '3d') {
             $(this).closest('.image-container').find(".img-2d").addClass('d-none');
@@ -47,7 +47,7 @@ $(document).ready(() => {
     var detailsMenuSwiper = new Swiper(".detailsMenuSwiper", {
         slidesPerView: "auto",
         spaceBetween: 20,
-        loop:true,
+        // loop:true,
     });
 
     $('.showAbout').on("click", () => {
@@ -177,7 +177,7 @@ $(document).ready(() => {
                 slidesPerView: 3.5,
             },
             485: {
-                slidesPerView: 4.2  ,
+                slidesPerView: 4.2,
             },
             576: {
                 slidesPerView: 4.5,
@@ -219,7 +219,7 @@ $(document).ready(() => {
     var myChart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: buyData.labels ,
+            labels: buyData.labels,
             datasets: [
                 {
                     label: "Price range",
@@ -239,12 +239,12 @@ $(document).ready(() => {
     });
 
 
-    $('input[name=chartType]').change(function(){
-        var value = $( 'input[name=chartType]:checked' ).val();
+    $('input[name=chartType]').change(function () {
+        var value = $('input[name=chartType]:checked').val();
 
         var data = buyData;
 
-        if (value == 'rent'){
+        if (value == 'rent') {
             data = rentData;
         }
 
@@ -369,23 +369,27 @@ $(document).ready(() => {
 
     //menu activate when scroll
 
+
+    onScroll();
     $(document).on("scroll", onScroll);
 
     function onScroll(event) {
         var scrollPos = $(document).scrollTop();
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
         // console.log("scrollPos==>",scrollPos);
 
-        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             // var totalSlides =  detailsMenuSwiper.slides.length - 2;
-
             var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
 
+            $('.detailsMenuSwiper a').each(function (index, element) {
+                // console.log(element);
+                $(element).removeClass('active');
+            });
+            $('.detailsMenuSwiper a:last-child').addClass('active');
 
-            // console.log("totalSlides=>",totalSlides);
-
-            detailsMenuSwiper.slideTo(totalSlides-1);
         }
 
         $('.detailsMenuSwiper a').each(function () {
@@ -395,33 +399,34 @@ $(document).ready(() => {
             var elementHeight = refElement.height();
             var elementPosition = refElement.position().top;
 
-            elementPosition -= (vh/2);
+            // console.log(vh,vw);
 
-            // if(elementHeight < vh){
-            //      elementHeight += (vh/2);
-            // }
-
-            // console.log("refElement==>",refElement);
-            // console.log("refElement.position().top==>",refElement.position().top);
-            // console.log("refElement.height()==>",refElement.height());
-            // console.log("------scrollPos==>",scrollPos);
-
+            if (vw >= 576) {
+                elementPosition -= (vh / 2);
+            }else {
+                elementPosition -= (vh/2);
+            }
 
             if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
 
-
-
-
                 // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
-                var nextIndex = currLink.data('swiper-slide-index');
+                var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
+                // var nextIndex = currLink.data('swiper-slide-index');
                 // console.log("nextIndex==>",nextIndex);
 
-                if(nextIndex != detailsMenuSwiper.activeIndex){
+                if (nextIndex != detailsMenuSwiper.activeIndex) {
                     // console.log(nextIndex);
-                    detailsMenuSwiper.slideTo(nextIndex);
+
+                    console.log("nextIndex==>",nextIndex);
+                    console.log(currLink);
+
+
+                    detailsMenuSwiper.slideTo(nextIndex -1);
 
                     $('a').removeClass("active");
                     currLink.addClass("active");
+
+                    return;
                 }
 
 
@@ -432,6 +437,12 @@ $(document).ready(() => {
                 // console.log("else...");
             }
         });
+
+        if (scrollPos == 0) {
+            console.log("scrollPos++>");
+            $('.detailsMenuSwiper a:first-child').addClass('active');
+        }
+
     }
 
 
@@ -604,11 +615,11 @@ $(document).ready(() => {
 
     initMap();
 
-    const showPhoneNoModal = ()=>{
+    const showPhoneNoModal = () => {
         setTimeout(() => DetailsPhoneNoModal.show(), 0);
     }
 
-    $('.bottomFloat .openPopUP').on("click",function (){
+    $('.bottomFloat .openPopUP').on("click", function () {
         showPhoneNoModal();
     });
 });
