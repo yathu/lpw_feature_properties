@@ -284,12 +284,22 @@ $(document).ready(() => {
     // });
 
     var swiper = new Swiper(".banner-swiper", {
-        // slidesPerView: 3,
-        loop: true,
+        loop: false,
         navigation: {
             nextEl: ".banner-next",
             prevEl: ".banner-prev",
         },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+        }
     });
 
     var myModalEl = document.querySelector('#zoomModal')

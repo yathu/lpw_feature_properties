@@ -10,14 +10,16 @@
       height: 500px;
     }
 
-    > .row {
-      max-height: 100%;
-      height: 100%;
-
-      > div {
+    @media (min-width: 576px) {
+      > .row {
         max-height: 100%;
         height: 100%;
-        overflow: hidden;
+
+        > div {
+          max-height: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
       }
     }
 
@@ -1644,6 +1646,12 @@
 
 #bannerModal {
   .modal-body {
+    max-height: 100%;
+
+    .swiper-wrapper {
+      width: 100vw;
+    }
+
     .swiper-button {
       &:after {
         font-size: 16px !important;
@@ -1658,6 +1666,18 @@
     .banner-prev {
       margin-left: -22px;
     }
+
+    .swiper-slide{
+      border-radius: 4px;
+      overflow: hidden;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    //.swiper-button-next, .swiper-button-prev {
+    //  @media (max-width: 767.98px) {
+    //    display: flex !important;
+    //  }
+    //}
   }
 }
 
