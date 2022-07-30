@@ -597,16 +597,21 @@
             }
 
             .floor-img {
-              flex: 1;
+              //flex: 1;
               object-fit: contain;
             }
 
             img.zoom {
               width: 30px;
               position: absolute;
-              right: 10px;
-              bottom: 20px;
+              //right: 10px;
+              bottom: 0px;
+              right: 0;
               cursor: pointer;
+
+              @media (min-width: 992px) {
+                //bottom: 20px;
+              }
             }
           }
         }
