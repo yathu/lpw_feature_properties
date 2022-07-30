@@ -24,10 +24,13 @@
     }
 
     img {
-      height: 100%;
-      object-fit: cover;
-      border-radius: 5px;
-      min-width: 100%;
+      @media (min-width: 576px) {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        min-width: 100%;
+      }
+
     }
 
     .btn-link-custom {
@@ -81,6 +84,10 @@
       overflow: hidden;
       border-radius: 4px;
 
+      @media (min-width: 576px) {
+        height: 50%;
+      }
+
       video {
         position: relative;
         object-fit: contain;
@@ -126,14 +133,20 @@
 
     .images {
       position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+
+      @media (min-width: 576px) {
+        height: 50%;
+      }
 
       .overlay {
         position: absolute;
-        top: 7px;
+        top: 8px;
         left: 12px;
         right: 12px;
         bottom: 0;
-        border-radius: 6px;
+        border-radius: 4px;
         background: rgba(32, 35, 48, 0.60);
         display: flex;
         justify-content: center;
@@ -1401,6 +1414,7 @@
     }
 
     .broucher-pdf-container {
+      overflow: hidden !important;
       i {
         font-size: 25px;
         position: absolute;
