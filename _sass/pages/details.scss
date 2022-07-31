@@ -1667,6 +1667,10 @@
   .modal-body {
     max-height: 100%;
 
+    @media (max-width: 767.98px) {
+      padding: 0;
+    }
+
     .swiper-wrapper {
       width: 100vw;
     }
@@ -1678,25 +1682,60 @@
       }
     }
 
+    //@media (max-width: 767.98px) {
+    //  .swiper-button{
+    //    background-color: #018e37;
+    //    border-radius: 25px;
+    //    width: 30px;
+    //    height: 30px;
+    //    display: flex;
+    //    justify-content: center;
+    //    align-items: center;
+    //  }
+    //}
+
     .banner-next {
-      margin-right: -22px;
+      margin-right: -12px;
     }
 
     .banner-prev {
-      margin-left: -22px;
+      margin-left: -12px;
     }
+
+    @media (min-width: 768px) {
+      .banner-next {
+        margin-right: -22px;
+      }
+
+      .banner-prev {
+        margin-left: -22px;
+      }
+    }
+
+
 
     .swiper-slide{
       border-radius: 4px;
       overflow: hidden;
       max-height: 100%;
       max-width: 100%;
+
+      img{
+        @media (max-width: 575.98px) {
+          min-height: 400px;
+          object-fit: cover;
+        }
+      }
     }
-    //.swiper-button-next, .swiper-button-prev {
-    //  @media (max-width: 767.98px) {
-    //    display: flex !important;
-    //  }
-    //}
+    .swiper-button-next, .swiper-button-prev {
+      @media (max-width: 767.98px) {
+        display: flex !important;
+        &:after{
+          color: #FFFFFF;
+          font-size: 20px !important;
+        }
+      }
+    }
   }
 }
 

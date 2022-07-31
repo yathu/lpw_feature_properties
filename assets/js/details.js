@@ -294,7 +294,7 @@ $(document).ready(() => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
             },
             768: {
                 slidesPerView: 1,
