@@ -427,8 +427,8 @@ $(document).ready(() => {
                 if (nextIndex != detailsMenuSwiper.activeIndex) {
                     // console.log(nextIndex);
 
-                    console.log("nextIndex==>",nextIndex);
-                    console.log(currLink);
+                    // console.log("nextIndex==>",nextIndex);
+                    // console.log(currLink);
 
 
                     detailsMenuSwiper.slideTo(nextIndex -1);
@@ -449,7 +449,7 @@ $(document).ready(() => {
         });
 
         if (scrollPos == 0) {
-            console.log("scrollPos++>");
+            // console.log("scrollPos++>");
             $('.detailsMenuSwiper a:first-child').addClass('active');
         }
 
@@ -576,55 +576,6 @@ $(document).ready(() => {
         renderPage(pageNum);
     });
 
-
-    //detail map code
-
-    var map;
-    var infowindow;
-
-    function initMap() {
-        var pyrmont = new google.maps.LatLng(6.927079, 79.861244), // sample location to start with: Mumbai, India
-
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: pyrmont,
-                zoom: 15
-            });
-
-        var request = {
-            location: pyrmont,
-            radius: 4000,
-            types: ['bakery'] // this is where you set the map to get the hospitals and health related places
-        };
-        infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, callback);
-    }
-
-    function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-        }
-    }
-
-    function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, 'click', function () {
-            // infowindow.setContent(place.name);
-            infowindow.setContent('test');
-            infowindow.open(map, this);
-        });
-    }
-
-
-    initMap();
-
     const showPhoneNoModal = () => {
         setTimeout(() => DetailsPhoneNoModal.show(), 0);
     }
@@ -633,3 +584,84 @@ $(document).ready(() => {
         showPhoneNoModal();
     });
 });
+
+//detail map code
+let map;
+let service;
+let infowindow;
+let sydney;
+
+function initMap() {
+     sydney = new google.maps.LatLng(-33.867, 151.195);
+
+    infowindow = new google.maps.InfoWindow();
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: sydney,
+        zoom: 15,
+    });
+
+    var request = {
+        location: sydney,
+        radius: '500',
+        type: ['bus_station']
+    };
+
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
+    }
+}
+
+$('.mapview-swiper .swiper-slide').on("click",function (){
+
+    const place = $(this).data("place");
+    changeMarkerPlaces(place);
+});
+
+function changeMarkerPlaces(place) {
+    clearOverlays();
+
+    var request = {
+        location: sydney,
+        radius: '500',
+        type: [place]
+    };
+
+
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+}
+
+let markers = [];
+
+function createMarker(place) {
+    if (!place.geometry || !place.geometry.location) return;
+
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+    });
+
+    markers.push(marker);
+
+    google.maps.event.addListener(marker, "click", () => {
+        infowindow.setContent(place.name || "");
+        infowindow.open(map);
+    });
+}
+
+function clearOverlays() {
+    if (markers) {
+        for (i in markers) {
+            markers[i].setMap(null);
+        }
+    }
+}
+
+window.initMap = initMap;

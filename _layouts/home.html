@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
     {% if page.title == "details" %}
-    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet"/>
     {% endif %}
 
     <!-- Bootstrap CSS -->
@@ -32,18 +32,9 @@
     <!--    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>-->
 
     {% if page.title == "details" %}
-
-    <!--<script-->
-    <!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&v=weekly"-->
-    <!--        defer-->
-    <!--&gt;</script>-->
-
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">
-    </script>
-
-    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>-->
-
+    <!--    <script-->
+    <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">-->
+    <!--    </script>-->
     {% endif %}
 
     <title>{{ page.title }}</title>
@@ -54,7 +45,6 @@
 <section class="{{ page.class }}">
     {{ content }}
 </section>
-
 
 
 {% if page.title == "home" %}
@@ -75,7 +65,8 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/js/intlTelInput.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/js/intlTelInput.min.js"></script>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
@@ -100,7 +91,11 @@
 {% endif %}
 
 
-
+{% if page.title == "details" %}
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
+        defer></script>
+{% endif %}
 </body>
 
 </html>

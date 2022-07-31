@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
     
-    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet"/>
     
 
     <!-- Bootstrap CSS -->
@@ -32,18 +32,9 @@
     <!--    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>-->
 
     
-
-    <!--<script-->
-    <!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&v=weekly"-->
-    <!--        defer-->
-    <!--&gt;</script>-->
-
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">
-    </script>
-
-    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>-->
-
+    <!--    <script-->
+    <!--            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&libraries=places">-->
+    <!--    </script>-->
     
 
     <title>details</title>
@@ -2726,20 +2717,20 @@
                     <div class="swiper mapview-swiper">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="bus_station">
                                 <div>
                                     <img src="./assets/img/details/mapview/train.svg" alt="bank">
                                 </div>
                                 Commute
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="bank">
                                 <div>
                                     <img src="./assets/img/details/mapview/bank.svg" alt="bank">
                                 </div>
                                 Banks
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="movie_theater">
                                 <div>
                                     <img src="./assets/img/details/mapview/clapperboard.svg" alt="bank">
                                 </div>
@@ -2747,35 +2738,35 @@
                             </div>
 
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="restaurant">
                                 <div>
                                     <img src="./assets/img/details/mapview/restaurant.svg" alt="bank">
                                 </div>
                                 Restaurants
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="supermarket">
                                 <div>
                                     <img src="./assets/img/details/mapview/groceries.svg" alt="bank">
                                 </div>
                                 Groceries
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="hospital">
                                 <div>
                                     <img src="./assets/img/details/mapview/pharmacy.svg" alt="bank">
                                 </div>
                                 Hospitals
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="shopping_mall">
                                 <div>
                                     <img src="./assets/img/details/mapview/shopping-cart.svg" alt="bank">
                                 </div>
                                 Shopping
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-place="park">
                                 <div>
                                     <img src="./assets/img/details/mapview/park%20copy.svg" alt="bank">
                                 </div>
@@ -3521,7 +3512,6 @@
 
 
 
-
 <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
 
 <script src="assets/js/jquery-3.6.0.js"></script>
@@ -3532,7 +3522,8 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/js/intlTelInput.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/js/intlTelInput.min.js"></script>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
@@ -3552,6 +3543,10 @@
 
 
 
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
+        defer></script>
 
 </body>
 
