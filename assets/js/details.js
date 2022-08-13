@@ -83,6 +83,33 @@ $(document).ready(() => {
         }
     });
 
+
+    new Swiper('.videos-menu-swiper', {
+        loop: false,
+        navigation: {
+            nextEl: '.video-prev',
+            prevEl: '.video-next',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+
     new Swiper('.loan-swiper', {
         loop: false,
         navigation: {
@@ -112,21 +139,10 @@ $(document).ready(() => {
         loop: false,
         slidesPerView: "auto",
         spaceBetween: 10,
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //         slidesPerView: 1,
-        //     },
-        //     576: {
-        //         slidesPerView: 1,
-        //     },
-        //     768: {
-        //         slidesPerView: 2,
-        //     },
-        //     992: {
-        //         slidesPerView: 3,
-        //     }
-        // }
+        navigation: {
+            nextEl: '.video-next',
+            prevEl: '.video-prev',
+        },
     });
 
     new Swiper('.other-project-swiper', {
@@ -195,6 +211,16 @@ $(document).ready(() => {
                 slidesPerView: 7.5,
             }
         }
+    });
+
+    new Swiper('.locality-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.locality-next',
+            prevEl: '.locality-prev',
+        },
+        spaceBetween: 15,
     });
 
 
@@ -622,6 +648,13 @@ $('.mapview-swiper .swiper-slide').on("click",function (){
 
     const place = $(this).data("place");
     changeMarkerPlaces(place);
+
+    $('.mapview-swiper .swiper-slide').each(
+        function () {
+            $(this).removeClass("active");
+        }
+    );
+    $(this).addClass('active');
 });
 
 function changeMarkerPlaces(place) {
