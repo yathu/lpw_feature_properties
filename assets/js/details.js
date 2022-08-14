@@ -87,6 +87,80 @@ $(document).ready(() => {
         }
     });
 
+    new Swiper('.land-payment-plan-swiper', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment1-next',
+            prevEl: '.land-payment1-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.land-payment-plan-swiper2', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment2-next',
+            prevEl: '.land-payment2-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.land-payment-plan-swiper3', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment3-next',
+            prevEl: '.land-payment3-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
 
     new Swiper('.videos-menu-swiper', {
         loop: false,
@@ -227,6 +301,47 @@ $(document).ready(() => {
         spaceBetween: 15,
     });
 
+    new Swiper('.land-highlight-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.highlight-next',
+            prevEl: '.highlight-prev',
+        },
+        spaceBetween: 15,
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //         slidesPerView: 2.5,
+        //     },
+        //     375: {
+        //         slidesPerView: 3.2,
+        //     },
+        //     450: {
+        //         slidesPerView: 3.5,
+        //     },
+        //     485: {
+        //         slidesPerView: 4.2,
+        //     },
+        //     576: {
+        //         slidesPerView: 4.5,
+        //     },
+        //     768: {
+        //         slidesPerView: 5.5,
+        //     },
+        //     992: {
+        //         slidesPerView: 5.5,
+        //     },
+        //     1200: {
+        //         slidesPerView: 6.5,
+        //     },
+        //     1440: {
+        //         slidesPerView: 7.5,
+        //     }
+        // }
+    });
+
+
 
     //property rate chart
 
@@ -354,6 +469,12 @@ $(document).ready(() => {
 
     var input = document.querySelector("#detailContactPhoneNo");
     window.intlTelInput(input, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var requestCallPhone = document.querySelector("#requestCallPhone");
+    window.intlTelInput(requestCallPhone, {
         initialCountry: "lk",
         allowDropdown: true,
     });
