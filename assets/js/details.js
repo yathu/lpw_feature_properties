@@ -342,7 +342,6 @@ $(document).ready(() => {
     });
 
 
-
     //property rate chart
 
     var ctx = document.getElementById('propertyRateChart').getContext('2d');
@@ -567,8 +566,8 @@ $(document).ready(() => {
 
             if (vw >= 576) {
                 elementPosition -= (vh / 2);
-            }else {
-                elementPosition -= (vh/2);
+            } else {
+                elementPosition -= (vh / 2);
             }
 
             if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
@@ -585,7 +584,7 @@ $(document).ready(() => {
                     // console.log(currLink);
 
 
-                    detailsMenuSwiper.slideTo(nextIndex -1);
+                    detailsMenuSwiper.slideTo(nextIndex - 1);
 
                     $('a').removeClass("active");
                     currLink.addClass("active");
@@ -754,7 +753,7 @@ let infowindow;
 let sydney;
 
 function initMap() {
-     sydney = new google.maps.LatLng(-33.867, 151.195);
+    sydney = new google.maps.LatLng(-33.867, 151.195);
 
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {
@@ -775,12 +774,13 @@ function initMap() {
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
+            // console.log(results[i]);
             createMarker(results[i]);
         }
     }
 }
 
-$('.mapview-swiper .swiper-slide').on("click",function (){
+$('.mapview-swiper .swiper-slide').on("click", function () {
 
     const place = $(this).data("place");
     changeMarkerPlaces(place);
@@ -812,9 +812,40 @@ let markers = [];
 function createMarker(place) {
     if (!place.geometry || !place.geometry.location) return;
 
+    console.log(place);
+
+    const getIcon = () => {
+        if (place.types[0] == "bus_station") {
+            return "assets/img/details/mapview/locationiconspin/Bus-stops-02.png";
+        } else if (place.types[0] == "bank") {
+            return "assets/img/details/mapview/locationiconspin/Bank.png";
+        } else if (place.types[0] == "movie_theater") {
+            return "assets/img/details/mapview/locationiconspin/Cinemas-02.png";
+        } else if (place.types.includes("restaurant")) {
+            return "assets/img/details/mapview/locationiconspin/Restaurant-02.png";
+        } else if (place.types[0] == "supermarket") {
+            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+        } else if (place.types[0] == "hospital") {
+            return "assets/img/details/mapview/locationiconspin/Hospital-02.png";
+        } else if (place.types[0] == "shopping_mall") {
+            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+        } else if (place.types[0] == "park") {
+            return "assets/img/details/mapview/locationiconspin/Parks-02.png";
+        }else if (place.types[0] == "gas_station") {
+            return "assets/img/details/mapview/locationiconspin/Fuel-station-02.png";
+        }else if (place.types[0] == "police") {
+            return "assets/img/details/mapview/locationiconspin/Police-station-03.png";
+        }
+        else return ''
+    }
+
+    console.log("get==>", getIcon());
+
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
+        icon: getIcon(),
+
     });
 
     markers.push(marker);
