@@ -7,23 +7,27 @@ $(document).ready(() => {
     });
 
     $('#contactNum').on("click", function () {
-        // console.log(1);
-
-        var parent = $(this).parents('.btn-row');
-
-        $(this).parents('.btn-row').find('.btn').each(function () {
-            // console.log(2);
-            // console.log($(this));
-
-
-            var num = $(this).data("num");
-            if (num) $(this).find('span').html(num);
-
-
-            $(this).removeClass('d-none');
-            $(this).addClass('d-flex');
-        });
+        $('#showEnquireNum').trigger('click');
     });
+
+    // $('#contactNum').on("click", function () {
+    //     // console.log(1);
+    //
+    //     var parent = $(this).parents('.btn-row');
+    //
+    //     $(this).parents('.btn-row').find('.btn').each(function () {
+    //         // console.log(2);
+    //         // console.log($(this));
+    //
+    //
+    //         var num = $(this).data("num");
+    //         if (num) $(this).find('span').html(num);
+    //
+    //
+    //         $(this).removeClass('d-none');
+    //         $(this).addClass('d-flex');
+    //     });
+    // });
 
     // $('#contactWhatsapp').on("click",function (){
     //     var num = $(this).data("num");
@@ -363,6 +367,9 @@ $(document).ready(() => {
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
 
+    var WhatsAppModal = new bootstrap.Modal(document.getElementById('DetailsWhatsAppModal'),)
+
+
     $('#btnShowPhone').on("click", function () {
 
         $('#detailsCallbackBtnClose').trigger("click");
@@ -606,8 +613,16 @@ $(document).ready(() => {
         setTimeout(() => DetailsPhoneNoModal.show(), 0);
     }
 
+    const showWhatsAppModal = () => {
+        setTimeout(() => WhatsAppModal.show(), 0);
+    }
+
     $('.bottomFloat .openPopUP').on("click", function () {
         showPhoneNoModal();
+    });
+
+    $('.bottomFloat .openPopWhatsApp').on("click", function () {
+        showWhatsAppModal();
     });
 });
 
