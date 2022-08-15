@@ -1479,6 +1479,36 @@
     }
   }
 
+  .loan-calculator-container{
+
+    .form-container{
+      label{
+        font-family: Rubik-Regular;
+        font-size: 14px;
+        color: #000000;
+        line-height: 25px;
+      }
+      .slider-range-container{
+        padding-top: 15px;
+      }
+      span.lbl{
+        font-family: Rubik-Regular;
+        font-size: 13px;
+        color: #71757B;
+        line-height: 30px;
+      }
+    }
+
+    .chart-container{
+    h3{
+      font-family: Rubik-Light;
+      font-size: 20px;
+      color: #202330;
+      text-align: center;
+    }
+    }
+  }
+
   .chat-container {
     background-image: url("./../../assets/img/details/chat-bg.png");
     padding: 35px 20px;

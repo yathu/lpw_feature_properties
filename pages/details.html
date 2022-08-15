@@ -1548,6 +1548,110 @@ permalink: /details.html
                 </div>
             </div>
 
+            <div class="loan-calculator-container mb-4">
+                <h2 class="title-content-1 mb-3">
+                    Bank Loan Offers
+                </h2>
+                <div class="row">
+                    <div class="col-md-8 form-container">
+                        <div class="row justify-content-between align-items-center mb-3 ">
+                            <div class="col-auto">
+                                <label>Currency</label>
+                            </div>
+                            <div class="col-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Property Value</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="propertyValueSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Down Payment</label>
+                            </div>
+                            <div class="col-auto d-flex align-items-center">
+                                <span class="me-3 lbl">20%</span>
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="downPaymentSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Interest Rate</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="interestRateSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Loan Period</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="loanPeriodSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4 chart-container d-flex flex-column justify-content-center align-items-center">
+                        <h3>
+                            Monthly Payment(Estd)
+                        </h3>
+
+                        <canvas id="loanChart"></canvas>
+
+                        <a class="btn btn-custom-primary mt-3 w-auto">
+                            APPLY FOR A LOAN
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
             <div id="Nearby" class="map-view mb-4">
                 <h2 class="title-content-1 mb-3">Explore Neighbourhood - Map View</h2>
 

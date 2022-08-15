@@ -317,7 +317,7 @@ a {
       background: #009833;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
       border-radius: 50%;
-      border: 0;
+      border: 0 !important;
       top: -6px;
 
       span {
@@ -325,6 +325,11 @@ a {
         top: -30px;
         color: #000;
       }
+    }
+
+    .ui-state-active, .ui-state-focus{
+      border:0 !important;
+      outline: none !important;
     }
 
     span.ui-slider-handle:first-child > span {

@@ -609,6 +609,86 @@ $(document).ready(() => {
     }
 
 
+    $("#propertyValueSlider").slider({
+        range: false,
+        min: 0,
+        max: 5000,
+        slide: function (event, ui) {
+            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+    });
+
+
+    $("#downPaymentSlider").slider({
+        range: false,
+        min: 0,
+        max: 5000,
+        slide: function (event, ui) {
+            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+    });
+
+
+    $("#interestRateSlider").slider({
+        range: false,
+        min: 0,
+        max: 5000,
+        slide: function (event, ui) {
+            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+    });
+
+    $("#loanPeriodSlider").slider({
+        range: false,
+        min: 0,
+        max: 5000,
+        slide: function (event, ui) {
+            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+    });
+
+
+
+    //background-image: linear-gradient(180deg, #B7D464 0%, #009833 100%);
+
+    var loanChartElement = document.getElementById('loanChart').getContext('2d');
+
+    var principle_gradient = loanChartElement.createLinearGradient(0, 0, 0, 400);
+    principle_gradient.addColorStop(0, '#B7D464');
+    principle_gradient.addColorStop(1, '#009833');
+
+    // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+
+    const data = {
+        labels: [
+            'Principle',
+            'Capital',
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [300, 200],
+            backgroundColor: [
+                principle_gradient,
+                '#E8E8E8'
+            ],
+            hoverOffset: 4
+        },
+        ]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {}
+    };
+
+    const loanChart = new Chart(
+        loanChartElement,
+        config
+    );
+
+
     //pdf broucher
 
     // If absolute URL from the remote server is provided, configure the CORS
