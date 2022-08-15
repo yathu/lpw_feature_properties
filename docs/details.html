@@ -44,20 +44,14 @@
 
 <section class="devDetails container-fluid">
     <div class="banner-img-container">
-    <div class="row gx-3">
-        <div class="col-12 col-sm-7 col-md-8 col-lg-9 position-relative">
+    <div class="row gx-md-3 box-1">
+        <div class="col-6 col-md-8 col-lg-9 position-relative">
             <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
             <a href="#" class="btn btn-link-custom position-absolute">
                 <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
                 Back to List
             </a>
             <div class="image-btns">
-                <a href="#">
-                    <img src="./assets/img/details/btnIcons/camera.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="./assets/img/details/btnIcons/rotation.svg" alt="">
-                </a>
 
                 <a id="love" class="" href="#">
                     <!--                    <img src="./assets/img/details/btnIcons/heart.svg" alt="">-->
@@ -67,32 +61,38 @@
 
             </div>
         </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 mt-3 mt-sm-0">
-            <div class="row h-100 row-cols-1 gy-0 mt-0">
-                <div class="col mt-0 video-cont pb-2">
-                    <!--                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">-->
-                    <video
-                            id="banner-video"
-                            class="video-js vjs-default-skin vjs-big-play-centered"
-                            preload="auto"
-                            width="auto"
-                            height="auto"
-                            controls
-                            poster="./assets/img/details/banner_1.jpg"
-                            data-setup="{
-                            fill: true
-                            }"
-                    >
-                        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
-                    </video>
+        <div class="col-6 d-md-none">
+            <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+        </div>
+        <div class="col-6 d-md-none">
+            <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+        </div>
+        <div class="col-6 d-md-none">
+            <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+        </div>
+        <div class="col-12 col-md-4 col-md-4 col-lg-3">
+            <div class="row box-2 h-100 row-cols-2 row-cols-md-1 gy-0 mt-0">
+                <div class="col mt-0 video-cont pb-md-2">
+                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
                 </div>
-                <div class="col pt-2 images">
+                <div class="col pt-md-2 images">
                     <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
                     <div class="overlay" data-bs-toggle="modal" data-bs-target="#bannerModal">
                         <span>
                             + <br>
                             19 more
                         </span>
+                        <div class="d-flex btns">
+                            <a href="#">
+                                <img src="./assets/img/details/btnIcons/camera.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/details/btnIcons/rotation.svg" alt="">
+                            </a>
+                            <a href="#" class="">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
 
                     </div>
                 </div>
@@ -122,14 +122,7 @@
         </div>
         <div class="col-auto d-flex flex-sm-column justify-content-between justify-content-sm-center text-start text-md-end pt-3 pt-sm-0 flex-sm-column-reverse align-items-sm-end">
 
-            <span class="est">
-                Est. Completion: May 2024
-            </span>
 
-            <a href="#" class="btn-link-custom mb-sm-3">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-                Share
-            </a>
         </div>
     </div>
 
@@ -227,15 +220,19 @@
                     Overview
                 </h2>
 
-                <div class="overview-items d-flex flex-wrap">
+                <div class="overview-items d-flex flex-wrap align-items-center">
                     <div class="item">
-                        <img src="./assets/img/details/overview/check.svg" alt="business_trade">
-                        <span>
-                            PROJECT AREA
+                        <span class="est">
+                            Est. Completion: May 2024
                         </span>
-                        <b>
-                            05 Acres
-                        </b>
+
+                        <!--                        <img src="./assets/img/details/overview/check.svg" alt="business_trade">-->
+                        <!--                        <span>-->
+                        <!--                            PROJECT AREA-->
+                        <!--                        </span>-->
+                        <!--                        <b>-->
+                        <!--                            05 Acres-->
+                        <!--                        </b>-->
                     </div>
 
                     <div class="item">
@@ -341,6 +338,93 @@
                     
                 </ul>
 
+            </div>
+
+            <div class="land-highlight-container mb-4">
+                <h2 class="title-content-1 mb-3">
+                    HighLights
+                </h2>
+                <div class="position-relative">
+                    <div class="swiper land-highlight-swiper">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
+                                    Ideal for commercial use
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev highlight-prev swiper-button custom-swiper-nav"></div>
+                    <div class="swiper-button-next highlight-next swiper-button custom-swiper-nav"></div>
+
+                </div>
             </div>
 
             <div id="About" class="about-container mb-3">
@@ -2074,6 +2158,42 @@
 
             </div>
 
+
+            <div id="Amenities" class="land-amenities-container mb-4">
+                <h2 class="title-content-1 mb-3">
+                    Amenities
+                </h2>
+
+                <ul>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                    <li>Amenities</li>
+                    
+                </ul>
+
+            </div>
+
             <div id="Specifications" class="specification-container mb-4">
 
                 <h2 class="title-content-1 mb-3">
@@ -2264,21 +2384,53 @@
                 <nav>
 
                     <div class="nav nav-pills" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                aria-selected="true">Key Features
-                        </button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Facilities
-                        </button>
-                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Nearby
-                            Amenities
-                        </button>
-                        <button class="nav-link" id="nav-360" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">360/Walk
-                            Through
-                        </button>
+
+                        <div class="position-relative">
+                            <div class="swiper videos-menu-swiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-home" type="button" role="tab"
+                                                aria-controls="nav-home"
+                                                aria-selected="true">Key Features
+                                        </button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-profile"
+                                                type="button" role="tab" aria-controls="nav-profile"
+                                                aria-selected="false">Facilities
+                                        </button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-contact"
+                                                type="button" role="tab" aria-controls="nav-contact"
+                                                aria-selected="false">Nearby
+                                            Amenities
+                                        </button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <button class="nav-link" id="nav-360" data-bs-toggle="tab"
+                                                data-bs-target="#nav-contact"
+                                                type="button" role="tab" aria-controls="nav-contact"
+                                                aria-selected="false">360/Walk
+                                            Through
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-prev video-prev swiper-button custom-swiper-nav"></div>
+                            <div class="swiper-button-next video-next swiper-button custom-swiper-nav"></div>
+
+                        </div>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -2314,7 +2466,7 @@
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
                         <video
-                                id="my-video"
+                                id="my-video1"
                                 class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
                                 preload="auto"
                                 width="640"
@@ -2504,20 +2656,60 @@
                         <img class="" src="./assets/img/details/access-e.jpg" alt="engineer">
                     </div>
                     <div class="col-auto">
-                        <span>Contact Access Engineering</span>
+                        <span class="mb-2 d-block">Contact Access Engineering</span>
                         <div class="phone-info hide">
 
-                            <span>+940777123457</span>
 
-                            <a href="#" class="btn btn-success">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" class="btn btn-success">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                            </a>
+                            <div class="phoneNumbers d-flex flex-column">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="d-flex flex-column">
+                                        <span class="name">Mr.David</span>
+                                        <span>+940777123457</span>
+                                    </div>
 
-                            <a id="showEnquireNum" class="btn btn-link">Click to view Telephone Number</a>
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <span class="name">Mr.David</span>
+                                        <span>+940777123457</span>
+                                    </div>
+
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <span class="tempNum">+940777123457</span>
+                                <a id="showEnquireNum" class="btn btn-link">Click to view Telephone Number</a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form>
+                            <p>
+                                Please enter your phone number and we will contact you shortly.
+                            </p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control ps-5" id="requestCallPhone"
+                                       placeholder="071234567" required>
+                            </div>
+                            <button type="submit" class="btn btn-custom-primary">Send</button>
+                        </form>
                     </div>
                 </div>
 
@@ -2639,6 +2831,216 @@
                 </div>
             </div>
 
+            <div class="land-payment-container mb-4">
+
+                <h2 class="title-content-1 mb-3">
+                    Payment Plan
+                </h2>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Plan 1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="position-relative">
+
+                                    <div class="swiper land-payment-plan-swiper">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide">
+                            <span>
+                                10%
+                            </span>
+                                                <p>
+                                                    After 5th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    After 10th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    On super structure completed
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-button-prev land-payment1-prev swiper-button custom-swiper-nav"></div>
+                                    <div class="swiper-button-next land-payment1-next swiper-button custom-swiper-nav"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Plan 2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="position-relative">
+
+                                    <div class="swiper land-payment-plan-swiper2">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide">
+                            <span>
+                                10%
+                            </span>
+                                                <p>
+                                                    After 5th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    After 10th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    On super structure completed
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-button-prev land-payment2-prev swiper-button custom-swiper-nav"></div>
+                                    <div class="swiper-button-next land-payment2-next swiper-button custom-swiper-nav"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                plan 3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="position-relative">
+
+                                    <div class="swiper land-payment-plan-swiper3">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide">
+                            <span>
+                                10%
+                            </span>
+                                                <p>
+                                                    After 5th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    After 10th floor
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                15%
+                            </span>
+                                                <p>
+                                                    On super structure completed
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+                                            <div class="swiper-slide">
+                            <span>
+                                60%
+                            </span>
+                                                <p>
+                                                    At handover
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-button-prev land-payment3-prev swiper-button custom-swiper-nav"></div>
+                                    <div class="swiper-button-next land-payment3-next swiper-button custom-swiper-nav"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="bank-loan-container mb-4">
                 <h2 class="title-content-1 mb-3">
                     Bank Loan Offers
@@ -2710,6 +3112,110 @@
                 </div>
             </div>
 
+            <div class="loan-calculator-container mb-4">
+                <h2 class="title-content-1 mb-3">
+                    Bank Loan Offers
+                </h2>
+                <div class="row">
+                    <div class="col-md-8 form-container">
+                        <div class="row justify-content-between align-items-center mb-3 ">
+                            <div class="col-auto">
+                                <label>Currency</label>
+                            </div>
+                            <div class="col-auto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Property Value</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="propertyValueSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Down Payment</label>
+                            </div>
+                            <div class="col-auto d-flex align-items-center">
+                                <span class="me-3 lbl">20%</span>
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="downPaymentSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Interest Rate</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="interestRateSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center mb-3">
+                            <div class="col-auto">
+                                <label>Loan Period</label>
+                            </div>
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" type="text" >
+                            </div>
+                            <div class="col-12">
+                                <div class="slider-range-container">
+                                    <div class="slider-range" id="loanPeriodSlider">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4 chart-container d-flex flex-column justify-content-center align-items-center">
+                        <h3>
+                            Monthly Payment(Estd)
+                        </h3>
+
+                        <canvas id="loanChart"></canvas>
+
+                        <a class="btn btn-custom-primary mt-3 w-auto">
+                            APPLY FOR A LOAN
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
             <div id="Nearby" class="map-view mb-4">
                 <h2 class="title-content-1 mb-3">Explore Neighbourhood - Map View</h2>
 
@@ -2717,12 +3223,6 @@
                     <div class="swiper mapview-swiper">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide" data-place="bus_station">
-                                <div>
-                                    <img src="./assets/img/details/mapview/train.svg" alt="bank">
-                                </div>
-                                Commute
-                            </div>
                             <div class="swiper-slide" data-place="bank">
                                 <div>
                                     <img src="./assets/img/details/mapview/bank.svg" alt="bank">
@@ -2773,6 +3273,27 @@
                                 Parks
                             </div>
 
+                            <div class="swiper-slide" data-place="bus_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/ICON_Bus%20stops%2002.svg" alt="bank">
+                                </div>
+                                Bus Station
+                            </div>
+
+                            <div class="swiper-slide" data-place="gas_station">
+                                <div>
+                                    <img src="./assets/img/details/mapview/ICON_Fuel%20station%20copy.svg" alt="bank">
+                                </div>
+                                Gas Station
+                            </div>
+
+                            <div class="swiper-slide" data-place="police">
+                                <div>
+                                    <img src="./assets/img/details/mapview/ICON_Police%20station%20copy%202.svg" alt="bank">
+                                </div>
+                                Police Station
+                            </div>
+
 
                         </div>
                     </div>
@@ -2786,9 +3307,9 @@
                     <div id="map">
 
                     </div>
-<!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.815297917005!2d79.82110019170285!3d6.921837363357458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1657570629365!5m2!1sen!2slk"-->
-<!--                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"-->
-<!--                            referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                    <!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.815297917005!2d79.82110019170285!3d6.921837363357458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1657570629365!5m2!1sen!2slk"-->
+                    <!--                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"-->
+                    <!--                            referrerpolicy="no-referrer-when-downgrade"></iframe>-->
                 </div>
 
             </div>
@@ -2796,110 +3317,127 @@
             <div class="locality-container mb-4">
                 <h2 class="title-content-1 mb-3">Locality</h2>
 
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <img src="./assets/img/details/locality/bus-station(1).svg" alt="door">
-                                <h3>Nearest Bus Stop</h3>
+                <div class="position-relative mb-3">
+                    <div class="swiper locality-swiper">
+                        <div class="swiper-wrapper align-items-center">
+
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="title">
+                                        <img src="./assets/img/details/locality/bus-station(1).svg" alt="door">
+                                        <h3>Nearest Bus Stop</h3>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Bagatalle Road & Galle Road: 20M
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Bagatalle Road & Galle Road: 20M
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="title">
+                                        <img src="./assets/img/details/locality/train%20copy.svg" alt="door">
+                                        <h3>Nearest Train Station</h3>
+                                    </div>
 
-                        <div class="item">
-                            <div class="title">
-                                <img src="./assets/img/details/locality/train%20copy.svg" alt="door">
-                                <h3>Nearest Train Station</h3>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Kollupitiya: 1.5km
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
 
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Kollupitiya: 1.5km
-                                </li>
-                            </ul>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="title">
+                                        <img src="./assets/img/details/locality/university.svg" alt="door">
+                                        <h3>Nearest Schools/Universities</h3>
+                                    </div>
 
-                        </div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Royal College Colombo 07: 1.5km
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Methodist College: 1.6km
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Ladies’ College: 1.7km
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            ACBT: 750m
+                                        </li>
+                                    </ul>
 
-                        <div class="item mb-2">
-                            <div class="title">
-                                <img src="./assets/img/details/locality/university.svg" alt="door">
-                                <h3>Nearest Schools/Universities</h3>
+                                </div>
+
                             </div>
 
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Royal College Colombo 07: 1.5km
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Methodist College: 1.6km
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Ladies’ College: 1.7km
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    ACBT: 750m
-                                </li>
-                            </ul>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="title">
+                                        <img src="./assets/img/details/locality/hospital-sign.svg" alt="door">
+                                        <h3>Nearest Hospitals</h3>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Durdans Hospital: 200m
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Nawaloka Hospitals PLC: 3km
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Nawaloka Hospital Specialist Centre: 2.9km
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="title">
+                                        <img src="./assets/img/details/locality/shopping-cart.svg" alt="door">
+                                        <h3>Nearest Shopping</h3>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Liberty Plaza: 1.6km
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            Majestic City: 1km
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
 
                         </div>
-
                     </div>
 
-                    <div class="col-12 col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <img src="./assets/img/details/locality/hospital-sign.svg" alt="door">
-                                <h3>Nearest Hospitals</h3>
-                            </div>
-
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Durdans Hospital: 200m
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Nawaloka Hospitals PLC: 3km
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Nawaloka Hospital Specialist Centre: 2.9km
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <img src="./assets/img/details/locality/shopping-cart.svg" alt="door">
-                                <h3>Nearest Shopping</h3>
-                            </div>
-
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Liberty Plaza: 1.6km
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Majestic City: 1km
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-
+                    <div class="swiper-button-prev locality-prev swiper-button custom-swiper-nav"></div>
+                    <div class="swiper-button-next locality-next swiper-button custom-swiper-nav"></div>
 
                 </div>
+
             </div>
 
             <div id="Rates" class="property-rate-chart-container pt-1 mb-4">
@@ -2985,7 +3523,7 @@
             </div>
 
             <div class="brochure-container mb-4">
-                <div class="d-flex justify-content-between pb-3">
+                <div class="d-flex justify-content-between align-items-center pb-sm-3">
                     <div>
                         <h2 class="title-content-1 mb-0">View Official Brochure</h2>
                         <span>
@@ -2993,7 +3531,8 @@
                         </span>
                     </div>
                     <div>
-                        <a class="btn btn-light bg-transparent border-0" download="Brochure" href="./assets/pdf/sample.pdf">Download</a>
+                        <a class="btn btn-light bg-transparent border-0" download="Brochure"
+                           href="./assets/pdf/sample.pdf">Download</a>
                     </div>
                 </div>
 
@@ -3001,13 +3540,6 @@
 
                     <i id="brochurePrev" class="fa fa-angle-left" aria-hidden="true"></i>
                     <i id="brochureNext" class="fa fa-angle-right" aria-hidden="true"></i>
-
-                    <!--                    <div>-->
-                    <!--                        <button id="prev">Previous</button>-->
-                    <!--                        <button id="next">Next</button>-->
-                    <!--                        &nbsp; &nbsp;-->
-                    <!--                        <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>-->
-                    <!--                    </div>-->
 
                     <canvas id="the-canvas"></canvas>
                 </div>
@@ -3024,70 +3556,9 @@
                     </div>
                 </div>
 
-                <!--                <div class="brochure-swiper-container pt-2 mt-1">-->
-                <!--                    <div class="position-relative">-->
-                <!--                        <div class="swiper brochure-swiper mx-3">-->
-                <!--                            <div class="swiper-wrapper">-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                                <div class="swiper-slide">-->
-                <!--                                    <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">-->
-                <!--                                </div>-->
-                <!--                                -->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                        <div class="swiper-button-prev brochure-prev swiper-button"></div>-->
-                <!--                        <div class="swiper-button-next brochure-next swiper-button"></div>-->
-                <!--                    </div>-->
-
-                <!--                    <div class="row gx-0 mt-3 align-items-center pagination-container">-->
-                <!--                        <div class="col-auto pe-2">-->
-                <!--                            <span>1-2 / 24</span>-->
-                <!--                        </div>-->
-                <!--                        <div class="col position-relative">-->
-                <!--                            <div class="swiper-pagination"></div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-
             </div>
 
-            <div id="Special_Notes" class="special-note-container">
+            <div id="Special_Notes" class="special-note-container pb-5">
                 <h2 class="title-content-1 mb-2">Special Notes</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -3128,41 +3599,41 @@
                 </h2>
 
                 <div class="row btn-row gx-3">
-                    <div class="col-6">
-                        <button id="contactNum" data-num="+94777235353"
-                                class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
+                    <div class="col-12">
+                        <a href="#Enquiry" id="contactNum" data-num="+94777235353"
+                           class="btn btn-outline-danger d-flex align-items-center justify-content-center w-100">
                             <i class="fa fa-phone me-1"></i>
                             <span>+94 123…</span>
-                        </button>
+                        </a>
                     </div>
-                    <div class="col-6">
-                        <button id="contactWhatsapp" data-num="+94777828282"
-                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">
-                            <i class="fa fa-whatsapp me-1"></i>
-                            <span class="text-uppercase">
-                                Whatsapp
-                            </span>
-                            <!--                            <span>+94 123…</span>-->
-                        </button>
-                    </div>
+                    <!--                    <div class="col-6">-->
+                    <!--                        <button id="contactWhatsapp" data-num="+94777828282"-->
+                    <!--                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">-->
+                    <!--                            <i class="fa fa-whatsapp me-1"></i>-->
+                    <!--                            <span class="text-uppercase">-->
+                    <!--                                Whatsapp-->
+                    <!--                            </span>-->
+                    <!--                            &lt;!&ndash;                            <span>+94 123…</span>&ndash;&gt;-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
 
-                    <div class="col-6">
-                        <button data-num="+94777235353"
-                                class="btn btn-outline-danger d-none align-items-center justify-content-center w-100">
-                            <i class="fa fa-phone me-1"></i>
-                            <span>+94 123…</span>
-                        </button>
-                    </div>
-                    <div class="col-6">
-                        <button data-num="+94777828282"
-                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">
-                            <i class="fa fa-whatsapp me-1"></i>
-                            <span class="text-uppercase">
-                                Whatsapp
-                            </span>
-                            <!--                            <span>+94 123…</span>-->
-                        </button>
-                    </div>
+                    <!--                    <div class="col-6">-->
+                    <!--                        <button data-num="+94777235353"-->
+                    <!--                                class="btn btn-outline-danger d-none align-items-center justify-content-center w-100">-->
+                    <!--                            <i class="fa fa-phone me-1"></i>-->
+                    <!--                            <span>+94 123…</span>-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="col-6">-->
+                    <!--                        <button data-num="+94777828282"-->
+                    <!--                                class="btn btn-outline-primary d-none align-items-center justify-content-center w-100">-->
+                    <!--                            <i class="fa fa-whatsapp me-1"></i>-->
+                    <!--                            <span class="text-uppercase">-->
+                    <!--                                Whatsapp-->
+                    <!--                            </span>-->
+                    <!--                            &lt;!&ndash;                            <span>+94 123…</span>&ndash;&gt;-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
                 </div>
 
                 <form class="row g-3 mt-0">
@@ -3175,17 +3646,13 @@
                         <input type="text" class="form-control form-control-sm" id="contactName"
                                placeholder="Your Name *" required>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <input type="tel" class="form-control form-control-sm" id="contactNo"
                                placeholder="Contact Number" required>
                     </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control form-control-sm" id="email"
+                    <div class="col-md-12">
+                        <input type="email" class="form-control form-control-sm" id="email11"
                                placeholder="Email Address *" required>
-                    </div>
-                    <div class="col-12">
-                        <input type="date" class="form-control form-control-sm position-relative" id="date"
-                               placeholder="Move-in Date">
                     </div>
                     <div class="col-12">
                         <textarea class="form-control form-control-sm" rows="2"
@@ -3217,8 +3684,9 @@
                         <!--                            <img src="./assets/img/details/btnIcons/share.svg" alt="comment">-->
                         <!--                        </a>-->
 
-                        <a class="btn-outline-primary d-block w-100 dropdown-toggle" href="#" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/details/btnIcons/share.svg" alt="comment">                        </a>
+                        <a class="btn-outline-primary d-block w-100 dropdown-toggle" href="#" role="button"
+                           id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/img/details/btnIcons/share.svg" alt="comment"> </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownShare">
                             <a class="dropdown-item" href="#">
@@ -3252,42 +3720,113 @@
 </div>
 
 <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
 
-                <div class="position-relative">
-                    <div class="swiper banner-swiper mx-md-3">
-                        <div class="swiper-wrapper">
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-xl-8">
+                        <div class="position-relative">
+                            <div class="swiper banner-swiper mx-md-3">
+                                <div class="swiper-wrapper align-items-center">
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                             alt="broucher">
+                                    </div>
+                                    
+                                    <div class="swiper-slide h-100 mh-100">
+                                        <video
+                                                id="myVideo"
+                                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                                preload="auto"
+                                                width="640"
+                                                height="264"
+                                                controls
+                                                poster="./assets/img/details/banner_1.jpg"
+                                        >
+                                            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
+                                        </video>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg" alt="broucher">
-                            </div>
-                            
+                            <div class="swiper-button-prev banner-prev swiper-button"></div>
+                            <div class="swiper-button-next banner-next swiper-button"></div>
                         </div>
                     </div>
-                    <div class="swiper-button-prev banner-prev swiper-button"></div>
-                    <div class="swiper-button-next banner-next swiper-button"></div>
+                    <div class="col-sm-6 col-lg-5 col-xl-4 d-none d-lg-block">
+
+                        <div class="title-content-1 text-center mb-3">
+                            Send us your inquiry
+                        </div>
+
+
+                        <div id="banner-contact-form" class="banner-contact-form position-sticky">
+
+                            <form class="row g-3 mt-0">
+                                <div class="col-12 mt-0">
+                                    <label>
+                                        Want to find out more?
+                                    </label>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control form-control-sm" id="bannerContactName"
+                                           placeholder="Your Name *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-sm" id="email"
+                                           placeholder="Email Address *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-sm" id="bannercontactNo"
+                                           placeholder="Contact Number" required>
+                                </div>
+                                <div class="col-12">
+                        <textarea class="form-control form-control-sm" rows="3"
+                                  placeholder="I am interested in this rental and would like to schedule a viewing."></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Create an alert for listing like this.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-custom-primary w-100">SEND</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -3365,68 +3904,51 @@
             </div>
             <div class="modal-body text-center">
                 <div class="desktop-content">
+                    <img class="rounded-circle" src="assets/img/number_modal.png" alt="comapny">
                     <h1 class="title-content-1">Call Access Engineering</h1>
-                    <img class="mb-4" src="assets/img/number_modal.png" alt="comapny">
-                    <!--                    <p>+94 123 456 789</p>-->
-                    <!--                    <div class="row justify-content-center gx-2 mb-5">-->
-                    <!--                        <div class="col-auto">-->
-                    <!--                            <a href="#" class="btn btn-success">-->
-                    <!--                                <i class="fa fa-phone" aria-hidden="true"></i>-->
-                    <!--                                CALL-->
-                    <!--                            </a>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="col-auto">-->
-                    <!--                            <a href="#" class="btn btn-success">-->
-                    <!--                                <i class="fa fa-whatsapp" aria-hidden="true"></i>-->
-                    <!--                                WHATSAPP ME-->
-                    <!--                            </a>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
+                    <span>
+                        <i class="fa fa-check-circle">
+                        </i>
+                        Verified Agent
+                    </span>
                 </div>
 
                 <div class="mobile-content">
-                    <h1 class="title-content-2 d-block d-md-none">Call</h1>
+                    <div class="d-flex justify-content-between align-items-center num-item">
+                        <div class="d-flex flex-column align-items-start title-sec">
+                            <p class="title-content-2">
+                                Kasun Perera
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </p>
+                            <span>0777121232</span>
+                        </div>
+                        <div class="phone-no-sec">
+                            <div class="phone-no-box">
+                                <div class="iconBox">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                CallNow
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center num-item">
+                        <div class="d-flex flex-column align-items-start title-sec">
+                            <p class="title-content-2">
+                                Kasun Perera
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </p>
+                            <span>0777121232</span>
+                        </div>
+                        <div class="phone-no-sec">
+                            <div class="phone-no-box">
+                                <div class="iconBox">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                CallNow
+                            </div>
+                        </div>
+                    </div>
 
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <td>Madhusha</td>
-                            <th>+94 123 456 789</th>
-                            <td>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Madhusha</td>
-                            <th>+94 123 456 789</th>
-                            <td>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Madhusha</td>
-                            <th>+94 123 456 789</th>
-                            <td>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="btn btn-success">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
@@ -3503,9 +4025,68 @@
 
 <div class="bottomFloat row gx-2">
     <div class="col"><a class="btn btn-danger openPopUP">CALL</a></div>
-    <div class="col"><a class="btn btn-outline-danger openPopUP" href="#">WHATSAPP</a></div>
+    <div class="col"><a class="btn btn-outline-danger openPopWhatsApp" href="#">WHATSAPP</a></div>
     <div class="col"><a class="btn btn-outline-danger" href="#Enquiry">EMAIL</a></div>
 </div>
+
+<div class="modal fade" id="DetailsWhatsAppModal" tabindex="-1" aria-labelledby="phoneNoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="desktop-content">
+                    <img class="rounded-circle" src="assets/img/number_modal.png" alt="comapny">
+                    <h1 class="title-content-1">Call Access Engineering</h1>
+                    <span>
+                        <i class="fa fa-check-circle">
+                        </i>
+                        Verified Agent
+                    </span>
+                </div>
+
+                <div class="mobile-content">
+                    <div class="d-flex justify-content-between align-items-center num-item">
+                        <div class="d-flex flex-column align-items-start title-sec">
+                            <p class="title-content-2">
+                                Kasun Perera
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </p>
+                            <span>0777121232</span>
+                        </div>
+                        <div class="phone-no-sec">
+                            <div class="phone-no-box">
+                                <div class="iconBox">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                </div>
+                                WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center num-item">
+                        <div class="d-flex flex-column align-items-start title-sec">
+                            <p class="title-content-2">
+                                Kasun Perera
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </p>
+                            <span>0777121232</span>
+                        </div>
+                        <div class="phone-no-sec">
+                            <div class="phone-no-box">
+                                <div class="iconBox">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                </div>
+                                WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </section>
 
 
@@ -3539,11 +4120,6 @@
 <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
-
-
-
-
-
 <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
         defer></script>
