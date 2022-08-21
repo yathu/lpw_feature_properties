@@ -611,41 +611,62 @@ $(document).ready(() => {
 
     $("#propertyValueSlider").slider({
         range: false,
-        min: 0,
-        max: 5000,
+        min: 1000000,
+        max: 100000000,
         slide: function (event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            $("#propertyValue").val(ui.value);
+            loanCalculator();
         }
     });
 
 
     $("#downPaymentSlider").slider({
         range: false,
-        min: 0,
-        max: 5000,
+        min: 20,
+        max: 100,
         slide: function (event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            $("#downPayment").val(ui.value);
+            loanCalculator();
         }
     });
 
 
     $("#interestRateSlider").slider({
         range: false,
-        min: 0,
-        max: 5000,
+        min: 5,
+        max: 30,
+        step: 0.25,
         slide: function (event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            $("#interestRate").val(ui.value);
+            loanCalculator();
         }
     });
 
     $("#loanPeriodSlider").slider({
         range: false,
-        min: 0,
-        max: 5000,
+        min: 1,
+        max: 30,
         slide: function (event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            $("#loanPeriod").val(ui.value);
+            loanCalculator();
         }
     });
+
+    init();
+
+    function init(){
+        var propertyVal = $("#propertyValueSlider").slider("value");
+        var downPaymentPersentage = $("#downPaymentSlider").slider("value");
+        var interestRate = $("#interestRateSlider").slider("value");
+        var loanPeriod = $("#loanPeriodSlider").slider("value");
+
+        var downPayment = (propertyVal / 100) * downPaymentPersentage;
+
+        $("#propertyValue").val(propertyVal);
+        $("#downPayment").val(downPayment);
+        $("#interestRate").val(interestRate);
+        $("#loanPeriod").val(loanPeriod);
+    }
 
 
 
@@ -659,6 +680,13 @@ $(document).ready(() => {
 
     // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
     // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+
+
+    try {
+
+    }catch (e) {
+        console.log(e);
+    }
 
     const data = {
         labels: [
@@ -680,13 +708,77 @@ $(document).ready(() => {
     const config = {
         type: 'doughnut',
         data: data,
-        options: {}
+        options: {
+            elements: {
+                center: {
+                    text: 'Red is 2/3 of the total numbers',
+                    color: '#FF6384', // Default is #000000
+                    fontStyle: 'Arial', // Default is Arial
+                    sidePadding: 20, // Default is 20 (as a percentage)
+                    minFontSize: 25, // Default is 20 (in px), set to false and text will not wrap.
+                    lineHeight: 25 // Default is 25 (in px), used for when text wraps
+                }
+            }
+        },
+        onAnimationComplete: function() {
+            ctx.fillText(data[0].value + "%", 100 - 20, 100, 200);
+        }
     };
 
     const loanChart = new Chart(
         loanChartElement,
         config
     );
+
+
+    const  loanCalculator = ()=>{
+
+        setTimeout(() => {
+            const propertyValue = $('#propertyValueSlider').slider('values', 0);
+            const interestRate = $('#interestRateSlider').slider('values', 0);
+            const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
+            const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
+
+            if(!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage){
+                return;
+            }
+
+            const interestRateCalculated = interestRate/100/12;
+
+            console.log("interestRateCalculated==>",interestRateCalculated);
+
+            const loanAmount = (propertyValue/100)*(100 - downPaymentPersantage);
+
+            console.log("price==>",loanAmount);
+
+            const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
+            const part2 = (((1 + interestRateCalculated) ** numberOfMonths) -1);
+
+            console.log("part1==>",part1);
+            console.log("part2==>",part2);
+
+            const Finalpersentage = (part1/part2);
+
+            const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
+
+            const totalPayment = monthlyPayment * numberOfMonths;
+
+            console.log("finalPrice==>",monthlyPayment);
+
+            $('#monthlyPayment').text(monthlyPayment);
+            $('#LoanAmount').text(loanAmount.toFixed(2));
+            $('#interestRateValue').text(interestRate);
+            $('#totalInterest').text(totalPayment - loanAmount.toFixed(2));
+            $('#totalPayment').text(totalPayment);
+
+            loanChart.data.datasets.data = [500,600];
+            loanChart.update();
+
+        } , 500);
+
+    }
+
+    loanCalculator();
 
 
     //pdf broucher
