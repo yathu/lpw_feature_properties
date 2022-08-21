@@ -119,17 +119,14 @@ permalink: /details.html
 
                 <div class="overview-items d-flex flex-wrap align-items-center">
                     <div class="item">
-                        <span class="est">
-                            Est. Completion: May 2024
-                        </span>
 
-                        <!--                        <img src="./assets/img/details/overview/check.svg" alt="business_trade">-->
-                        <!--                        <span>-->
-                        <!--                            PROJECT AREA-->
-                        <!--                        </span>-->
-                        <!--                        <b>-->
-                        <!--                            05 Acres-->
-                        <!--                        </b>-->
+                        <img src="./assets/img/details/overview/check.svg" alt="business_trade">
+                        <span>
+                            Est. Completion:
+                        </span>
+                        <b>
+                            May 2024
+                        </b>
                     </div>
 
                     <div class="item">
@@ -1134,12 +1131,12 @@ permalink: /details.html
                     </div>
                 </div>
 
-                <div class="card mb-4">
+                <div id="contactCard" class="card mb-5 col-md-6 offset-md-3 d-none">
                     <div class="card-body">
                         <form>
-                            <p>
+                            <h3 class="title-content-2 mb-3">
                                 Please enter your phone number and we will contact you shortly.
-                            </p>
+                            </h3>
                             <div class="mb-3">
                                 <input type="text" class="form-control ps-5" id="requestCallPhone"
                                        placeholder="071234567" required>
@@ -1560,12 +1557,14 @@ permalink: /details.html
                             </div>
                             <div class="col-auto">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                           id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">LKR</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                           id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">USD</label>
                                 </div>
                             </div>
                         </div>
@@ -1575,7 +1574,7 @@ permalink: /details.html
                                 <label>Property Value</label>
                             </div>
                             <div class="col-auto">
-                                <input readonly id="propertyValue" class="form-control form-control-sm" type="text" >
+                                <input readonly id="propertyValue" class="form-control form-control-sm" type="text">
                             </div>
                             <div class="col-12">
                                 <div class="slider-range-container">
@@ -1592,7 +1591,7 @@ permalink: /details.html
                             </div>
                             <div class="col-auto d-flex align-items-center">
                                 <span class="me-3 lbl">20%</span>
-                                <input readonly id="downPayment" class="form-control form-control-sm" type="text" >
+                                <input readonly id="downPayment" class="form-control form-control-sm" type="text">
                             </div>
                             <div class="col-12">
                                 <div class="slider-range-container">
@@ -1608,7 +1607,7 @@ permalink: /details.html
                                 <label>Interest Rate</label>
                             </div>
                             <div class="col-auto">
-                                <input readonly id="interestRate" class="form-control form-control-sm" type="text" >
+                                <input readonly id="interestRate" class="form-control form-control-sm" type="text">
                             </div>
                             <div class="col-12">
                                 <div class="slider-range-container">
@@ -1624,7 +1623,7 @@ permalink: /details.html
                                 <label>Loan Period</label>
                             </div>
                             <div class="col-auto">
-                                <input readonly id="loanPeriod" class="form-control form-control-sm" type="text" >
+                                <input readonly id="loanPeriod" class="form-control form-control-sm" type="text">
                             </div>
                             <div class="col-12">
                                 <div class="slider-range-container">
@@ -1654,6 +1653,27 @@ permalink: /details.html
                                 </span>
                             </div>
                         </div>
+
+                        <div class="legend-container d-flex justify-content-center mt-3 pb-3">
+
+                            <div class="d-inline-flex flex-column inner-container">
+                                <div class="legend-item principle mb-2">
+                                    <span></span>
+                                    <div>
+                                        Principle
+                                    </div>
+                                </div>
+                                <div class="legend-item capital">
+                                    <span></span>
+                                    <div>
+                                        Capital
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
 
                         <div>
                             <label>
@@ -1766,7 +1786,8 @@ permalink: /details.html
 
                             <div class="swiper-slide" data-place="police">
                                 <div>
-                                    <img src="./assets/img/details/mapview/ICON_Police%20station%20copy%202.svg" alt="bank">
+                                    <img src="./assets/img/details/mapview/ICON_Police%20station%20copy%202.svg"
+                                         alt="bank">
                                 </div>
                                 Police Station
                             </div>

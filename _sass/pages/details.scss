@@ -1351,6 +1351,15 @@
       margin-left: -23px;
     }
 
+    @media (max-width: 767.98px) {
+      .swiper-button-next {
+        right: -10px;
+      }
+      .swiper-button-prev {
+        margin-left: -18px;
+      }
+    }
+
   }
 
   .land-payment-container {
@@ -1533,6 +1542,40 @@
             color: #71757B;
             text-align: center;
             line-height: 1px;
+          }
+        }
+
+      }
+      .legend-container{
+        .inner-container{
+          .legend-item{
+            display: flex;
+            align-items: center;
+            span{
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              display:inline-block;
+              margin-right: 5px;
+            }
+            div{
+              display: inline-block;
+              font-family: Rubik-Regular;
+              font-size: 14px;
+              color: #000000;
+            }
+          }
+
+          .principle{
+            span{
+              background-image: linear-gradient(180deg, #B7D464 0%, #009833 100%);
+            }
+          }
+          .capital{
+            span{
+              background-color: #E8E8E8;
+
+            }
           }
         }
       }

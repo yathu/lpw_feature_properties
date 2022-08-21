@@ -511,6 +511,7 @@ $(document).ready(() => {
 
     $('#showEnquireNum').on("click", function () {
         $('.phone-info').removeClass('hide');
+        $('#contactCard').removeClass('d-none');
         $(this).hide();
     });
 
@@ -688,6 +689,7 @@ $(document).ready(() => {
         console.log(e);
     }
 
+
     const data = {
         labels: [
             'Principle',
@@ -709,20 +711,15 @@ $(document).ready(() => {
         type: 'doughnut',
         data: data,
         options: {
-            elements: {
-                center: {
-                    text: 'Red is 2/3 of the total numbers',
-                    color: '#FF6384', // Default is #000000
-                    fontStyle: 'Arial', // Default is Arial
-                    sidePadding: 20, // Default is 20 (as a percentage)
-                    minFontSize: 25, // Default is 20 (in px), set to false and text will not wrap.
-                    lineHeight: 25 // Default is 25 (in px), used for when text wraps
+            plugins:{
+                htmlLegend: {
+                    containerID: 'legendContainer',
+                },
+                legend: {
+                    display: false,
                 }
             }
         },
-        onAnimationComplete: function() {
-            ctx.fillText(data[0].value + "%", 100 - 20, 100, 200);
-        }
     };
 
     const loanChart = new Chart(
@@ -745,17 +742,17 @@ $(document).ready(() => {
 
             const interestRateCalculated = interestRate/100/12;
 
-            console.log("interestRateCalculated==>",interestRateCalculated);
+            // console.log("interestRateCalculated==>",interestRateCalculated);
 
             const loanAmount = (propertyValue/100)*(100 - downPaymentPersantage);
 
-            console.log("price==>",loanAmount);
+            // console.log("price==>",loanAmount);
 
             const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
             const part2 = (((1 + interestRateCalculated) ** numberOfMonths) -1);
 
-            console.log("part1==>",part1);
-            console.log("part2==>",part2);
+            // console.log("part1==>",part1);
+            // console.log("part2==>",part2);
 
             const Finalpersentage = (part1/part2);
 
@@ -763,7 +760,7 @@ $(document).ready(() => {
 
             const totalPayment = monthlyPayment * numberOfMonths;
 
-            console.log("finalPrice==>",monthlyPayment);
+            // console.log("finalPrice==>",monthlyPayment);
 
             $('#monthlyPayment').text(monthlyPayment);
             $('#LoanAmount').text(loanAmount.toFixed(2));
@@ -771,14 +768,20 @@ $(document).ready(() => {
             $('#totalInterest').text(totalPayment - loanAmount.toFixed(2));
             $('#totalPayment').text(totalPayment);
 
-            loanChart.data.datasets.data = [500,600];
-            loanChart.update();
+            updateChart(monthlyPayment,totalPayment);
 
         } , 500);
 
     }
 
     loanCalculator();
+
+    function updateChart(monthlyPayment,totalPayment) {
+        loanChart.data.datasets[0].data[0] = totalPayment;
+        loanChart.data.datasets[0].data[1] = monthlyPayment;
+        loanChart.update();
+    }
+
 
 
     //pdf broucher
