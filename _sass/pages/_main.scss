@@ -15,6 +15,9 @@
 .form-check-input:focus {
   box-shadow: none;
 }
+.obj-fit-cover{
+  object-fit: cover !important;
+}
 
 .form-switch .form-check-input:focus:not(:checked) {
   border-color: #bfbfbf;
