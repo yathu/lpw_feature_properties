@@ -427,7 +427,7 @@ $(document).ready(() => {
     //     },
     // });
 
-    var swiper = new Swiper(".banner-swiper", {
+    var bannerSwiper = new Swiper(".banner-swiper", {
         loop: false,
         navigation: {
             nextEl: ".banner-next",
@@ -445,6 +445,21 @@ $(document).ready(() => {
             },
         }
     });
+
+    var bannerModal = document.querySelector('#bannerModal');
+
+    bannerModal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+        const element = event.relatedTarget;
+
+        var index = $(element).data("index") || 0 ;
+
+        console.log("index",index);
+
+        bannerSwiper.slideTo(index);
+
+    });
+
 
     var myModalEl = document.querySelector('#zoomModal')
     myModalEl.addEventListener('show.bs.modal', function (event) {
@@ -614,6 +629,7 @@ $(document).ready(() => {
         range: false,
         min: 1000000,
         max: 100000000,
+        step: 500000,
         slide: function (event, ui) {
             $("#propertyValue").val(ui.value);
             loanCalculator();
@@ -625,6 +641,7 @@ $(document).ready(() => {
         range: false,
         min: 20,
         max: 100,
+        step:5,
         slide: function (event, ui) {
             $("#downPayment").val(ui.value);
             loanCalculator();
@@ -636,7 +653,7 @@ $(document).ready(() => {
         range: false,
         min: 5,
         max: 30,
-        step: 0.25,
+        step: 0.5,
         slide: function (event, ui) {
             $("#interestRate").val(ui.value);
             loanCalculator();
@@ -647,6 +664,7 @@ $(document).ready(() => {
         range: false,
         min: 1,
         max: 30,
+        step: 1,
         slide: function (event, ui) {
             $("#loanPeriod").val(ui.value);
             loanCalculator();
@@ -758,14 +776,14 @@ $(document).ready(() => {
 
             const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
 
-            const totalPayment = monthlyPayment * numberOfMonths;
+            const totalPayment = Math.ceil(monthlyPayment * numberOfMonths);
 
             // console.log("finalPrice==>",monthlyPayment);
 
             $('#monthlyPayment').text(monthlyPayment);
-            $('#LoanAmount').text(loanAmount.toFixed(2));
+            $('#LoanAmount').text(Math.ceil(loanAmount.toFixed(2)));
             $('#interestRateValue').text(interestRate);
-            $('#totalInterest').text(totalPayment - loanAmount.toFixed(2));
+            $('#totalInterest').text(Math.ceil(totalPayment - loanAmount.toFixed(2)));
             $('#totalPayment').text(totalPayment);
 
             updateChart(monthlyPayment,totalPayment);

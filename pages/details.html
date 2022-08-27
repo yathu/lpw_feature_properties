@@ -8,7 +8,7 @@ permalink: /details.html
 <div class="banner-img-container">
     <div class="row gx-md-3 box-1">
         <div class="col-6 col-md-8 col-lg-9 position-relative">
-            <img class="img-fluid h-100 w-100 obj-fit-cover" src="./assets/img/details/banner_1.jpg" alt="banner">
+            <img class="img-fluid h-100 w-100 obj-fit-cover" src="./assets/img/details/banner_1.jpg" data-index="0" alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
             <a href="#" class="btn btn-link-custom position-absolute">
                 <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
                 Back to List
@@ -26,10 +26,10 @@ permalink: /details.html
         <div class="col-6 d-md-none">
             <div class="row">
                 <div class="col-12 d-md-none">
-                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner"  data-index="1" data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
                 <div class="col-12 d-md-none">
-                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner" data-index="2"  data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
             </div>
         </div>
@@ -37,11 +37,11 @@ permalink: /details.html
         <div class="col-12 col-md-4 col-md-4 col-lg-3">
             <div class="row box-2 h-100 row-cols-2 row-cols-md-1 gy-0 mt-0">
                 <div class="col mt-0 video-cont pb-md-2">
-                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
+                    <img class="img-fluid" src="./assets/img/details/banner_1.jpg" data-index="3" alt="banner"  data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
                 <div class="col pt-md-2 images">
                     <img class="img-fluid" src="./assets/img/details/banner_1.jpg" alt="banner">
-                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#bannerModal">
+                    <div class="overlay" data-index="4" data-bs-toggle="modal" data-bs-target="#bannerModal">
                         <span>
                             + <br>
                             19 more
@@ -1133,17 +1133,26 @@ permalink: /details.html
                     </div>
                 </div>
 
-                <div id="contactCard" class="card mb-5 col-md-6 offset-md-3 d-none">
+                <div id="contactCard" class="card mb-5 col-md-8 offset-md-2 d-none mt-5">
+                    <div class="card-header">
+                        <h3 class="title-content-2 mb-0">
+                            Request a call back
+                        </h3>
+                    </div>
                     <div class="card-body">
                         <form>
-                            <h3 class="title-content-2 mb-3">
-                                Please enter your phone number and we will contact you shortly.
-                            </h3>
-                            <div class="mb-3">
-                                <input type="text" class="form-control ps-5" id="requestCallPhone"
-                                       placeholder="071234567" required>
+                            <p class="mb-3">
+                                Please enter your phone number to request the advertiser to call you back
+                            </p>
+                            <div class="row gx-3 mx-0">
+                                <div class="col ps-0">
+                                    <input type="text" class="form-control form-control-sm ps-5" id="requestCallPhone"
+                                           placeholder="071234567" required>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-custom-primary">Send</button>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-custom-primary">Send</button>
                         </form>
                     </div>
                 </div>
@@ -2229,9 +2238,9 @@ permalink: /details.html
                         <div class="position-relative">
                             <div class="swiper banner-swiper mx-md-3">
                                 <div class="swiper-wrapper align-items-center">
-                                    {% for i in (1..6) %}
+                                    {% for i in (0..6) %}
                                     <div class="swiper-slide">
-                                        <img class="img-fluid w-100" src="./assets/img/details/broucher.jpg"
+                                        <img class="img-fluid w-100" src="https://via.placeholder.com/498x292/3d4070/FFFFFF/?text=498x292 - {{ i }}"
                                              alt="broucher">
                                     </div>
                                     {% endfor %}
