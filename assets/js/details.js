@@ -434,7 +434,7 @@ $(document).ready(() => {
             prevEl: ".banner-prev",
         },
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
         breakpoints: {
             // when window width is >= 320px
             320: {
