@@ -636,6 +636,18 @@ $(document).ready(() => {
         }
     });
 
+    $("#propertyValue").on("change",function (){
+       var val =  $(this).val();
+        var propertyVal = $("#propertyValueSlider").slider("value");
+
+        if(val >= 1000000 && val <= 100000000){
+            $("#propertyValueSlider").slider('value',val);
+        }else {
+            $("#propertyValue").val(propertyVal);
+        }
+        loanCalculator();
+    });
+
 
     $("#downPaymentSlider").slider({
         range: false,
@@ -643,9 +655,36 @@ $(document).ready(() => {
         max: 100,
         step:5,
         slide: function (event, ui) {
-            $("#downPayment").val(ui.value);
+            $("#downPayPer").text(ui.value);
+
+            var propertyValue = $("#propertyValue").val();
+            var downPay = (propertyValue / 100) * ui.value;
+            $("#downPayment").val(downPay);
+
             loanCalculator();
         }
+    });
+
+    $("#downPayment").on("change",function (){
+        var val =  $(this).val();
+        var propertyValue = $("#propertyValue").val();
+
+        var newDownPercentage = (val/propertyValue) * 100;
+
+        var OlddownPercentage = $("#downPaymentSlider").slider("value");
+
+
+        if(newDownPercentage >= 20 && newDownPercentage <= 100){
+            $("#downPaymentSlider").slider('value',newDownPercentage);
+            $("#downPayPer").text(newDownPercentage);
+        }else {
+            var downPay = (propertyValue / 100) * OlddownPercentage;
+            $("#downPayment").val(downPay);
+            $("#downPayPer").text(OlddownPercentage);
+
+        }
+        loanCalculator();
+
     });
 
 
@@ -660,6 +699,18 @@ $(document).ready(() => {
         }
     });
 
+    $("#interestRate").on("change",function (){
+        var val =  $(this).val();
+        var rate = $("#interestRateSlider").slider("value");
+
+        if(val >= 5 && val <= 30){
+            $("#interestRateSlider").slider('value',val);
+        }else {
+            $("#interestRate").val(rate);
+        }
+        loanCalculator();
+    });
+
     $("#loanPeriodSlider").slider({
         range: false,
         min: 1,
@@ -669,6 +720,18 @@ $(document).ready(() => {
             $("#loanPeriod").val(ui.value);
             loanCalculator();
         }
+    });
+
+    $("#loanPeriod").on("change",function (){
+        var val =  $(this).val();
+        var rate = $("#loanPeriodSlider").slider("value");
+
+        if(val >= 1 && val <= 30){
+            $("#loanPeriodSlider").slider('value',val);
+        }else {
+            $("#loanPeriod").val(rate);
+        }
+        loanCalculator();
     });
 
     init();
@@ -750,9 +813,14 @@ $(document).ready(() => {
 
         setTimeout(() => {
             const propertyValue = $('#propertyValueSlider').slider('values', 0);
+            console.log("propertyValue calc==>",propertyValue);
+
             const interestRate = $('#interestRateSlider').slider('values', 0);
             const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
             const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
+
+            console.log("downPaymentPersantage calc==>",downPaymentPersantage);
+
 
             if(!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage){
                 return;

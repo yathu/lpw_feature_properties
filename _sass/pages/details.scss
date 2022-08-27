@@ -1509,6 +1509,21 @@
         color: #71757B;
         line-height: 30px;
       }
+
+      input[type=number]{
+        min-width: 180px;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
     }
 
     .chart-container{
@@ -1582,7 +1597,15 @@
           }
         }
       }
-
+      .loan-table{
+        font-size: 14px;
+        font-family: Rubik-Regular;
+        tr{
+          td{
+            padding: 2px 8px;
+          }
+        }
+      }
     }
   }
 
