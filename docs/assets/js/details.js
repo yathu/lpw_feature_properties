@@ -427,14 +427,14 @@ $(document).ready(() => {
     //     },
     // });
 
-    var swiper = new Swiper(".banner-swiper", {
+    var bannerSwiper = new Swiper(".banner-swiper", {
         loop: false,
         navigation: {
             nextEl: ".banner-next",
             prevEl: ".banner-prev",
         },
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
         breakpoints: {
             // when window width is >= 320px
             320: {
@@ -445,6 +445,21 @@ $(document).ready(() => {
             },
         }
     });
+
+    var bannerModal = document.querySelector('#bannerModal');
+
+    bannerModal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+        const element = event.relatedTarget;
+
+        var index = $(element).data("index") || 0 ;
+
+        console.log("index",index);
+
+        bannerSwiper.slideTo(index);
+
+    });
+
 
     var myModalEl = document.querySelector('#zoomModal')
     myModalEl.addEventListener('show.bs.modal', function (event) {
@@ -614,10 +629,23 @@ $(document).ready(() => {
         range: false,
         min: 1000000,
         max: 100000000,
+        step: 500000,
         slide: function (event, ui) {
             $("#propertyValue").val(ui.value);
             loanCalculator();
         }
+    });
+
+    $("#propertyValue").on("change",function (){
+       var val =  $(this).val();
+        var propertyVal = $("#propertyValueSlider").slider("value");
+
+        if(val >= 1000000 && val <= 100000000){
+            $("#propertyValueSlider").slider('value',val);
+        }else {
+            $("#propertyValue").val(propertyVal);
+        }
+        loanCalculator();
     });
 
 
@@ -625,10 +653,38 @@ $(document).ready(() => {
         range: false,
         min: 20,
         max: 100,
+        step:5,
         slide: function (event, ui) {
-            $("#downPayment").val(ui.value);
+            $("#downPayPer").text(ui.value);
+
+            var propertyValue = $("#propertyValue").val();
+            var downPay = (propertyValue / 100) * ui.value;
+            $("#downPayment").val(downPay);
+
             loanCalculator();
         }
+    });
+
+    $("#downPayment").on("change",function (){
+        var val =  $(this).val();
+        var propertyValue = $("#propertyValue").val();
+
+        var newDownPercentage = (val/propertyValue) * 100;
+
+        var OlddownPercentage = $("#downPaymentSlider").slider("value");
+
+
+        if(newDownPercentage >= 20 && newDownPercentage <= 100){
+            $("#downPaymentSlider").slider('value',newDownPercentage);
+            $("#downPayPer").text(newDownPercentage);
+        }else {
+            var downPay = (propertyValue / 100) * OlddownPercentage;
+            $("#downPayment").val(downPay);
+            $("#downPayPer").text(OlddownPercentage);
+
+        }
+        loanCalculator();
+
     });
 
 
@@ -636,21 +692,46 @@ $(document).ready(() => {
         range: false,
         min: 5,
         max: 30,
-        step: 0.25,
+        step: 0.5,
         slide: function (event, ui) {
             $("#interestRate").val(ui.value);
             loanCalculator();
         }
     });
 
+    $("#interestRate").on("change",function (){
+        var val =  $(this).val();
+        var rate = $("#interestRateSlider").slider("value");
+
+        if(val >= 5 && val <= 30){
+            $("#interestRateSlider").slider('value',val);
+        }else {
+            $("#interestRate").val(rate);
+        }
+        loanCalculator();
+    });
+
     $("#loanPeriodSlider").slider({
         range: false,
         min: 1,
         max: 30,
+        step: 1,
         slide: function (event, ui) {
             $("#loanPeriod").val(ui.value);
             loanCalculator();
         }
+    });
+
+    $("#loanPeriod").on("change",function (){
+        var val =  $(this).val();
+        var rate = $("#loanPeriodSlider").slider("value");
+
+        if(val >= 1 && val <= 30){
+            $("#loanPeriodSlider").slider('value',val);
+        }else {
+            $("#loanPeriod").val(rate);
+        }
+        loanCalculator();
     });
 
     init();
@@ -732,9 +813,14 @@ $(document).ready(() => {
 
         setTimeout(() => {
             const propertyValue = $('#propertyValueSlider').slider('values', 0);
+            console.log("propertyValue calc==>",propertyValue);
+
             const interestRate = $('#interestRateSlider').slider('values', 0);
             const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
             const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
+
+            console.log("downPaymentPersantage calc==>",downPaymentPersantage);
+
 
             if(!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage){
                 return;
@@ -758,14 +844,14 @@ $(document).ready(() => {
 
             const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
 
-            const totalPayment = monthlyPayment * numberOfMonths;
+            const totalPayment = Math.ceil(monthlyPayment * numberOfMonths);
 
             // console.log("finalPrice==>",monthlyPayment);
 
             $('#monthlyPayment').text(monthlyPayment);
-            $('#LoanAmount').text(loanAmount.toFixed(2));
+            $('#LoanAmount').text(Math.ceil(loanAmount.toFixed(2)));
             $('#interestRateValue').text(interestRate);
-            $('#totalInterest').text(totalPayment - loanAmount.toFixed(2));
+            $('#totalInterest').text(Math.ceil(totalPayment - loanAmount.toFixed(2)));
             $('#totalPayment').text(totalPayment);
 
             updateChart(monthlyPayment,totalPayment);
