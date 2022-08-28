@@ -1561,6 +1561,9 @@
     }
 
       .chart-canvas-container{
+        #loanChart{
+          max-width: 100%;
+        }
         .chartText{
           position: absolute;
           top: 55%;
@@ -1629,6 +1632,7 @@
         tr{
           td{
             padding: 2px 8px;
+            vertical-align: middle;
           }
         }
       }
@@ -2091,6 +2095,7 @@
         top: 0;
         width: auto;
       }
+
     }
 
     .share-btn-row {
@@ -2650,4 +2655,8 @@ input[type="date"]:focus:before {
   .pure-material-button-contained:disabled::after {
     opacity: 0;
   }
+}
+
+.country-list{
+  white-space: normal !important;
 }

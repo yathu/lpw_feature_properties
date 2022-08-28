@@ -1,5 +1,15 @@
 $(document).ready(() => {
 
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'LKR',
+        currencyDisplay: "symbol",
+        minimumFractionDigits: 0,
+        // These options are needed to round to whole numbers if that's what you want.
+        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+    });
+
     $('.dropdown-toggle').dropdown();
 
     $('.banner-img-container #love').on("click", function () {
@@ -499,6 +509,18 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
+    var contactFrmPhoneNo = document.querySelector("#contactNo");
+    window.intlTelInput(contactFrmPhoneNo, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var inqContact = document.querySelector("#inqContact");
+    window.intlTelInput(inqContact, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
 
@@ -773,8 +795,8 @@ $(document).ready(() => {
 
     const data = {
         labels: [
-            'Principle',
-            'Capital',
+            'Loan amount ',
+            'Down Payment',
         ],
         datasets: [{
             label: 'My First Dataset',
@@ -842,19 +864,22 @@ $(document).ready(() => {
 
             const Finalpersentage = (part1/part2);
 
+
             const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
 
             const totalPayment = Math.ceil(monthlyPayment * numberOfMonths);
 
             // console.log("finalPrice==>",monthlyPayment);
 
-            $('#monthlyPayment').text(monthlyPayment);
-            $('#LoanAmount').text(Math.ceil(loanAmount.toFixed(2)));
+            $('#monthlyPayment').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
+            $('.boldText').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
+            $('#LoanAmount').text(formatter.format(Math.ceil(loanAmount.toFixed(2))).replace("LKR", "Rs"));
             $('#interestRateValue').text(interestRate);
-            $('#totalInterest').text(Math.ceil(totalPayment - loanAmount.toFixed(2)));
-            $('#totalPayment').text(totalPayment);
+            $('#totalInterest').text(formatter.format(Math.ceil(totalPayment - loanAmount.toFixed(2))).replace("LKR", "Rs"));
+            $('#totalPayment').text(formatter.format(totalPayment).replace("LKR", "Rs"));
 
-            updateChart(monthlyPayment,totalPayment);
+            var downpayment = $('#downPayment').val();
+            updateChart(downpayment,loanAmount);
 
         } , 500);
 
