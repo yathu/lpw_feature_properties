@@ -653,19 +653,20 @@ $(document).ready(() => {
         max: 100000000,
         step: 500000,
         slide: function (event, ui) {
-            $("#propertyValue").val(ui.value);
+            $("#propertyValue").val(formatter.format(ui.value).replace("LKR", ""));
             loanCalculator();
         }
     });
 
     $("#propertyValue").on("change",function (){
-       var val =  $(this).val();
+       var val =  $(this).val().replace(/,/g,"");
         var propertyVal = $("#propertyValueSlider").slider("value");
 
         if(val >= 1000000 && val <= 100000000){
             $("#propertyValueSlider").slider('value',val);
+            $("#propertyValue").val(formatter.format(val).replace("LKR", ""));
         }else {
-            $("#propertyValue").val(propertyVal);
+            $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
         }
         loanCalculator();
     });
