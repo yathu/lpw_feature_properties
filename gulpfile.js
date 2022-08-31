@@ -24,7 +24,8 @@ const files = {
     jsPath1: 'assets/js/map.js',
     jsPath2: 'assets/js/details.js',
     allJsPath: 'assets/js/*.js',
-    imgPath: 'assets/img/**/*'
+    imgPath: 'assets/img/**/*',
+    _site: '_site/**/*',
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -69,11 +70,17 @@ function jekyllStart() {
     return cp.spawn("bundle", ["exec", "jekyll", "serve"], { stdio: "inherit" });
 }
 
+function copyToLive(){
+    return src(files._site)
+        .pipe(dest('docs'))
+}
+
 function watchTask() {
     watch(files.scssPath, scssTask);
     watch([files.allJsPath], jsTask);
     watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll, browserSyncReload));
     watch(files.imgPath, imgTask);
+    watch(files._site, copyToLive);
 }
 
 // Clean assets
