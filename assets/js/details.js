@@ -680,17 +680,19 @@ $(document).ready(() => {
         slide: function (event, ui) {
             $("#downPayPer").text(ui.value);
 
-            var propertyValue = $("#propertyValue").val();
+            const propertyValue = $('#propertyValueSlider').slider('values', 0);
             var downPay = (propertyValue / 100) * ui.value;
-            $("#downPayment").val(downPay);
+            // $("#downPayment").val(downPay);
+            $("#downPayment").val(formatter.format(downPay).replace("LKR", ""));
+
 
             loanCalculator();
         }
     });
 
     $("#downPayment").on("change",function (){
-        var val =  $(this).val();
-        var propertyValue = $("#propertyValue").val();
+        var val =  $(this).val().replace(/,/g,"");
+        var propertyValue = $("#propertyValue").val().replace(/,/g,"");
 
         var newDownPercentage = (val/propertyValue) * 100;
 
@@ -717,19 +719,19 @@ $(document).ready(() => {
         max: 30,
         step: 0.5,
         slide: function (event, ui) {
-            $("#interestRate").val(ui.value);
+            $("#interestRate").val(ui.value + "%");
             loanCalculator();
         }
     });
 
     $("#interestRate").on("change",function (){
-        var val =  $(this).val();
+        var val =  $(this).val().replace('%', '');
         var rate = $("#interestRateSlider").slider("value");
 
         if(val >= 5 && val <= 30){
             $("#interestRateSlider").slider('value',val);
         }else {
-            $("#interestRate").val(rate);
+            $("#interestRate").val(rate+ "%");
         }
         loanCalculator();
     });
@@ -740,13 +742,13 @@ $(document).ready(() => {
         max: 30,
         step: 1,
         slide: function (event, ui) {
-            $("#loanPeriod").val(ui.value);
+            $("#loanPeriod").val(ui.value + " years");
             loanCalculator();
         }
     });
 
     $("#loanPeriod").on("change",function (){
-        var val =  $(this).val();
+        var val =  $(this).val().replace(" years",'');
         var rate = $("#loanPeriodSlider").slider("value");
 
         if(val >= 1 && val <= 30){
@@ -767,10 +769,10 @@ $(document).ready(() => {
 
         var downPayment = (propertyVal / 100) * downPaymentPersentage;
 
-        $("#propertyValue").val(propertyVal);
-        $("#downPayment").val(downPayment);
-        $("#interestRate").val(interestRate);
-        $("#loanPeriod").val(loanPeriod);
+        $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
+        $("#downPayment").val(formatter.format(downPayment).replace("LKR", ""));
+        $("#interestRate").val(interestRate + '%');
+        $("#loanPeriod").val(loanPeriod+ " years");
     }
 
 
@@ -879,7 +881,7 @@ $(document).ready(() => {
             $('#totalInterest').text(formatter.format(Math.ceil(totalPayment - loanAmount.toFixed(2))).replace("LKR", "Rs"));
             $('#totalPayment').text(formatter.format(totalPayment).replace("LKR", "Rs"));
 
-            var downpayment = $('#downPayment').val();
+            var downpayment = $('#downPayment').val().replace(/,/g,"");
             updateChart(downpayment,loanAmount);
 
         } , 500);

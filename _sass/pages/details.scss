@@ -1541,8 +1541,8 @@
         line-height: 30px;
       }
 
-      input[type=number]{
-        min-width: 180px;
+      input[type=text]{
+        width: 130px;
       }
 
       input::-webkit-outer-spin-button,
@@ -1554,6 +1554,15 @@
       /* Firefox */
       input[type=number] {
         -moz-appearance: textfield;
+      }
+      .input-group{
+        .input-group-text{
+          font-family: Rubik-Regular;
+          font-size: 14px;
+          background-color: white;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
       }
     }
 
