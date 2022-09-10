@@ -26,6 +26,10 @@ var mobileListingSwiper = new Swiper('.mobileListingSwiper', {
     loop: false,
     slidesPerView: '1.2',
     spaceBetween: 12,
+    centeredSlides: true,
+    breakpoints: {
+        // when window width is >= 320px
+    }
 });
 
 let features;

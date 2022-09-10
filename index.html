@@ -71,28 +71,29 @@ permalink: /index.html
     <div class="mapView">
         <div class="map-box">
             <div id="map"></div>
-        </div>
-    </div>
 
-    <div class="container mobile-listing-container">
-        <div class="swiper mobileListingSwiper">
+            <div class="container mobile-listing-container">
+                <div class="swiper mobileListingSwiper">
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    {% include property_list_item.html %}
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            {% include property_list_item.html %}
+                        </div>
+                        <div class="swiper-slide">
+                            {% include property_list_item.html %}
+                        </div>
+                        <div class="swiper-slide">
+                            {% include property_list_item.html %}
+                        </div>
+                    </div>
+
+                    <!-- If we need scrollbar -->
+                    <!--            <div class="swiper-scrollbar"></div>-->
                 </div>
-                <div class="swiper-slide">
-                    {% include property_list_item.html %}
-                </div>
-                <div class="swiper-slide">
-                    {% include property_list_item.html %}
-                </div>
+
             </div>
 
-            <!-- If we need scrollbar -->
-            <!--            <div class="swiper-scrollbar"></div>-->
         </div>
-
     </div>
 
     <div class="container listing-container">
