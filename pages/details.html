@@ -2204,19 +2204,19 @@ permalink: /details.html
                         </label>
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control form-control-sm" id="contactName"
+                        <input type="text" class="form-control" id="contactName"
                                placeholder="Your Name *" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="tel" class="form-control form-control-sm" id="contactNo"
+                        <input type="tel" class="form-control" id="contactNo"
                                placeholder="Contact Number" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="email" class="form-control form-control-sm" id="email11"
+                        <input type="email" class="form-control" id="email11"
                                placeholder="Email Address *" required>
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control form-control-sm" rows="2"
+                        <textarea class="form-control" rows="2"
                                   placeholder="I am interested in this rental and would like to schedule a viewing."></textarea>
                     </div>
 
@@ -2327,12 +2327,12 @@ permalink: /details.html
 <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered mx-0 mx-sm-auto">
         <div class="modal-content">
-            <div class="modal-body">
+            <div class="modal-body p-0">
 
-                <div class="row align-items-center">
+                <div class="row gx-0">
                     <div class="col-lg-7 col-xl-8">
-                        <div class="position-relative">
-                            <div class="swiper banner-swiper mx-md-3">
+                        <div class="position-relative h-100">
+                            <div class="swiper banner-swiper h-100">
                                 <div class="swiper-wrapper align-items-center">
                                     {% for i in (0..6) %}
                                     <div class="swiper-slide">
@@ -2359,9 +2359,13 @@ permalink: /details.html
                             <div class="swiper-button-next banner-next swiper-button"></div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-5 col-xl-4 d-none d-lg-block">
+                    <div class="col-sm-6 col-lg-5 col-xl-4 d-none d-lg-block px-3">
 
-                        <div class="title-content-1 text-center mb-3">
+                        <div class="close" data-bs-dismiss="modal">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="title-content-1 text-center mb-3 mt-4">
                             Send us your inquiry
                         </div>
 

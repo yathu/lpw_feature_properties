@@ -1,6 +1,5 @@
+
 $(document).ready(function () {
-
-
 
     var phoneNoModal = new bootstrap.Modal(document.getElementById('phoneNoModal'),)
     var callbackModal = new bootstrap.Modal(document.getElementById('callbackModal'),)

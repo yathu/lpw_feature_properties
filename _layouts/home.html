@@ -91,6 +91,17 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
         defer></script>
 {% endif %}
+
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('#loading').hide();
+    });
+</script>
+
+<div id="loading">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
 </body>
 
 </html>
