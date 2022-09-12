@@ -49,6 +49,8 @@ $(document).ready(() => {
         var name = $(this).attr('name');
         var value = $('input[name=' + name + ']:checked').val();
 
+        console.log(value);
+
         if (value == '3d') {
             $(this).closest('.image-container').find(".img-2d").addClass('d-none');
             $(this).closest('.image-container').find(".img-3d").removeClass('d-none');

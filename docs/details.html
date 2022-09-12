@@ -125,7 +125,18 @@
         <div class="col-12 col-sm-auto pt-3 pt-sm-0">
 
             <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle d-flex justify-content-center align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                <button class="btn btn-outline-secondary d-flex justify-content-center align-items-center d-md-none" type="button"
+                        data-bs-toggle="modal" data-bs-target="#shareMobileModal">
+                    <img src="./assets/img/share_icons/002-facebook.png" alt="social share">
+                    <img src="./assets/img/share_icons/003-whatsapp.png" alt="social share">
+                    <img src="./assets/img/share_icons/005-telegram.png" alt="social share">
+                    <span>
+                        share
+                    </span>
+                </button>
+
+                <button class="btn btn-outline-secondary dropdown-toggle d-none d-md-flex justify-content-center align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="./assets/img/share_icons/002-facebook.png" alt="social share">
                     <img src="./assets/img/share_icons/003-whatsapp.png" alt="social share">
                     <img src="./assets/img/share_icons/005-telegram.png" alt="social share">
@@ -268,7 +279,7 @@
                     Overview
                 </h2>
 
-                <div class="overview-items d-flex flex-wrap align-items-center">
+                <div class="overview-items d-flex flex-wrap">
                     <div class="item">
 
                         <img src="./assets/img/details/overview/check.svg" alt="business_trade">
@@ -2698,7 +2709,7 @@
 
                 <div class="row info mb-4">
                     <div class="col-md-3">
-                        <img class="img-fluid" src="./assets/img/details/access-e.jpg" alt="engineer">
+                        <img class="img-fluid mb-3" src="./assets/img/details/access-e.jpg" alt="engineer">
                     </div>
                     <div class="col ps-md-3">
                         <span class="mb-3 d-block lh-1">Contact Access Engineering</span>
@@ -4012,6 +4023,65 @@
     </div>
 </div>
 
+<div class="modal fade" id="shareMobileModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header align-items-center border-0">
+                <h5 class="mb-0 lh-1">
+                    Share this property
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-1">
+                <ul class="mb-0 p-0">
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/002-facebook.png" alt="social share">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/003-whatsapp.png" alt="social share">
+                            Whatsapp
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/001-viber.png" alt="social share">
+                            Viber
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/004-twitter.png" alt="social share">
+                            Twitter
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/006-linkedin.png" alt="social share">
+                            Linkedin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/share_icons/005-telegram.png" alt="social share">
+                            Telegram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -4058,13 +4128,13 @@
 
                         <div class="row gx-3 mb-3">
                             <div class="col-12">
-                                <input type="text" class="form-control" id="detailContactPhoneNo"
+                                <input type="tel" class="form-control" id="detailContactPhoneNo"
                                        placeholder="Phone Number"
                                        required>
                             </div>
                         </div>
 
-                        <button id="btnShowPhone" type="button" class="btn btn-custom-primary w-100 py-2">
+                        <button id="btnShowPhone1" type="submit" class="btn btn-custom-primary w-100 py-2">
                             SHOW PHONE NUMBER
                         </button>
                     </form>
@@ -4203,7 +4273,7 @@
 
 <div class="bottomFloat row gx-2">
     <div class="col"><a class="btn btn-danger openPopUP call-btn pure-material-button-contained position-relative">CALL</a></div>
-    <div class="col"><a class="btn btn-outline-danger openPopWhatsApp" href="#">WHATSAPP</a></div>
+    <div class="col"><a class="btn btn-outline-danger openPopWhatsApp">WHATSAPP</a></div>
     <div class="col"><a class="btn btn-outline-danger" href="#Enquiry">EMAIL</a></div>
 </div>
 
