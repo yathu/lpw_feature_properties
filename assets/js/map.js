@@ -48,7 +48,7 @@ function initMap() {
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f5f5f5"
+                        "color": "#c9c9c9"
                     }
                 ]
             },
@@ -90,7 +90,7 @@ function initMap() {
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#eeeeee"
+                        "color": "#d9d9d9"
                     }
                 ]
             },
@@ -126,7 +126,7 @@ function initMap() {
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#ffffff"
+                        "color": "#b0b0b0"
                     }
                 ]
             },
