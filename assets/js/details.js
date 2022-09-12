@@ -72,6 +72,16 @@ $(document).ready(() => {
         $('.features-container').toggleClass('show-less');
     });
 
+    $('#videos-nav-tab button').on("click",function (index,el) {
+        var thisBtn = $(this)[0];
+
+        $('#videos-nav-tab button').each((index,el)=>{
+            if(el !== thisBtn){
+                $(el).removeClass('active');
+            }
+        })
+    });
+
     new Swiper('.payment-plan-swiper', {
         loop: false,
         navigation: {

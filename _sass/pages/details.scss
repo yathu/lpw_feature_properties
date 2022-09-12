@@ -1119,7 +1119,7 @@
         a.btn-link {
           font-family: Rubik-Medium;
           font-size: 16px;
-          color: #018E37;
+          color: #ffffff;
           line-height: 20px;
 
           @media (max-width: 767.98px) {
@@ -2238,9 +2238,16 @@
     }
 
     .swiper-button {
+      background-color: #FFFFFF;
+      width: 35px;
+      height: 35px;
+      border-radius: 25px;
+      border: 1px solid #E1E1E1;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
       &:after {
-        font-size: 44px !important;
-        color: #ffffff;
+        font-size: 18px !important;
+        color: #018e37;
       }
     }
 
