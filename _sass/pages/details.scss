@@ -1,3 +1,8 @@
+
+.devDetails .banner-img-container{
+  
+}
+
 .devDetails {
   @media (min-width: 576px) {
     padding-top: var(--bs-gutter-x, .75rem);
@@ -1149,6 +1154,9 @@
         .tempNum{
             display: none;
         }
+        .hide-show-box{
+          display: none !important;
+        }
       }
 
       .hide {
@@ -2256,9 +2264,14 @@
       border: 1px solid #E1E1E1;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 
-      &:after {
+        &:after {
         font-size: 18px !important;
         color: #018e37;
+      }
+
+      @media (max-width: 767.98px) {
+        width: 30px;
+        height: 30px;
       }
     }
 
@@ -2282,13 +2295,13 @@
       margin-left: 0px;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       .banner-next {
-        margin-right: 0px;
+        margin-right: -8px;
       }
 
       .banner-prev {
-        margin-left: 0px;
+        margin-left: -8px;
       }
     }
 
@@ -2313,8 +2326,7 @@
       @media (max-width: 767.98px) {
         display: flex !important;
         &:after{
-          color: #FFFFFF;
-          font-size: 20px !important;
+          font-size: 16px !important;
         }
       }
     }
@@ -2515,8 +2527,6 @@
   }
 
   .modal-dialog {
-    transition: none !important;
-    transform: none !important;
     width: 100%;
     max-width: 100% !important;
     margin: 0;

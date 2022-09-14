@@ -562,6 +562,7 @@ $(document).ready(() => {
         $('.phone-info').removeClass('hide');
         $('#contactCard').removeClass('d-none');
         $(this).hide();
+        $('.show-box').addClass('hide-show-box');
     });
 
 
@@ -591,7 +592,7 @@ $(document).ready(() => {
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
         const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
-        // console.log("scrollPos==>",scrollPos);
+        console.log("scrollPos==>",scrollPos);
 
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             // var totalSlides =  detailsMenuSwiper.slides.length - 2;
@@ -617,8 +618,9 @@ $(document).ready(() => {
             if (vw >= 576) {
                 elementPosition -= (vh / 2);
             } else {
-                elementPosition -= (vh / 2);
+                elementPosition -= 120;
             }
+
 
             if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
 
@@ -628,6 +630,8 @@ $(document).ready(() => {
                 // console.log("nextIndex==>",nextIndex);
 
                 if (nextIndex != detailsMenuSwiper.activeIndex) {
+                    console.log(refElement,scrollPos,elementPosition,elementHeight);
+
                     // console.log(nextIndex);
 
                     // console.log("nextIndex==>",nextIndex);
@@ -1054,12 +1058,22 @@ let infowindow;
 let sydney;
 
 function initMap() {
-    sydney = new google.maps.LatLng(-33.867, 151.195);
+
+    var locations = $('#map').data("location").split(",");
+
+
+    sydney = new google.maps.LatLng(parseFloat(locations[0]),parseFloat(locations[1]));
+
 
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {
         center: sydney,
         zoom: 15,
+    });
+
+    new google.maps.Marker({
+        position: sydney,
+        map: map,
     });
 
     var request = {

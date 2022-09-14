@@ -814,14 +814,14 @@
     //top: auto;
 
     .modal-dialog {
-      transition: none !important;
-      transform: none !important;
+      transition: all ease-in-out .5s;
       width: 100%;
       max-width: 100% !important;
       margin: 0;
       display: flex;
       align-items: flex-end;
       min-height: calc(100% - 0rem);
+      transform: translateY(100%);
     }
     .modal-content {
       border-radius: 13px 13px 0 0;
@@ -865,6 +865,7 @@
     .modal-dialog {
       //transform: none !important;
       //margin: 0;
+      transform: translateY(0px) !important;
     }
   }
 
@@ -872,7 +873,7 @@
 
 
 #phoneNoModal {
-  z-index: 10000;
+  z-index: 99999;
   //height: auto !important;
   //bottom: 0 !important;
   //top: auto;
@@ -923,14 +924,14 @@
 
   @media (max-width: 767.98px) {
     .modal-dialog {
-      //transition: transform .2s ease-out;
-      //transform: translateY(100%);
+      transition: all ease-in-out .5s;
       width: 100%;
       max-width: 100% !important;
       margin: 0;
       display: flex;
       align-items: flex-end;
       min-height: calc(100% - 0rem);
+      transform: translateY(100%);
     }
 
     .modal-content {
@@ -1000,8 +1001,7 @@
     justify-content: center;
 
     .modal-dialog {
-      transform: none !important;
-      margin: 0;
+      transform: translateY(0px) !important;
     }
   }
 
