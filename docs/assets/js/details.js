@@ -7,8 +7,11 @@ $(document).ready(() => {
     document.querySelector('.nativeShare')
         .addEventListener('click', event => {
             if (navigator.share) {
+
+                var title = $('#propertyTitle').text();
+
                 navigator.share({
-                    title: 'GeeksForGeeks',
+                    title: title,
                     url: window.location.href
                 }).then(() => {
                     console.log('Thanks for sharing!');

@@ -117,8 +117,9 @@ a {
   padding: 11px 12px 8px 12px;
 
   &:hover{
-    background-color: #018E37;
+    background-color: #018E37 !important;
     color: #FFFFFF;
+    border: 1px solid #018E37 !important;
   }
 }
 

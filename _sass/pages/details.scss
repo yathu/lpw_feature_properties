@@ -2326,6 +2326,15 @@
         color: #FFFFFF;
         font-size: 24px;
       }
+
+      @media (max-width: 991.98px) {
+        top: -35px;
+        width: 35px;
+        height: 35px;
+        i {
+          font-size: 18px;
+        }
+      }
     }
 
     .banner-swiper {
@@ -2512,7 +2521,9 @@
     border-radius: 15px 15px 0 0;
 
     .btn-close {
-      font-size: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #000;
     }
   }
 
