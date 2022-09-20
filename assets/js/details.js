@@ -1,5 +1,30 @@
 $(document).ready(() => {
 
+    $('.copyUrl').on("click",function () {
+        navigator.clipboard.writeText(window.location.href);
+    });
+
+    document.querySelector('.nativeShare')
+        .addEventListener('click', event => {
+            if (navigator.share) {
+
+                var title = $('#propertyTitle').text();
+
+                navigator.share({
+                    title: title,
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(err => {
+                    console.log(
+                        "Error while using Web share API:");
+                    console.log(err);
+                });
+            } else {
+                console.log("browser not supported...");
+            }
+        })
+
     var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'LKR',
