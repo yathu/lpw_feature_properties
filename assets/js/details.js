@@ -1,5 +1,12 @@
 $(document).ready(() => {
 
+    $('.menuContainer .swiper-slide').on("click",function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        var some_element = $(id);
+        $('html,body').animate({scrollTop: some_element.offset().top - 80});
+    });
+
     $('.copyUrl').on("click",function () {
         navigator.clipboard.writeText(window.location.href);
     });
@@ -641,7 +648,7 @@ $(document).ready(() => {
             // console.log(vh,vw);
 
             if (vw >= 576) {
-                elementPosition -= (vh / 2);
+                elementPosition -= (vh / 4);
             } else {
                 elementPosition -= 120;
             }
