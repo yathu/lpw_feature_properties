@@ -176,6 +176,11 @@
             width: 100%;
           }
 
+          .bootstrap-select{
+            padding-top: 26px !important;
+            padding-bottom: 10px !important;
+          }
+
           label, .btn {
             padding-left: 0;
             margin-left: 0;
@@ -274,6 +279,10 @@
           background-repeat: no-repeat;
           background-position-x: 100%;
           background-position-y: 77%;
+        }
+
+        .btn{
+          max-height: 20px !important;
         }
       }
 

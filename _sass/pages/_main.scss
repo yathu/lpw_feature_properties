@@ -2,6 +2,12 @@
   z-index: 999;
 }
 
+.border-md-none{
+  @media (min-width: 768px) {
+    border: 0 !important;
+  }
+}
+
 .justify-self-end {
   justify-self: self-end !important;
 }
