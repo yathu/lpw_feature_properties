@@ -568,4 +568,143 @@ body  ::-webkit-scrollbar-track {
 }
 
 
+.new-header{
+  .top-bar{
+    .nav{
+      .nav-item{
+        .nav-link{
+          font-size: 14px;
+          color: #000;
+          font-family: Raleway,sans-serif;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        .active{
+          color: #fff;
+          background-color: #ff4500;
+        }
+      }
+      .lang{
+        @media(max-width: 767.98px){
+          display: none;
+        }
+      }
+    }
+  }
+
+  .new-main-nav{
+    background-color: #009432;
+    //padding-left: 12px;
+    //padding-right: 12px;
+
+    @media (min-width: 992px) {
+      //padding-left: 28px;
+      //padding-right: 28px;
+    }
+
+    .navbar-toggler{
+      &:focus{
+        outline: 0;
+        box-shadow: none!important;
+
+      }
+    }
+
+    .nav-item{
+      .nav-link{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 0.9rem 1rem;
+      }
+      .active{
+        background-color: #007126;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.new-footer-container{
+  font-family: Raleway,sans-serif !important;
+  background-color: #e7e7e7;
+
+
+  .footer-title{
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    font-family: Raleway,sans-serif !important;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0px;
+
+    li{
+      a{
+        color: #000;
+        font-size: 12px;
+        padding-top: 20px;
+        font-family: Raleway,sans-serif !important;
+      }
+    }
+  }
+
+  ul.social-icons{
+    li{
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child{
+        margin-left: 0;
+      }
+      .fa{
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 15px;
+        text-align: center;
+        background-color: #009432;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .subscribe-section{
+    form{
+      input{
+        font-size: 14px;
+        color: #525252;
+        border-color: #999999;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &:hover,&:focus{
+          box-shadow: none!important;
+          outline: none!important;
+        }
+      }
+      .btn{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: 14px;
+        font-weight: 400 !important;
+        font-family: Raleway,sans-serif;
+      }
+    }
+  }
+
+  .copyright{
+    padding: 20px 0;
+    font-size: 12px;
+    border-top: solid 1px #979797;
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+
 
