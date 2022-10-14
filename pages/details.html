@@ -1778,7 +1778,7 @@ permalink: /details.html
                         </table>
                         </div>
 
-                        <a class="btn btn-custom-primary mt-2 w-auto">
+                        <a class="btn btn-custom-primary mt-2 w-auto" data-bs-toggle="modal" data-bs-target="#loanPopup">
                             APPLY FOR A LOAN
                         </a>
 
@@ -2693,6 +2693,72 @@ permalink: /details.html
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="loanPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" id="callbackBtnClose1" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                    <form id="loanForm" action="#">
+                        <div>
+                            <h3>Account</h3>
+                            <section>
+                                <label for="userName">User name *</label>
+                                <input id="userName" name="userName" type="text" class="required">
+
+                                <div>
+
+                                    <label for="disabledSelect" class="form-label">Disabled select menu</label>
+
+                                    <select name="testSelect" id="disabledSelect" class="form-select required">
+                                        <option selected value="">Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                                <label for="password">Password *</label>
+                                <input id="password" name="password" type="text" class="required">
+                                <label for="confirm">Confirm Password *</label>
+                                <input id="confirm" name="confirm" type="text" class="required">
+                                <p>(*) Mandatory</p>
+                            </section>
+                            <h3>Profile</h3>
+                            <section>
+                                <label for="name">First name *</label>
+                                <input id="name" name="name" type="text" class="required">
+                                <label for="surname">Last name *</label>
+                                <input id="surname" name="surname" type="text" class="required">
+                                <label for="email">Email *</label>
+                                <input id="email" name="email" type="text" class="required email">
+                                <label for="address">Address</label>
+                                <input id="address" name="address" type="text">
+                                <p>(*) Mandatory</p>
+                            </section>
+                            <h3>Hints</h3>
+                            <section>
+                                <ul>
+                                    <li>Foo</li>
+                                    <li>Bar</li>
+                                    <li>Foobar</li>
+                                </ul>
+                            </section>
+                            <h3>Finish</h3>
+                            <section>
+                                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                            </section>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="bottomFloat row gx-2">
     <div class="col"><a class="btn btn-danger openPopUP call-btn pure-material-button-contained position-relative">CALL</a></div>

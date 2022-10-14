@@ -52,6 +52,64 @@ $(document).ready(() => {
         $('#showEnquireNum').trigger('click');
     });
 
+    jQuery.validator.setDefaults({
+        onfocusout: function (e) {
+            this.element(e);
+        },
+        onkeyup: false,
+
+        highlight: function (element) {
+            jQuery(element).closest('.form-control').addClass('is-invalid');
+        },
+        unhighlight: function (element) {
+            jQuery(element).closest('.form-control').removeClass('is-invalid');
+            jQuery(element).closest('.form-control').addClass('is-valid');
+        },
+
+        errorElement: 'div',
+        errorClass: 'invalid-feedback',
+        errorPlacement: function (error, element) {
+            if (element.parent('.input-group-prepend').length) {
+                $(element).siblings(".invalid-feedback").append(error);
+                //error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+    });
+
+    var form = $("#loanForm");
+    form.validate({
+        errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            testSelect: {
+                required: true
+            },
+            confirm: {
+                equalTo: "#password"
+            },
+        }
+    });
+    form.children("div").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        onStepChanging: function (event, currentIndex, newIndex)
+        {
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function (event, currentIndex)
+        {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function (event, currentIndex)
+        {
+            alert("Submitted!");
+        }
+    });
+
     // $('#contactNum').on("click", function () {
     //     // console.log(1);
     //
