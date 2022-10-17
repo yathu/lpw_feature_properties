@@ -32,39 +32,481 @@
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light nav-pills new-main-nav py-0">
             <div class="container-fluid px-0 px-lg-3">
-                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sales</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sales
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="row full-width">
+                                    <div class="col">
+                                        <h4><a href="/sale/index.php">Find Property for sale</a></h4>
+                                        <ol>
+                                            <li><a href="/forsale-all-House.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/house', { nonInteraction: true });">Houses</a>
+                                            </li>
+                                            <li><a href="/forsale-all-Apartment.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/apartments', { nonInteraction: true });">Apartments</a>
+                                            </li>
+                                            <li><a href="/forsale-all-Commercial.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/comm', { nonInteraction: true });">Commercial</a>
+                                            </li>
+                                            <li><a href="/forsale-all-Bungalow.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/bungalows', { nonInteraction: true });">Bungalows</a>
+                                            </li>
+                                            <li><a href="/forsale-all-Villa.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/villas', { nonInteraction: true });">Villas</a>
+                                            </li>
+                                            <li><a href="/forsale-all-Studio.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/studio', { nonInteraction: true });">Studio
+                                                / Bedsit</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;property-type=Commercial&amp;sub-property-type=Warehouse&amp;price-option=price_total"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/sales/warehouse', { nonInteraction: true });">Warehouse</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/featured-dev/featured.php">New Developments</a></h4>
+                                        <ol>
+                                            <li><a href="/featured-dev/featured.php">Featured developments for sale</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Featured Properties</a></h4>
+                                        <ol>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;price-option=price_total&amp;amenities=NEW">Newly
+                                                    built property for sale</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;property-type=Bungalow,Villa&amp;price-option=price_total">Colonial
+                                                    Houses for sale</a></li>
+                                            <li><a href="/sale/index.php?urgent=Y">Urgent properties for sale</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=50000000&amp;max=Any&amp;price-option=price_total">Luxury
+                                                    Apartments</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=Any&amp;max=30000000&amp;price-option=price_total">Mid-range
+                                                    Apartments</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;location=Central_Nuwara+Eliya_362e393439373436_38302e373836303537&amp;property-type=Bungalow&amp;price-option=price_total&amp;searchbox=Nuwara+Eliya">Bungalows
+                                                    in Nuwara Eliya</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;location=Western_Battaramulla__&amp;property-type=House&amp;price-option=price_total&amp;searchbox=Battaramulla">Houses
+                                                    in Battaramulla area</a></li>
+                                            <li><a href="/sale/colombo/colombo/commercial/">Commercial property for sale
+                                                in
+                                                Colombo</a></li>
+                                            <li><a href="/sale/commercial/hotel/">Hotels for Sale</a></li>
+                                            <li><a href="/sale/commercial/warehouse/">Warehouses for sale</a></li>
+                                            <li>
+                                                <a href="sale/index.php?search=1&amp;location=Southern_0__&amp;property-type=Apartment&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=NEW">Brand
+                                                    new apartment</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Learn and Discover</a></h4>
+                                        <ol>
+                                            <li><a href="/house_prices.php">Sri Lanka House Price Index</a></li>
+                                            <li><a href="/features/property-buying-for-foreigners.php">Guide for
+                                                foreigners
+                                                buying property</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rentals</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rentals
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/rentals/index.php">Find property for Rent</a></h4>
+                                        <ol>
+                                            <li><a href="/rentals/lease-all-House.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/house', { nonInteraction: true });">Houses</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Apartment.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/apartments', { nonInteraction: true });">Apartments</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Commercial.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/comm', { nonInteraction: true });">Commercial</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Bungalow.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/bungalows', { nonInteraction: true });">Bungalows</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Annexe.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/annexe', { nonInteraction: true });">Annexes</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Villa.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/villas', { nonInteraction: true });">Villas</a>
+                                            </li>
+                                            <li><a href="/rentals/lease-all-Studio.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/studio', { nonInteraction: true });">Studio
+                                                / Bedsit</a></li>
+                                            <li><a href="/rentals/lease-all-Room.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/rentals/rooms', { nonInteraction: true });">Rooms
+                                                / Boarding Places</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/rentals/index.php">Featured Properties</a></h4>
+                                        <ol>
+                                            <li><a href="/rentals/commercial/warehouse/">Warehouses for rent</a></li>
+                                            <li><a href="/rentals/index.php?new=Y">Newly built property for rent</a>
+                                            </li>
+                                            <li><a href="/rentals/index.php?urgent=Y">Urgent properties to let</a></li>
+                                            <li>
+                                                <a href="/rentals/index.php?search=1&amp;price-option=price-month&amp;filter-result=short-term-rentals">Short
+                                                    term rentals</a></li>
+                                            <li><a href="/rentals/colombo/colombo/commercial/office/">Office spaces in
+                                                Colombo</a></li>
+                                            <li><a href="/rentals/commercial/Co-Working/">Co-working places</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Learn and Discover</a></h4>
+                                        <ol>
+                                            <li><a href="/house_prices.php">House Prices</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Land
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/land/index.php">Find Land for Sale or Lease</a></h4>
+                                        <ol>
+                                            <li><a href="/land/sale-all-Bare+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/bare', { nonInteraction: true });">Bare
+                                                Land</a></li>
+                                            <li><a href="/land/sale-all-Beachfront+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/beachfront', { nonInteraction: true });">Beachfront
+                                                Land</a></li>
+                                            <li><a href="/land/sale-all-Cultivated+Land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/agri', { nonInteraction: true });">Cultivated
+                                                / Agriculture</a></li>
+                                            <li><a href="/land/sale-all-Land+with+house.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/with-house', { nonInteraction: true });">Land
+                                                with House</a></li>
+                                            <li><a href="/land/sale-all-Tea+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/tea', { nonInteraction: true });">Tea
+                                                Estate Land</a></li>
+                                            <li><a href="/land/sale-all-Rubber+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/rubber', { nonInteraction: true });">Rubber
+                                                Estate Land</a></li>
+                                            <li><a href="/land/sale-all-Coconut+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/coconut', { nonInteraction: true });">Coconut
+                                                Estate Land</a></li>
+                                            <li><a href="/land/sale-all-Paddy+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/paddy', { nonInteraction: true });">Paddy
+                                                (Rice) Land</a></li>
+                                            <li><a href="/land/sale-all-Cinnamon+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/cinnamon', { nonInteraction: true });">Cinnamon
+                                                Estate Land</a></li>
+                                            <li><a href="/land/sale-all-Waterfront+land.html"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/land/waterfront', { nonInteraction: true });">Waterfront
+                                                Land</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/land/index.php">Featured Properties</a></h4>
+                                        <ol>
+                                            <li>
+                                                <a href="/land/index.php?search=1&amp;location=Central_Nuwara+Eliya_362e393439373436_38302e373836303537&amp;price-option=total&amp;searchbox=Nuwara+Eliya">Lands
+                                                    in Nuwara Eliya</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;price-option=price_total&amp;amenities=BF">Beachfront
+                                                    property</a></li>
+                                            <li>
+                                                <a href="/land/index.php?search=1&amp;property-type=Cultivated_Land&amp;price-option=total">Cultivation
+                                                    lands</a></li>
+                                            <li style="white-space: nowrap;"><a
+                                                    href="/invest/top-investment-properities/?search=7">Investment Lands
+                                                within 1 hour of Colombo</a></li>
+                                            <li>
+                                                <a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=BF">Beachfront
+                                                    properties</a></li>
+                                            <li><a style="white-space: nowrap;"
+                                                   href="/land/index.php?search=1&amp;location=Western_0&amp;min=1000&amp;max=100000&amp;price-option=perch&amp;searchbox=western+province">Lands
+                                                for less than 1 lakh a perch in Western Province </a></li>
+                                            <li><a style="white-space: nowrap;"
+                                                   href="/land/index.php?search=1&amp;location=Western_0&amp;property-type=Cultivated_Land&amp;min=Any&amp;max=Any&amp;price-option=perch&amp;searchbox=Western+province">Cultivation
+                                                lands within 1 hour from Colombo </a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Learn and Discover</a></h4>
+                                        <ol>
+                                            <li style="white-space: nowrap;"><a href="/house_prices.php#lands-wp">Land
+                                                Prices in Greater Colombo</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                New Projects
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/featured-dev/featured.php">Find New Projects</a></h4>
+                                        <ol>
+                                            <li><a href="/featured-dev/featured.php">Featured Projects</a></li>
+                                            <li><a href="/condo-directory/">Condo Directory</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Invest
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/invest">Invest Section</a></h4>
+                                        <ol>
+                                            <!--                        <li><a href="/invest">Investment Calculator</a></li>-->
+                                            <li><a href="/invest/top-investment-properities">Top Investment
+                                                Properties</a>
+                                            </li>
+                                            <li><a href="/invest/top-investment-properities/?search=1">Luxury
+                                                Apartments</a>
+                                            </li>
+                                            <li><a href="/invest/top-investment-properities/?search=2">Mid-range
+                                                Apartments</a></li>
+                                            <li><a href="/invest/top-investment-properities/?search=3">Lands and
+                                                Bungalows
+                                                in Nuwara Eliya</a></li>
+                                            <li><a href="/invest/top-investment-properities/?search=4">Beachfront
+                                                property</a></li>
+                                            <li><a href="/invest/top-investment-properities/?search=5">Houses in
+                                                Battaramulla area</a></li>
+                                            <li><a href="/invest/top-investment-properities/?search=6">Cultivation
+                                                lands</a>
+                                            </li>
+                                            <li><a style="white-space: nowrap;"
+                                                   href="/invest/top-investment-properities/?search=7">Investment Lands
+                                                within 1 hour of Colombo</a></li>
+                                            <li><a style="white-space: nowrap;"
+                                                   href="/invest/top-investment-properities/?search=8">Commercial
+                                                property
+                                                for sale in Colombo</a></li>
+                                            <li><a href="/invest/top-investment-properities/?search=9">Hotels for
+                                                Sale</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/invest">Tools &amp; Advice</a></h4>
+                                        <ol>
+                                            <li><a href="/invest/roi-calculator/">ROI calculator</a></li>
+                                            <li><a href="/invest/trending-properties/">Trending Properties</a></li>
+                                            <li><a href="/invest/top-investment-properities/">Top Investment
+                                                properties</a>
+                                            </li>
+                                            <li><a href="/house_prices.php">House Price Index</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Loans
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/housing-loan-calculator/">Home Loans</a></h4>
+                                        <ol>
+                                            <li><a href="/housing-loan-calculator/"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_calculator', { nonInteraction: true });">Home
+                                                Loan Calculator</a></li>
+                                            <li><a href="/housing-loan-comparison/"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_comparison', { nonInteraction: true });">Home
+                                                Loan Comparison</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Wanted
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink6">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/wanted/wanted.php">Wanted Properties</a></h4>
+                                        <ol>
+                                            <li><a href="/wanted/wanted.php?type=w_house">Houses wanted</a></li>
+                                            <li><a href="/wanted/wanted.php?type=w_apartment">Apartments wanted</a></li>
+                                            <li><a href="/wanted/wanted.php?type=w_land">Land wanted</a></li>
+                                            <li><a href="/wanted/wanted.php?type=w_commercial">Commercial Buildings</a>
+                                            </li>
+                                            <li><a href="/wanted/wanted.php?type=w_room">Rooms wanted</a></li>
+                                            <li><a href="/myaccountV2/login?wtd">Post Your Ad</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Find Agent
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink7">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="/agents/estate_agents.php">Find Agents / Agents Directory</a></h4>
+                                        <ol>
+                                            <li><a href="/agents/estate_agents.php?agent_type=Sales">Residencial
+                                                sales</a>
+                                            </li>
+                                            <li><a href="/agents/estate_agents.php?agent_type=Rentals">Letting
+                                                Agents</a>
+                                            </li>
+                                            <li><a href="/agents/estate_agents.php?agent_type=Commercial">Commercial
+                                                property agents</a></li>
+                                            <li><a href="/agents/estate_agents.php?agent_type=Land">Land Sales</a></li>
+                                            <!--                        <li><a href="/agents/estate_agents.php?agent_type=Management">Property Management</a></li>-->
+                                            <!--                        <li><a href="/agents/estate_agents.php?agent_type=Research">Feasibility Studies</a></li>-->
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Land</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">New Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Invest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Wanted</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Find Agent</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">More</a>
+
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink8"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink8">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4><a href="#">Assistance</a></h4>
+                                        <ol>
+                                            <li><a href="/buyers-sellers-assistance/"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/BNS', { nonInteraction: true });">Buyer
+                                                &amp; Seller Assistance</a></li>
+                                            <li><a href="/performance/"
+                                                   onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/performance', { nonInteraction: true });">Promote
+                                                your property</a></li>
+                                            <li><a href="/contact-us">Contact Us </a></li>
+                                            <li><a href="#">&nbsp;</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Area Guides</a></h4>
+                                        <ol>
+                                            <li><a href="/maps/sri-lanka-maps.php">Maps of Sri Lanka</a></li>
+                                            <li><a href="/area/">Area Guide</a></li>
+                                            <!-- <li><a href="/location-guide/">Area Guide</a></li> -->
+                                            <li><a href="/maps/colombo-7/arcade-independence-square/">Point of
+                                                Interests</a>
+                                            </li>
+                                            <li><a href="#">&nbsp;</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="#">Guide</a></h4>
+                                        <ol>
+                                            <li><a href="/features/property-buying-guide/">Property Buying Guide</a>
+                                            </li>
+                                            <li><a href="/features/property-buying-for-foreigners.php">Foreign Buyers'
+                                                Guide</a></li>
+                                            <li>
+                                                <a href="/property-news/capital-gains-tax-and-its-effects-on-property-in-sri-lanka/">Capital
+                                                    Gains Tax</a></li>
+                                            <li><a href="/house_prices.php">Sri Lanka House Price Index</a></li>
+                                            <li><a href="/membership-benefits/">Membership Benefits</a></li>
+                                            <li><a href="#">&nbsp;</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/property-news">Blog</a></h4>
+                                        <ol>
+                                            <li><a href="/aboutus.php">About us</a></li>
+                                            <li><a href="/careers">Careers</a></li>
+                                            <li><a href="/contact-us">Contact Us</a></li>
+                                            <li><a href="/events">Events</a></li>
+                                            <li><a href="/FAQs.php">FAQs</a></li>
+                                            <li><a href="#">&nbsp;</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <h4><a href="/idealhome/">Ideal Home</a></h4>
+                                        <ol>
+                                            <li><a href="/idealhome/Appliances--Electronics">Appliances &amp;
+                                                Electronics</a></li>
+                                            <li><a href="/idealhome/Furniture">Furniture</a></li>
+                                            <li><a href="/idealhome/Household-items">Household items</a></li>
+                                            <li><a href="/idealhome/Solar--Hot-Water">Solar &amp; Hot Water</a></li>
+                                            <li><a href="/idealhome/Bathrooms">Bathrooms</a></li>
+                                            <li><a href="/idealhome/Gardening">Gardening</a></li>
+                                            <li><a href="/idealhome/Kitchen">Kitchen</a></li>
+                                            <li><a href="/idealhome/Professionals">Professionals</a></li>
+                                            <li><a href="/idealhome/Flooring">Flooring</a></li>
+                                            <li><a href="/idealhome/House-Construction">House Construction</a></li>
+                                            <li><a href="/idealhome/Lighting">Lighting</a></li>
+                                            <li><a href="/idealhome/Service-providers">Service Providers</a></li>
+                                            <li><a href="/idealhome/Other-Services">Other Services</a></li>
+                                            <li><a href="#">&nbsp;</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">
-                    <span class="fa fa-star" title="My Favourite Properties">
-                    </span>
+                            <span class="fa fa-star" title="My Favourite Properties">
+                            </span>
                             </a>
                         </li>
                     </ul>
