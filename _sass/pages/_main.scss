@@ -622,7 +622,7 @@ body  ::-webkit-scrollbar-track {
         display: flex;
         align-items: center;
         justify-content: start;
-        padding-left: 15px;
+        padding-left: 30px;
 
         h2{
           text-align: left;
@@ -675,6 +675,10 @@ body  ::-webkit-scrollbar-track {
           }
         }
       }
+
+      .toolsMenu{
+        padding: 12px 30px;
+      }
     }
 
     .wrapper-next-level{
@@ -685,10 +689,16 @@ body  ::-webkit-scrollbar-track {
   .back-one-level {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
-    svg {
-      fill: var(--white);
+    padding: 12px 26px;
+    width: 100%;
+    border-bottom: 1px solid #ecedee;
+
+    i{
+      font-size: 24px;
       margin-right: 10px;
+    }
+    span{
+      margin-top: 2px;
     }
   }
 
@@ -744,6 +754,21 @@ body  ::-webkit-scrollbar-track {
           right: -20px;
           transform: translateY(-50%);
           color: var(--orange);
+        }
+      }
+    }
+
+    .menu{
+      a{
+        &:after{
+          content: "\f105";
+          position: absolute;
+          right: 15px;
+          font-family: FontAwesome;
+          font-size: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #555;
         }
       }
     }
