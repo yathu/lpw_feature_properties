@@ -14,6 +14,10 @@ $(document).ready(function () {
     const isVisibleClass = "is-visible";
     const isActiveClass = "is-active";
 
+    $('.close-mobile-nav').on("click",function () {
+        $( ".toggle-menu" ).trigger( "click" );
+    });
+
     toggleMenu.addEventListener("click", function () {
         menuWrapper.classList.toggle(isVisibleClass);
 

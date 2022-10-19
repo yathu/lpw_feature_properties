@@ -44,7 +44,7 @@
 <body>
 
 <div class="container-fluid new-header">
-    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center top-bar mb-2 mb-sm-0 px-lg-3">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center top-bar mb-3 mb-sm-0 px-lg-3">
         <img width="221px" height="61px" src="https://www.lankapropertyweb.com/images/logo/lpw_logo_v12.svg"
              alt="LPW Logo">
         <div class="d-flex">
@@ -74,11 +74,29 @@
         </div>
     </div>
 
-    <div class="mobile-nav-container row">
-        <button class="toggle-menu btn" type="button">
-            MENU
-        </button>
-    </div>
+    <div class="mobile-nav-container row justify-content-between d-lg-none">
+
+        <div class="col">
+            <button class="btn toggle-menu" type="button">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="col">
+            <img src="https://w7.pngwing.com/pngs/982/122/png-transparent-house-computer-icons-green-home-home-renovation-angle-building-text-thumbnail.png"
+                 alt="">
+        </div>
+        <div class="col">
+            <span>
+                EN
+            </span>
+        </div>
+        <div class="col-auto">
+            <a href="#" class="btn btn-custom-primary">
+                POST YOUR AD
+            </a>
+        </div>
+
+        </div>
 
     <header class="page-header d-lg-none">
         <nav>
@@ -90,12 +108,15 @@
                         <h2>
                             Lanka Property Web
                         </h2>
+                        <button type="button" class="btn-close btn-close-white me-2 close-mobile-nav" aria-label="Close"></button>
                     </div>
 
 
                     <ul class="menu level-1">
                         <li>
-                            <a href="/sale/index.php" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/sales/main', { nonInteraction: true });" class="nested">Sales</a>
+                            <a href="/sale/index.php"
+                               onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/sales/main', { nonInteraction: true });"
+                               class="nested">Sales</a>
 
                             <ul class="sub-menu level-2">
                                 <li class="see-all"><a href="/sale/index.php"><b>Sales Home</b></a></li>
@@ -105,19 +126,35 @@
                                 <li><a href="/forsale-all-Bungalow.html">Bungalows</a></li>
                                 <li><a href="/forsale-all-Villa.html">Villas</a></li>
                                 <li><a href="/forsale-all-Studio.html">Studio / Bedsit</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;property-type=Commercial&amp;sub-property-type=Warehouse&amp;price-option=price_total">Warehouse</a></li>
-                                <li style="margin-top: 10px;" id="toolsMenu"><b>Featured Properties</b></li>
-                                <li><a href="/sale/index.php?search=1&amp;price-option=price_total&amp;amenities=NEW">Newly built property for sale</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;property-type=Bungalow,Villa&amp;price-option=price_total">Colonial Houses for sale</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;property-type=Commercial&amp;sub-property-type=Warehouse&amp;price-option=price_total">Warehouse</a>
+                                </li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Featured Properties</b></li>
+                                <li><a href="/sale/index.php?search=1&amp;price-option=price_total&amp;amenities=NEW">Newly
+                                    built property for sale</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;property-type=Bungalow,Villa&amp;price-option=price_total">Colonial
+                                        Houses for sale</a></li>
                                 <li><a href="/sale/index.php?urgent=Y">Urgent properties for sale</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=50000000&amp;max=Any&amp;price-option=price_total">Luxury Apartments</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=Any&amp;max=30000000&amp;price-option=price_total">Mid-range Apartments</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;location=Central_Nuwara+Eliya_362e393439373436_38302e373836303537&amp;property-type=Bungalow&amp;price-option=price_total&amp;searchbox=Nuwara+Eliya">Bungalows in Nuwara Eliya</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;location=Western_Battaramulla__&amp;property-type=House&amp;price-option=price_total&amp;searchbox=Battaramulla">Houses in Battaramulla area</a></li>
-                                <li><a href="/sale/colombo/colombo/commercial/">Commercial property for sale in Colombo</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=50000000&amp;max=Any&amp;price-option=price_total">Luxury
+                                        Apartments</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;property-type=Apartment&amp;min=Any&amp;max=30000000&amp;price-option=price_total">Mid-range
+                                        Apartments</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;location=Central_Nuwara+Eliya_362e393439373436_38302e373836303537&amp;property-type=Bungalow&amp;price-option=price_total&amp;searchbox=Nuwara+Eliya">Bungalows
+                                        in Nuwara Eliya</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;location=Western_Battaramulla__&amp;property-type=House&amp;price-option=price_total&amp;searchbox=Battaramulla">Houses
+                                        in Battaramulla area</a></li>
+                                <li><a href="/sale/colombo/colombo/commercial/">Commercial property for sale in
+                                    Colombo</a></li>
                                 <li><a href="/sale/commercial/hotel/">Hotels for Sale</a></li>
                                 <li><a href="/sale/commercial/warehouse/">Warehouses for sale</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;property-type=Apartment&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=NEW">Brand new apartment</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;property-type=Apartment&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=NEW">Brand
+                                        new apartment</a></li>
 
                             </ul>
                         </li>
@@ -126,7 +163,12 @@
                             <a href="" class="nested">Rentals </a>
 
                             <ul class="sub-menu level-2">
-                                <li class="see-all"><a href="/rentals/index.php" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/rentals/main', { nonInteraction: true });">Rentals Home</a></li>
+                                <li class="see-all">
+                                    <a href="/rentals/index.php"
+                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/rentals/main', { nonInteraction: true });">
+                                        <b>Rentals Home</b>
+                                    </a>
+                                </li>
                                 <li><a href="/rentals/lease-all-House.html">Houses</a></li>
                                 <li><a href="/rentals/lease-all-Apartment.html">Apartments</a></li>
                                 <li><a href="/rentals/lease-all-Commercial.html">Commercial</a></li>
@@ -135,12 +177,15 @@
                                 <li><a href="/rentals/lease-all-Villa.html">Villas</a></li>
                                 <li><a href="/rentals/lease-all-Studio.html">Studio / Bedsit</a></li>
                                 <li><a href="/rentals/lease-all-Room.html">Rooms</a></li>
-                                <li><b>Featured Properties</b></li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Featured Properties</b></li>
                                 <li><a href="/rentals/commercial/warehouse/">Warehouses for rent</a></li>
                                 <li><a href="/rentals/index.php?new=Y">Newly built property for rent</a></li>
                                 <li><a href="/rentals/index.php?urgent=Y">Urgent properties to let</a></li>
-                                <li><a href="/rentals/index.php?search=1&amp;price-option=price-month&amp;filter-result=short-term-rentals">Short term rentals</a></li>
-                                <li><a href="/rentals/colombo/colombo/commercial/office/">Office spaces in Colombo</a></li>
+                                <li>
+                                    <a href="/rentals/index.php?search=1&amp;price-option=price-month&amp;filter-result=short-term-rentals">Short
+                                        term rentals</a></li>
+                                <li><a href="/rentals/colombo/colombo/commercial/office/">Office spaces in Colombo</a>
+                                </li>
                                 <li><a href="/rentals/commercial/Co-Working/">Co-working places</a></li>
                             </ul>
                         </li>
@@ -148,7 +193,11 @@
                         <li>
                             <a href="" class="nested">Land </a>
                             <ul class="sub-menu level-2">
-                                <li class="see-all"><a href="/land/index.php" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/land/main', { nonInteraction: true });">Lands Home</a></li>
+                                <li class="see-all"><a href="/land/index.php"
+                                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/land/main', { nonInteraction: true });">
+                                    <b>Lands
+                                        Home</b>
+                                </a></li>
                                 <li><a href="/land/sale-all-Bare+land.html">Bare Land</a></li>
                                 <li><a href="/land/sale-all-Beachfront+land.html">Beachfront Land</a></li>
                                 <li><a href="/land/sale-all-Cultivated+Land.html">Cultivated / Agriculture</a></li>
@@ -159,8 +208,12 @@
                                 <li><a href="/land/sale-all-Paddy+land.html">Paddy (Rice) Land</a></li>
                                 <li><a href="/land/sale-all-Cinnamon+land.html">Cinnamon Estate Land</a></li>
                                 <li><a href="/land/sale-all-Waterfront+land.html">Waterfront Land</a></li>
-                                <li><a style="white-space: nowrap;" href="/land/index.php?search=1&amp;location=Western_0&amp;min=1000&amp;max=100000&amp;price-option=perch&amp;searchbox=western+province">Lands for less than 1 lakh a perch in Western Province</a></li>
-                                <li><a style="white-space: nowrap;" href="/land/index.php?search=1&amp;location=Western_0&amp;property-type=Cultivated_Land&amp;min=Any&amp;max=Any&amp;price-option=perch&amp;searchbox=Western+province">Cultivation lands within 1 hour from Colombo</a></li>
+                                <li><a style="white-space: nowrap;"
+                                       href="/land/index.php?search=1&amp;location=Western_0&amp;min=1000&amp;max=100000&amp;price-option=perch&amp;searchbox=western+province">Lands
+                                    for less than 1 lakh a perch in Western Province</a></li>
+                                <li><a style="white-space: nowrap;"
+                                       href="/land/index.php?search=1&amp;location=Western_0&amp;property-type=Cultivated_Land&amp;min=Any&amp;max=Any&amp;price-option=perch&amp;searchbox=Western+province">Cultivation
+                                    lands within 1 hour from Colombo</a></li>
 
                             </ul>
                         </li>
@@ -176,20 +229,33 @@
                         <li>
                             <a href="" class="nested">Invest section </a>
                             <ul class="sub-menu level-2">
-                                <li class="see-all"><a href="/invest/" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/invest/main', { nonInteraction: true });">Invest section Home</a></li>
+                                <li class="see-all">
+                                    <a href="/invest/"
+                                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/invest/main', { nonInteraction: true });">
+                                        <b>Invest
+                                            section Home</b>
+                                    </a></li>
                                 <li><a href="/invest/top-investment-properities">Top investment Properties</a></li>
                                 <li><a href="/invest/top-investment-properities/?search=1">Luxury Apartments</a></li>
                                 <li><a href="/invest/top-investment-properities/?search=2">Mid-range Apartments</a></li>
-                                <li><a href="/invest/top-investment-properities/?search=3">Lands and Bungalows in Nuwara Eliya</a></li>
+                                <li><a href="/invest/top-investment-properities/?search=3">Lands and Bungalows in Nuwara
+                                    Eliya</a></li>
                                 <li><a href="/invest/top-investment-properities/?search=4">Beachfront property</a></li>
-                                <li><a href="/invest/top-investment-properities/?search=5">Houses in Battaramulla area</a></li>
+                                <li><a href="/invest/top-investment-properities/?search=5">Houses in Battaramulla
+                                    area</a></li>
                                 <li><a href="/invest/top-investment-properities/?search=6">Cultivation lands</a></li>
-                                <li><a href="/invest/top-investment-properities/?search=7">Investment Lands within 1 hour of Colombo</a></li>
-                                <li><a href="/invest/top-investment-properities/?search=8">Commercial property for sale in Colombo</a></li>
+                                <li><a href="/invest/top-investment-properities/?search=7">Investment Lands within 1
+                                    hour of Colombo</a></li>
+                                <li><a href="/invest/top-investment-properities/?search=8">Commercial property for sale
+                                    in Colombo</a></li>
                                 <li><a href="/invest/top-investment-properities/?search=9">Hotels for Sale</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;property-type=Apartment&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=NEW">Brand new apartment</a></li>
-                                <li><a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=BF">Beachfront properties</a></li>
-                                <li style="margin-top: 10px;" id="toolsMenu"><b>Tools &amp; Advice</b></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;property-type=Apartment&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=NEW">Brand
+                                        new apartment</a></li>
+                                <li>
+                                    <a href="/sale/index.php?search=1&amp;location=Southern_0__&amp;price-option=price_total&amp;searchbox=Southern+province&amp;amenities=BF">Beachfront
+                                        properties</a></li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Tools &amp; Advice</b></li>
                                 <li><a href="/invest/roi-calculator/">ROI calculator</a></li>
                                 <li><a href="/invest/trending-properties/">Trending Properties</a></li>
                                 <li><a href="/invest/top-investment-properities/">Top Investment properties</a></li>
@@ -201,8 +267,12 @@
                         <li>
                             <a href="/housing-loan-calculator/" class="nested">Home Loans</a>
                             <ul class="sub-menu level-2">
-                                <li><a href="/housing-loan-calculator/" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_calculator', { nonInteraction: true });">Home Loan Calculator</a></li>
-                                <li><a href="/housing-loan-comparison/" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_comparison', { nonInteraction: true });">Home Loan Comparison</a></li>
+                                <li><a href="/housing-loan-calculator/"
+                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_calculator', { nonInteraction: true });">Home
+                                    Loan Calculator</a></li>
+                                <li><a href="/housing-loan-comparison/"
+                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/home_loan_comparison', { nonInteraction: true });">Home
+                                    Loan Comparison</a></li>
                             </ul>
                         </li>
 
@@ -223,7 +293,8 @@
                             <ul class="sub-menu level-2">
                                 <li><a href="/agents/estate_agents.php?agent_type=Sales">Residential sales</a></li>
                                 <li><a href="/agents/estate_agents.php?agent_type=Rentals">Letting Agents</a></li>
-                                <li><a href="/agents/estate_agents.php?agent_type=Commercial">Commercial property agents</a></li>
+                                <li><a href="/agents/estate_agents.php?agent_type=Commercial">Commercial property
+                                    agents</a></li>
                                 <li><a href="/agents/estate_agents.php?agent_type=Land">Land Sales</a></li>
                             </ul>
                         </li>
@@ -231,22 +302,32 @@
                         <li>
                             <a href="" class="nested">More </a>
                             <ul class="sub-menu level-2">
-                                <li style="margin-top: 10px;" id="toolsMenu"><b>Assistance</b></li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Assistance</b></li>
                                 <li><a href="/buyers-sellers-assistance/">Buyer &amp; Seller Assistance</a></li>
-                                <li><a href="/performance/" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/performance', { nonInteraction: true });">Promote your property</a></li>
+                                <li><a href="/performance/"
+                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/header/tools/performance', { nonInteraction: true });">Promote
+                                    your property</a></li>
                                 <li><a href="/contact-us">Contact Us</a></li>
-                                <li style="margin-top: 10px;" id="toolsMenu"><b>Area Guides</b></li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Area Guides</b></li>
                                 <li><a href="/maps/sri-lanka-maps.php">Maps of Sri Lanka</a></li>
                                 <li><a href="/area/">Area Guide</a></li>
                                 <!-- <li><a href="/location-guide/">Area Guide</a></li> -->
                                 <li><a href="/maps/colombo-7/arcade-independence-square/">Point of Interests</a></li>
-                                <li style="margin-top: 10px;" id="toolsMenu"><b>Guides</b></li>
+                                <li style="margin-top: 10px;" class="toolsMenu"><b>Guides</b></li>
                                 <li><a href="/features/property-buying-guide/">Property Buying Guide</a></li>
-                                <li><a href="/features/property-buying-for-foreigners.php">Foreign Buyers' Guide</a></li>
-                                <li><a href="/property-news/capital-gains-tax-and-its-effects-on-property-in-sri-lanka/">Capital Gains Tax</a></li>
+                                <li><a href="/features/property-buying-for-foreigners.php">Foreign Buyers' Guide</a>
+                                </li>
+                                <li>
+                                    <a href="/property-news/capital-gains-tax-and-its-effects-on-property-in-sri-lanka/">Capital
+                                        Gains Tax</a></li>
                                 <li><a href="/house_prices.php">Sri Lanka House Price Index</a></li>
                                 <li><a href="/membership-benefits/">Membership Benefits</a></li>
-                                <li style="margin-top: 10px;" id="toolsMenu" class="see-all"><b><a href="/idealhome/" onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/idealhome/main', { nonInteraction: true });" style="padding:0;">Ideal Home</a></b></li>
+                                <li style="margin-top: 10px;" id="" class="see-all">
+                                    <a href="/idealhome/"
+                                       onclick="ga('send', 'event', 'TopMenu', 'Click', '/topMenu/mobile/idealhome/main', { nonInteraction: true });">
+                                        <b>Ideal Home</b>
+                                    </a>
+                                </li>
                                 <li><a href="https://idealhome.lk/electronics">Appliances &amp; Electronics</a></li>
                                 <li><a href="https://idealhome.lk/furniture">Furniture</a></li>
                                 <li><a href="https://idealhome.lk/household-items">Household items</a></li>
@@ -260,7 +341,7 @@
                                 <li><a href="https://idealhome.lk/lighting">Lighting</a></li>
                                 <li><a href="https://idealhome.lk/service-providers">Service Providers</a></li>
                                 <li><a href="https://idealhome.lk/other-services">Other Services</a></li>
-                                <li style="margin-left: -30px;" class="see-all"><a href="/property-news">Blog</a></li>
+                                <li style="margin-left: -30px;" class="see-all"><a href="/property-news"><b>Blog</b></a></li>
                                 <li><a href="/aboutus.php">About us</a></li>
                                 <li><a href="/careers">Careers</a></li>
                                 <li><a href="/contact-us">Contact Us</a></li>
@@ -269,44 +350,44 @@
                             </ul>
                         </li>
 
-<!--                        <li>-->
-<!--                            <a href="" class="nested">0000000 </a>-->
-<!--                            <ul class="sub-menu level-2">-->
-<!--                                <li>-->
-<!--                                    <a href="">1111111</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="" class="nested">0000000 </a>-->
+                        <!--                            <ul class="sub-menu level-2">-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="">1111111</a>-->
+                        <!--                                </li>-->
+                        <!--                            </ul>-->
+                        <!--                        </li>-->
 
 
-<!--                        <li>-->
-<!--                            <a href="" class="nested">Company</a>-->
-<!--                            <ul class="sub-menu level-2">-->
-<!--                                <li>-->
-<!--                                    <a href="">History</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="">Team</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="" class="nested">Careers</a>-->
-<!--                                    <ul class="sub-menu level-3">-->
-<!--                                        <li>-->
-<!--                                            <a href="">Sales Assistant</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="">Graphic Designer</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="">Marketing Specialist</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="">Storekeeper</a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="" class="nested">Company</a>-->
+                        <!--                            <ul class="sub-menu level-2">-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="">History</a>-->
+                        <!--                                </li>-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="">Team</a>-->
+                        <!--                                </li>-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="" class="nested">Careers</a>-->
+                        <!--                                    <ul class="sub-menu level-3">-->
+                        <!--                                        <li>-->
+                        <!--                                            <a href="">Sales Assistant</a>-->
+                        <!--                                        </li>-->
+                        <!--                                        <li>-->
+                        <!--                                            <a href="">Graphic Designer</a>-->
+                        <!--                                        </li>-->
+                        <!--                                        <li>-->
+                        <!--                                            <a href="">Marketing Specialist</a>-->
+                        <!--                                        </li>-->
+                        <!--                                        <li>-->
+                        <!--                                            <a href="">Storekeeper</a>-->
+                        <!--                                        </li>-->
+                        <!--                                    </ul>-->
+                        <!--                                </li>-->
+                        <!--                            </ul>-->
+                        <!--                        </li>-->
                     </ul>
                 </div>
 

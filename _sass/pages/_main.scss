@@ -594,15 +594,50 @@ body  ::-webkit-scrollbar-track {
 
   .mobile-nav-container{
     position: relative;
-    height: 60px;
+    height: 51px;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    div:not(:last-child){
+      border-right: 1px solid #d8d8d8;
+    }
+
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button{
+      i{
+        font-size: 21px;
+      }
+    }
+
+    img{
+      max-width: 30px;
+    }
+
+    span{
+      color: #333333;
+      font-family: Rubik-Regular;
+      font-size: 13px;
+    }
+
+    .btn-custom-primary{
+      font-family: Rubik-Regular;
+      font-size: 13px;
+    }
   }
 
 
   .page-header {
     position: fixed;
     top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    //transform: translateX(-50%);
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -621,7 +656,7 @@ body  ::-webkit-scrollbar-track {
         height: 50px;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: space-between;
         padding-left: 30px;
 
         h2{
@@ -632,6 +667,9 @@ body  ::-webkit-scrollbar-track {
           margin-bottom: 0;
           line-height: 1;
           font-weight: 300;
+        }
+        .btn-close{
+          opacity: 1;
         }
       }
 
@@ -677,7 +715,19 @@ body  ::-webkit-scrollbar-track {
       }
 
       .toolsMenu{
-        padding: 12px 30px;
+        padding: 15px 15px 15px;
+        border-bottom: 1px solid #ecedee;
+        margin-top: 0!important;
+      }
+
+      .sub-menu{
+        //b{
+        //  padding: 20px 15px 5px;
+        //  border-bottom: 1px solid #ecedee;
+        //  margin-top: 0!important;
+        //  display: block;
+        //  width: 100%;
+        //}
       }
     }
 
@@ -711,6 +761,9 @@ body  ::-webkit-scrollbar-track {
     height: calc(100vh);
     overflow: hidden;
     background-color: white;
+    transform: translateX(-100%);
+    transition: all ease-in .5s;
+
 
     ul{ list-style-type: none;
       li {
@@ -776,6 +829,10 @@ body  ::-webkit-scrollbar-track {
 
   .menu-wrapper.is-visible {
     display: block;
+    left: 0;
+    transition: all ease-in .5s;
+    transform: translateX(0%);
+
   }
 
   .new-main-nav{
