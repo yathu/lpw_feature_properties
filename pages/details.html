@@ -36,10 +36,10 @@ permalink: /details.html
 
         <div class="col-12 col-md-4 col-md-4 col-lg-3 mobile-bottom-block">
             <div class="row gx-0 gx-md-3 box-2 h-100 row-cols-2 row-cols-md-1 gy-0 mt-0">
-                <div class="col mt-0 video-cont pb-md-2 border-end border-md-none">
+                <div class="col mt-0 video-cont pb-md-2 border-end border-md-none mh-100">
                     <img class="img-fluid h-100 obj-fit-cover" src="./assets/img/details/banner_1.jpg" data-index="3" alt="banner"  data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
-                <div class="col pt-md-2 images">
+                <div class="col pt-md-2 images mh-100">
                     <img class="img-fluid h-100 obj-fit-cover" src="./assets/img/details/banner_1.jpg" alt="banner">
                     <div class="overlay" data-index="4" data-bs-toggle="modal" data-bs-target="#bannerModal">
                         <span>
@@ -929,17 +929,19 @@ permalink: /details.html
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <!--                                poster="./assets/img/details/video-poster.png"-->
 
-                        <video
-                                id="my-video"
-                                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
-                                preload="auto"
-                                width="640"
-                                height="264"
-                                controls
-                                data-setup="{}"
-                        >
-                            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"/>
-                        </video>
+                        <iframe height="410" class="w-100 mh-100" src="https://www.youtube.com/embed/13S0wDibaEw" title="இலங்கை A1ஆக அதிரடி வெற்றியுடன் இரண்டாம் சுற்றில் ! UAE வெற்றி செய்த குழப்பம் ! குசல், வனிது கலக்கல்" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--                        <video-->
+<!--                                id="my-video-key"-->
+<!--                                class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"-->
+<!--                                preload="auto"-->
+<!--                                width="640"-->
+<!--                                height="264"-->
+<!--                                controls-->
+<!--                                data-setup="{}"-->
+<!--                        >-->
+<!--                            <source src="https://youtu.be/13S0wDibaEw" type="video/mp4"/>-->
+<!--                        </video>-->
 
 
                     </div>
@@ -1219,9 +1221,9 @@ permalink: /details.html
 
                 <form class="row g-3">
                     <div class="col-md-6">
-                        <input type="text" placeholder="Your Name *" class="form-control mb-3" id="inqName">
-                        <input type="email" placeholder="Email Address *" class="form-control mb-3" id="inqEmail">
-                        <input type="text" placeholder="Contact Number" class="form-control ps-5" id="inqContact">
+                        <input type="text" placeholder="Your Name *" class="form-control mb-3" id="inqName" required>
+                        <input type="email" placeholder="Email Address *" class="form-control mb-3" id="inqEmail" required>
+                        <input type="text" placeholder="Contact Number" class="form-control ps-5" id="inqContact" required>
 
                     </div>
                     <div class="col-md-6">
@@ -1667,7 +1669,7 @@ permalink: /details.html
                                 <span class="me-2 lbl"><span id="downPayPer">20</span>%</span>
                                 <div class="input-group">
                                     <span class="input-group-text">Rs</span>
-                                    <input id="downPayment" class="form-control form-control-sm" type="text" min="20" max="100">
+                                    <input id="downPayment" class="form-control form-control-sm bg-white" type="text" min="20" max="100" disabled>
                                 </div>
                             </div>
                             <div class="col-12">

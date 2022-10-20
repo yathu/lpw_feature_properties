@@ -23,6 +23,7 @@ const files = {
     jsPath: 'assets/js/main.js',
     jsPath1: 'assets/js/map.js',
     jsPath2: 'assets/js/details.js',
+    jsPath3: 'assets/js/common.js',
     allJsPath: 'assets/js/*.js',
     imgPath: 'assets/img/**/*',
     _site: '_site/**/*',
@@ -44,7 +45,8 @@ function jsTask() {
     return src([
         files.jsPath,
         files.jsPath1,
-        files.jsPath2
+        files.jsPath2,
+        files.jsPath3
     ])
         .pipe(uglify())
         .pipe(dest('_site/assets/js/'))

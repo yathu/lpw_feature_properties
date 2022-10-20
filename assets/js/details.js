@@ -623,6 +623,12 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
+    var bannercontactNo = document.querySelector("#bannercontactNo");
+    window.intlTelInput(bannercontactNo, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
 
@@ -800,15 +806,18 @@ $(document).ready(() => {
         var val =  $(this).val().replace(/,/g,"");
         var propertyValue = $("#propertyValue").val().replace(/,/g,"");
 
-        var newDownPercentage = (val/propertyValue) * 100;
+        var newDownPercentage = ((val/propertyValue) * 100).toFixed(2);
 
         var OlddownPercentage = $("#downPaymentSlider").slider("value");
 
 
         if(newDownPercentage >= 20 && newDownPercentage <= 100){
+            console.log("new");
             $("#downPaymentSlider").slider('value',newDownPercentage);
             $("#downPayPer").text(newDownPercentage);
+
         }else {
+            console.log("new old");
             var downPay = (propertyValue / 100) * OlddownPercentage;
             $("#downPayment").val(downPay);
             $("#downPayPer").text(OlddownPercentage);
@@ -963,6 +972,8 @@ $(document).ready(() => {
 
             const loanAmount = (propertyValue/100)*(100 - downPaymentPersantage);
 
+            let downPaymentVal = (propertyValue/100) * downPaymentPersantage;
+
             // console.log("price==>",loanAmount);
 
             const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
@@ -986,6 +997,8 @@ $(document).ready(() => {
             $('#interestRateValue').text(interestRate);
             $('#totalInterest').text(formatter.format(Math.ceil(totalPayment - loanAmount.toFixed(2))).replace("LKR", "Rs"));
             $('#totalPayment').text(formatter.format(totalPayment).replace("LKR", "Rs"));
+
+            $('#downPayment').val(downPaymentVal);
 
             var downpayment = $('#downPayment').val().replace(/,/g,"");
             updateChart(downpayment,loanAmount);
