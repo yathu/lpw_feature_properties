@@ -569,6 +569,9 @@ body  ::-webkit-scrollbar-track {
 
 
 .new-header{
+  z-index: 999;
+  position: relative;
+
   .top-bar{
     .nav{
       .nav-item{
