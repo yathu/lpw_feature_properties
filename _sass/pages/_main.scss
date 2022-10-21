@@ -880,6 +880,11 @@ body  ::-webkit-scrollbar-track {
         text-decoration: none;
         font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
         padding: 0.9rem 15px;
+
+        &:hover{
+          background-color: #007126;
+          border-radius: 0;
+        }
       }
       .active{
         background-color: #007126;
