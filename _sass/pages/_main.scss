@@ -785,6 +785,9 @@ body  ::-webkit-scrollbar-track {
         font-weight: 400;
         font-size: 16px;
         font-family: Raleway,sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
 
         &:hover {
@@ -939,6 +942,8 @@ body  ::-webkit-scrollbar-track {
 .new-footer-container{
   font-family: Raleway,sans-serif !important;
   background-color: #e7e7e7;
+  position: relative;
+  z-index: 99;
 
 
   .footer-title{
