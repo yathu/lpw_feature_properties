@@ -10,7 +10,7 @@ $(document).ready(() => {
     $('.copyUrl').on("click",function () {
         navigator.clipboard.writeText(window.location.href);
     });
-
+ 
     document.querySelector('.nativeShare')
         .addEventListener('click', event => {
             if (navigator.share) {
@@ -59,11 +59,11 @@ $(document).ready(() => {
         onkeyup: false,
 
         highlight: function (element) {
-            jQuery(element).closest('.form-control').addClass('is-invalid');
+            // jQuery(element).closest('.form-control').addClass('is-invalid');
         },
         unhighlight: function (element) {
-            jQuery(element).closest('.form-control').removeClass('is-invalid');
-            jQuery(element).closest('.form-control').addClass('is-valid');
+            // jQuery(element).closest('.form-control').removeClass('is-invalid');
+            // jQuery(element).closest('.form-control').addClass('is-valid');
         },
 
         errorElement: 'div',
@@ -80,19 +80,30 @@ $(document).ready(() => {
 
     var form = $("#loanForm");
     form.validate({
-        errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
         rules: {
-            testSelect: {
-                required: true
+            purpose:{
+                required: true,
             },
-            confirm: {
-                equalTo: "#password"
+            fullname:{
+                required: true,
+            },
+            living_place:{
+                required: true,
+            },
+            loanPhone: {
+                required: true,
+                number: true,
+            },
+            loanEmail:{
+                required: true,
             },
         }
     });
     form.children("div").steps({
         headerTag: "h3",
         bodyTag: "section",
+        titleTemplate : '<span class="number">#index#</span>',
         transitionEffect: "slideLeft",
         onStepChanging: function (event, currentIndex, newIndex)
         {
@@ -106,9 +117,18 @@ $(document).ready(() => {
         },
         onFinished: function (event, currentIndex)
         {
-            alert("Submitted!");
+            //submit the form
+            // alert("Submitted!");
+            $("#loanPopup .modal-content").addClass('success-content');
         }
     });
+
+    const loanModal = document.getElementById('loanPopup');
+    loanModal.addEventListener('hidden.bs.modal', event => {
+        $("#loanPopup .modal-content").removeClass('success-content');
+    })
+
+    //$("#loanPopup .modal-content").addClass('success-content');
 
     // $('#contactNum').on("click", function () {
     //     // console.log(1);
@@ -455,76 +475,76 @@ $(document).ready(() => {
 
 
     //property rate chart
-
-    var ctx = document.getElementById('propertyRateChart').getContext('2d');
-
-    var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
-    gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
-
-    var buyData = {
-        labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
-        data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
-    };
-
-    var rentData = {
-        labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
-        data: [850, 1120, 750, 1050, 1320, 1220, 1390, 1560]
-    };
-
-    var myChart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: buyData.labels,
-            datasets: [
-                {
-                    label: "Price range",
-                    data: buyData.data,
-                    tension: 0.3,
-                    fill: true,
-                    // backgroundColor: 'rgb(255, 99, 132)',
-                    backgroundColor: gradient,
-                    borderColor: '#ECA743',
-                },
-            ],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-        }
-    });
-
-
-    $('input[name=chartType]').change(function () {
-        var value = $('input[name=chartType]:checked').val();
-
-        var data = buyData;
-
-        if (value == 'rent') {
-            data = rentData;
-        }
-
-        // myChart.data.datasets = data.data;
-        // myChart.data.labels = data.labels;
-
-
-        myChart.data.labels = data.labels;
-
-        myChart.data.datasets.pop();
-        myChart.data.datasets.push({
-            label: "Price range",
-            data: data.data,
-            tension: 0.3,
-            fill: true,
-            backgroundColor: gradient,
-            borderColor: '#ECA743',
-        });
-
-
-        myChart.update();
-
-    });
-
+    //
+    // var ctx = document.getElementById('propertyRateChart').getContext('2d');
+    //
+    // var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+    //
+    // var buyData = {
+    //     labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+    //     data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
+    // };
+    //
+    // var rentData = {
+    //     labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
+    //     data: [850, 1120, 750, 1050, 1320, 1220, 1390, 1560]
+    // };
+    //
+    // var myChart = new Chart(ctx, {
+    //     type: "line",
+    //     data: {
+    //         labels: buyData.labels,
+    //         datasets: [
+    //             {
+    //                 label: "Price range",
+    //                 data: buyData.data,
+    //                 tension: 0.3,
+    //                 fill: true,
+    //                 // backgroundColor: 'rgb(255, 99, 132)',
+    //                 backgroundColor: gradient,
+    //                 borderColor: '#ECA743',
+    //             },
+    //         ],
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         maintainAspectRatio: false,
+    //     }
+    // });
+    //
+    //
+    // $('input[name=chartType]').change(function () {
+    //     var value = $('input[name=chartType]:checked').val();
+    //
+    //     var data = buyData;
+    //
+    //     if (value == 'rent') {
+    //         data = rentData;
+    //     }
+    //
+    //     // myChart.data.datasets = data.data;
+    //     // myChart.data.labels = data.labels;
+    //
+    //
+    //     myChart.data.labels = data.labels;
+    //
+    //     myChart.data.datasets.pop();
+    //     myChart.data.datasets.push({
+    //         label: "Price range",
+    //         data: data.data,
+    //         tension: 0.3,
+    //         fill: true,
+    //         backgroundColor: gradient,
+    //         borderColor: '#ECA743',
+    //     });
+    //
+    //
+    //     myChart.update();
+    //
+    // });
+    //
 
     // var swiper = new Swiper(".brochure-swiper", {
     //     // slidesPerView: 3,
@@ -576,15 +596,25 @@ $(document).ready(() => {
     var myModalEl = document.querySelector('#zoomModal')
     myModalEl.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
-        let img_path = $(button).data("img");
+        let img_path = '';
 
-        const checked = $(button).parent().find('.floor-view-switch').prop('checked');
+//        console.log(event.relatedTarget);
 
-        // console.log(checked);
+        const checked = $(button).closest('.image-container').find('.floor-img').each((i,obj)=>{
 
-        if (checked) {
-            img_path = $(button).data("3d-img");
-        }
+            var isHide = $(obj).hasClass('d-none');
+
+            if(!isHide){
+                img_path = $(obj).attr('src');
+            }
+            console.log("isHide==>",isHide);
+        });
+
+//         console.log("checked==>",checked);
+//
+//        if (checked) {
+//            img_path = $(button).data("3d-img");
+//        }
 
         // console.log(img_path);
 

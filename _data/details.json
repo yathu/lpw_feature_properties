@@ -12,7 +12,6 @@
     {"name": "Enquiry","link": "Enquiry"},
     {"name": "Finance","link": "Finance"},
     {"name": "Nearby","link": "Nearby"},
-    {"name": "Rates","link": "Rates"},
     {"name": "Special Notes","link": "Special_Notes"}
   ]
 }
