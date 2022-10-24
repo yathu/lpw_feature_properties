@@ -1382,7 +1382,7 @@
     }
 
 
-    #teamMore {
+    #teamMore, .fa-caret-down {
       display: none;
     }
 
@@ -1396,11 +1396,11 @@
         height: 100%;
         align-items: end;
 
-        #teamMore {
+        #teamMore, .fa-caret-down {
           display: inline-block;
         }
 
-        #teamLess {
+        #teamLess, .fa-caret-up {
           display: none;
         }
       }
