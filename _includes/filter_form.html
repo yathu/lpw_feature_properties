@@ -10,7 +10,7 @@
                         <option value="1">Colombo 1</option>
                         <option value="2">Colombo 2</option>
                     </select>
-                    <label for="possesionYear">Location</label>
+                    <label for="city">Location</label>
                 </div>
             </div>
 
@@ -198,7 +198,7 @@
     <!-- Modal -->
     <div class="modal fade more-filter-modal" id="exampleModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
-            <form>
+            <div>
 
                 <div class="modal-content">
 
@@ -405,7 +405,7 @@
                     </div>
                 </div>
 
-            </form>
+            </div>
 
         </div>
 
@@ -428,7 +428,7 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="possesionYear">Location</label>
+                        <label for="cityMobile">Location</label>
                         <select id="cityMobile" class="form-control selectpicker" data-live-search="true"
                                 title="City, Area" multiple>
                             <option value="1">Colombo 1</option>
@@ -467,7 +467,7 @@
                         <div class="mobile-possession">
                             {% for i in (1..4) %}
                             <div class="check-box">
-                                <input type="radio" class="btn-check" name="possessionInputMobile" id="{{i}}mobPoss" autocomplete="off">
+                                <input type="radio" class="btn-check" name="possessionInputMobile" id="{{i}}mobPoss" value="{{i}}" autocomplete="off">
                                 <label class="btn btn-outline-secondary" for="{{i}}mobPoss">
                                     {{i}} yr
                                 </label>
@@ -476,7 +476,7 @@
 
 
                             <div class="check-box">
-                                <select id="possessionPlus" class="form-control selectpicker"
+                                <select id="possessionPlus" class="form-control selectpicker possessionPlus"
                                         title="5+ Yr">
                                     <option value="5">5Yr</option>
                                     <option value="6">6Yr</option>

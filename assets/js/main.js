@@ -76,6 +76,24 @@ $(document).ready(function () {
     $('#bedroom_mobile').selectpicker();
     $('#possession_mobile').selectpicker();
 
+
+    $('#possessionPlus').selectpicker();
+    $('input[type=radio][name=possessionInputMobile]').change(function() {
+        console.log(this.value);
+        $('#possessionPlus').selectpicker('deselectAll');
+        $('#possessionPlus').selectpicker('val', '');
+
+        $('.possessionPlus').find("button.dropdown-toggle").removeClass('btn-custom-primary');
+        $('.possessionPlus').find("button.dropdown-toggle").addClass('btn-light');
+    });
+
+    $("#possessionPlus").change(function(){
+        $('input[name="possessionInputMobile"]').prop('checked', false);
+        $('.possessionPlus').find("button.dropdown-toggle").addClass('btn-custom-primary');
+        $('.possessionPlus').find("button.dropdown-toggle").removeClass('btn-light');
+    });
+
+
     var myModal = new bootstrap.Modal(document.getElementById('mobModal'));
 
     // myModal.show();
