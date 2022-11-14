@@ -64,9 +64,9 @@ $(document).ready(function () {
         // console.log("currentScroll==>",currentScroll);
 
         if ((currentScroll - lastScroll > 0) && currentScroll > 480) {
-            $('.filter-form-container').removeClass('sticky-top');
+            $('.filter-form-tag').removeClass('sticky-top');
         } else {
-            $('.filter-form-container').addClass('sticky-top');
+            $('.filter-form-tag').addClass('sticky-top');
         }
         lastScroll = currentScroll;
     });

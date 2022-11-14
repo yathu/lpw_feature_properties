@@ -1,4 +1,4 @@
-<form class="sticky-top">
+<form class="filter-form-tag sticky-top">
 
 
 <div class="filter-form-container row w-100 align-items-center mx-0">
@@ -10,8 +10,10 @@
                 <div class="form-floating">
                     <select id="city" class="form-control selectpicker" data-live-search="true" title="City, Area"
                             multiple>
-                        <option value="1">Colombo 1</option>
-                        <option value="2">Colombo 2</option>
+                        {% for i in (1..50) %}
+                        <option value="1">Colombo {{i}}</option>
+                        {% endfor %}
+
                     </select>
                     <label for="city">Location</label>
                 </div>

@@ -2405,7 +2405,7 @@
         object-fit: cover;
 
         @media (max-width: 575.98px) {
-          min-height: 400px;
+          //min-height: 400px;
         }
       }
     }
@@ -2489,6 +2489,7 @@
       right: 0;
       top: 0;
       bottom: 0;
+      background-size: cover;
     }
   }
 }
