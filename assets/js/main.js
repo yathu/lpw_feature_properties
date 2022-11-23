@@ -12,6 +12,11 @@ $(document).ready(function () {
         setTimeout(()=> phoneNoModal.show(),0);
     });
 
+    $("#callbackModal").on('shown.bs.modal', function (event) {
+        var property = $(event.relatedTarget).data("prperty")
+        console.log("property==>",property);
+    });
+
     var input = document.querySelector("#phoneNo");
     window.intlTelInput(input, {
         initialCountry: "lk",
@@ -278,19 +283,102 @@ $(document).ready(function () {
 
     $('#totalMinPrice').on('change', function () {
         $('#budgetStart').html(this.value);
+
+        disableMaxPrice(this.value);
     });
+
+    function disableMaxPrice(value) {
+        const minValue = parseInt(value);
+
+        console.log("minValue==>",minValue);
+
+        $("#totalMaxPrice > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue < minValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
 
     $('#totalMaxPrice').on('change', function () {
         $('#budgetEnd').html(this.value);
+        disableMinPrice(this.value);
     });
+
+    function disableMinPrice(value) {
+        const maxValue = parseInt(value);
+
+        console.log("maxValue==>",maxValue);
+
+        $("#totalMinPrice > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue > maxValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
 
     $('#sqftMinPrice').on('change', function () {
         $('#budgetStart').html(this.value);
+
+        disableSqftMaxPrice(this.value);
     });
+
+    function disableSqftMaxPrice(value) {
+        const minValue = parseInt(value);
+
+        console.log("minSqftValue==>",minValue);
+
+        $("#sqftMaxPrice > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue < minValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
+
 
     $('#sqftMaxPrice').on('change', function () {
         $('#budgetEnd').html(this.value);
+        disableSqftMinPrice(this.value);
     });
+
+    function disableSqftMinPrice(value) {
+        const maxValue = parseInt(value);
+
+        console.log("sqftmaxValue==>",maxValue);
+
+        $("#sqftMinPrice > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue > maxValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
 
     $('input[name="budgetType"]').on('change', function () {
         // var value = $(this).val();
@@ -303,7 +391,109 @@ $(document).ready(function () {
         $('#budgetStart').html('0');
         $('#budgetEnd').html('Any');
 
+        disableMaxPrice(0);
+        disableMinPrice(100)
+
+        disableSqftMinPrice(100000);
+        disableSqftMaxPrice(0);
+
     });
+
+    $('#totalMinPriceMobile').on('change', function () {
+        disableMaxPriceMobile(this.value);
+    });
+
+    function disableMaxPriceMobile(value) {
+        const minValue = parseInt(value);
+
+        console.log("minValue==>",minValue);
+
+        $("#totalMaxPriceMobile > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue < minValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
+
+    $('#totalMaxPriceMobile').on('change', function () {
+        disableMinPriceMobile(this.value);
+    });
+
+    function disableMinPriceMobile(value) {
+        const maxValue = parseInt(value);
+
+        console.log("maxValue==>",maxValue);
+
+        $("#totalMinPriceMobile > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue > maxValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
+
+
+
+    $('#sqftMinPriceMobile').on('change', function () {
+        disableSqftMaxPriceMobile(this.value);
+    });
+
+    function disableSqftMaxPriceMobile(value) {
+        const minValue = parseInt(value);
+
+        console.log("minSqftValuemob==>",minValue);
+
+        $("#sqftMaxPriceMobile > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue < minValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
+
+
+    $('#sqftMaxPriceMobile').on('change', function () {
+        disableSqftMinPriceMobile(this.value);
+    });
+
+    function disableSqftMinPriceMobile(value) {
+        const maxValue = parseInt(value);
+
+        console.log("sqftmaxValue==>",maxValue);
+
+        $("#sqftMinPriceMobile > option").each(function() {
+            if(this.value == "any") return;
+
+            const optionValue = parseInt(this.value);
+
+            if(optionValue > maxValue){
+                $(this).attr("disabled", true);
+            }else {
+                $(this).attr("disabled", false);
+            }
+        });
+
+    }
+
 
     $('input[name="budgetTypeMobile"]').on('change', function () {
         var value = $(this).val();
@@ -321,6 +511,13 @@ $(document).ready(function () {
             $('#totalSqftMobile').hide();
             $('#totalBudgetMobile').show();
         }
+
+        disableMaxPriceMobile(0);
+        disableMinPriceMobile(100);
+
+        disableSqftMaxPriceMobile(0);
+        disableSqftMinPriceMobile(100000);
+
     });
 
     // $('input[name="budgetType"]:checked').val();

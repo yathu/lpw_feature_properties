@@ -22,12 +22,14 @@
 
       @media (max-width: 767.98px) {
         max-height: 200px;
+        min-height: 100%;
       }
 
       @media (max-width: 575.98px) {
         border-bottom-left-radius: 0px;
         border-top-right-radius: 4px;
         max-height: 160px;
+        min-height: 100%;
       }
     }
 
@@ -35,6 +37,7 @@
       @media (min-width: 768px) {
         height: 270px;
         max-height: 270px;
+        min-height: 100%;
       }
     }
 
@@ -157,6 +160,10 @@
       line-height: 20px;
       margin-bottom: 0;
 
+      @media (min-width: 768px) {
+        width: auto;
+      }
+
       @media (max-width: 575.98px) {
         font-size: 12px;
       }
@@ -170,12 +177,30 @@
           font-weight: normal;
           padding: 5px;
           @media (max-width: 575.98px) {
-            padding: 4px;
+            padding: 3px;
+          }
+
+          @media (min-width: 576px) {
+            padding: 5px 10px;
           }
         }
         td:nth-child(4),td:nth-child(5){
           text-align: right;
         }
+
+        th,td:nth-child(2),td:nth-child(3){
+          width: 60px;
+
+          @media (max-width: 575.98px) {
+            width: 34px;
+          }
+
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            width: 58px;
+          }
+
+        }
+
       }
     }
 

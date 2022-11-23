@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Oval</title>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="lpw-featured-development-landing-page-2.0" transform="translate(-1120.000000, -1013.000000)" fill="#30D158">
-            <circle id="Oval" cx="1147" cy="1040" r="27"></circle>
-        </g>
-    </g>
-</svg>
+<svg width="54" height="54" xmlns="http://www.w3.org/2000/svg"><circle cx="1147" cy="1040" r="27" transform="translate(-1120 -1013)" fill="#30D158" fill-rule="evenodd"/></svg>
