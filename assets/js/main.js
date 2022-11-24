@@ -526,40 +526,45 @@ $(document).ready(function () {
     $("#areaSqftRange").slider({
         range: true,
         min: 0,
-        max: 5000,
-        // step:10,
-        values: [0, 5000],
+        max: 6000,
+        step:250,
+        values: [0, 6000],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             appendSqftSliderFirstVal(ui.values[0]);
             appendSqftSliderLastVal(ui.values[1]);
+
+            $('#areaSqftRangeValues').val(ui.values[0] + "," + ui.values[1]);
         }
     });
 
     var sqftVal = $('#areaSqftRange').slider("values")[0];
     var sqftVal2 = $('#areaSqftRange').slider("values")[1];
-    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : (sqftVal2 == 5000 ? 'any' : sqftVal2);
+    var SqftFinalVal2 = sqftVal2 == 0 ? 0 : (sqftVal2 == 6000 ? 'any' : sqftVal2);
+
+    $('#areaSqftRangeValues').val(sqftVal + "," + sqftVal2);
+
 
     $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + sqftVal + "</span>");
     $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + SqftFinalVal2 + "</span>");
 
 
     function appendSqftSliderFirstVal(value) {
-        var finalVal = value == 0 ? 0 : (value == 5000 ? 'any' : value);
+        var finalVal = value == 0 ? 0 : (value == 6000 ? 'any' : value);
         $("#areaSqftRange span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastVal(value) {
-        var finalVal = value == 0 ? 0 : (value == 5000 ? 'any' : value);
+        var finalVal = value == 0 ? 0 : (value == 6000 ? 'any' : value);
         $("#areaSqftRange span.ui-slider-handle:last span").html(finalVal);
     }
 
 
     //budget slider labels
-    for (let i = 0; i <= 20; i++) {
+    for (let i = 0; i <= 23; i++) {
         var isOdd = (i % 2) !== 0;
         // console.log(isOdd);
-        $("#areaSqftLabels").append("<span class='slider-label' style='left: calc(" + (i * 5) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i == 20 ? "Any" : i * 250)) + "</span>");
+        $("#areaSqftLabels").append("<span class='slider-label' style='left: calc(" + (i * 4.16) + "% - 13px)'><i>|</i>" + (isOdd ? "" : (i == 23 ? "Any" : i * 250)) + "</span>");
     }
 
 
@@ -567,33 +572,39 @@ $(document).ready(function () {
     $("#areaSqftRangeMobile").slider({
         range: true,
         min: 0,
-        max: 5000,
+        max: 6000,
         // step:10,
-        values: [0, 5000],
+        values: [0, 6000],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             appendSqftSliderFirstValMobile(ui.values[0]);
             appendSqftSliderLastValMobile(ui.values[1]);
+
+            $('#areaSqftRangeValuesMobile').val(ui.values[0] + "," + ui.values[1]);
+
         }
     });
 
     var sqftValMobile = $('#areaSqftRangeMobile').slider("values")[0];
     var sqftVal2Mobile = $('#areaSqftRangeMobile').slider("values")[1];
-    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : (sqftVal2Mobile == 5000 ? 'any' : sqftVal2Mobile);
+    var SqftFinalVal2Mobile = sqftVal2Mobile == 0 ? 0 : (sqftVal2Mobile == 6000 ? 'any' : sqftVal2Mobile);
 
     $("#areaSqftRangeMobile span.ui-slider-handle:first").append("<span>" + sqftValMobile + "</span>");
     $("#areaSqftRangeMobile span.ui-slider-handle:last").append("<span>" + SqftFinalVal2Mobile + "</span>");
 
+    $('#areaSqftRangeValuesMobile').val(sqftValMobile + "," + sqftVal2Mobile);
+
+
 
     function appendSqftSliderFirstValMobile(value) {
-        var finalVal = value == 0 ? 0 : (value == 5000 ? 'any' : value);
+        var finalVal = value == 0 ? 0 : (value == 6000 ? 'any' : value);
         $("#areaSqftRangeMobile span.ui-slider-handle:first span").html(finalVal);
     }
 
     function appendSqftSliderLastValMobile(value) {
         // console.log("value==>", value);
 
-        var finalVal = value == 0 ? 0 : (value == 5000 ? 'any' : value);
+        var finalVal = value == 0 ? 0 : (value == 6000 ? 'any' : value);
         $("#areaSqftRangeMobile span.ui-slider-handle:last span").html(finalVal);
     }
 
@@ -658,10 +669,15 @@ $(document).ready(function () {
 
     //reset desktop modal
     $('#desktopModalBtnReset').on("click", function () {
-        $('#areaSqftRange').slider('option', {values: [0, 5000]});
+        $('#areaSqftRange').slider('option', {values: [0, 6000]});
 
         appendSqftSliderFirstVal(0);
-        appendSqftSliderLastVal(5000);
+        appendSqftSliderLastVal(6000);
+
+        setTimeout(()=>{
+            $('#areaSqftRangeValues').val(0 + "," + 6000);
+        },500);
+
         // $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + 0 + "</span>");
         // $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + 500 + "</span>");
     });
@@ -671,10 +687,16 @@ $(document).ready(function () {
         $('.selectpicker').selectpicker('deselectAll');
         $('.selectpicker').selectpicker('val', '');
 
-        $('#areaSqftRangeMobile').slider('option', {values: [0, 5000]});
+        $('#areaSqftRangeMobile').slider('option', {values: [0, 6000]});
 
         appendSqftSliderFirstValMobile(0);
-        appendSqftSliderLastValMobile(5000);
+        appendSqftSliderLastValMobile(6000);
+        
+        setTimeout(()=>{
+            $('#areaSqftRangeValuesMobile').val(0 + "," + 6000);
+        },500);
+
+
     });
 
 
@@ -727,5 +749,17 @@ $(document).ready(function () {
     // var arr = [5, 19, 8, 1];
     //
     // solution(arr);
+
+    //if translation select changes navigate
+
+    $("#translation_mobile").on("change",function () {
+
+    });
+
+    $('#translation_mobile').change(function() {
+        var url = $(this).val();
+        console.log(url);
+        window.location.href = url;
+    });
 
 });
