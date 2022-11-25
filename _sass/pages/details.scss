@@ -500,7 +500,8 @@
         font-size: 16px;
         color: #CDD2D9;
         line-height: 30px;
-        padding: 4px 0;
+        padding: 4px 0 4px 25px;
+        position: relative;
 
         @media (max-width: 767.98px) {
           font-size: 13px;
@@ -511,6 +512,17 @@
           color: #FFC107;
           margin-right: 7px;
           font-size: 19px
+        }
+
+        &:before{
+          content: "\f005";
+          position: absolute;
+          font: normal normal normal 14px/1 FontAwesome;
+          color: #FFC107;
+          font-size: 19px;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }
@@ -683,6 +695,8 @@
       .accordion-body {
         border-left: 1px solid #E4E8F6;
         border-right: 1px solid #E4E8F6;
+        border-bottom: 1px solid #E4E8F6;
+
         padding: 0;
 
         > .row {
