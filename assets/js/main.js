@@ -752,10 +752,6 @@ $(document).ready(function () {
 
     //if translation select changes navigate
 
-    $("#translation_mobile").on("change",function () {
-
-    });
-
     $('#translation_mobile').change(function() {
         var url = $(this).val();
         console.log(url);
