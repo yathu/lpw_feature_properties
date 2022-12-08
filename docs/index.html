@@ -82,9 +82,9 @@
         <div class="col">
 
             <div class="form-group">
-                <select class="form-control border-0 bg-transparent">
-                    <option>EN</option>
-                    <option>SL</option>
+                <select id="translation_mobile" class="form-control border-0 bg-transparent">
+                    <option value="http://localhost:3000/1">EN</option>
+                    <option value="http://localhost:3000/2">SL</option>
                 </select>
             </div>
 
@@ -1027,7 +1027,7 @@
 
             <div class="col">
                 <div class="form-floating">
-                    <select id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms" multiple>
+                    <select name="bedroomSelect[]" id="bedroomSelect" class="form-control selectpicker" title="No of Bedrooms" multiple>
                         <option>1 Bedroom</option>
                         <option>2 Bedrooms</option>
                         <option>3 Bedrooms</option>
@@ -1254,7 +1254,7 @@
 
         <div class="col-auto">
 
-            <button id="btnResetDesktop" type="reset" class="btn btn-reset">
+            <button id="btnResetDesktop" type="submit" class="btn btn-reset">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 Search
             </button>
@@ -1346,6 +1346,7 @@
                         </label>
 
                         <div class="slider-range-container">
+                            <input id="areaSqftRangeValues" style="visibility: hidden" type="text" />
                             <div class="slider-range" id="areaSqftRange">
                             </div>
                             <div id="areaSqftLabels" class="sliderLabels">
@@ -1863,6 +1864,7 @@
                         </label>
 
                         <div class="slider-range-container">
+                            <input type="text" id="areaSqftRangeValuesMobile" style="visibility: hidden">
                             <div class="slider-range" id="areaSqftRangeMobile">
                             </div>
                             <div id="areaSqftLabelsMobile" class="sliderLabels">

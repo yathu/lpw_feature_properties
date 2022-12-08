@@ -80,7 +80,7 @@ function copyToLive(){
 function watchTask() {
     watch(files.scssPath, scssTask);
     watch([files.allJsPath], jsTask);
-    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll, browserSyncReload));
+    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(browserSyncReload));
     watch(files.imgPath, imgTask);
     watch(files._site, copyToLive);
 }
@@ -108,7 +108,6 @@ function browserSyncReload(done) {
 
 
 exports.default = series(
-    jekyll,
     parallel(scssTask, jsTask, imgTask),
     browserSyncServe,
     watchTask
