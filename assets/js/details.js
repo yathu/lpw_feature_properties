@@ -1296,12 +1296,36 @@ function createMarker(place) {
 
     });
 
-    markers.push(marker);
+    marker.addListener('mouseover', function () {
+        try {
+            infowindow.setContent(place.name || "");
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+
+        }catch (e) {
+            console.log("create Info error ==>")
+        }
+    });
+
 
     google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name || "");
-        infowindow.open(map);
+        try {
+            infowindow.setContent(place.name || "");
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+
+        }catch (e) {
+            console.log("create Info error ==>")
+        }
     });
+
+    markers.push(marker);
 }
 
 function clearOverlays() {
