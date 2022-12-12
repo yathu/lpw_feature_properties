@@ -758,4 +758,30 @@ $(document).ready(function () {
         window.location.href = url;
     });
 
+    $("#callSuc").on("click",function (){
+        callAlert("success","successfully sent data :)", '');
+    });
+
+    $("#callerror").on("click",function (){
+        callAlert("error","Error sent data :)", '');
+    });
+
+    function callAlert(type, message, CloseModal){
+
+        if(type === "success"){
+            $("#commonAlertModal .success").removeClass('d-none');
+            $("#commonAlertModal .error").addClass('d-none');
+        }else {
+            $("#commonAlertModal .success").addClass('d-none');
+            $("#commonAlertModal .error").removeClass('d-none');
+        }
+
+        $("#commonAlertModal p").html(message);
+
+        if(CloseModal){
+            $('#'+CloseModal).modal('hide');
+        }
+
+    }
+
 });

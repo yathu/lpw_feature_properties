@@ -1032,5 +1032,36 @@ body  ::-webkit-scrollbar-track {
   z-index: 999999;
 }
 
+#commonAlertModal{
+  img{
+    width: 40px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: 13px;
+    color: #3d3d3dee;
+    font-family: 'Rubik-Regular';
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h5{
+    margin-bottom: 15px;
+  }
+  .success{
+    h5{
+      color: #018e37;
+    }
+  }
+
+  .error{
+    h5{
+      color: #ff4501;
+    }
+  }
+}
+
+
+
 
 
