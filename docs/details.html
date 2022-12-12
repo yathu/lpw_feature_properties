@@ -3606,35 +3606,32 @@
                                 <a id="showEnquireNum" class="btn btn-link ps-2 lh-1">Click to view Telephone Number</a>
                             </div>
                         </div>
-
-                        <div id="contactCard" class="card mb-5 col-md-12 col-xl-11 d-none mt-5">
-                            <div class="card-header">
-                                <h3 class="title-content-2 mb-0">
-                                    Request a call back
-                                </h3>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <p class="mb-3">
-                                        Please enter your phone number to request the advertiser to call you back
-                                    </p>
-                                    <div class="row gx-3 mx-0">
-                                        <div class="col ps-0">
-                                            <input type="text" class="form-control form-control-sm ps-5 position-relative" id="requestCallPhone"
-                                                   placeholder="071234567" required>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="submit" class="btn btn-custom-primary">Send</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
 
+                <div id="contactCard" class="card mb-5 d-none mt-5">
+                    <div class="card-header">
+                        <h3 class="title-content-2 mb-0">
+                            Request a call back
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <p class="mb-3">
+                                Please enter your phone number to request the advertiser to call you back
+                            </p>
+                            <div class="row gx-3 mx-0">
+                                <div class="col ps-0">
+                                    <input type="text" class="form-control form-control-sm ps-5 position-relative" id="requestCallPhone"
+                                           placeholder="071234567" required>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-custom-primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
                 <form class="row g-3">
                     <div class="col-md-6">
@@ -5510,6 +5507,44 @@
 
 <div id="loading">
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+<!--<button id="callSuc" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#commonAlertModal">-->
+<!--success-->
+<!--</button>-->
+
+<!--<button id="callerror" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#commonAlertModal">-->
+<!--error-->
+<!--</button>-->
+
+<div class="modal fade" id="commonAlertModal" tabindex="-1" aria-labelledby="commonAlertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+        <div class="success d-flex align-items-center justify-content-center flex-column">
+          <img src="./assets/img/correct.png" alt="success message img">
+          <h5>Success</h5>
+          <p>
+            Lorem ipsum dolor sit amet, amet stet eligendi quo ex, noluisse inimicus salutandi an vel, ea justo saperet qui. Eam at torquatos democritum, ut laudem voluptua nec.
+          </p>
+          <button type="button" class="btn btn-custom-primary px-4" data-bs-dismiss="modal" aria-label="Close">Continue</button>
+        </div>
+
+        <div class="error d-flex align-items-center justify-content-center flex-column d-none">
+          <img src="./assets/img/error.png" alt="success message img">
+          <h5>Error</h5>
+          <p>
+            Lorem ipsum dolor sit amet, amet stet eligendi quo ex, noluisse inimicus salutandi an vel, ea justo saperet qui. Eam at torquatos democritum, ut laudem voluptua nec.
+          </p>
+          <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
