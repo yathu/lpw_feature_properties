@@ -768,6 +768,8 @@ $(document).ready(function () {
 
     function callAlert(type, message, CloseModal){
 
+        $('#commonAlertModal').modal('show'); //show the modal first
+
         if(type === "success"){
             $("#commonAlertModal .success").removeClass('d-none');
             $("#commonAlertModal .error").addClass('d-none');
