@@ -933,7 +933,7 @@
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
 
       li {
         width: 33%;
@@ -2520,6 +2520,10 @@
     font-size: 8px;
     opacity: 1;
     border: 1px solid #9b9b9b;
+  }
+
+  .modal-dialog {
+    margin: 15px;
   }
 }
 

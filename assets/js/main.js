@@ -382,14 +382,16 @@ $(document).ready(function () {
 
     $('input[name="budgetType"]').on('change', function () {
         // var value = $(this).val();
-        $("#totalMinPrice").val('0');
-        $("#totalMaxPrice").val('any');
+        // $("#totalMinPrice").val('0');
+        // $("#totalMaxPrice").val('any');
+        //
+        // $("#sqftMinPrice").val('0');
+        // $("#sqftMaxPrice").val('any');
 
-        $("#sqftMinPrice").val('0');
-        $("#sqftMaxPrice").val('any');
+        // $('#budgetStart').html('0');
+        // $('#budgetEnd').html('Any');
 
-        $('#budgetStart').html('0');
-        $('#budgetEnd').html('Any');
+        //TODO: update active item values to table
 
         disableMaxPrice(0);
         disableMinPrice(100)
