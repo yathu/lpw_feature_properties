@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     var phoneNoModal = new bootstrap.Modal(document.getElementById('phoneNoModal'),)
@@ -6,21 +5,21 @@ $(document).ready(function () {
 
     // phoneNoModal.show();
 
-    $('#btnShowPhone').on("click",function () {
+    $('#btnShowPhone').on("click", function () {
 
         $('#callbackBtnClose').trigger("click");
-        setTimeout(()=> phoneNoModal.show(),0);
+        setTimeout(() => phoneNoModal.show(), 0);
     });
 
     $("#callbackModal").on('shown.bs.modal', function (event) {
         var property = $(event.relatedTarget).data("prperty")
-        console.log("property==>",property);
+        console.log("property==>", property);
     });
 
     var input = document.querySelector("#phoneNo");
     window.intlTelInput(input, {
         initialCountry: "lk",
-        allowDropdown:true,
+        allowDropdown: true,
     });
 
     $(window).scroll(function (event) {
@@ -28,9 +27,9 @@ $(document).ready(function () {
         var width = $(window).width();
 
         // console.log(width,scroll);
-        if(scroll > 60 && width <768){
+        if (scroll > 60 && width < 768) {
             $('.map-enabled>.filter-form-container').addClass('top-0');
-        }else {
+        } else {
             $('.map-enabled>.filter-form-container').removeClass('top-0');
         }
         // if window < 768
@@ -47,18 +46,18 @@ $(document).ready(function () {
     //     console.log('click');
     // });
 
-    $('#totalTab').on('click',function (){
+    $('#totalTab').on('click', function () {
         $('#totalTabContent').show();
         $('#sqftTabContent').hide();
     });
-    $('#sqftTab').on('click',function (){
+    $('#sqftTab').on('click', function () {
         $('#totalTabContent').hide();
         $('#sqftTabContent').show();
     });
 
-    $('.filter-form-container .controls>div.col').on("click",function (e) {
-       // var id = $(this).find('button').data("id");
-       // console.log("id==>",id);
+    $('.filter-form-container .controls>div.col').on("click", function (e) {
+        // var id = $(this).find('button').data("id");
+        // console.log("id==>",id);
     });
 
 
@@ -83,7 +82,7 @@ $(document).ready(function () {
 
 
     $('#possessionPlus').selectpicker();
-    $('input[type=radio][name=possessionInputMobile]').change(function() {
+    $('input[type=radio][name=possessionInputMobile]').change(function () {
         console.log(this.value);
         $('#possessionPlus').selectpicker('deselectAll');
         $('#possessionPlus').selectpicker('val', '');
@@ -92,7 +91,7 @@ $(document).ready(function () {
         $('.possessionPlus').find("button.dropdown-toggle").addClass('btn-light');
     });
 
-    $("#possessionPlus").change(function(){
+    $("#possessionPlus").change(function () {
         $('input[name="possessionInputMobile"]').prop('checked', false);
         $('.possessionPlus').find("button.dropdown-toggle").addClass('btn-custom-primary');
         $('.possessionPlus').find("button.dropdown-toggle").removeClass('btn-light');
@@ -290,16 +289,16 @@ $(document).ready(function () {
     function disableMaxPrice(value) {
         const minValue = parseInt(value);
 
-        console.log("minValue==>",minValue);
+        console.log("minValue==>", minValue);
 
-        $("#totalMaxPrice > option").each(function() {
-            if(this.value == "any") return;
+        $("#totalMaxPrice > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue < minValue){
+            if (optionValue < minValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -314,16 +313,16 @@ $(document).ready(function () {
     function disableMinPrice(value) {
         const maxValue = parseInt(value);
 
-        console.log("maxValue==>",maxValue);
+        console.log("maxValue==>", maxValue);
 
-        $("#totalMinPrice > option").each(function() {
-            if(this.value == "any") return;
+        $("#totalMinPrice > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue > maxValue){
+            if (optionValue > maxValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -339,16 +338,16 @@ $(document).ready(function () {
     function disableSqftMaxPrice(value) {
         const minValue = parseInt(value);
 
-        console.log("minSqftValue==>",minValue);
+        console.log("minSqftValue==>", minValue);
 
-        $("#sqftMaxPrice > option").each(function() {
-            if(this.value == "any") return;
+        $("#sqftMaxPrice > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue < minValue){
+            if (optionValue < minValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -364,16 +363,16 @@ $(document).ready(function () {
     function disableSqftMinPrice(value) {
         const maxValue = parseInt(value);
 
-        console.log("sqftmaxValue==>",maxValue);
+        console.log("sqftmaxValue==>", maxValue);
 
-        $("#sqftMinPrice > option").each(function() {
-            if(this.value == "any") return;
+        $("#sqftMinPrice > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue > maxValue){
+            if (optionValue > maxValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -381,23 +380,40 @@ $(document).ready(function () {
     }
 
     $('input[name="budgetType"]').on('change', function () {
-        // var value = $(this).val();
+        var value = $(this).val();
+
         // $("#totalMinPrice").val('0');
         // $("#totalMaxPrice").val('any');
         //
         // $("#sqftMinPrice").val('0');
         // $("#sqftMaxPrice").val('any');
-
+        //
         // $('#budgetStart').html('0');
         // $('#budgetEnd').html('Any');
 
-        //TODO: update active item values to table
 
-        disableMaxPrice(0);
-        disableMinPrice(100)
+        if (value === 'sqft') {
 
-        disableSqftMinPrice(100000);
-        disableSqftMaxPrice(0);
+            var min = $("#sqftMinPrice").val();
+            var max = $("#sqftMaxPrice").val();
+
+            $('#budgetStart').html(min);
+            $('#budgetEnd').html(max);
+
+        } else {
+
+            var min = $("#totalMinPrice").val();
+            var max = $("#totalMaxPrice").val();
+
+            $('#budgetStart').html(min);
+            $('#budgetEnd').html(max);
+        }
+
+        // disableMaxPrice(0);
+        // disableMinPrice(100);
+        //
+        // disableSqftMinPrice(100000);
+        // disableSqftMaxPrice(0);
 
     });
 
@@ -408,16 +424,16 @@ $(document).ready(function () {
     function disableMaxPriceMobile(value) {
         const minValue = parseInt(value);
 
-        console.log("minValue==>",minValue);
+        console.log("minValue==>", minValue);
 
-        $("#totalMaxPriceMobile > option").each(function() {
-            if(this.value == "any") return;
+        $("#totalMaxPriceMobile > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue < minValue){
+            if (optionValue < minValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -431,22 +447,21 @@ $(document).ready(function () {
     function disableMinPriceMobile(value) {
         const maxValue = parseInt(value);
 
-        console.log("maxValue==>",maxValue);
+        console.log("maxValue==>", maxValue);
 
-        $("#totalMinPriceMobile > option").each(function() {
-            if(this.value == "any") return;
+        $("#totalMinPriceMobile > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue > maxValue){
+            if (optionValue > maxValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
 
     }
-
 
 
     $('#sqftMinPriceMobile').on('change', function () {
@@ -456,16 +471,16 @@ $(document).ready(function () {
     function disableSqftMaxPriceMobile(value) {
         const minValue = parseInt(value);
 
-        console.log("minSqftValuemob==>",minValue);
+        console.log("minSqftValuemob==>", minValue);
 
-        $("#sqftMaxPriceMobile > option").each(function() {
-            if(this.value == "any") return;
+        $("#sqftMaxPriceMobile > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue < minValue){
+            if (optionValue < minValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -480,16 +495,16 @@ $(document).ready(function () {
     function disableSqftMinPriceMobile(value) {
         const maxValue = parseInt(value);
 
-        console.log("sqftmaxValue==>",maxValue);
+        console.log("sqftmaxValue==>", maxValue);
 
-        $("#sqftMinPriceMobile > option").each(function() {
-            if(this.value == "any") return;
+        $("#sqftMinPriceMobile > option").each(function () {
+            if (this.value == "any") return;
 
             const optionValue = parseInt(this.value);
 
-            if(optionValue > maxValue){
+            if (optionValue > maxValue) {
                 $(this).attr("disabled", true);
-            }else {
+            } else {
                 $(this).attr("disabled", false);
             }
         });
@@ -506,10 +521,10 @@ $(document).ready(function () {
         $("#sqftMinPriceMobile").val('0');
         $("#sqftMaxPriceMobile").val('any');
 
-        if (value == 'sqft'){
+        if (value == 'sqft') {
             $('#totalSqftMobile').show();
             $('#totalBudgetMobile').hide();
-        }else {
+        } else {
             $('#totalSqftMobile').hide();
             $('#totalBudgetMobile').show();
         }
@@ -529,7 +544,7 @@ $(document).ready(function () {
         range: true,
         min: 0,
         max: 6000,
-        step:250,
+        step: 250,
         values: [0, 6000],
         slide: function (event, ui) {
             // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
@@ -595,7 +610,6 @@ $(document).ready(function () {
     $("#areaSqftRangeMobile span.ui-slider-handle:last").append("<span>" + SqftFinalVal2Mobile + "</span>");
 
     $('#areaSqftRangeValuesMobile').val(sqftValMobile + "," + sqftVal2Mobile);
-
 
 
     function appendSqftSliderFirstValMobile(value) {
@@ -676,9 +690,9 @@ $(document).ready(function () {
         appendSqftSliderFirstVal(0);
         appendSqftSliderLastVal(6000);
 
-        setTimeout(()=>{
+        setTimeout(() => {
             $('#areaSqftRangeValues').val(0 + "," + 6000);
-        },500);
+        }, 500);
 
         // $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + 0 + "</span>");
         // $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + 500 + "</span>");
@@ -693,10 +707,10 @@ $(document).ready(function () {
 
         appendSqftSliderFirstValMobile(0);
         appendSqftSliderLastValMobile(6000);
-        
-        setTimeout(()=>{
+
+        setTimeout(() => {
             $('#areaSqftRangeValuesMobile').val(0 + "," + 6000);
-        },500);
+        }, 500);
 
 
     });
@@ -754,36 +768,36 @@ $(document).ready(function () {
 
     //if translation select changes navigate
 
-    $('#translation_mobile').change(function() {
+    $('#translation_mobile').change(function () {
         var url = $(this).val();
         console.log(url);
         window.location.href = url;
     });
 
-    $("#callSuc").on("click",function (){
-        callAlert("success","successfully sent data :)", '');
+    $("#callSuc").on("click", function () {
+        callAlert("success", "successfully sent data :)", '');
     });
 
-    $("#callerror").on("click",function (){
-        callAlert("error","Error sent data :)", '');
+    $("#callerror").on("click", function () {
+        callAlert("error", "Error sent data :)", '');
     });
 
-    function callAlert(type, message, CloseModal){
+    function callAlert(type, message, CloseModal) {
 
         $('#commonAlertModal').modal('show'); //show the modal first
 
-        if(type === "success"){
+        if (type === "success") {
             $("#commonAlertModal .success").removeClass('d-none');
             $("#commonAlertModal .error").addClass('d-none');
-        }else {
+        } else {
             $("#commonAlertModal .success").addClass('d-none');
             $("#commonAlertModal .error").removeClass('d-none');
         }
 
         $("#commonAlertModal p").html(message);
 
-        if(CloseModal){
-            $('#'+CloseModal).modal('hide');
+        if (CloseModal) {
+            $('#' + CloseModal).modal('hide');
         }
 
     }

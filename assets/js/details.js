@@ -1,5 +1,10 @@
 $(document).ready(() => {
 
+    $('.spec-grid').masonry({
+        // options
+        itemSelector: '.spec-grid-item',
+    });
+
     $('.menuContainer .swiper-slide').on("click",function (e) {
         e.preventDefault();
         var id = $(this).attr('href');

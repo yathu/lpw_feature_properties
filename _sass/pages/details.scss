@@ -64,8 +64,14 @@
         height: 34% !important;
         overflow: hidden;
         img {
-          height: 100% !important;
+          height: -webkit-fill-available !important;
           max-height: 100% !important;
+        }
+      }
+
+      .btns{
+        img{
+          height: auto !important;
         }
       }
     }
@@ -934,12 +940,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      list-style-type: none;
+      padding-left: 10px;
 
       li {
         width: 33%;
         margin-bottom: 5px;
         position: relative;
-
+        padding-left: 20px;
 
         @media (max-width: 575.98px) {
           width: calc(50% - 6px);
@@ -948,6 +956,14 @@
         @media (min-width: 576px) and (max-width: 767.98px) {
           width: 32%;
           font-size: 14px;
+        }
+
+        &:before{
+          content: "\f111";
+          font-family: FontAwesome;
+          font-size: 9px;
+          position: absolute;
+          margin-left: -20px;
         }
 
       }
@@ -962,6 +978,12 @@
     background: #DDF4F3;
     border-radius: 4px;
     padding: 25px 20px 15px 20px;
+
+    .spec-grid{
+      .spec-grid-item{
+        padding-bottom: 15px;
+      }
+    }
 
     .title {
       display: flex;
