@@ -877,6 +877,7 @@
           width: 25px;
           height: 25px;
           margin-right: 15px;
+          margin-top: 3px;
         }
 
         @media (max-width: 575.98px) {
@@ -2435,10 +2436,11 @@
       overflow: hidden;
       max-height: 100%;
       max-width: 100%;
+      min-height: 300px;
 
       img {
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
 
         @media (max-width: 575.98px) {
           //min-height: 400px;
@@ -3156,6 +3158,9 @@
         list-style-type: none;
         padding-top: 10px;
         padding-bottom: 10px;
+        height: 51px;
+        display: flex;
+        align-items: center;
 
         a {
           display: flex;

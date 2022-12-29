@@ -539,6 +539,29 @@ $(document).ready(function () {
 
     // $('input[name="budgetType"]:checked').val();
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const area_min = urlParams.get('area_min');
+    const area_max = urlParams.get('area_max');
+
+    function setAreaValues() {
+
+        let area_value = "";
+
+        if(area_min){
+            area_value = area_min;
+        }
+
+        if(area_max){
+            area_value = area_value + "," + area_max;
+        }
+
+        $("#areaSqftRangeValues").val(area_value);
+        $("#areaSqftRangeValuesMobile").val(area_value);
+
+    }
+
 
     $("#areaSqftRange").slider({
         range: true,
@@ -560,10 +583,18 @@ $(document).ready(function () {
     var SqftFinalVal2 = sqftVal2 == 0 ? 0 : (sqftVal2 == 6000 ? 'any' : sqftVal2);
 
     $('#areaSqftRangeValues').val(sqftVal + "," + sqftVal2);
+    setAreaValues();
+
+    if(area_min && area_max){
+        $('#areaSqftRange').slider('option',{values: [area_min, area_max]});
+        $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + area_min + "</span>");
+        $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + area_max + "</span>");
+    }else {
+        $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + sqftVal + "</span>");
+        $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + SqftFinalVal2 + "</span>");
+    }
 
 
-    $("#areaSqftRange span.ui-slider-handle:first").append("<span>" + sqftVal + "</span>");
-    $("#areaSqftRange span.ui-slider-handle:last").append("<span>" + SqftFinalVal2 + "</span>");
 
 
     function appendSqftSliderFirstVal(value) {

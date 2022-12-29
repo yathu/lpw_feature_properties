@@ -5,17 +5,17 @@ $(document).ready(() => {
         itemSelector: '.spec-grid-item',
     });
 
-    $('.menuContainer .swiper-slide').on("click",function (e) {
+    $('.menuContainer .swiper-slide').on("click", function (e) {
         e.preventDefault();
         var id = $(this).attr('href');
         var some_element = $(id);
         $('html,body').animate({scrollTop: some_element.offset().top - 80});
     });
 
-    $('.copyUrl').on("click",function () {
+    $('.copyUrl').on("click", function () {
         navigator.clipboard.writeText(window.location.href);
     });
- 
+
     document.querySelector('.nativeShare')
         .addEventListener('click', event => {
             if (navigator.share) {
@@ -87,20 +87,20 @@ $(document).ready(() => {
     form.validate({
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
         rules: {
-            purpose:{
+            purpose: {
                 required: true,
             },
-            fullname:{
+            fullname: {
                 required: true,
             },
-            living_place:{
+            living_place: {
                 required: true,
             },
             loanPhone: {
                 required: true,
                 number: true,
             },
-            loanEmail:{
+            loanEmail: {
                 required: true,
             },
         }
@@ -108,20 +108,17 @@ $(document).ready(() => {
     form.children("div").steps({
         headerTag: "h3",
         bodyTag: "section",
-        titleTemplate : '<span class="number">#index#</span>',
+        titleTemplate: '<span class="number">#index#</span>',
         transitionEffect: "slideLeft",
-        onStepChanging: function (event, currentIndex, newIndex)
-        {
+        onStepChanging: function (event, currentIndex, newIndex) {
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
-        onFinishing: function (event, currentIndex)
-        {
+        onFinishing: function (event, currentIndex) {
             form.validate().settings.ignore = ":disabled";
             return form.valid();
         },
-        onFinished: function (event, currentIndex)
-        {
+        onFinished: function (event, currentIndex) {
             //submit the form
             // alert("Submitted!");
             $("#loanPopup .modal-content").addClass('success-content');
@@ -189,11 +186,11 @@ $(document).ready(() => {
         $('.features-container').toggleClass('show-less');
     });
 
-    $('#videos-nav-tab button').on("click",function (index,el) {
+    $('#videos-nav-tab button').on("click", function (index, el) {
         var thisBtn = $(this)[0];
 
-        $('#videos-nav-tab button').each((index,el)=>{
-            if(el !== thisBtn){
+        $('#videos-nav-tab button').each((index, el) => {
+            if (el !== thisBtn) {
                 $(el).removeClass('active');
             }
         })
@@ -589,9 +586,9 @@ $(document).ready(() => {
         console.log(event.relatedTarget);
         const element = event.relatedTarget;
 
-        var index = $(element).data("index") || 0 ;
+        var index = $(element).data("index") || 0;
 
-        console.log("index",index);
+        console.log("index", index);
 
         bannerSwiper.slideTo(index);
 
@@ -605,14 +602,14 @@ $(document).ready(() => {
 
 //        console.log(event.relatedTarget);
 
-        const checked = $(button).closest('.image-container').find('.floor-img').each((i,obj)=>{
+        const checked = $(button).closest('.image-container').find('.floor-img').each((i, obj) => {
 
             var isHide = $(obj).hasClass('d-none');
 
-            if(!isHide){
+            if (!isHide) {
                 img_path = $(obj).attr('src');
             }
-            console.log("isHide==>",isHide);
+            console.log("isHide==>", isHide);
         });
 
 //         console.log("checked==>",checked);
@@ -723,7 +720,7 @@ $(document).ready(() => {
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
         const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
-        console.log("scrollPos==>",scrollPos);
+        console.log("scrollPos==>", scrollPos);
 
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             // var totalSlides =  detailsMenuSwiper.slides.length - 2;
@@ -761,7 +758,7 @@ $(document).ready(() => {
                 // console.log("nextIndex==>",nextIndex);
 
                 if (nextIndex != detailsMenuSwiper.activeIndex) {
-                    console.log(refElement,scrollPos,elementPosition,elementHeight);
+                    console.log(refElement, scrollPos, elementPosition, elementHeight);
 
                     // console.log(nextIndex);
 
@@ -805,14 +802,14 @@ $(document).ready(() => {
         }
     });
 
-    $("#propertyValue").on("change",function (){
-       var val =  $(this).val().replace(/,/g,"");
+    $("#propertyValue").on("change", function () {
+        var val = $(this).val().replace(/,/g, "");
         var propertyVal = $("#propertyValueSlider").slider("value");
 
-        if(val >= 1000000 && val <= 100000000){
-            $("#propertyValueSlider").slider('value',val);
+        if (val >= 1000000 && val <= 100000000) {
+            $("#propertyValueSlider").slider('value', val);
             $("#propertyValue").val(formatter.format(val).replace("LKR", ""));
-        }else {
+        } else {
             $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
         }
         loanCalculator();
@@ -823,7 +820,7 @@ $(document).ready(() => {
         range: false,
         min: 20,
         max: 100,
-        step:5,
+        step: 5,
         slide: function (event, ui) {
             $("#downPayPer").text(ui.value);
 
@@ -837,21 +834,21 @@ $(document).ready(() => {
         }
     });
 
-    $("#downPayment").on("change",function (){
-        var val =  $(this).val().replace(/,/g,"");
-        var propertyValue = $("#propertyValue").val().replace(/,/g,"");
+    $("#downPayment").on("change", function () {
+        var val = $(this).val().replace(/,/g, "");
+        var propertyValue = $("#propertyValue").val().replace(/,/g, "");
 
-        var newDownPercentage = ((val/propertyValue) * 100).toFixed(2);
+        var newDownPercentage = ((val / propertyValue) * 100).toFixed(2);
 
         var OlddownPercentage = $("#downPaymentSlider").slider("value");
 
 
-        if(newDownPercentage >= 20 && newDownPercentage <= 100){
+        if (newDownPercentage >= 20 && newDownPercentage <= 100) {
             console.log("new");
-            $("#downPaymentSlider").slider('value',newDownPercentage);
+            $("#downPaymentSlider").slider('value', newDownPercentage);
             $("#downPayPer").text(newDownPercentage);
 
-        }else {
+        } else {
             console.log("new old");
             var downPay = (propertyValue / 100) * OlddownPercentage;
             $("#downPayment").val(downPay);
@@ -874,14 +871,14 @@ $(document).ready(() => {
         }
     });
 
-    $("#interestRate").on("change",function (){
-        var val =  $(this).val().replace('%', '');
+    $("#interestRate").on("change", function () {
+        var val = $(this).val().replace('%', '');
         var rate = $("#interestRateSlider").slider("value");
 
-        if(val >= 5 && val <= 30){
-            $("#interestRateSlider").slider('value',val);
-        }else {
-            $("#interestRate").val(rate+ "%");
+        if (val >= 5 && val <= 30) {
+            $("#interestRateSlider").slider('value', val);
+        } else {
+            $("#interestRate").val(rate + "%");
         }
         loanCalculator();
     });
@@ -897,13 +894,13 @@ $(document).ready(() => {
         }
     });
 
-    $("#loanPeriod").on("change",function (){
-        var val =  $(this).val().replace(" years",'');
+    $("#loanPeriod").on("change", function () {
+        var val = $(this).val().replace(" years", '');
         var rate = $("#loanPeriodSlider").slider("value");
 
-        if(val >= 1 && val <= 30){
-            $("#loanPeriodSlider").slider('value',val);
-        }else {
+        if (val >= 1 && val <= 30) {
+            $("#loanPeriodSlider").slider('value', val);
+        } else {
             $("#loanPeriod").val(rate);
         }
         loanCalculator();
@@ -911,7 +908,7 @@ $(document).ready(() => {
 
     init();
 
-    function init(){
+    function init() {
         var propertyVal = $("#propertyValueSlider").slider("value");
         var downPaymentPersentage = $("#downPaymentSlider").slider("value");
         var interestRate = $("#interestRateSlider").slider("value");
@@ -922,9 +919,8 @@ $(document).ready(() => {
         $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
         $("#downPayment").val(formatter.format(downPayment).replace("LKR", ""));
         $("#interestRate").val(interestRate + '%');
-        $("#loanPeriod").val(loanPeriod+ " years");
+        $("#loanPeriod").val(loanPeriod + " years");
     }
-
 
 
     //background-image: linear-gradient(180deg, #B7D464 0%, #009833 100%);
@@ -941,7 +937,7 @@ $(document).ready(() => {
 
     try {
 
-    }catch (e) {
+    } catch (e) {
         console.log(e);
     }
 
@@ -967,7 +963,7 @@ $(document).ready(() => {
         type: 'doughnut',
         data: data,
         options: {
-            plugins:{
+            plugins: {
                 htmlLegend: {
                     containerID: 'legendContainer',
                 },
@@ -984,40 +980,40 @@ $(document).ready(() => {
     );
 
 
-    const  loanCalculator = ()=>{
+    const loanCalculator = () => {
 
         setTimeout(() => {
             const propertyValue = $('#propertyValueSlider').slider('values', 0);
-            console.log("propertyValue calc==>",propertyValue);
+            console.log("propertyValue calc==>", propertyValue);
 
             const interestRate = $('#interestRateSlider').slider('values', 0);
             const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
             const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
 
-            console.log("downPaymentPersantage calc==>",downPaymentPersantage);
+            console.log("downPaymentPersantage calc==>", downPaymentPersantage);
 
 
-            if(!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage){
+            if (!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage) {
                 return;
             }
 
-            const interestRateCalculated = interestRate/100/12;
+            const interestRateCalculated = interestRate / 100 / 12;
 
             // console.log("interestRateCalculated==>",interestRateCalculated);
 
-            const loanAmount = (propertyValue/100)*(100 - downPaymentPersantage);
+            const loanAmount = (propertyValue / 100) * (100 - downPaymentPersantage);
 
-            let downPaymentVal = (propertyValue/100) * downPaymentPersantage;
+            let downPaymentVal = (propertyValue / 100) * downPaymentPersantage;
 
             // console.log("price==>",loanAmount);
 
             const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
-            const part2 = (((1 + interestRateCalculated) ** numberOfMonths) -1);
+            const part2 = (((1 + interestRateCalculated) ** numberOfMonths) - 1);
 
             // console.log("part1==>",part1);
             // console.log("part2==>",part2);
 
-            const Finalpersentage = (part1/part2);
+            const Finalpersentage = (part1 / part2);
 
 
             const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
@@ -1035,21 +1031,20 @@ $(document).ready(() => {
 
             $('#downPayment').val(downPaymentVal);
 
-            var downpayment = $('#downPayment').val().replace(/,/g,"");
-            updateChart(downpayment,loanAmount);
+            var downpayment = $('#downPayment').val().replace(/,/g, "");
+            updateChart(downpayment, loanAmount);
 
-        } , 500);
+        }, 500);
 
     }
 
     loanCalculator();
 
-    function updateChart(monthlyPayment,totalPayment) {
+    function updateChart(monthlyPayment, totalPayment) {
         loanChart.data.datasets[0].data[0] = totalPayment;
         loanChart.data.datasets[0].data[1] = monthlyPayment;
         loanChart.update();
     }
-
 
 
     //pdf broucher
@@ -1200,7 +1195,7 @@ function initMap() {
     var locations = $('#map').data("location").split(",");
 
 
-    sydney = new google.maps.LatLng(parseFloat(locations[0]),parseFloat(locations[1]));
+    sydney = new google.maps.LatLng(parseFloat(locations[0]), parseFloat(locations[1]));
 
 
     infowindow = new google.maps.InfoWindow();
@@ -1284,12 +1279,11 @@ function createMarker(place) {
             return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
         } else if (place.types[0] == "park") {
             return "assets/img/details/mapview/locationiconspin/Parks-02.png";
-        }else if (place.types[0] == "gas_station") {
+        } else if (place.types[0] == "gas_station") {
             return "assets/img/details/mapview/locationiconspin/Fuel-station-02.png";
-        }else if (place.types[0] == "police") {
+        } else if (place.types[0] == "police") {
             return "assets/img/details/mapview/locationiconspin/Police-station-03.png";
-        }
-        else return ''
+        } else return ''
     }
 
     console.log("get==>", getIcon());
@@ -1310,7 +1304,7 @@ function createMarker(place) {
                 shouldFocus: false,
             });
 
-        }catch (e) {
+        } catch (e) {
             console.log("create Info error ==>")
         }
     });
@@ -1325,7 +1319,7 @@ function createMarker(place) {
                 shouldFocus: false,
             });
 
-        }catch (e) {
+        } catch (e) {
             console.log("create Info error ==>")
         }
     });
