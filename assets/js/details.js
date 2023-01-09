@@ -664,8 +664,13 @@ $(document).ready(() => {
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
 
-    var WhatsAppModal = new bootstrap.Modal(document.getElementById('DetailsWhatsAppModal'),)
+    var WhatsAppModal = new bootstrap.Modal(document.getElementById('DetailsWhatsAppModal'),);
 
+
+    var dePhoneModal = document.getElementById('DetailsPhoneNoModal');
+    dePhoneModal.addEventListener('hidden.bs.modal', event => {
+        $('body').css('overflow','auto');
+    });
 
     $('#btnShowPhone').on("click", function () {
 
