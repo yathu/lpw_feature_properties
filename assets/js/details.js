@@ -105,6 +105,61 @@ $(document).ready(() => {
             },
         }
     });
+
+    var detailsPopupForm = $("#details_popup_form");
+    detailsPopupForm.validate({
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            initName: {
+                required: true,
+            },
+            initPhoneNo: {
+                required: true,
+                number: true,
+            },
+            initEmail1: {
+                required: true,
+                email: true
+            },
+            termsCheck: {
+                required: true,
+            },
+        },
+        highlight: function(element) {
+            $(element).removeClass('is-valid').addClass('is-invalid');
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        },
+    });
+
+    var enqForm = $("#enqForm");
+    enqForm.validate({
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            inqName: {
+                required: true,
+            },
+            inqContact: {
+                required: true,
+                number: true,
+            },
+            inqEmail: {
+                required: true,
+                email: true
+            },
+            enqTerms: {
+                required: true,
+            },
+        },
+        highlight: function(element) {
+            $(element).removeClass('is-valid').addClass('is-invalid');
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        },
+    });
+
     form.children("div").steps({
         headerTag: "h3",
         bodyTag: "section",

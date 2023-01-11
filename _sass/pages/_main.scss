@@ -645,7 +645,7 @@ body  ::-webkit-scrollbar-track {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    z-index: 99999;
+    z-index: 999999;
     //d9d9d9
 
     .list-wrapper {
@@ -1064,6 +1064,24 @@ body  ::-webkit-scrollbar-track {
 .iti-mobile .intl-tel-input.iti-container {
   z-index: 999999 !important;
 }
+
+.mt-n1 {
+  margin-top: -0.25rem !important;
+}
+
+.mt-n2 {
+  margin-top: -0.5rem !important;
+}
+.mt-n3 {
+  margin-top: -0.75rem !important;
+}
+
+//.intl-tel-input:has( #initPhoneNo:invalid) {
+//  ~ .invalid-feedback {
+//    display: block;
+//  }
+//}
+
 
 
 
