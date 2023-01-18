@@ -727,6 +727,18 @@ $(document).ready(() => {
         $('body').css('overflow','auto');
     });
 
+
+    // var commonAlertModal = document.getElementById('commonAlertModal');
+    // commonAlertModal.addEventListener('hidden.bs.modal', event => {
+    //     $('body').removeClass('modal-open');
+    //     $('.modal-backdrop').remove();
+    //     $("body").removeAttr("style");
+    // });
+    //
+    // var myModalEl = document.getElementById('commonAlertModal',{});
+    // var modal = bootstrap.Modal.getInstance(myModalEl)
+    // modal.hide();
+
     $('#btnShowPhone').on("click", function () {
 
         $('#detailsCallbackBtnClose').trigger("click");
