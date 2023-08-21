@@ -1,4 +1,4 @@
-var { src, dest, watch, series, parallel } = require('gulp');
+var {src, dest, watch, series, parallel} = require('gulp');
 
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
@@ -37,7 +37,7 @@ function scssTask() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(dest('_site/assets/css/')) // put final CSS in dist folder
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({stream: true}))
 }
 
 // JS task: concatenates and uglifies JS files to script.js
@@ -50,7 +50,7 @@ function jsTask() {
     ])
         .pipe(uglify())
         .pipe(dest('_site/assets/js/'))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({stream: true}))
 }
 
 //img task
@@ -59,20 +59,20 @@ function imgTask() {
         .pipe(newer("_site/assets/img/"))
         .pipe(imagemin())
         .pipe(dest("_site/assets/img/"))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({stream: true}))
 }
 
 // Jekyll
 function jekyll() {
-    return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
+    return cp.spawn("bundle", ["exec", "jekyll", "build"], {stdio: "inherit"});
 }
 
 // Jekyll
 function jekyllStart() {
-    return cp.spawn("bundle", ["exec", "jekyll", "serve"], { stdio: "inherit" });
+    return cp.spawn("bundle", ["exec", "jekyll", "serve"], {stdio: "inherit"});
 }
 
-function copyToLive(){
+function copyToLive() {
     return src(files._site)
         .pipe(dest('docs'))
 }
@@ -80,7 +80,7 @@ function copyToLive(){
 function watchTask() {
     watch(files.scssPath, scssTask);
     watch([files.allJsPath], jsTask);
-    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(browserSyncReload));
+    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll,browserSyncReload));
     watch(files.imgPath, imgTask);
     watch(files._site, copyToLive);
 }
@@ -108,6 +108,7 @@ function browserSyncReload(done) {
 
 
 exports.default = series(
+    jekyll,
     parallel(scssTask, jsTask, imgTask),
     browserSyncServe,
     watchTask
