@@ -1,1 +1,1428 @@
-$(document).ready(()=>{$(".spec-grid").masonry({itemSelector:".spec-grid-item"}),$(".menuContainer .swiper-slide").on("click",function(e){e.preventDefault();e=$(this).attr("href"),e=$(e);$("html,body").animate({scrollTop:e.offset().top-80})}),$(".copyUrl").on("click",function(){navigator.clipboard.writeText(window.location.href)}),document.querySelector(".nativeShare").addEventListener("click",e=>{var n;navigator.share?(n=$("#propertyTitle").text(),navigator.share({title:n,url:window.location.href}).then(()=>{console.log("Thanks for sharing!")}).catch(e=>{console.log("Error while using Web share API:"),console.log(e)})):console.log("browser not supported...")});var l=new Intl.NumberFormat("en-US",{style:"currency",currency:"LKR",currencyDisplay:"symbol",minimumFractionDigits:0}),t=($(".dropdown-toggle").dropdown(),$(".banner-img-container #love").on("click",function(){$(this).toggleClass("active")}),$("#contactNum").on("click",function(){$("#showEnquireNum").trigger("click")}),jQuery.validator.setDefaults({onfocusout:function(e){this.element(e)},onkeyup:!1,highlight:function(e){},unhighlight:function(e){},errorElement:"div",errorClass:"invalid-feedback",errorPlacement:function(e,n){n.parent(".input-group-prepend").length?$(n).siblings(".invalid-feedback").append(e):e.insertAfter(n)}}),$("#loanForm"));t.validate({rules:{purpose:{required:!0},fullname:{required:!0},living_place:{required:!0},loanPhone:{required:!0,number:!0},loanEmail:{required:!0}}}),$("#details_popup_form").validate({rules:{initName:{required:!0},initPhoneNo:{required:!0,number:!0},initEmail1:{required:!0,email:!0},termsCheck:{required:!0}},highlight:function(e){$(e).removeClass("is-valid").addClass("is-invalid")},unhighlight:function(e){$(e).removeClass("is-invalid").addClass("is-valid")}}),$("#enqForm").validate({rules:{inqName:{required:!0},inqContact:{required:!0,number:!0},inqEmail:{required:!0,email:!0},enqTerms:{required:!0}},highlight:function(e){$(e).removeClass("is-valid").addClass("is-invalid")},unhighlight:function(e){$(e).removeClass("is-invalid").addClass("is-valid")}}),t.children("div").steps({headerTag:"h3",bodyTag:"section",titleTemplate:'<span class="number">#index#</span>',transitionEffect:"slideLeft",onStepChanging:function(e,n,i){return t.validate().settings.ignore=":disabled,:hidden",t.valid()},onFinishing:function(e,n){return t.validate().settings.ignore=":disabled",t.valid()},onFinished:function(e,n){$("#loanPopup .modal-content").addClass("success-content")}});document.getElementById("loanPopup").addEventListener("hidden.bs.modal",e=>{$("#loanPopup .modal-content").removeClass("success-content")}),$(".floorViewOption").change(function(){var e=$(this).attr("name"),e=$("input[name="+e+"]:checked").val();console.log(e),"3d"==e?($(this).closest(".image-container").find(".img-2d").addClass("d-none"),$(this).closest(".image-container").find(".img-3d").removeClass("d-none")):($(this).closest(".image-container").find(".img-2d").removeClass("d-none"),$(this).closest(".image-container").find(".img-3d").addClass("d-none"))});var r=new Swiper(".detailsMenuSwiper",{slidesPerView:"auto",spaceBetween:20}),n=($(".showAbout").on("click",()=>{$(".about-container>div").toggleClass("hide-text")}),$(".showFeatures").on("click",()=>{$(".features-container").toggleClass("show-less")}),$("#videos-nav-tab button").on("click",function(e,n){var i=$(this)[0];$("#videos-nav-tab button").each((e,n)=>{n!==i&&$(n).removeClass("active")})}),new Swiper(".payment-plan-swiper",{loop:!1,navigation:{nextEl:".payment-next",prevEl:".payment-prev"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:3.5},576:{slidesPerView:4.5},768:{slidesPerView:5},992:{slidesPerView:5}}}),new Swiper(".land-payment-plan-swiper",{loop:!0,navigation:{nextEl:".land-payment1-next",prevEl:".land-payment1-prev"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:3.5},576:{slidesPerView:4.5},768:{slidesPerView:5},992:{slidesPerView:5}}}),new Swiper(".land-payment-plan-swiper2",{loop:!0,navigation:{nextEl:".land-payment2-next",prevEl:".land-payment2-prev"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:3.5},576:{slidesPerView:4.5},768:{slidesPerView:5},992:{slidesPerView:5}}}),new Swiper(".land-payment-plan-swiper3",{loop:!0,navigation:{nextEl:".land-payment3-next",prevEl:".land-payment3-prev"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:3.5},576:{slidesPerView:4.5},768:{slidesPerView:5},992:{slidesPerView:5}}}),new Swiper(".videos-menu-swiper",{loop:!1,navigation:{nextEl:".video-prev",prevEl:".video-next"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:3.5},576:{slidesPerView:4.5},768:{slidesPerView:5},992:{slidesPerView:5}}}),new Swiper(".loan-swiper",{loop:!1,navigation:{nextEl:".loan-next",prevEl:".loan-prev"},slidesPerView:4,spaceBetween:10,breakpoints:{320:{slidesPerView:2.5},576:{slidesPerView:3.5},768:{slidesPerView:4.5},992:{slidesPerView:4.5}}}),new Swiper(".videos-menu-swiper",{loop:!1,slidesPerView:"auto",spaceBetween:10,navigation:{nextEl:".video-next",prevEl:".video-prev"}}),new Swiper(".other-project-swiper",{loop:!1,navigation:{nextEl:".other-project-next",prevEl:".other-project-prev"},slidesPerView:3,spaceBetween:10,breakpoints:{320:{slidesPerView:1.5},576:{slidesPerView:2.5},768:{slidesPerView:2.5},992:{slidesPerView:2.5},1200:{slidesPerView:3.5}}}),new Swiper(".mapview-swiper",{loop:!1,slidesPerView:4.5,navigation:{nextEl:".mapView-next",prevEl:".mapView-prev"},spaceBetween:10,breakpoints:{320:{slidesPerView:2.5},375:{slidesPerView:3.2},450:{slidesPerView:3.5},485:{slidesPerView:4.2},576:{slidesPerView:4.5},768:{slidesPerView:5.5},992:{slidesPerView:5.5},1200:{slidesPerView:6.5},1440:{slidesPerView:7.5}}}),new Swiper(".locality-swiper",{loop:!0,slidesPerView:"auto",navigation:{nextEl:".locality-next",prevEl:".locality-prev"},spaceBetween:15}),new Swiper(".land-highlight-swiper",{loop:!0,slidesPerView:"auto",navigation:{nextEl:".highlight-next",prevEl:".highlight-prev"},spaceBetween:15}),new Swiper(".banner-swiper",{loop:!1,navigation:{nextEl:".banner-next",prevEl:".banner-prev"},slidesPerView:1,spaceBetween:0,breakpoints:{320:{slidesPerView:1},768:{slidesPerView:1}}}));document.querySelector("#bannerModal").addEventListener("show.bs.modal",function(e){console.log(e.relatedTarget);e=e.relatedTarget,e=$(e).data("index")||0;console.log("index",e),n.slideTo(e)});document.querySelector("#zoomModal").addEventListener("show.bs.modal",function(e){var n=e.relatedTarget;let t="";$(n).closest(".image-container").find(".floor-img").each((e,n)=>{var i=$(n).hasClass("d-none");i||(t=$(n).attr("src")),console.log("isHide==>",i)});n=$(e.target).find("img");$(n).attr("src",t)});var e=document.querySelector("#detailContactPhoneNo"),e=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),document.querySelector("#requestCallPhone")),e=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),document.querySelector("#initPhoneNo")),e=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),document.querySelector("#contactNo")),e=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),document.querySelector("#inqContact")),e=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),document.querySelector("#bannercontactNo")),i=(window.intlTelInput(e,{initialCountry:"lk",allowDropdown:!0}),new bootstrap.Modal(document.getElementById("DetailsPhoneNoModal"))),a=new bootstrap.Modal(document.getElementById("detailsPopup")),o=new bootstrap.Modal(document.getElementById("DetailsWhatsAppModal")),s=(document.getElementById("DetailsPhoneNoModal").addEventListener("hidden.bs.modal",e=>{$("body").css("overflow","auto")}),$("#btnShowPhone").on("click",function(){$("#detailsCallbackBtnClose").trigger("click"),setTimeout(()=>i.show(),0)}),$("#showSpecification").on("click",function(){$("#specContent").toggleClass("show-less")}),$("#showTeam").on("click",function(){$("#teamShowMoreContent").toggleClass("show-less")}),$("#showEnquireNum").on("click",function(){$(".phone-info").removeClass("hide"),$("#contactCard").removeClass("d-none"),$(this).hide(),$(".show-box").addClass("hide-show-box")}),0);function d(e){var o=$(document).scrollTop();const l=Math.max(document.documentElement.clientHeight||0,window.innerHeight||0),s=Math.max(document.documentElement.clientWidth||0,window.innerWidth||0);console.log("scrollPos==>",o),$(window).scrollTop()+$(window).height()==$(document).height()&&($(".detailsMenuSwiper a:not(.swiper-slide-duplicate)").length,$(".detailsMenuSwiper a").each(function(e,n){$(n).removeClass("active")}),$(".detailsMenuSwiper a:last-child").addClass("active")),$(".detailsMenuSwiper a").each(function(){var e,n=$(this),i=$(n.attr("href")),t=i.height(),a=i.position().top;576<=s?a-=l/4:a-=120,a<=o&&o<a+t&&(e=n.attr("aria-label").trim().split("/")[0])!=r.activeIndex&&(console.log(i,o,a,t),r.slideTo(e-1),$("a").removeClass("active"),n.addClass("active"))}),0==o&&$(".detailsMenuSwiper a:first-child").addClass("active")}$(window).scroll(function(e){var n=$(this).scrollTop();s<n||null===localStorage.getItem("popupShowed")&&(a.show(),window.localStorage.setItem("popupShowed",!0)),s=n}),d(),$(document).on("scroll",d),$("#propertyValueSlider").slider({range:!1,min:1e6,max:1e8,step:5e5,slide:function(e,n){$("#propertyValue").val(l.format(n.value).replace("LKR","")),m()}}),$("#propertyValue").on("change",function(){var e=$(this).val().replace(/,/g,""),n=$("#propertyValueSlider").slider("value");1e6<=e&&e<=1e8?($("#propertyValueSlider").slider("value",e),$("#propertyValue").val(l.format(e).replace("LKR",""))):$("#propertyValue").val(l.format(n).replace("LKR","")),m()}),$("#downPaymentSlider").slider({range:!1,min:20,max:100,step:5,slide:function(e,n){$("#downPayPer").text(n.value);n=$("#propertyValueSlider").slider("values",0)/100*n.value;$("#downPayment").val(l.format(n).replace("LKR","")),m()}}),$("#downPayment").on("change",function(){var e=$(this).val().replace(/,/g,""),n=$("#propertyValue").val().replace(/,/g,""),e=(e/n*100).toFixed(2),i=$("#downPaymentSlider").slider("value");20<=e&&e<=100?(console.log("new"),$("#downPaymentSlider").slider("value",e),$("#downPayPer").text(e)):(console.log("new old"),e=n/100*i,$("#downPayment").val(e),$("#downPayPer").text(i)),m()}),$("#interestRateSlider").slider({range:!1,min:5,max:30,step:.5,slide:function(e,n){$("#interestRate").val(n.value+"%"),m()}}),$("#interestRate").on("change",function(){var e=$(this).val().replace("%",""),n=$("#interestRateSlider").slider("value");5<=e&&e<=30?$("#interestRateSlider").slider("value",e):$("#interestRate").val(n+"%"),m()}),$("#loanPeriodSlider").slider({range:!1,min:1,max:30,step:1,slide:function(e,n){$("#loanPeriod").val(n.value+" years"),m()}}),$("#loanPeriod").on("change",function(){var e=$(this).val().replace(" years",""),n=$("#loanPeriodSlider").slider("value");1<=e&&e<=30?$("#loanPeriodSlider").slider("value",e):$("#loanPeriod").val(n),m()}),e=$("#propertyValueSlider").slider("value"),c=$("#downPaymentSlider").slider("value"),p=$("#interestRateSlider").slider("value"),w=$("#loanPeriodSlider").slider("value"),c*=e/100,$("#propertyValue").val(l.format(e).replace("LKR","")),$("#downPayment").val(l.format(c).replace("LKR","")),$("#interestRate").val(p+"%"),$("#loanPeriod").val(w+" years");var e=document.getElementById("loanChart").getContext("2d"),c=e.createLinearGradient(0,0,0,400),p=(c.addColorStop(0,"#B7D464"),c.addColorStop(1,"#009833"),{labels:["Loan amount ","Down Payment"],datasets:[{label:"My First Dataset",data:[300,200],backgroundColor:[c,"#E8E8E8"],hoverOffset:4}]});const u=new Chart(e,{type:"doughnut",data:p,options:{plugins:{htmlLegend:{containerID:"legendContainer"},legend:{display:!1}}}}),m=()=>{setTimeout(()=>{var e,n,i=$("#propertyValueSlider").slider("values",0),t=(console.log("propertyValue calc==>",i),$("#interestRateSlider").slider("values",0)),a=12*$("#loanPeriodSlider").slider("values",0),o=$("#downPaymentSlider").slider("values",0);console.log("downPaymentPersantage calc==>",o),i&&t&&a&&o&&(n=t/100/12,e=i/100*(100-o),i=i/100*o,o=Math.ceil(e*(n*(1+n)**a/((1+n)**a-1))),n=Math.ceil(o*a),$("#monthlyPayment").text(l.format(o).replace("LKR","Rs")),$(".boldText").text(l.format(o).replace("LKR","Rs")),$("#LoanAmount").text(l.format(Math.ceil(e.toFixed(2))).replace("LKR","Rs")),$("#interestRateValue").text(t),$("#totalInterest").text(l.format(Math.ceil(n-e.toFixed(2))).replace("LKR","Rs")),$("#totalPayment").text(l.format(n).replace("LKR","Rs")),$("#downPayment").val(i),a=$("#downPayment").val().replace(/,/g,""),o=a,t=e,u.data.datasets[0].data[0]=t,u.data.datasets[0].data[1]=o,u.update())},500)};m();var w=window["pdfjs-dist/build/pdf"],g=(w.GlobalWorkerOptions.workerSrc="//mozilla.github.io/pdf.js/build/pdf.worker.js",null),v=1,h=!1,y=null,f=1,P=document.getElementById("the-canvas"),b=(document.getElementById("broucher-pdf-container"),P.getContext("2d"));function S(e){h=!0,g.getPage(e).then(function(e){var n=e.getViewport({scale:f}),i=document.getElementById("broucher-pdf-container").offsetWidth,i=(P.height=400,P.width=i-32,{canvasContext:b,viewport:n});e.render(i).promise.then(function(){h=!1,null!==y&&(S(y),y=null)})});var n=e/g.numPages*100+"%";$("#brochureProgressBar").width(n),$("#pageNumbers").html(e+" / "+g.numPages)}function V(e){h?y=e:S(e)}document.getElementById("brochurePrev").addEventListener("click",function(){v<=1||V(--v)}),document.getElementById("brochureNext").addEventListener("click",function(){v>=g.numPages||V(++v)}),w.getDocument("./assets/pdf/sample.pdf").promise.then(function(e){g=e,S(v)});$(".bottomFloat .openPopUP").on("click",function(){setTimeout(()=>i.show(),0)}),$(".bottomFloat .openPopWhatsApp").on("click",function(){setTimeout(()=>o.show(),0)})});let map,service,infowindow,sydney;function initMap(){var e=$("#map").data("location").split(","),e=(sydney=new google.maps.LatLng(parseFloat(e[0]),parseFloat(e[1])),infowindow=new google.maps.InfoWindow,map=new google.maps.Map(document.getElementById("map"),{center:sydney,zoom:15}),new google.maps.Marker({position:sydney,map:map}),{location:sydney,radius:"500",type:["bus_station"]});(service=new google.maps.places.PlacesService(map)).nearbySearch(e,callback)}function callback(e,n){if(n==google.maps.places.PlacesServiceStatus.OK)for(var i=0;i<e.length;i++)createMarker(e[i])}function changeMarkerPlaces(e){clearOverlays();e={location:sydney,radius:"500",type:[e]};(service=new google.maps.places.PlacesService(map)).nearbySearch(e,callback)}$(".mapview-swiper .swiper-slide").on("click",function(){changeMarkerPlaces($(this).data("place")),$(".mapview-swiper .swiper-slide").each(function(){$(this).removeClass("active")}),$(this).addClass("active")});let markers=[];function createMarker(e){if(e.geometry&&e.geometry.location){console.log(e);var n=()=>"bus_station"==e.types[0]?"assets/img/details/mapview/locationiconspin/Bus-stops-02.png":"bank"==e.types[0]?"assets/img/details/mapview/locationiconspin/Bank.png":"movie_theater"==e.types[0]?"assets/img/details/mapview/locationiconspin/Cinemas-02.png":e.types.includes("restaurant")?"assets/img/details/mapview/locationiconspin/Restaurant-02.png":"supermarket"==e.types[0]?"assets/img/details/mapview/locationiconspin/Shopping-02.png":"hospital"==e.types[0]?"assets/img/details/mapview/locationiconspin/Hospital-02.png":"shopping_mall"==e.types[0]?"assets/img/details/mapview/locationiconspin/Shopping-02.png":"park"==e.types[0]?"assets/img/details/mapview/locationiconspin/Parks-02.png":"gas_station"==e.types[0]?"assets/img/details/mapview/locationiconspin/Fuel-station-02.png":"police"==e.types[0]?"assets/img/details/mapview/locationiconspin/Police-station-03.png":"";console.log("get==>",n());const i=new google.maps.Marker({map:map,position:e.geometry.location,icon:n()});i.addListener("mouseover",function(){try{infowindow.setContent(e.name||""),infowindow.open({anchor:i,map:map,shouldFocus:!1})}catch(e){console.log("create Info error ==>")}}),google.maps.event.addListener(i,"click",()=>{try{infowindow.setContent(e.name||""),infowindow.open({anchor:i,map:map,shouldFocus:!1})}catch(e){console.log("create Info error ==>")}}),markers.push(i)}}function clearOverlays(){if(markers)for(i in markers)markers[i].setMap(null)}window.initMap=initMap;
+$(document).ready(() => {
+
+    $('.spec-grid').masonry({
+        // options
+        itemSelector: '.spec-grid-item',
+    });
+
+    $('.menuContainer .swiper-slide').on("click", function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        var some_element = $(id);
+        $('html,body').animate({scrollTop: some_element.offset().top - 80});
+    });
+
+    $('.copyUrl').on("click", function () {
+        navigator.clipboard.writeText(window.location.href);
+    });
+
+    document.querySelector('.nativeShare')
+        .addEventListener('click', event => {
+            if (navigator.share) {
+
+                var title = $('#propertyTitle').text();
+
+                navigator.share({
+                    title: title,
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(err => {
+                    console.log(
+                        "Error while using Web share API:");
+                    console.log(err);
+                });
+            } else {
+                console.log("browser not supported...");
+            }
+        })
+
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'LKR',
+        currencyDisplay: "symbol",
+        minimumFractionDigits: 0,
+        // These options are needed to round to whole numbers if that's what you want.
+        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    $('.banner-img-container #love').on("click", function () {
+        $(this).toggleClass('active');
+    });
+
+    $('#contactNum').on("click", function () {
+        $('#showEnquireNum').trigger('click');
+    });
+
+    jQuery.validator.setDefaults({
+        onfocusout: function (e) {
+            this.element(e);
+        },
+        onkeyup: false,
+
+        highlight: function (element) {
+            // jQuery(element).closest('.form-control').addClass('is-invalid');
+        },
+        unhighlight: function (element) {
+            // jQuery(element).closest('.form-control').removeClass('is-invalid');
+            // jQuery(element).closest('.form-control').addClass('is-valid');
+        },
+
+        errorElement: 'div',
+        errorClass: 'invalid-feedback',
+        errorPlacement: function (error, element) {
+            if (element.parent('.input-group-prepend').length) {
+                $(element).siblings(".invalid-feedback").append(error);
+                //error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+    });
+
+    var form = $("#loanForm");
+    form.validate({
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            purpose: {
+                required: true,
+            },
+            fullname: {
+                required: true,
+            },
+            living_place: {
+                required: true,
+            },
+            loanPhone: {
+                required: true,
+                number: true,
+            },
+            loanEmail: {
+                required: true,
+            },
+        }
+    });
+
+    var detailsPopupForm = $("#details_popup_form");
+    detailsPopupForm.validate({
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            initName: {
+                required: true,
+            },
+            initPhoneNo: {
+                required: true,
+                number: true,
+            },
+            initEmail1: {
+                required: true,
+                email: true
+            },
+            termsCheck: {
+                required: true,
+            },
+        },
+        highlight: function(element) {
+            $(element).removeClass('is-valid').addClass('is-invalid');
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        },
+    });
+
+    var enqForm = $("#enqForm");
+    enqForm.validate({
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            inqName: {
+                required: true,
+            },
+            inqContact: {
+                required: true,
+                number: true,
+            },
+            inqEmail: {
+                required: true,
+                email: true
+            },
+            enqTerms: {
+                required: true,
+            },
+        },
+        highlight: function(element) {
+            $(element).removeClass('is-valid').addClass('is-invalid');
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        },
+    });
+
+    form.children("div").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        titleTemplate: '<span class="number">#index#</span>',
+        transitionEffect: "slideLeft",
+        onStepChanging: function (event, currentIndex, newIndex) {
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function (event, currentIndex) {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function (event, currentIndex) {
+            //submit the form
+            // alert("Submitted!");
+            $("#loanPopup .modal-content").addClass('success-content');
+        }
+    });
+
+    const loanModal = document.getElementById('loanPopup');
+    loanModal.addEventListener('hidden.bs.modal', event => {
+        $("#loanPopup .modal-content").removeClass('success-content');
+    })
+
+    //$("#loanPopup .modal-content").addClass('success-content');
+
+    // $('#contactNum').on("click", function () {
+    //     // console.log(1);
+    //
+    //     var parent = $(this).parents('.btn-row');
+    //
+    //     $(this).parents('.btn-row').find('.btn').each(function () {
+    //         // console.log(2);
+    //         // console.log($(this));
+    //
+    //
+    //         var num = $(this).data("num");
+    //         if (num) $(this).find('span').html(num);
+    //
+    //
+    //         $(this).removeClass('d-none');
+    //         $(this).addClass('d-flex');
+    //     });
+    // });
+
+    // $('#contactWhatsapp').on("click",function (){
+    //     var num = $(this).data("num");
+    //     if(num) $(this).find('span').html(num);
+    // });
+
+    $('.floorViewOption').change(function () {
+
+        var name = $(this).attr('name');
+        var value = $('input[name=' + name + ']:checked').val();
+
+        console.log(value);
+
+        if (value == '3d') {
+            $(this).closest('.image-container').find(".img-2d").addClass('d-none');
+            $(this).closest('.image-container').find(".img-3d").removeClass('d-none');
+        } else {
+            $(this).closest('.image-container').find(".img-2d").removeClass('d-none');
+            $(this).closest('.image-container').find(".img-3d").addClass('d-none');
+        }
+    });
+
+    var detailsMenuSwiper = new Swiper(".detailsMenuSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        // loop:true,
+    });
+
+    $('.showAbout').on("click", () => {
+        $('.about-container>div').toggleClass('hide-text');
+    });
+
+    $('.showFeatures').on("click", () => {
+        $('.features-container').toggleClass('show-less');
+    });
+
+    $('#videos-nav-tab button').on("click", function (index, el) {
+        var thisBtn = $(this)[0];
+
+        $('#videos-nav-tab button').each((index, el) => {
+            if (el !== thisBtn) {
+                $(el).removeClass('active');
+            }
+        })
+    });
+
+    new Swiper('.payment-plan-swiper', {
+        loop: false,
+        navigation: {
+            nextEl: '.payment-next',
+            prevEl: '.payment-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.land-payment-plan-swiper', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment1-next',
+            prevEl: '.land-payment1-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.land-payment-plan-swiper2', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment2-next',
+            prevEl: '.land-payment2-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.land-payment-plan-swiper3', {
+        loop: true,
+        navigation: {
+            nextEl: '.land-payment3-next',
+            prevEl: '.land-payment3-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+    new Swiper('.videos-menu-swiper', {
+        loop: false,
+        navigation: {
+            nextEl: '.video-prev',
+            prevEl: '.video-next',
+        },
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3.5,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 5,
+            }
+        }
+    });
+
+
+    new Swiper('.loan-swiper', {
+        loop: false,
+        navigation: {
+            nextEl: '.loan-next',
+            prevEl: '.loan-prev',
+        },
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //         slidesPerView: 2.5,
+        //     },
+        //     576: {
+        //         slidesPerView: 3.5,
+        //     },
+        //     768: {
+        //         slidesPerView: 4.5,
+        //     },
+        //     992: {
+        //         slidesPerView: 4.5,
+        //     }
+        // }
+    });
+
+    new Swiper('.videos-menu-swiper', {
+        loop: false,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.video-next',
+            prevEl: '.video-prev',
+        },
+    });
+
+    new Swiper('.other-project-swiper', {
+        loop: false,
+        navigation: {
+            nextEl: '.other-project-next',
+            prevEl: '.other-project-prev',
+        },
+        slidesPerView: 3,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.5,
+            },
+            576: {
+                slidesPerView: 2.5,
+            },
+            768: {
+                slidesPerView: 2.5,
+            },
+            992: {
+                slidesPerView: 2.5,
+            },
+            1200: {
+                slidesPerView: 3.5,
+            }
+        }
+    });
+
+    new Swiper('.mapview-swiper', {
+        loop: false,
+        slidesPerView: 4.5,
+        navigation: {
+            nextEl: '.mapView-next',
+            prevEl: '.mapView-prev',
+        },
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 2.5,
+            },
+            375: {
+                slidesPerView: 3.2,
+            },
+            450: {
+                slidesPerView: 3.5,
+            },
+            485: {
+                slidesPerView: 4.2,
+            },
+            576: {
+                slidesPerView: 4.5,
+            },
+            768: {
+                slidesPerView: 5.5,
+            },
+            992: {
+                slidesPerView: 5.5,
+            },
+            1200: {
+                slidesPerView: 6.5,
+            },
+            1440: {
+                slidesPerView: 7.5,
+            }
+        }
+    });
+
+    new Swiper('.locality-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.locality-next',
+            prevEl: '.locality-prev',
+        },
+        spaceBetween: 15,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        }
+    });
+
+    new Swiper('.land-highlight-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.highlight-next',
+            prevEl: '.highlight-prev',
+        },
+        spaceBetween: 15,
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //         slidesPerView: 2.5,
+        //     },
+        //     375: {
+        //         slidesPerView: 3.2,
+        //     },
+        //     450: {
+        //         slidesPerView: 3.5,
+        //     },
+        //     485: {
+        //         slidesPerView: 4.2,
+        //     },
+        //     576: {
+        //         slidesPerView: 4.5,
+        //     },
+        //     768: {
+        //         slidesPerView: 5.5,
+        //     },
+        //     992: {
+        //         slidesPerView: 5.5,
+        //     },
+        //     1200: {
+        //         slidesPerView: 6.5,
+        //     },
+        //     1440: {
+        //         slidesPerView: 7.5,
+        //     }
+        // }
+    });
+
+
+    //property rate chart
+    //
+    // var ctx = document.getElementById('propertyRateChart').getContext('2d');
+    //
+    // var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+    //
+    // var buyData = {
+    //     labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+    //     data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
+    // };
+    //
+    // var rentData = {
+    //     labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
+    //     data: [850, 1120, 750, 1050, 1320, 1220, 1390, 1560]
+    // };
+    //
+    // var myChart = new Chart(ctx, {
+    //     type: "line",
+    //     data: {
+    //         labels: buyData.labels,
+    //         datasets: [
+    //             {
+    //                 label: "Price range",
+    //                 data: buyData.data,
+    //                 tension: 0.3,
+    //                 fill: true,
+    //                 // backgroundColor: 'rgb(255, 99, 132)',
+    //                 backgroundColor: gradient,
+    //                 borderColor: '#ECA743',
+    //             },
+    //         ],
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         maintainAspectRatio: false,
+    //     }
+    // });
+    //
+    //
+    // $('input[name=chartType]').change(function () {
+    //     var value = $('input[name=chartType]:checked').val();
+    //
+    //     var data = buyData;
+    //
+    //     if (value == 'rent') {
+    //         data = rentData;
+    //     }
+    //
+    //     // myChart.data.datasets = data.data;
+    //     // myChart.data.labels = data.labels;
+    //
+    //
+    //     myChart.data.labels = data.labels;
+    //
+    //     myChart.data.datasets.pop();
+    //     myChart.data.datasets.push({
+    //         label: "Price range",
+    //         data: data.data,
+    //         tension: 0.3,
+    //         fill: true,
+    //         backgroundColor: gradient,
+    //         borderColor: '#ECA743',
+    //     });
+    //
+    //
+    //     myChart.update();
+    //
+    // });
+    //
+
+    // var swiper = new Swiper(".brochure-swiper", {
+    //     // slidesPerView: 3,
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         type: "progressbar",
+    //     },
+    //     loop:false,
+    //     navigation: {
+    //         nextEl: ".brochure-next",
+    //         prevEl: ".brochure-prev",
+    //     },
+    // });
+
+    var bannerSwiper = new Swiper(".banner-swiper", {
+        loop: false,
+        navigation: {
+            nextEl: ".banner-next",
+            prevEl: ".banner-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+        }
+    });
+
+    var bannerModal = document.querySelector('#bannerModal');
+
+    bannerModal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+        const element = event.relatedTarget;
+
+        var index = $(element).data("index") || 0;
+
+        console.log("index", index);
+
+        bannerSwiper.slideTo(index);
+
+    });
+
+
+    var myModalEl = document.querySelector('#zoomModal')
+    myModalEl.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        let img_path = '';
+
+//        console.log(event.relatedTarget);
+
+        const checked = $(button).closest('.image-container').find('.floor-img').each((i, obj) => {
+
+            var isHide = $(obj).hasClass('d-none');
+
+            if (!isHide) {
+                img_path = $(obj).attr('src');
+            }
+            console.log("isHide==>", isHide);
+        });
+
+//         console.log("checked==>",checked);
+//
+//        if (checked) {
+//            img_path = $(button).data("3d-img");
+//        }
+
+        // console.log(img_path);
+
+        let zoomImg = $(event.target).find('img');
+
+        $(zoomImg).attr("src", img_path);
+    });
+
+    var input = document.querySelector("#detailContactPhoneNo");
+    window.intlTelInput(input, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var requestCallPhone = document.querySelector("#requestCallPhone");
+    window.intlTelInput(requestCallPhone, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var initPhoneNo = document.querySelector("#initPhoneNo");
+    window.intlTelInput(initPhoneNo, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var contactFrmPhoneNo = document.querySelector("#contactNo");
+    window.intlTelInput(contactFrmPhoneNo, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var inqContact = document.querySelector("#inqContact");
+    window.intlTelInput(inqContact, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var bannercontactNo = document.querySelector("#bannercontactNo");
+    window.intlTelInput(bannercontactNo, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
+    var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
+    var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
+
+    var WhatsAppModal = new bootstrap.Modal(document.getElementById('DetailsWhatsAppModal'),);
+
+
+    var dePhoneModal = document.getElementById('DetailsPhoneNoModal');
+    dePhoneModal.addEventListener('hidden.bs.modal', event => {
+        $('body').css('overflow','auto');
+    });
+
+
+    // var commonAlertModal = document.getElementById('commonAlertModal');
+    // commonAlertModal.addEventListener('hidden.bs.modal', event => {
+    //     $('body').removeClass('modal-open');
+    //     $('.modal-backdrop').remove();
+    //     $("body").removeAttr("style");
+    // });
+    //
+    // var myModalEl = document.getElementById('commonAlertModal',{});
+    // var modal = bootstrap.Modal.getInstance(myModalEl)
+    // modal.hide();
+
+    $('#btnShowPhone').on("click", function () {
+
+        $('#detailsCallbackBtnClose').trigger("click");
+        setTimeout(() => DetailsPhoneNoModal.show(), 0);
+    });
+
+    // setTimeout(() => {
+    //     detailsInitPopup.show();
+    // }, 30000);
+
+    $('#showSpecification').on("click", function () {
+        $('#specContent').toggleClass('show-less');
+    });
+
+
+    $('#showTeam').on("click", function () {
+        $('#teamShowMoreContent').toggleClass('show-less');
+    });
+
+    $('#showEnquireNum').on("click", function () {
+        $('.phone-info').removeClass('hide');
+        $('#contactCard').removeClass('d-none');
+        $(this).hide();
+        $('.show-box').addClass('hide-show-box');
+    });
+
+
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+        } else {
+
+            if (localStorage.getItem("popupShowed") === null) {
+                detailsInitPopup.show();
+                window.localStorage.setItem('popupShowed', true);
+            }
+        }
+        lastScrollTop = st;
+    });
+
+    //menu activate when scroll
+
+
+    onScroll();
+    $(document).on("scroll", onScroll);
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
+        console.log("scrollPos==>", scrollPos);
+
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            // var totalSlides =  detailsMenuSwiper.slides.length - 2;
+            var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
+
+            $('.detailsMenuSwiper a').each(function (index, element) {
+                // console.log(element);
+                $(element).removeClass('active');
+            });
+            $('.detailsMenuSwiper a:last-child').addClass('active');
+
+        }
+
+        $('.detailsMenuSwiper a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+
+            var elementHeight = refElement.height();
+            var elementPosition = refElement.position().top;
+
+            // console.log(vh,vw);
+
+            if (vw >= 576) {
+                elementPosition -= (vh / 4);
+            } else {
+                elementPosition -= 120;
+            }
+
+
+            if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
+
+                // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
+                var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
+                // var nextIndex = currLink.data('swiper-slide-index');
+                // console.log("nextIndex==>",nextIndex);
+
+                if (nextIndex != detailsMenuSwiper.activeIndex) {
+                    console.log(refElement, scrollPos, elementPosition, elementHeight);
+
+                    // console.log(nextIndex);
+
+                    // console.log("nextIndex==>",nextIndex);
+                    // console.log(currLink);
+
+
+                    detailsMenuSwiper.slideTo(nextIndex - 1);
+
+                    $('a').removeClass("active");
+                    currLink.addClass("active");
+
+                    return;
+                }
+
+
+            } else {
+                // console.log("currLink==>",currLink);
+                // currLink.removeClass("active");
+
+                // console.log("else...");
+            }
+        });
+
+        if (scrollPos == 0) {
+            // console.log("scrollPos++>");
+            $('.detailsMenuSwiper a:first-child').addClass('active');
+        }
+
+    }
+
+
+    $("#propertyValueSlider").slider({
+        range: false,
+        min: 1000000,
+        max: 100000000,
+        step: 500000,
+        slide: function (event, ui) {
+            $("#propertyValue").val(formatter.format(ui.value).replace("LKR", ""));
+            loanCalculator();
+        }
+    });
+
+    $("#propertyValue").on("change", function () {
+        var val = $(this).val().replace(/,/g, "");
+        var propertyVal = $("#propertyValueSlider").slider("value");
+
+        if (val >= 1000000 && val <= 100000000) {
+            $("#propertyValueSlider").slider('value', val);
+            $("#propertyValue").val(formatter.format(val).replace("LKR", ""));
+        } else {
+            $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
+        }
+        loanCalculator();
+    });
+
+
+    $("#downPaymentSlider").slider({
+        range: false,
+        min: 20,
+        max: 100,
+        step: 5,
+        slide: function (event, ui) {
+            $("#downPayPer").text(ui.value);
+
+            const propertyValue = $('#propertyValueSlider').slider('values', 0);
+            var downPay = (propertyValue / 100) * ui.value;
+            // $("#downPayment").val(downPay);
+            $("#downPayment").val(formatter.format(downPay).replace("LKR", ""));
+
+
+            loanCalculator();
+        }
+    });
+
+    $("#downPayment").on("change", function () {
+        var val = $(this).val().replace(/,/g, "");
+        var propertyValue = $("#propertyValue").val().replace(/,/g, "");
+
+        var newDownPercentage = ((val / propertyValue) * 100).toFixed(2);
+
+        var OlddownPercentage = $("#downPaymentSlider").slider("value");
+
+
+        if (newDownPercentage >= 20 && newDownPercentage <= 100) {
+            console.log("new");
+            $("#downPaymentSlider").slider('value', newDownPercentage);
+            $("#downPayPer").text(newDownPercentage);
+
+        } else {
+            console.log("new old");
+            var downPay = (propertyValue / 100) * OlddownPercentage;
+            $("#downPayment").val(downPay);
+            $("#downPayPer").text(OlddownPercentage);
+
+        }
+        loanCalculator();
+
+    });
+
+
+    $("#interestRateSlider").slider({
+        range: false,
+        min: 5,
+        max: 30,
+        step: 0.5,
+        slide: function (event, ui) {
+            $("#interestRate").val(ui.value + "%");
+            loanCalculator();
+        }
+    });
+
+    $("#interestRate").on("change", function () {
+        var val = $(this).val().replace('%', '');
+        var rate = $("#interestRateSlider").slider("value");
+
+        if (val >= 5 && val <= 30) {
+            $("#interestRateSlider").slider('value', val);
+        } else {
+            $("#interestRate").val(rate + "%");
+        }
+        loanCalculator();
+    });
+
+    $("#loanPeriodSlider").slider({
+        range: false,
+        min: 1,
+        max: 30,
+        step: 1,
+        slide: function (event, ui) {
+            $("#loanPeriod").val(ui.value + " years");
+            loanCalculator();
+        }
+    });
+
+    $("#loanPeriod").on("change", function () {
+        var val = $(this).val().replace(" years", '');
+        var rate = $("#loanPeriodSlider").slider("value");
+
+        if (val >= 1 && val <= 30) {
+            $("#loanPeriodSlider").slider('value', val);
+        } else {
+            $("#loanPeriod").val(rate);
+        }
+        loanCalculator();
+    });
+
+    init();
+
+    function init() {
+        var propertyVal = $("#propertyValueSlider").slider("value");
+        var downPaymentPersentage = $("#downPaymentSlider").slider("value");
+        var interestRate = $("#interestRateSlider").slider("value");
+        var loanPeriod = $("#loanPeriodSlider").slider("value");
+
+        var downPayment = (propertyVal / 100) * downPaymentPersentage;
+
+        $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
+        $("#downPayment").val(formatter.format(downPayment).replace("LKR", ""));
+        $("#interestRate").val(interestRate + '%');
+        $("#loanPeriod").val(loanPeriod + " years");
+    }
+
+
+    //background-image: linear-gradient(180deg, #B7D464 0%, #009833 100%);
+
+    var loanChartElement = document.getElementById('loanChart').getContext('2d');
+
+    var principle_gradient = loanChartElement.createLinearGradient(0, 0, 0, 400);
+    principle_gradient.addColorStop(0, '#B7D464');
+    principle_gradient.addColorStop(1, '#009833');
+
+    // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+
+
+    try {
+
+    } catch (e) {
+        console.log(e);
+    }
+
+
+    const data = {
+        labels: [
+            'Loan amount ',
+            'Down Payment',
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [300, 200],
+            backgroundColor: [
+                principle_gradient,
+                '#E8E8E8'
+            ],
+            hoverOffset: 4
+        },
+        ]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legendContainer',
+                },
+                legend: {
+                    display: false,
+                }
+            }
+        },
+    };
+
+    const loanChart = new Chart(
+        loanChartElement,
+        config
+    );
+
+
+    const loanCalculator = () => {
+
+        setTimeout(() => {
+            const propertyValue = $('#propertyValueSlider').slider('values', 0);
+            console.log("propertyValue calc==>", propertyValue);
+
+            const interestRate = $('#interestRateSlider').slider('values', 0);
+            const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
+            const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
+
+            console.log("downPaymentPersantage calc==>", downPaymentPersantage);
+
+
+            if (!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage) {
+                return;
+            }
+
+            const interestRateCalculated = interestRate / 100 / 12;
+
+            // console.log("interestRateCalculated==>",interestRateCalculated);
+
+            const loanAmount = (propertyValue / 100) * (100 - downPaymentPersantage);
+
+            let downPaymentVal = (propertyValue / 100) * downPaymentPersantage;
+
+            // console.log("price==>",loanAmount);
+
+            const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
+            const part2 = (((1 + interestRateCalculated) ** numberOfMonths) - 1);
+
+            // console.log("part1==>",part1);
+            // console.log("part2==>",part2);
+
+            const Finalpersentage = (part1 / part2);
+
+
+            const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
+
+            const totalPayment = Math.ceil(monthlyPayment * numberOfMonths);
+
+            // console.log("finalPrice==>",monthlyPayment);
+
+            $('#monthlyPayment').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
+            $('.boldText').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
+            $('#LoanAmount').text(formatter.format(Math.ceil(loanAmount.toFixed(2))).replace("LKR", "Rs"));
+            $('#interestRateValue').text(interestRate);
+            $('#totalInterest').text(formatter.format(Math.ceil(totalPayment - loanAmount.toFixed(2))).replace("LKR", "Rs"));
+            $('#totalPayment').text(formatter.format(totalPayment).replace("LKR", "Rs"));
+
+            $('#downPayment').val(downPaymentVal);
+
+            var downpayment = $('#downPayment').val().replace(/,/g, "");
+            updateChart(downpayment, loanAmount);
+
+        }, 500);
+
+    }
+
+    loanCalculator();
+
+    function updateChart(monthlyPayment, totalPayment) {
+        loanChart.data.datasets[0].data[0] = totalPayment;
+        loanChart.data.datasets[0].data[1] = monthlyPayment;
+        loanChart.update();
+    }
+
+
+    //pdf broucher
+
+    // If absolute URL from the remote server is provided, configure the CORS
+// header on that server.
+//     var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
+    var url = './assets/pdf/sample.pdf';
+
+// Loaded via <script> tag, create shortcut to access PDF.js exports.
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+// The workerSrc property shall be specified.
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+    var pdfDoc = null,
+        pageNum = 1,
+        pageRendering = false,
+        pageNumPending = null,
+        scale = 1,
+        canvas = document.getElementById('the-canvas'),
+        container = document.getElementById('broucher-pdf-container'),
+        ctx = canvas.getContext('2d');
+
+    /**
+     * Get page info from document, resize canvas accordingly, and render page.
+     * @param num Page number.
+     */
+    function renderPage(num) {
+        pageRendering = true;
+        // Using promise to fetch the page
+        pdfDoc.getPage(num).then(function (page) {
+
+            var viewport = page.getViewport({scale: scale});
+
+            // var scale_ = container.clientWidth / viewport.width;
+
+            // viewport = page.getViewport(scale_);
+
+            // canvas.height = viewport.height;
+
+            const containerWidth = document.getElementById("broucher-pdf-container").offsetWidth;
+
+            canvas.height = 400;
+            canvas.width = containerWidth - 32;
+            // canvas.width = viewport.width;
+
+            // Render PDF page into canvas context
+            var renderContext = {
+                canvasContext: ctx,
+                viewport: viewport
+            };
+            var renderTask = page.render(renderContext);
+
+            // Wait for rendering to finish
+            renderTask.promise.then(function () {
+                pageRendering = false;
+                if (pageNumPending !== null) {
+                    // New page rendering is pending
+                    renderPage(pageNumPending);
+                    pageNumPending = null;
+                }
+            });
+        });
+
+        // Update page counters
+        // document.getElementById('page_num').textContent = num;
+        var progressWidth = ((num / pdfDoc.numPages) * 100) + '%';
+        $('#brochureProgressBar').width(progressWidth);
+
+        $('#pageNumbers').html(`${num} / ${pdfDoc.numPages}`);
+    }
+
+    /**
+     * If another page rendering in progress, waits until the rendering is
+     * finised. Otherwise, executes rendering immediately.
+     */
+    function queueRenderPage(num) {
+        if (pageRendering) {
+            pageNumPending = num;
+        } else {
+            renderPage(num);
+        }
+    }
+
+    /**
+     * Displays previous page.
+     */
+    function onPrevPage() {
+        if (pageNum <= 1) {
+            return;
+        }
+        pageNum--;
+        queueRenderPage(pageNum);
+    }
+
+    document.getElementById('brochurePrev').addEventListener('click', onPrevPage);
+
+    /**
+     * Displays next page.
+     */
+    function onNextPage() {
+        if (pageNum >= pdfDoc.numPages) {
+            return;
+        }
+        pageNum++;
+        queueRenderPage(pageNum);
+    }
+
+    document.getElementById('brochureNext').addEventListener('click', onNextPage);
+
+    /**
+     * Asynchronously downloads PDF.
+     */
+    pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+        pdfDoc = pdfDoc_;
+        // document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+        // Initial/first page rendering
+        renderPage(pageNum);
+    });
+
+    const showPhoneNoModal = () => {
+        setTimeout(() => DetailsPhoneNoModal.show(), 0);
+    }
+
+    const showWhatsAppModal = () => {
+        setTimeout(() => WhatsAppModal.show(), 0);
+    }
+
+    $('.bottomFloat .openPopUP').on("click", function () {
+        showPhoneNoModal();
+    });
+
+    $('.bottomFloat .openPopWhatsApp').on("click", function () {
+        showWhatsAppModal();
+    });
+});
+
+//detail map code
+let map;
+let service;
+let infowindow;
+let sydney;
+
+function initMap() {
+
+    var locations = $('#map').data("location").split(",");
+
+
+    sydney = new google.maps.LatLng(parseFloat(locations[0]), parseFloat(locations[1]));
+
+
+    infowindow = new google.maps.InfoWindow();
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: sydney,
+        zoom: 15,
+    });
+
+    new google.maps.Marker({
+        position: sydney,
+        map: map,
+    });
+
+    var request = {
+        location: sydney,
+        radius: '500',
+        type: ['bus_station']
+    };
+
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            // console.log(results[i]);
+            createMarker(results[i]);
+        }
+    }
+}
+
+$('.mapview-swiper .swiper-slide').on("click", function () {
+
+    const place = $(this).data("place");
+    changeMarkerPlaces(place);
+
+    $('.mapview-swiper .swiper-slide').each(
+        function () {
+            $(this).removeClass("active");
+        }
+    );
+    $(this).addClass('active');
+});
+
+function changeMarkerPlaces(place) {
+    clearOverlays();
+
+    var request = {
+        location: sydney,
+        radius: '500',
+        type: [place]
+    };
+
+
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+}
+
+let markers = [];
+
+function createMarker(place) {
+    if (!place.geometry || !place.geometry.location) return;
+
+    console.log(place);
+
+    const getIcon = () => {
+        if (place.types[0] == "bus_station") {
+            return "assets/img/details/mapview/locationiconspin/Bus-stops-02.png";
+        } else if (place.types[0] == "bank") {
+            return "assets/img/details/mapview/locationiconspin/Bank.png";
+        } else if (place.types[0] == "movie_theater") {
+            return "assets/img/details/mapview/locationiconspin/Cinemas-02.png";
+        } else if (place.types.includes("restaurant")) {
+            return "assets/img/details/mapview/locationiconspin/Restaurant-02.png";
+        } else if (place.types[0] == "supermarket") {
+            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+        } else if (place.types[0] == "hospital") {
+            return "assets/img/details/mapview/locationiconspin/Hospital-02.png";
+        } else if (place.types[0] == "shopping_mall") {
+            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+        } else if (place.types[0] == "park") {
+            return "assets/img/details/mapview/locationiconspin/Parks-02.png";
+        } else if (place.types[0] == "gas_station") {
+            return "assets/img/details/mapview/locationiconspin/Fuel-station-02.png";
+        } else if (place.types[0] == "police") {
+            return "assets/img/details/mapview/locationiconspin/Police-station-03.png";
+        } else return ''
+    }
+
+    console.log("get==>", getIcon());
+
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+        icon: getIcon(),
+
+    });
+
+    marker.addListener('mouseover', function () {
+        try {
+            infowindow.setContent(place.name || "");
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+
+        } catch (e) {
+            console.log("create Info error ==>")
+        }
+    });
+
+
+    google.maps.event.addListener(marker, "click", () => {
+        try {
+            infowindow.setContent(place.name || "");
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+
+        } catch (e) {
+            console.log("create Info error ==>")
+        }
+    });
+
+    markers.push(marker);
+}
+
+function clearOverlays() {
+    if (markers) {
+        for (i in markers) {
+            markers[i].setMap(null);
+        }
+    }
+}
+
+window.initMap = initMap;
