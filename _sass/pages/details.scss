@@ -1675,6 +1675,27 @@
     border-radius: 5px;
     padding: 25px 20px;
 
+    svg{
+      max-width: 52px;
+    }
+
+    .title-content-1-light{
+      color: #202330;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+    .price{
+      color: #202330;
+      line-height: 1;
+
+    }
+
+    .title-light-1{
+      color: #202330;
+      margin-top: 24px;
+      margin-bottom: 15px;
+    }
+
     .swiper-slide {
       background: #FFFFFF;
       border: 1px solid #E6E6E6;

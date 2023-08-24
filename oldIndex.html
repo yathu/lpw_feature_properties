@@ -1,0 +1,543 @@
+---
+title: home
+layout: home
+class: feature_properties_index
+permalink: /old_index.html
+---
+
+<video class="index-video-banner" playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
+<div id="map-parent" class="container-fluid px-0">
+
+  {% include filter_form.html %}
+
+
+  <div class="row mx-0 align-items-center filtered-info justify-content-between">
+    <div class="col-12 col-lg-auto">
+      <h2 class="title-light">
+        All Featured Properties
+        <span class="title-light-1">
+        (1027 projects)
+    </span>
+      </h2>
+
+    </div>
+
+    <div class="col-auto sort-menu-container">
+        <span>
+            Sort by:
+        </span>
+
+      <div id="sortSwiper" class="swiper">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide active" href="#">
+            Relevance
+          </a>
+          <a class="swiper-slide" href="#">
+            Price-Low
+          </a>
+          <a class="swiper-slide" href="#">
+            Price-High
+          </a>
+          <a class="swiper-slide" href="#">
+            Possession Date
+          </a>
+        </div>
+
+        <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
+        <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
+
+      </div>
+
+      <!--            <div>-->
+      <!--                <a class="active" href="#">-->
+      <!--                    Relevance-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Price-Low-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Price-High-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Possession Date-->
+      <!--                </a>-->
+      <!--            </div>-->
+    </div>
+  </div>
+
+  <div class="mapView">
+    <div class="map-box">
+      <div id="map"></div>
+
+      <div class="container mobile-listing-container px-0">
+        <div class="swiper mobileListingSwiper">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              {% include property_list_item.html %}
+            </div>
+            <div class="swiper-slide">
+              {% include property_list_item.html %}
+            </div>
+            <div class="swiper-slide">
+              {% include property_list_item.html %}
+            </div>
+          </div>
+
+          <!-- If we need scrollbar -->
+          <!--            <div class="swiper-scrollbar"></div>-->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container listing-container">
+    {% include property_list_item.html %}
+    {% include property_list_item.html %}
+
+    {% include virtual_banner.html %}
+
+    {% include property_list_item.html %}
+
+    <div class="preferred-project px-3 px-lg-4 pt-4 pb-4">
+      <div class="row">
+        <div class="col">
+          <h1 class="title-content-1 mt-2 mx-4 mx-md-0">Own your dream property now, next year or later</h1>
+          <p class="title-light-1 mx-4 mx-md-0">
+            Projects based on your preferred possession date
+          </p>
+        </div>
+        <div class="col-auto d-none d-md-flex flex-column">
+          {% include rental_complete_btn.html %}
+        </div>
+      </div>
+
+      <div class="row justify-content-center content-row pb-2">
+
+        <div class="col-auto d-flex flex-column text-center">
+          <img src="./assets/img/most-apprecated.svg" alt="Most Appreciated">
+          <h3>Most Appreciated</h3>
+          <p>Areas with higher than 50% price <br>
+            appreciation</p>
+        </div>
+
+        <div class="col-auto d-flex flex-column text-center">
+          <img src="./assets/img/best-offers.svg" alt="Most Appreciated">
+          <h3>Best Offers</h3>
+          <p>
+            Projects with discounts <br>
+            and offers
+          </p>
+        </div>
+
+        <div class="col-auto d-flex flex-column text-center">
+          <img src="./assets/img/apartment-finder.svg" alt="Most Appreciated">
+          <h3>Apartment Finder</h3>
+          <p>
+            Use our apartment finder to help you<br>
+            with your search
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {% include property_list_item.html %}
+    {% include property_list_item.html %}
+
+    <div class="preferred-project priceRangeSwiperContainer px-3 px-lg-4 pt-4 pb-4">
+      <h1 class="title-content-1 mt-2">Own your dream property now, next year or later</h1>
+      <p class="title-light-1 mb-3">
+        Projects based on your preferred possession date
+      </p>
+
+      <!--            <div class="mb-4">-->
+      <!--                <button class="btn btn-outline-danger">-->
+      <!--                    price-->
+      <!--                </button>-->
+      <!--                <button class="btn btn-outline-danger mx-2">-->
+      <!--                    Location-->
+      <!--                </button>-->
+      <!--                <button class="btn btn-outline-danger">-->
+      <!--                    Other-->
+      <!--                </button>-->
+      <!--            </div>-->
+
+      <nav class="mb-4">
+        <div class="nav nav-pills" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                  type="button" role="tab" aria-controls="nav-home" aria-selected="true">Price
+          </button>
+          <button class="nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab"
+                  data-bs-target="#nav-profile"
+                  type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Location
+          </button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                  type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Other
+          </button>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="price-range-swiper-container">
+            <div id="priceRangeSwiper" class="swiper priceRangeSwiper">
+              <div class="swiper-wrapper">
+                {% for i in (1..10) %}
+                <a href="#" class="swiper-slide">
+                  <span class="range">Price range</span>
+                  <p class="price">{{i}}M-20M</p>
+                  <span class="noOfProjects">87 projects</span>
+                </a>
+                {% endfor %}
+
+              </div>
+            </div>
+            <div class="price-range-swiper-button-next swiper-button-next"></div>
+            <div class="price-range-swiper-button-prev swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="price-range-swiper-container location-swiper-container">
+            <div id="locationRangeSwiper" class="swiper priceRangeSwiper">
+              <div class="swiper-wrapper">
+                {% for i in (1..10) %}
+                <a href="#" class="swiper-slide">
+                  <span class="range">Price range</span>
+                  <p class="price">10M-20M</p>
+                  <span class="noOfProjects">87 projects</span>
+                </a>
+                {% endfor %}
+
+              </div>
+            </div>
+            <div class="price-range-swiper-button-next-1 swiper-button-next"></div>
+            <div class="price-range-swiper-button-prev-1 swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <div class="price-range-swiper-container type-swiper-container">
+            <div id="otherRangeSwiper" class="swiper priceRangeSwiper">
+              <div class="swiper-wrapper">
+                {% for i in (1..10) %}
+                <a href="#" class="swiper-slide">
+                  <span class="range">Price range</span>
+                  <p class="price">10M-20M</p>
+                  <span class="noOfProjects">87 projects</span>
+                </a>
+                {% endfor %}
+
+              </div>
+            </div>
+            <div class="price-range-swiper-button-next-2 swiper-button-next"></div>
+            <div class="price-range-swiper-button-prev-2 swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    {% include property_list_item.html %}
+
+    <div class="property-type-swiper-container px-3 px-lg-4">
+      <h1 class="title-content-1">
+        Own your dream property now, next year or later
+      </h1>
+
+
+      <div class="property-type-swiper-box">
+        <div class="swiper property-type-swiper">
+          <div class="swiper-wrapper">
+
+            {% for i in (20..30) %}
+            <a href="#" class="swiper-slide">
+              <img src="https://picsum.photos/id/{{i}}1/270/300" alt="propertyType">
+              <div class="content">
+                <p>Residential Apartments</p>
+                <span>
+                            40 projects
+                        </span>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="property-type-swiper-button-next swiper-button-next"></div>
+        <div class="property-type-swiper-button-prev swiper-button-prev"></div>
+      </div>
+
+    </div>
+
+    {% include property_list_item.html %}
+
+    <div class="city-projects px-3 px-lg-4">
+
+      <h1 class="title-content-1 mt-2">
+        Find properties fromyour
+        closest city
+      </h1>
+      <p class="title-light-1">
+        1348 Projects around the island
+      </p>
+
+      <div class="city-swiper-box">
+        <div class="swiper city-project-swiper">
+          <div class="swiper-wrapper">
+
+            {% for i in (1..10) %}
+            <a href="#" class="swiper-slide">
+              <p class="city">10M-20M</p>
+              <span class="noOfProjects">87 projects</span>
+            </a>
+            {% endfor %}
+
+          </div>
+        </div>
+
+        <div class="city-swiper-button-next swiper-button-next">
+        </div>
+        <div class="city-swiper-button-prev swiper-button-prev"></div>
+
+      </div>
+
+
+    </div>
+
+    {% include property_list_item.html %}
+    {% include property_list_item.html %}
+
+    <div class="tour-project px-3 px-lg-4 d-none d-md-block">
+
+      <div class="swiper tour-swiper ms-2 mt-3">
+        <div class="swiper-wrapper">
+          {% for i in (1..5) %}
+          <div class="swiper-slide">
+            <h1>Discover immersive 360 property tours</h1>
+            <p>Explore properties from the comfort of your home</p>
+            <a href="#" class="btn btn-link-custom">VIEW MORE</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="swiper-pagination tour-swiper-pagination"></div>
+
+    </div>
+
+    <div class="propertyTool px-3 px-lg-4">
+
+      <h1 class="title-content-1 mt-2">
+        Exclusive Property Tools
+      </h1>
+      <p class="title-light-1">
+        Make your property decisions smart and informed.
+      </p>
+
+      <div class="tool-swiper-box">
+        <div class="swiper tool-swiper">
+          <div class="swiper-wrapper">
+            {% for i in (1..10) %}
+            <a href="#" class="swiper-slide">
+              <img src="./assets/img/tool-img-1.svg" alt="tool">
+              <h4>
+                Home Loan Calculator
+              </h4>
+              <p>
+                Calculate your estimated monthly home loan payment.
+              </p>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="tool-swiper-button-next swiper-button-next"></div>
+        <div class="tool-swiper-button-prev swiper-button-prev"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row mx-0 align-items-center filtered-info justify-content-between mobile-filter py-0">
+
+    <div class="col-auto sort-menu-container sort-menu-mobile">
+        <span>
+            Sort by:
+        </span>
+
+      <div id="sortSwiper" class="swiper">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide active" href="#">
+            Relevance
+          </a>
+          <a class="swiper-slide" href="#">
+            Price-Low
+          </a>
+          <a class="swiper-slide" href="#">
+            Price-High
+          </a>
+          <a class="swiper-slide" href="#">
+            Possession Date
+          </a>
+        </div>
+
+        <div class="swiper-btn swiper-button-prev sort-swiper-prev"></div>
+        <div class="swiper-btn swiper-button-next sort-swiper-next"></div>
+
+      </div>
+
+      <!--            <div>-->
+      <!--                <a class="active" href="#">-->
+      <!--                    Relevance-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Price-Low-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Price-High-->
+      <!--                </a>-->
+      <!--                <a href="#">-->
+      <!--                    Possession Date-->
+      <!--                </a>-->
+      <!--            </div>-->
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" id="callbackBtnClose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 pt-1">
+
+        <div class="desktop-content">
+          <img class="rounded-circle" src="assets/img/number_modal.png" alt="comapny">
+          <h1 class="title-content-1">Call Access Engineering</h1>
+        </div>
+
+
+        <div class="content">
+          <h5 class="title-content-1 text-center mb-3" style="color:#727272;">Please enter your details</h5>
+
+          <p class="mb-0 pt-1">
+            To view the seller’s number, please enter your name, email and contact number. This will help
+            the
+            seller to follow up on your inquiry.
+          </p>
+        </div>
+
+        <div class="form-container">
+          <form>
+
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Your Name *" required>
+            </div>
+
+            <div class="mb-3">
+              <input type="email" class="form-control" id="exampleInputEmail1"
+                     placeholder="E-mail Address">
+            </div>
+
+            <div class="row gx-3 mb-3">
+              <div class="col-12">
+                <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number"
+                       required>
+              </div>
+            </div>
+
+            <button id="btnShowPhone" type="button" class="btn btn-custom-primary w-100 py-2">
+              SHOW PHONE NUMBER
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--numberShowModal-->
+<div class="modal fade" id="phoneNoModal" tabindex="-1" aria-labelledby="phoneNoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="desktop-content">
+          <h1 class="title-content-1">Call Access Engineering</h1>
+          <img class="mb-4" src="assets/img/number_modal.png" alt="comapny">
+          <!--                    <p>+94 123 456 789</p>-->
+          <!--                    <div class="row justify-content-center gx-2 mb-5">-->
+          <!--                        <div class="col-auto">-->
+          <!--                            <a href="#" class="btn btn-success">-->
+          <!--                                <i class="fa fa-phone" aria-hidden="true"></i>-->
+          <!--                                CALL-->
+          <!--                            </a>-->
+          <!--                        </div>-->
+          <!--                        <div class="col-auto">-->
+          <!--                            <a href="#" class="btn btn-success">-->
+          <!--                                <i class="fa fa-whatsapp" aria-hidden="true"></i>-->
+          <!--                                WHATSAPP ME-->
+          <!--                            </a>-->
+          <!--                        </div>-->
+          <!--                    </div>-->
+        </div>
+
+        <div class="mobile-content">
+          <h1 class="title-content-2 d-block d-md-none">Call</h1>
+
+          <table class="table">
+            <tbody>
+            <tr>
+              <td>Madhusha</td>
+              <th>+94 123 456 789</th>
+              <td>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Madhusha</td>
+              <th>+94 123 456 789</th>
+              <td>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Madhusha</td>
+              <th>+94 123 456 789</th>
+              <td>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

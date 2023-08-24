@@ -233,6 +233,23 @@ a {
 
 }
 
+.title-2 {
+  font-family: Rubik-Medium;
+  font-size: 30px;
+
+  @media (min-width: 992px) and (max-width: 1199.8px) {
+    font-size: 26px;
+  }
+  @media (max-width: 767.98px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+  }
+
+}
+
 .cursor-auto {
   cursor: auto !important;
 }
@@ -257,6 +274,14 @@ a {
   color: #202330;
   letter-spacing: -0.46px;
 
+  @media (max-width: 767.98px) {
+    font-size: 17px;
+  }
+}
+
+.title-content-1-light {
+  font-family: Rubik-Light;
+  font-size: 25px;
   @media (max-width: 767.98px) {
     font-size: 17px;
   }
