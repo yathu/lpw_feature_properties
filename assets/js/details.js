@@ -125,10 +125,10 @@ $(document).ready(() => {
                 required: true,
             },
         },
-        highlight: function(element) {
+        highlight: function (element) {
             $(element).removeClass('is-valid').addClass('is-invalid');
         },
-        unhighlight: function(element) {
+        unhighlight: function (element) {
             $(element).removeClass('is-invalid').addClass('is-valid');
         },
     });
@@ -152,10 +152,10 @@ $(document).ready(() => {
                 required: true,
             },
         },
-        highlight: function(element) {
+        highlight: function (element) {
             $(element).removeClass('is-valid').addClass('is-invalid');
         },
-        unhighlight: function(element) {
+        unhighlight: function (element) {
             $(element).removeClass('is-invalid').addClass('is-valid');
         },
     });
@@ -549,77 +549,154 @@ $(document).ready(() => {
     });
 
 
-    //property rate chart
-    //
-    // var ctx = document.getElementById('propertyRateChart').getContext('2d');
-    //
-    // var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
-    // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
-    //
-    // var buyData = {
-    //     labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
-    //     data: [950, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
-    // };
-    //
-    // var rentData = {
-    //     labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
-    //     data: [850, 1120, 750, 1050, 1320, 1220, 1390, 1560]
-    // };
-    //
-    // var myChart = new Chart(ctx, {
-    //     type: "line",
-    //     data: {
-    //         labels: buyData.labels,
-    //         datasets: [
-    //             {
-    //                 label: "Price range",
-    //                 data: buyData.data,
-    //                 tension: 0.3,
-    //                 fill: true,
-    //                 // backgroundColor: 'rgb(255, 99, 132)',
-    //                 backgroundColor: gradient,
-    //                 borderColor: '#ECA743',
-    //             },
-    //         ],
-    //     },
-    //     options: {
-    //         responsive: true,
-    //         maintainAspectRatio: false,
-    //     }
-    // });
-    //
-    //
-    // $('input[name=chartType]').change(function () {
-    //     var value = $('input[name=chartType]:checked').val();
-    //
-    //     var data = buyData;
-    //
-    //     if (value == 'rent') {
-    //         data = rentData;
-    //     }
-    //
-    //     // myChart.data.datasets = data.data;
-    //     // myChart.data.labels = data.labels;
-    //
-    //
-    //     myChart.data.labels = data.labels;
-    //
-    //     myChart.data.datasets.pop();
-    //     myChart.data.datasets.push({
-    //         label: "Price range",
-    //         data: data.data,
-    //         tension: 0.3,
-    //         fill: true,
-    //         backgroundColor: gradient,
-    //         borderColor: '#ECA743',
-    //     });
-    //
-    //
-    //     myChart.update();
-    //
-    // });
-    //
+    // property rate chart
+
+    var ctx = document.getElementById('propertyRateChart').getContext('2d');
+
+    var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
+    gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
+
+    var buyData = {
+        labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+        data: [200, 1220, 1340, 1450, 1320, 1220, 1390, 1560]
+    };
+
+    var rentData = {
+        labels: ["Jan 1", "Jan 2", "Jan 4", "Jan 7", "Jan 10", "Jan 11", "Jan 13", "Jan 16"],
+        data: [600, 1120, 750, 1050, 1320, 1220, 1390, 1560]
+    };
+
+    var buySqftData = {
+        labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+        data: [400, 1220, 1340, 300, 1320, 1220, 1390, 1560]
+    };
+
+    var rentSqftData = {
+        labels: ["Jan 1", "Jan 3", "Jan 5", "Jan 7", "Jan 9", "Jan 11", "Jan 13", "Jan 15"],
+        data: [800, 300, 1340, 1300, 1320, 400, 1390, 200]
+    };
+
+    var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: buyData.labels,
+            datasets: [
+                {
+                    label: "Price range",
+                    data: buyData.data,
+                    tension: 0.3,
+                    fill: true,
+                    // backgroundColor: 'rgb(255, 99, 132)',
+                    backgroundColor: gradient,
+                    borderColor: '#ECA743',
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+
+    $('input[name=chartType]').change(function () {
+        var value = $('input[name=chartType]:checked').val();
+        const priceOption = $('input[name="price_option"]:checked').val();
+
+        var data;
+
+        if (value == 'rent') {
+            data = rentData;
+
+            if (priceOption == 'sqftPrice') {
+                data = rentSqftData;
+            }
+        } else if (priceOption == 'sqftPrice') {
+            data = buySqftData;
+        } else {
+            data = buyData;
+        }
+
+        // myChart.data.datasets = data.data;
+        // myChart.data.labels = data.labels;
+
+
+        myChart.data.labels = data.labels;
+
+        myChart.data.datasets.pop();
+        myChart.data.datasets.push({
+            label: "Price range",
+            data: data.data,
+            tension: 0.3,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: '#ECA743',
+        });
+
+
+        myChart.update();
+
+    });
+
+
+    $('input[name=price_option]').change(function () {
+        var value = $('input[name=chartType]:checked').val();
+        const priceOption = $('input[name="price_option"]:checked').val();
+
+        var data;
+
+        if (value == 'buy') {
+
+            if (priceOption == 'sqftPrice') {
+                data = buySqftData;
+            } else {
+                data = buyData;
+            }
+
+        } else {
+
+            if (priceOption == 'sqftPrice') {
+                data = rentSqftData;
+            } else {
+                data = rentData;
+            }
+
+        }
+
+        // if(priceOption == 'sqftPrice'){
+        // }
+
+
+        myChart.data.labels = data.labels;
+
+        myChart.data.datasets.pop();
+        myChart.data.datasets.push({
+            label: "Price range",
+            data: data.data,
+            tension: 0.3,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: '#ECA743',
+        });
+
+
+        myChart.update();
+
+    });
+
 
     // var swiper = new Swiper(".brochure-swiper", {
     //     // slidesPerView: 3,
@@ -742,7 +819,7 @@ $(document).ready(() => {
 
     var dePhoneModal = document.getElementById('DetailsPhoneNoModal');
     dePhoneModal.addEventListener('hidden.bs.modal', event => {
-        $('body').css('overflow','auto');
+        $('body').css('overflow', 'auto');
     });
 
 
