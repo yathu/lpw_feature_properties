@@ -1,0 +1,10 @@
+{
+  "next_step": [
+    {"img": "file(1).svg","content": "Apply for pre-approval"},
+    {"img": "calculator(1).svg","content": "Calculate upfront costs"},
+    {"img": "advice(1).svg","content": "Read advice on making an offer"},
+    {"img": "contract(1).svg","content": "Ask for sales contract"},
+    {"img": "coin.svg","content": "Estimate ongoing costs"},
+    {"img": "google-docs.svg","content": "Learn about building inspections"},
+  ]
+}
