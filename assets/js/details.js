@@ -149,7 +149,7 @@ $(document).ready(() => {
                 email: true
             },
             enqTerms: {
-                required: true,
+                // required: true,
             },
         },
         highlight: function (element) {
@@ -419,7 +419,7 @@ $(document).ready(() => {
             prevEl: '.other-project-prev',
         },
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 15,
         breakpoints: {
             // when window width is >= 320px
             320: {
@@ -508,7 +508,7 @@ $(document).ready(() => {
         }
     });
 
-    new Swiper('.land-highlight-swiper', {
+    new Swiper('.insight-swiper', {
         loop: true,
         slidesPerView: 'auto',
         navigation: {
@@ -516,36 +516,56 @@ $(document).ready(() => {
             prevEl: '.highlight-prev',
         },
         spaceBetween: 15,
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //         slidesPerView: 2.5,
-        //     },
-        //     375: {
-        //         slidesPerView: 3.2,
-        //     },
-        //     450: {
-        //         slidesPerView: 3.5,
-        //     },
-        //     485: {
-        //         slidesPerView: 4.2,
-        //     },
-        //     576: {
-        //         slidesPerView: 4.5,
-        //     },
-        //     768: {
-        //         slidesPerView: 5.5,
-        //     },
-        //     992: {
-        //         slidesPerView: 5.5,
-        //     },
-        //     1200: {
-        //         slidesPerView: 6.5,
-        //     },
-        //     1440: {
-        //         slidesPerView: 7.5,
-        //     }
-        // }
+        breakpoints: {
+            320: {
+                slidesPerView: 1.2,
+            },
+            576: {
+                slidesPerView: 2.2,
+            },
+            768: {
+                slidesPerView: 2.5,
+            },
+            992: {
+                slidesPerView: 2.4,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    new Swiper('.feature-project-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.featured-next',
+            prevEl: '.featured-prev',
+        },
+        spaceBetween: 15,
+        breakpoints: {
+            320: {
+                slidesPerView: 1.2,
+            },
+            576: {
+                slidesPerView: 2.2,
+            },
+            768: {
+                slidesPerView: 2.5,
+            },
+            992: {
+                slidesPerView: 2.4,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 3,
+            }
+        }
     });
 
 
@@ -730,19 +750,19 @@ $(document).ready(() => {
         }
     });
 
-    var bannerModal = document.querySelector('#bannerModal');
-
-    bannerModal.addEventListener('show.bs.modal', function (event) {
-        console.log(event.relatedTarget);
-        const element = event.relatedTarget;
-
-        var index = $(element).data("index") || 0;
-
-        console.log("index", index);
-
-        bannerSwiper.slideTo(index);
-
-    });
+    // var bannerModal = document.querySelector('#bannerModal');
+    //
+    // bannerModal.addEventListener('show.bs.modal', function (event) {
+    //     console.log(event.relatedTarget);
+    //     const element = event.relatedTarget;
+    //
+    //     var index = $(element).data("index") || 0;
+    //
+    //     console.log("index", index);
+    //
+    //     bannerSwiper.slideTo(index);
+    //
+    // });
 
 
     var myModalEl = document.querySelector('#zoomModal')
