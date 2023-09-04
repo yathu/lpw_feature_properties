@@ -1,18 +1,91 @@
 {
   "menu_items": [
-    {"name": "Overview","link": "Overview"},
-    {"name": "Highlights","link": "Highlights"},
-    {"name": "About","link": "About"},
-    {"name": "Features","link": "Features"},
-    {"name": "Floor Plans","link": "Floor_plans"},
-    {"name": "Amenities","link": "Amenities"},
-    {"name": "Specifications","link": "Specifications"},
-    {"name": "Video","link": "Video"},
-    {"name": "Developer","link": "Developer"},
-    {"name": "Enquiry","link": "Enquiry"},
-    {"name": "Finance","link": "Finance"},
-    {"name": "Nearby","link": "Nearby"},
-    {"name": "Special Notes","link": "Special_Notes"}
+    {
+      "name": "Overview",
+      "link": "Overview"
+    },
+    {
+      "name": "Highlights",
+      "link": "Highlights"
+    },
+    {
+      "name": "About",
+      "link": "About"
+    },
+    {
+      "name": "Features",
+      "link": "Features"
+    },
+    {
+      "name": "Floor Plans",
+      "link": "Floor_plans"
+    },
+    {
+      "name": "Amenities",
+      "link": "Amenities"
+    },
+    {
+      "name": "Specifications",
+      "link": "Specifications"
+    },
+    {
+      "name": "Video",
+      "link": "Video"
+    },
+    {
+      "name": "Developer",
+      "link": "Developer"
+    },
+    {
+      "name": "Enquiry",
+      "link": "Enquiry"
+    },
+    {
+      "name": "Finance",
+      "link": "Finance"
+    },
+    {
+      "name": "Nearby",
+      "link": "Nearby"
+    },
+    {
+      "name": "Special Notes",
+      "link": "Special_Notes"
+    }
+  ],
+  "overviews": [
+    {
+      "label": "PROPERTY TYPE",
+      "val": "Apartment"
+    },
+    {
+      "label": "PARKING SLOTS",
+      "val": "3"
+    },
+    {
+      "label": "AREA OF LAND",
+      "val": "2 Acres"
+    },
+    {
+      "label": "FURNISHING STATUS",
+      "val": "Fully Furnished"
+    },
+    {
+      "label": "CONSTRUCTION STATUS",
+      "val": "Ready to move in"
+    },
+    {
+      "label": "AVAILABILITY",
+      "val": "Available Now"
+    },
+    {
+      "label": "AGENT’S REFERENCE",
+      "val": "1002"
+    },
+    {
+      "label": "AGE OF BUILDING",
+      "val": "3 Years"
+    }
   ]
 }
 

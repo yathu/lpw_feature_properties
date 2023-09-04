@@ -53,9 +53,9 @@ $(document).ready(() => {
         $(this).toggleClass('active');
     });
 
-    $('#contactNum').on("click", function () {
-        $('#showEnquireNum').trigger('click');
-    });
+    // $('#contactNum').on("click", function () {
+    //     $('#showEnquireNum').trigger('click');
+    // });
 
     jQuery.validator.setDefaults({
         onfocusout: function (e) {
