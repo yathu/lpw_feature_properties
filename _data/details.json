@@ -5,52 +5,56 @@
       "link": "Overview"
     },
     {
-      "name": "Highlights",
-      "link": "Highlights"
+      "name": "Property Details",
+      "link": "Property_Details"
     },
     {
-      "name": "About",
-      "link": "About"
-    },
-    {
-      "name": "Features",
-      "link": "Features"
-    },
-    {
-      "name": "Floor Plans",
-      "link": "Floor_plans"
-    },
-    {
-      "name": "Amenities",
-      "link": "Amenities"
-    },
-    {
-      "name": "Specifications",
-      "link": "Specifications"
+      "name": "Property Features",
+      "link": "Property_Features"
     },
     {
       "name": "Video",
       "link": "Video"
     },
     {
-      "name": "Developer",
-      "link": "Developer"
+      "name": "360/Walk Through",
+      "link": "walkthrough"
     },
     {
-      "name": "Enquiry",
-      "link": "Enquiry"
-    },
-    {
-      "name": "Finance",
-      "link": "Finance"
-    },
-    {
-      "name": "Nearby",
+      "name": "Neighbourhood",
       "link": "Nearby"
     },
     {
-      "name": "Special Notes",
-      "link": "Special_Notes"
+      "name": "Locality",
+      "link": "Locality"
+    },
+    {
+      "name": "Home Loan Calculator",
+      "link": "home_loan"
+    },
+    {
+      "name": "Property Rates",
+      "link": "Rates"
+    },
+    {
+      "name": "Contact Advertiser",
+      "link": "Enquiry"
+    },
+    {
+      "name": "Similar Properties",
+      "link": "Developer"
+    },
+    {
+      "name": "Next Steps for Buyers",
+      "link": "nextStep"
+    },
+    {
+      "name": "Insights & Tools",
+      "link": "insight"
+    },
+    {
+      "name": "Featured Projects",
+      "link": "featured"
     }
   ],
   "overviews": [

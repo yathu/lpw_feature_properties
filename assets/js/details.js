@@ -49,9 +49,9 @@ $(document).ready(() => {
 
     $('.dropdown-toggle').dropdown();
 
-    $('.banner-img-container #love').on("click", function () {
-        $(this).toggleClass('active');
-    });
+    // $('.banner-img-container #love').on("click", function () {
+    //     $(this).toggleClass('active');
+    // });
 
     // $('#contactNum').on("click", function () {
     //     $('#showEnquireNum').trigger('click');
@@ -801,11 +801,11 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
-    var requestCallPhone = document.querySelector("#requestCallPhone");
-    window.intlTelInput(requestCallPhone, {
-        initialCountry: "lk",
-        allowDropdown: true,
-    });
+    // var requestCallPhone = document.querySelector("#requestCallPhone");
+    // window.intlTelInput(requestCallPhone, {
+    //     initialCountry: "lk",
+    //     allowDropdown: true,
+    // });
 
     var initPhoneNo = document.querySelector("#initPhoneNo");
     window.intlTelInput(initPhoneNo, {
@@ -813,11 +813,11 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
-    var contactFrmPhoneNo = document.querySelector("#contactNo");
-    window.intlTelInput(contactFrmPhoneNo, {
-        initialCountry: "lk",
-        allowDropdown: true,
-    });
+    // var contactFrmPhoneNo = document.querySelector("#contactNo");
+    // window.intlTelInput(contactFrmPhoneNo, {
+    //     initialCountry: "lk",
+    //     allowDropdown: true,
+    // });
 
     var inqContact = document.querySelector("#inqContact");
     window.intlTelInput(inqContact, {
@@ -825,11 +825,11 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
-    var bannercontactNo = document.querySelector("#bannercontactNo");
-    window.intlTelInput(bannercontactNo, {
-        initialCountry: "lk",
-        allowDropdown: true,
-    });
+    // var bannercontactNo = document.querySelector("#bannercontactNo");
+    // window.intlTelInput(bannercontactNo, {
+    //     initialCountry: "lk",
+    //     allowDropdown: true,
+    // });
 
     var DetailsPhoneNoModal = new bootstrap.Modal(document.getElementById('DetailsPhoneNoModal'),)
     var detailsInitPopup = new bootstrap.Modal(document.getElementById('detailsPopup'),);
@@ -1093,266 +1093,81 @@ $(document).ready(() => {
         loanCalculator();
     });
 
-    init();
-
-    function init() {
-        var propertyVal = $("#propertyValueSlider").slider("value");
-        var downPaymentPersentage = $("#downPaymentSlider").slider("value");
-        var interestRate = $("#interestRateSlider").slider("value");
-        var loanPeriod = $("#loanPeriodSlider").slider("value");
-
-        var downPayment = (propertyVal / 100) * downPaymentPersentage;
-
-        $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
-        $("#downPayment").val(formatter.format(downPayment).replace("LKR", ""));
-        $("#interestRate").val(interestRate + '%');
-        $("#loanPeriod").val(loanPeriod + " years");
-    }
+    // init();
+    //
+    // function init() {
+    //     var propertyVal = $("#propertyValueSlider").slider("value");
+    //     var downPaymentPersentage = $("#downPaymentSlider").slider("value");
+    //     var interestRate = $("#interestRateSlider").slider("value");
+    //     var loanPeriod = $("#loanPeriodSlider").slider("value");
+    //
+    //     var downPayment = (propertyVal / 100) * downPaymentPersentage;
+    //
+    //     $("#propertyValue").val(formatter.format(propertyVal).replace("LKR", ""));
+    //     $("#downPayment").val(formatter.format(downPayment).replace("LKR", ""));
+    //     $("#interestRate").val(interestRate + '%');
+    //     $("#loanPeriod").val(loanPeriod + " years");
+    // }
 
 
     //background-image: linear-gradient(180deg, #B7D464 0%, #009833 100%);
 
-    var loanChartElement = document.getElementById('loanChart').getContext('2d');
-
-    var principle_gradient = loanChartElement.createLinearGradient(0, 0, 0, 400);
-    principle_gradient.addColorStop(0, '#B7D464');
-    principle_gradient.addColorStop(1, '#009833');
+    // var loanChartElement = document.getElementById('loanChart').getContext('2d');
+    //
+    // var principle_gradient = loanChartElement.createLinearGradient(0, 0, 0, 400);
+    // principle_gradient.addColorStop(0, '#B7D464');
+    // principle_gradient.addColorStop(1, '#009833');
 
     // gradient.addColorStop(0, 'rgba(251,183,87,0.50)');
     // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
 
 
-    try {
 
-    } catch (e) {
-        console.log(e);
-    }
-
-
-    const data = {
-        labels: [
-            'Loan amount ',
-            'Down Payment',
-        ],
-        datasets: [{
-            label: 'My First Dataset',
-            data: [300, 200],
-            backgroundColor: [
-                principle_gradient,
-                '#E8E8E8'
-            ],
-            hoverOffset: 4
-        },
-        ]
-    };
-
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {
-            plugins: {
-                htmlLegend: {
-                    containerID: 'legendContainer',
-                },
-                legend: {
-                    display: false,
-                }
-            }
-        },
-    };
-
-    const loanChart = new Chart(
-        loanChartElement,
-        config
-    );
+    // const data = {
+    //     labels: [
+    //         'Loan amount ',
+    //         'Down Payment',
+    //     ],
+    //     datasets: [{
+    //         label: 'My First Dataset',
+    //         data: [300, 200],
+    //         backgroundColor: [
+    //             principle_gradient,
+    //             '#E8E8E8'
+    //         ],
+    //         hoverOffset: 4
+    //     },
+    //     ]
+    // };
+    //
+    // const config = {
+    //     type: 'doughnut',
+    //     data: data,
+    //     options: {
+    //         plugins: {
+    //             htmlLegend: {
+    //                 containerID: 'legendContainer',
+    //             },
+    //             legend: {
+    //                 display: false,
+    //             }
+    //         }
+    //     },
+    // };
+    //
+    // const loanChart = new Chart(
+    //     loanChartElement,
+    //     config
+    // );
 
 
-    const loanCalculator = () => {
-
-        setTimeout(() => {
-            const propertyValue = $('#propertyValueSlider').slider('values', 0);
-            console.log("propertyValue calc==>", propertyValue);
-
-            const interestRate = $('#interestRateSlider').slider('values', 0);
-            const numberOfMonths = $('#loanPeriodSlider').slider('values', 0) * 12;
-            const downPaymentPersantage = $('#downPaymentSlider').slider('values', 0);
-
-            console.log("downPaymentPersantage calc==>", downPaymentPersantage);
+    // function updateChart(monthlyPayment, totalPayment) {
+    //     loanChart.data.datasets[0].data[0] = totalPayment;
+    //     loanChart.data.datasets[0].data[1] = monthlyPayment;
+    //     loanChart.update();
+    // }
 
 
-            if (!propertyValue || !interestRate || !numberOfMonths || !downPaymentPersantage) {
-                return;
-            }
-
-            const interestRateCalculated = interestRate / 100 / 12;
-
-            // console.log("interestRateCalculated==>",interestRateCalculated);
-
-            const loanAmount = (propertyValue / 100) * (100 - downPaymentPersantage);
-
-            let downPaymentVal = (propertyValue / 100) * downPaymentPersantage;
-
-            // console.log("price==>",loanAmount);
-
-            const part1 = (interestRateCalculated * ((1 + interestRateCalculated) ** numberOfMonths));
-            const part2 = (((1 + interestRateCalculated) ** numberOfMonths) - 1);
-
-            // console.log("part1==>",part1);
-            // console.log("part2==>",part2);
-
-            const Finalpersentage = (part1 / part2);
-
-
-            const monthlyPayment = Math.ceil(loanAmount * Finalpersentage);
-
-            const totalPayment = Math.ceil(monthlyPayment * numberOfMonths);
-
-            // console.log("finalPrice==>",monthlyPayment);
-
-            $('#monthlyPayment').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
-            $('.boldText').text(formatter.format(monthlyPayment).replace("LKR", "Rs"));
-            $('#LoanAmount').text(formatter.format(Math.ceil(loanAmount.toFixed(2))).replace("LKR", "Rs"));
-            $('#interestRateValue').text(interestRate);
-            $('#totalInterest').text(formatter.format(Math.ceil(totalPayment - loanAmount.toFixed(2))).replace("LKR", "Rs"));
-            $('#totalPayment').text(formatter.format(totalPayment).replace("LKR", "Rs"));
-
-            $('#downPayment').val(downPaymentVal);
-
-            var downpayment = $('#downPayment').val().replace(/,/g, "");
-            updateChart(downpayment, loanAmount);
-
-        }, 500);
-
-    }
-
-    loanCalculator();
-
-    function updateChart(monthlyPayment, totalPayment) {
-        loanChart.data.datasets[0].data[0] = totalPayment;
-        loanChart.data.datasets[0].data[1] = monthlyPayment;
-        loanChart.update();
-    }
-
-
-    //pdf broucher
-
-    // If absolute URL from the remote server is provided, configure the CORS
-// header on that server.
-//     var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
-    var url = './assets/pdf/sample.pdf';
-
-// Loaded via <script> tag, create shortcut to access PDF.js exports.
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-// The workerSrc property shall be specified.
-    pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
-
-    var pdfDoc = null,
-        pageNum = 1,
-        pageRendering = false,
-        pageNumPending = null,
-        scale = 1,
-        canvas = document.getElementById('the-canvas'),
-        container = document.getElementById('broucher-pdf-container'),
-        ctx = canvas.getContext('2d');
-
-    /**
-     * Get page info from document, resize canvas accordingly, and render page.
-     * @param num Page number.
-     */
-    function renderPage(num) {
-        pageRendering = true;
-        // Using promise to fetch the page
-        pdfDoc.getPage(num).then(function (page) {
-
-            var viewport = page.getViewport({scale: scale});
-
-            // var scale_ = container.clientWidth / viewport.width;
-
-            // viewport = page.getViewport(scale_);
-
-            // canvas.height = viewport.height;
-
-            const containerWidth = document.getElementById("broucher-pdf-container").offsetWidth;
-
-            canvas.height = 400;
-            canvas.width = containerWidth - 32;
-            // canvas.width = viewport.width;
-
-            // Render PDF page into canvas context
-            var renderContext = {
-                canvasContext: ctx,
-                viewport: viewport
-            };
-            var renderTask = page.render(renderContext);
-
-            // Wait for rendering to finish
-            renderTask.promise.then(function () {
-                pageRendering = false;
-                if (pageNumPending !== null) {
-                    // New page rendering is pending
-                    renderPage(pageNumPending);
-                    pageNumPending = null;
-                }
-            });
-        });
-
-        // Update page counters
-        // document.getElementById('page_num').textContent = num;
-        var progressWidth = ((num / pdfDoc.numPages) * 100) + '%';
-        $('#brochureProgressBar').width(progressWidth);
-
-        $('#pageNumbers').html(`${num} / ${pdfDoc.numPages}`);
-    }
-
-    /**
-     * If another page rendering in progress, waits until the rendering is
-     * finised. Otherwise, executes rendering immediately.
-     */
-    function queueRenderPage(num) {
-        if (pageRendering) {
-            pageNumPending = num;
-        } else {
-            renderPage(num);
-        }
-    }
-
-    /**
-     * Displays previous page.
-     */
-    function onPrevPage() {
-        if (pageNum <= 1) {
-            return;
-        }
-        pageNum--;
-        queueRenderPage(pageNum);
-    }
-
-    document.getElementById('brochurePrev').addEventListener('click', onPrevPage);
-
-    /**
-     * Displays next page.
-     */
-    function onNextPage() {
-        if (pageNum >= pdfDoc.numPages) {
-            return;
-        }
-        pageNum++;
-        queueRenderPage(pageNum);
-    }
-
-    document.getElementById('brochureNext').addEventListener('click', onNextPage);
-
-    /**
-     * Asynchronously downloads PDF.
-     */
-    pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
-        pdfDoc = pdfDoc_;
-        // document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-        // Initial/first page rendering
-        renderPage(pageNum);
-    });
 
     const showPhoneNoModal = () => {
         setTimeout(() => DetailsPhoneNoModal.show(), 0);
