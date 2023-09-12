@@ -1,4 +1,7 @@
-- **Don't ignore _site** 
+### Required
+
+-  node v14.18.1
+
 - Install node modules
   ```
   npm install
