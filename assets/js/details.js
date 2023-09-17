@@ -750,19 +750,19 @@ $(document).ready(() => {
         }
     });
 
-    // var bannerModal = document.querySelector('#bannerModal');
+    var bannerModal = document.querySelector('#bannerModal');
     //
-    // bannerModal.addEventListener('show.bs.modal', function (event) {
-    //     console.log(event.relatedTarget);
-    //     const element = event.relatedTarget;
-    //
-    //     var index = $(element).data("index") || 0;
-    //
-    //     console.log("index", index);
-    //
-    //     bannerSwiper.slideTo(index);
-    //
-    // });
+    bannerModal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+        const element = event.relatedTarget;
+
+        var index = $(element).data("index") || 0;
+
+        console.log("index", index);
+
+        bannerSwiper.slideTo(index);
+
+    });
 
 
     var myModalEl = document.querySelector('#zoomModal')
@@ -873,12 +873,28 @@ $(document).ready(() => {
         $('#teamShowMoreContent').toggleClass('show-less');
     });
 
-    $('#showEnquireNum').on("click", function () {
-        $('.phone-info').removeClass('hide');
-        $('#contactCard').removeClass('d-none');
-        $(this).hide();
-        $('.show-box').addClass('hide-show-box');
+    // $('#showEnquireNum').on("click", function () {
+    //     $('.phone-info').removeClass('hide');
+    //     $('#contactCard').removeClass('d-none');
+    //     $(this).hide();
+    //     $('.show-box').addClass('hide-show-box');
+    // });
+
+    $('#viewAgent').on('click', function () {
+        $('#phoneInfo').removeClass('hide');
     });
+
+    $('#agentNum').on('click', function () {
+        setTimeout(()=>{
+            $('#phoneInfo').removeClass('hide');
+        },1000)
+    });
+
+    $('#saveBtn').on('click', function () {
+        $(this).toggleClass('saved');
+    });
+
+
 
 
     var lastScrollTop = 0;
@@ -1122,7 +1138,6 @@ $(document).ready(() => {
     // gradient.addColorStop(1, 'rgba(255,212,78,0.00)');
 
 
-
     // const data = {
     //     labels: [
     //         'Loan amount ',
@@ -1166,7 +1181,6 @@ $(document).ready(() => {
     //     loanChart.data.datasets[0].data[1] = monthlyPayment;
     //     loanChart.update();
     // }
-
 
 
     const showPhoneNoModal = () => {
