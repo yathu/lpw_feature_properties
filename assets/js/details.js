@@ -251,6 +251,21 @@ $(document).ready(() => {
         })
     });
 
+    $("#nextStepItems >.item-col").each(function (index, element){
+        // console.log("index=>",index);
+        console.log("index=>",index);
+
+        if(index > 3){
+            $(this).addClass('hide');
+        }
+    });
+
+    $("#viewNextStep").on("click",function (){
+        $('#nextStepItems > .item-col').removeClass('hide');
+
+        $('.viewMoreNext').hide();
+    });
+
     new Swiper('.payment-plan-swiper', {
         loop: false,
         navigation: {
@@ -491,19 +506,19 @@ $(document).ready(() => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.2,
             },
             576: {
-                slidesPerView: 2,
+                slidesPerView: 1.3,
             },
             768: {
-                slidesPerView: 2,
+                slidesPerView: 2.3,
             },
             992: {
-                slidesPerView: 2,
+                slidesPerView: 2.2,
             },
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 2.3,
             },
         }
     });
