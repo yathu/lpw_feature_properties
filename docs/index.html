@@ -986,7 +986,8 @@
                         </span>
                     </div>
 
-                    <div class="d-flex btns d-flex justify-content-center">
+                    <div class="d-flex btns d-flex justify-content-center" data-bs-toggle="modal"
+                         data-bs-target="#bannerModal">
                         <div>
                             <img src="assets/img/details/btnIcons/camera.svg" alt="">
                             <span class="">
@@ -995,13 +996,13 @@
                         </div>
                         <div class="ms-4">
                             <img src="assets/img/details/btnIcons/rotation.svg" alt="">
-                            <span style="margin-left: -2px">
+                            <span>
                                     3D
                                 </span>
                         </div>
                         <div class="ms-4">
                             <img class="ms-2" src="assets/img/details/btnIcons/video-camera.svg" alt="">
-                            <span class="ms-1">
+                            <span class="">
                                     1
                                 </span>
                         </div>
@@ -1038,8 +1039,8 @@
                 </div>
             </div>
 
-            <div class="title-content-2 price-container d-flex align-items-end flex-wrap">
-                <span class="price">LKR 2,83,415</span>
+            <div class="title-content-2 price-container d-flex align-items-baseline align-items-md-end flex-wrap">
+                <span class="price mb-3 mb-lg-0">LKR 2,83,415</span>
                 <!--                <span class="price-label">Upwards</span>-->
                 <span class="pt-md-2 pt-lg-0 sqft mx-2">
                   per month (or nearest offer)
@@ -1053,12 +1054,12 @@
                 <!--                    </svg>-->
                 <!--                </div>-->
 
-                <select class="form-select w-auto" aria-label="Default select example">
+                <select class="form-select w-auto me-3" aria-label="Default select example">
                     <option selected>USD 845</option>
                     <option value="1">EUR 600</option>
                 </select>
 
-                <div class="move-in px-4 py-2 ms-3">
+                <div class="move-in px-4 py-2">
                     Ready to move in
                 </div>
             </div>
@@ -2143,8 +2144,8 @@
 
                         </div>
                         <div class="col d-flex justify-content-between">
-                            <div class="row align-items-center">
-                                <p class="col">
+                            <div class="row flex-column flex-md-row align-items-start align-items-md-center">
+                                <p class="col pb-2 pb-md-0">
                                     Try our new price meter tool to find out the average price of the property in
                                     Colomb0 03
                                 </p>
@@ -2895,76 +2896,70 @@ Access Engineering
 
                 <!--                create bootstrap layout 3columns 2rows -->
 
-                <div class="row align-items-stretch mb-1">
+                <div class="row align-items-stretch mb-1 position-relative">
 
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/file(1).svg" alt="">
-
-
                             Apply for pre-approval
                         </div>
                     </div>
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/calculator(1).svg" alt="">
-
-
                             Calculate upfront costs
                         </div>
                     </div>
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/advice(1).svg" alt="">
-
-
                             Read advice on making an offer
                         </div>
                     </div>
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/contract(1).svg" alt="">
-
-
                             Ask for sales contract
                         </div>
                     </div>
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/coin.svg" alt="">
-
-
                             Estimate ongoing costs
                         </div>
                     </div>
 
                     
 
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div id="nextStepItems" class="col-12 col-sm-6 col-md-4">
                         <div class="item-col">
                             <img src="assets/img/details/next_step/google-docs.svg" alt="">
-
-
                             Learn about building inspections
                         </div>
                     </div>
 
                     
+
+                    <div class="position-absolute viewMoreNext">
+                        <button id="viewNextStep" class="btn btn-outline-primary">
+                            View more
+                        </button>
+                    </div>
 
                 </div>
 
@@ -5266,7 +5261,7 @@ Access Engineering
                 </div>
 
                 <div class="row gx-0">
-                    <div class="col-lg-7 col-xl-8 py-1 ps-3">
+                    <div class="col-lg-7 col-xl-8">
                         <div class="position-relative h-100">
                             <div class="swiper banner-swiper h-100">
                                 <div class="swiper-wrapper align-items-center">
@@ -5314,15 +5309,15 @@ Access Engineering
                                     </div>
                                     
                                     <div class="swiper-slide d-flex align-items-lg-center">
-                                        <div class="ratio ratio-16x9">
+                                        <div class="ratio ratio-16x9 h-100">
                                             <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                                                     title="YouTube video" allowfullscreen></iframe>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide h-auto">
+                                    <div class="swiper-slide">
                                         <video
                                                 id="myVideo"
-                                                class="video-js vjs-default-skin vjs-big-play-centered"
+                                                class="video-js vjs-default-skin vjs-big-play-centered h-100"
                                                 preload="auto"
                                                 width="auto"
                                                 height="auto"
@@ -5766,11 +5761,25 @@ Access Engineering
 
 
 <div class="bottomFloat row gx-2">
-    <div class="col"><a
-            class="btn btn-danger openPopUP call-btn pure-material-button-contained position-relative">CALL</a>
+    <div class="col">
+        <a
+                class="btn btn-danger openPopUP call-btn pure-material-button-contained position-relative">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            CALL
+        </a>
     </div>
-    <div class="col"><a class="btn btn-outline-danger openPopWhatsApp">WHATSAPP</a></div>
-    <div class="col"><a class="btn btn-outline-danger" href="#Enquiry">EMAIL</a></div>
+    <div class="col">
+        <a class="btn btn-custom-primary openPopWhatsApp">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            CHAT
+        </a>
+    </div>
+    <div class="col">
+        <a class="btn btn-outline-danger" href="#Enquiry">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            EMAIL
+        </a>
+    </div>
 </div>
 
 <div class="modal fade" id="DetailsWhatsAppModal" tabindex="-1" aria-labelledby="phoneNoModalLabel"

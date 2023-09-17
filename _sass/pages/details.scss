@@ -47,9 +47,12 @@
     img {
       cursor: pointer !important;
     }
+    .img-fluid{
+      min-width: 100%;
+    }
 
     @media (max-width: 767.98px) {
-      height: 50vh;
+      height: 60vh;
       overflow: hidden;
     }
     @media (max-width: 575.98px) {
@@ -165,7 +168,7 @@
       @media (min-width: 576px) {
         //height: 100%;
         object-fit: cover;
-        min-width: 100%;
+        //min-width: 100%;
       }
 
       @media (min-width: 768px) {
@@ -341,6 +344,14 @@
         right: 8px;
         left: 8px;
 
+        @media (max-width: 767.98px) {
+          bottom: 5px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          bottom: 8px;
+        }
+
         div {
           display: flex;
 
@@ -350,6 +361,7 @@
             color: #FFFFFF;
             font-size: 18px;
             object-fit: contain;
+            margin-right: 5px;
           }
 
           span {
@@ -1856,6 +1868,20 @@
         //line-height: 30px;
       }
     }
+
+    #nextStepItems{
+      .hide{
+        display: none;
+      }
+    }
+
+    .viewMoreNext{
+      background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.88) 51%, #FFFFFF 100%);
+      padding: 50px 10px 15px 10px;
+      display: flex;
+      justify-content: center;
+      bottom: 15px;
+    }
   }
 
   .ideal-container {
@@ -2563,16 +2589,16 @@
       //border-radius: 4px;
       overflow: hidden;
       max-width: 100%;
-      min-height: 300px;
-      max-height: 300px;
+      //min-height: 300px;
+      //max-height: 300px;
 
-      @media (min-width: 992px) {
-        max-height: 465px;
-      }
+      //@media (min-width: 992px) {
+      //  max-height: 465px;
+      //}
 
       img {
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
 
         @media (max-width: 575.98px) {
           //min-height: 400px;
@@ -2653,7 +2679,7 @@
     .video-js {
       position: relative !important;
       width: 100% !important;
-      height: auto !important;
+      height: 100% !important;
       max-height: 100% !important;
     }
 
@@ -3386,6 +3412,10 @@ input[type="date"]:focus:before {
   a {
     max-width: 100% !important;
     width: 100%;
+
+    i{
+      margin-right: 5px;
+    }
   }
 
   .btn-outline-danger:hover {
