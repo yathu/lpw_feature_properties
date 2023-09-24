@@ -256,7 +256,9 @@ $(document).ready(() => {
         console.log("index=>",index);
 
         if(index > 3){
-            $(this).addClass('hide');
+            if ($(window).width() < 768){
+                $(this).addClass('hide');
+            }
         }
     });
 
@@ -563,22 +565,25 @@ $(document).ready(() => {
         spaceBetween: 15,
         breakpoints: {
             320: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.1,
+            },
+            425: {
+                slidesPerView: 1.3,
             },
             576: {
-                slidesPerView: 2.2,
+                slidesPerView: 1.3,
             },
             768: {
-                slidesPerView: 2.5,
+                slidesPerView: 2.2,
             },
             992: {
-                slidesPerView: 2.4,
+                slidesPerView: 2.2,
             },
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
             },
             1440: {
-                slidesPerView: 3,
+                slidesPerView: 2.8,
             }
         }
     });
@@ -907,6 +912,9 @@ $(document).ready(() => {
 
     $('#saveBtn').on('click', function () {
         $(this).toggleClass('saved');
+        const text = $(this).children('span').text();
+        const appendText = text.toLowerCase() == 'save' ? 'Saved' : 'Save';
+        $(this).children('span').html(appendText);
     });
 
 
