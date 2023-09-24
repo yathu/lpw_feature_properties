@@ -1877,10 +1877,18 @@
 
     .viewMoreNext{
       background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.88) 51%, #FFFFFF 100%);
-      padding: 50px 10px 15px 10px;
+      padding: 75px 10px 15px 10px;
       display: flex;
       justify-content: center;
-      bottom: 15px;
+      bottom: 0px;
+
+      @media (min-width: 576px) {
+        bottom: 10px;
+      }
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -2485,6 +2493,10 @@
 
       hr {
         background-color: #D9D9D9;
+      }
+
+      .btn{
+        font-size: 15px !important;
       }
 
     }
@@ -3314,6 +3326,12 @@
         }
       }
     }
+  }
+}
+
+#reportModal{
+  .modal-dialog{
+    max-width: 375px;
   }
 }
 
