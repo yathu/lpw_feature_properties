@@ -457,45 +457,45 @@ $(document).ready(() => {
         }
     });
 
-    new Swiper('.mapview-swiper', {
-        loop: false,
-        slidesPerView: 4.5,
-        navigation: {
-            nextEl: '.mapView-next',
-            prevEl: '.mapView-prev',
-        },
-        spaceBetween: 10,
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 2.5,
-            },
-            375: {
-                slidesPerView: 3.2,
-            },
-            450: {
-                slidesPerView: 3.5,
-            },
-            485: {
-                slidesPerView: 4.2,
-            },
-            576: {
-                slidesPerView: 4.5,
-            },
-            768: {
-                slidesPerView: 5.5,
-            },
-            992: {
-                slidesPerView: 5.5,
-            },
-            1200: {
-                slidesPerView: 6.5,
-            },
-            1440: {
-                slidesPerView: 7.5,
-            }
-        }
-    });
+    // new Swiper('.mapview-swiper', {
+    //     loop: false,
+    //     slidesPerView: 4.5,
+    //     navigation: {
+    //         nextEl: '.mapView-next',
+    //         prevEl: '.mapView-prev',
+    //     },
+    //     spaceBetween: 10,
+    //     breakpoints: {
+    //         // when window width is >= 320px
+    //         320: {
+    //             slidesPerView: 2.5,
+    //         },
+    //         375: {
+    //             slidesPerView: 3.2,
+    //         },
+    //         450: {
+    //             slidesPerView: 3.5,
+    //         },
+    //         485: {
+    //             slidesPerView: 4.2,
+    //         },
+    //         576: {
+    //             slidesPerView: 4.5,
+    //         },
+    //         768: {
+    //             slidesPerView: 5.5,
+    //         },
+    //         992: {
+    //             slidesPerView: 5.5,
+    //         },
+    //         1200: {
+    //             slidesPerView: 6.5,
+    //         },
+    //         1440: {
+    //             slidesPerView: 7.5,
+    //         }
+    //     }
+    // });
 
     new Swiper('.locality-swiper', {
         loop: true,
@@ -1214,7 +1214,7 @@ $(document).ready(() => {
         setTimeout(() => WhatsAppModal.show(), 0);
     }
 
-    $('.bottomFloat .openPopUP').on("click", function () {
+    $('.openPopUP').on("click", function () {
         showPhoneNoModal();
     });
 
@@ -1233,9 +1233,7 @@ function initMap() {
 
     var locations = $('#map').data("location").split(",");
 
-
     sydney = new google.maps.LatLng(parseFloat(locations[0]), parseFloat(locations[1]));
-
 
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {
@@ -1255,7 +1253,7 @@ function initMap() {
     };
 
     service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
+    // service.nearbySearch(request, callback);
 }
 
 function callback(results, status) {
@@ -1267,18 +1265,18 @@ function callback(results, status) {
     }
 }
 
-$('.mapview-swiper .swiper-slide').on("click", function () {
-
-    const place = $(this).data("place");
-    changeMarkerPlaces(place);
-
-    $('.mapview-swiper .swiper-slide').each(
-        function () {
-            $(this).removeClass("active");
-        }
-    );
-    $(this).addClass('active');
-});
+// $('.mapview-swiper .swiper-slide').on("click", function () {
+//
+//     const place = $(this).data("place");
+//     changeMarkerPlaces(place);
+//
+//     $('.mapview-swiper .swiper-slide').each(
+//         function () {
+//             $(this).removeClass("active");
+//         }
+//     );
+//     $(this).addClass('active');
+// });
 
 function changeMarkerPlaces(place) {
     clearOverlays();
