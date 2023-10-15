@@ -1505,9 +1505,9 @@
         text-align: center;
         line-height: 20px;
 
-        @media (max-width: 767.98px) {
-          display: none;
-        }
+        //@media (max-width: 767.98px) {
+        //  display: none;
+        //}
       }
 
       .phone-info {
@@ -2832,7 +2832,7 @@
         span {
           line-height: 1;
           font-family: Rubik-Regular;
-          font-size: 13px;
+          font-size: 15px;
           color: #202330;
         }
       }
