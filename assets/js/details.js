@@ -251,18 +251,18 @@ $(document).ready(() => {
         })
     });
 
-    $("#nextStepItems >.item-col").each(function (index, element){
+    $("#nextStepItems >.item-col").each(function (index, element) {
         // console.log("index=>",index);
-        console.log("index=>",index);
+        console.log("index=>", index);
 
-        if(index > 3){
-            if ($(window).width() < 768){
+        if (index > 3) {
+            if ($(window).width() < 768) {
                 $(this).addClass('hide');
             }
         }
     });
 
-    $("#viewNextStep").on("click",function (){
+    $("#viewNextStep").on("click", function () {
         $('#nextStepItems > .item-col').removeClass('hide');
 
         $('.viewMoreNext').hide();
@@ -907,11 +907,11 @@ $(document).ready(() => {
     });
 
     $('#agentNum').on('click', function () {
-        setTimeout(()=>{
+        setTimeout(() => {
             $('#phoneInfo').removeClass('hide');
             $('#viewAgent').removeClass('d-md-inline-block');
             $('#viewAgent').addClass('d-none');
-        },1000)
+        }, 1000)
     });
 
     $('#saveBtn').on('click', function () {
@@ -920,8 +920,6 @@ $(document).ready(() => {
         const appendText = text.toLowerCase() == 'save' ? 'Saved' : 'Save';
         $(this).children('span').html(appendText);
     });
-
-
 
 
     var lastScrollTop = 0;
@@ -1225,7 +1223,18 @@ $(document).ready(() => {
     $('.bottomFloat .openPopWhatsApp').on("click", function () {
         showWhatsAppModal();
     });
+
+    //whatsApp
+    setTimeout(()=> setTime(), 1000);
+
 });
+
+const setTime = () => {
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes();
+
+    $("#wap-time").html(time);
+}
 
 //detail map code
 let map;
