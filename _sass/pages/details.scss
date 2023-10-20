@@ -2172,7 +2172,7 @@
       margin-bottom: 7px;
     }
 
-    .apply-btn{
+    .apply-btn {
       border-radius: 25px !important;
     }
 
@@ -2532,6 +2532,13 @@
 }
 
 #bannerModal {
+  .modal-content {
+
+    @media (max-width: 767.98px) {
+      background-color: transparent !important;
+    }
+  }
+
   .modal-body {
     max-height: 100%;
 
@@ -2641,6 +2648,9 @@
 
         @media (max-width: 575.98px) {
           //min-height: 400px;
+        }
+        @media (max-width: 767.98px) {
+          object-fit: contain;
         }
       }
     }
@@ -3468,7 +3478,7 @@ input[type="date"]:focus:before {
   //  color: #ff4501;
   //}
 
-  .btn-secondary{
+  .btn-secondary {
     padding: 4px 12px;
   }
 
@@ -3558,4 +3568,188 @@ input[type="date"]:focus:before {
 
 .country-list {
   white-space: normal !important;
+}
+
+.whatsAppPopup {
+  position: fixed;
+  z-index: 99999;
+  bottom: 25px;
+  right: 25px;
+  width: 360px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 #a7a7a7;
+
+  .wap-header {
+    background-color: #0a5f54;
+    padding: 15px;
+
+    img {
+      width: 52px;
+      height: 52px;
+      position: relative;
+
+    }
+
+    .online{
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-color: #adff2f;
+      border-radius: 25px;
+      bottom: 4px;
+      right: 2px;
+      border: 2px solid #086054;
+    }
+
+    .name-container{
+      color: #FFFFFF;
+
+      .name{
+        font-family: Rubik-Medium;
+        font-size: 15px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .desc{
+        font-family: Rubik-Regular;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .wap-body{
+    background-color: #e6ddd4;
+    padding: 15px 20px 15px 15px;
+    position: relative;
+
+    &:before{
+      content: "";
+      background-image: url("../img/details/whatsapp-bg.png");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.08;
+      background-repeat: no-repeat;
+    }
+
+    .talk-bubble {
+      margin: 5px 0px 0px 15px;
+      display: inline-block;
+      position: relative;
+      width: 200px;
+      height: auto;
+      background-color: #fff;
+      padding: 5px 12px 12px;
+      border-radius: 6px;
+    }
+
+    .tri-right.border.left-top:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -40px;
+      right: auto;
+      top: -8px;
+      bottom: auto;
+      border: 32px solid;
+      border-color: #666 transparent transparent transparent;
+    }
+    .tri-right.left-top:after{
+      content: " ";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -15px;
+      right: auto;
+      top: 0;
+      bottom: auto;
+      border: 15px solid transparent;
+      border-top-color: #fff;
+    }
+
+    strong{
+      color: #828282;
+      font-size: 13px;
+      margin-bottom: 5px;
+      display: block;
+    }
+    p{
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  }
+
+  .wap-footer{
+    padding: 15px;
+    .btn{
+      background-color: #16c655;
+      border-radius: 25px;
+      padding: 10px 12px;
+      color: #FFFFFF;
+
+      img{
+        width: 18px;
+        height: auto;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  $dot-width: 5px;
+  $dot-color: #3b5998;
+  $speed: 1.5s;
+
+  .typing-container{
+    padding: 15px 18px;
+    margin-bottom: 5px;
+  }
+  .typing {
+    position: relative;
+    width: 20px;
+    height: 5px;
+
+    span {
+      content: '';
+      animation: blink $speed infinite;
+      animation-fill-mode: both;
+      height: $dot-width;
+      width: $dot-width;
+      background: $dot-color;
+      position: absolute;
+      left:0;
+      top:0;
+      border-radius: 50%;
+
+      &:nth-child(2) {
+        animation-delay: .2s;
+        margin-left: $dot-width * 1.5;
+      }
+
+      &:nth-child(3) {
+        animation-delay: .4s;
+        margin-left: $dot-width * 3;
+      }
+    }
+  }
+
+
+  @keyframes blink {
+    0% {
+      opacity: .1;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .1;
+    }
+  }
 }
