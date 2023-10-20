@@ -902,11 +902,15 @@ $(document).ready(() => {
 
     $('#viewAgent').on('click', function () {
         $('#phoneInfo').removeClass('hide');
+        $('#viewAgent').removeClass('d-md-inline-block');
+        $('#viewAgent').addClass('d-none');
     });
 
     $('#agentNum').on('click', function () {
         setTimeout(()=>{
             $('#phoneInfo').removeClass('hide');
+            $('#viewAgent').removeClass('d-md-inline-block');
+            $('#viewAgent').addClass('d-none');
         },1000)
     });
 
