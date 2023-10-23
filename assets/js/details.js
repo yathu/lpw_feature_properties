@@ -1224,12 +1224,43 @@ $(document).ready(() => {
         showWhatsAppModal();
     });
 
-    //whatsApp
-    setTimeout(()=> setTime(), 1000);
+    let myIntervel;
+
+    const isWAPShowed = localStorage.getItem("WAPShowed");
+    console.log("isWAPShowed==>",isWAPShowed);
+
+    setTimeout(()=>{
+        if(!isWAPShowed){
+            showWhatsApp()
+        }
+
+    },3000);
+
+    $('#closeWap').on("click",function () {
+        $("#whatsAppPopup").addClass('d-none');
+        clearInterval(myIntervel);
+    })
 
 });
 
+const showWhatsApp = ()=>{
+    //whatsApp
+    $("#whatsAppPopup").removeClass('d-none');
+    setTimeout(()=>{
+        $("#whatsAppPopup").addClass('transation');
+
+    },200)
+    localStorage.setItem("WAPShowed", true);
+    setTime();
+    myIntervel =  setInterval(setTime, 60000);
+
+    setTimeout(()=>{
+        $('#typing').addClass('d-none');
+    },3000)
+}
+
 const setTime = () => {
+    console.log("time called ==>")
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes();
 

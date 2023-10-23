@@ -3570,6 +3570,11 @@ input[type="date"]:focus:before {
   white-space: normal !important;
 }
 
+.transation{
+  transform: translate(-50%, 0) !important;
+  transition: all ease-in-out .5s;
+}
+
 .whatsAppPopup {
   position: fixed;
   z-index: 99999;
@@ -3579,6 +3584,14 @@ input[type="date"]:focus:before {
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 0 5px 0 #a7a7a7;
+
+  @media (max-width: 767.98px) {
+    left: 50%;
+    transform: translate(-50%, 110%);
+    bottom: 15px;
+    max-width: calc(100% - 30px);
+    transition: all ease-in-out .5s;
+  }
 
   .wap-header {
     background-color: #0a5f54;
@@ -3617,6 +3630,12 @@ input[type="date"]:focus:before {
         font-family: Rubik-Regular;
         font-size: 12px;
       }
+    }
+
+    .btn-close{
+      top: 11px;
+      right: 9px;
+      font-size: 10px;
     }
   }
 
