@@ -3063,8 +3063,8 @@ Access Engineering (Agent)
 </div>
 
 
-<div class="whatsAppPopup" id="whatsAppPopup">
-    <div class="wap-header d-flex align-items-center">
+<div class="whatsAppPopup d-none" id="whatsAppPopup">
+    <div class="wap-header d-flex align-items-center position-relative">
         <div class="position-relative d-inline-block col-auto">
             <img class="rounded-circle"
                  src="https://static.elfsight.com/apps/all-in-one-chat/avatars/general.jpeg"
@@ -3075,9 +3075,12 @@ Access Engineering (Agent)
             <div class="name">Agent Name</div>
             <div class="desc">Agent Description message</div>
         </div>
+
+        <button type="button" id="closeWap" class="btn-close btn-close-white position-absolute" aria-label="Close"></button>
+
     </div>
     <div class="wap-body d-flex flex-column align-items-start">
-        <div class="typing-container d-inline-flex bg-white rounded-pill justify-content-center align-items-center">
+        <div id="typing" class="typing-container d-inline-flex bg-white rounded-pill justify-content-center align-items-center">
             <div class="typing">
                 <span></span>
                 <span></span>
@@ -3093,10 +3096,13 @@ Access Engineering (Agent)
             <p class="mb-0">
                 How can I help you?
             </p>
+            <span class="time d-block" id="wap-time">
+                15.45
+            </span>
         </div>
     </div>
     <div class="wap-footer bg-white">
-        <a href="#" class="btn d-block">
+        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">
             <img src="assets/img/details/wap-line.svg" alt="">
             Start Chat
         </a>

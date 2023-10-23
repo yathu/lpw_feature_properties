@@ -3570,6 +3570,11 @@ input[type="date"]:focus:before {
   white-space: normal !important;
 }
 
+.transation{
+  transform: translate(-50%, 0) !important;
+  transition: all ease-in-out .5s;
+}
+
 .whatsAppPopup {
   position: fixed;
   z-index: 99999;
@@ -3579,6 +3584,14 @@ input[type="date"]:focus:before {
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 0 5px 0 #a7a7a7;
+
+  @media (max-width: 767.98px) {
+    left: 50%;
+    transform: translate(-50%, 110%);
+    bottom: 15px;
+    max-width: calc(100% - 30px);
+    transition: all ease-in-out .5s;
+  }
 
   .wap-header {
     background-color: #0a5f54;
@@ -3618,6 +3631,12 @@ input[type="date"]:focus:before {
         font-size: 12px;
       }
     }
+
+    .btn-close{
+      top: 11px;
+      right: 9px;
+      font-size: 10px;
+    }
   }
 
   .wap-body{
@@ -3645,7 +3664,7 @@ input[type="date"]:focus:before {
       width: 200px;
       height: auto;
       background-color: #fff;
-      padding: 5px 12px 12px;
+      padding: 5px 12px 5px;
       border-radius: 6px;
     }
 
@@ -3684,6 +3703,12 @@ input[type="date"]:focus:before {
       font-size: 14px;
       font-weight: 300;
       margin-bottom: 10px;
+    }
+    span.time{
+      font-size: 12px;
+      color: #797979;
+      text-align: right;
+      margin-top: 5px;
     }
   }
 
