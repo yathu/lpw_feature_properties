@@ -1227,36 +1227,74 @@ $(document).ready(() => {
     let myIntervel;
 
     const isWAPShowed = localStorage.getItem("WAPShowed");
-    console.log("isWAPShowed==>",isWAPShowed);
+    console.log("isWAPShowed==>", isWAPShowed);
 
-    setTimeout(()=>{
-        if(!isWAPShowed){
+    setTimeout(() => {
+        if (!isWAPShowed) {
             showWhatsApp()
         }
 
-    },3000);
+    }, 3000);
 
-    $('#closeWap').on("click",function () {
+    $('#closeWap').on("click", function () {
         $("#whatsAppPopup").addClass('d-none');
         clearInterval(myIntervel);
     })
 
+    const levelLength = $('#nav_breadcrumb').children().length;
+    console.log("levelLength", levelLength);
+
+    if (levelLength > 2) {
+        $('#nav_breadcrumb li').each((index, item) => {
+
+            console.log("index=========>", index);
+
+            if (index > 0 && index < levelLength - 1) {
+                console.log("item==>", item);
+
+                if ($(item).attr('id') == 'show_breadcrumb') {
+                    $(item).removeClass('d-none');
+                } else {
+                    $(item).addClass('d-none');
+                }
+            }
+
+            if (index == (levelLength - 1)) {
+
+            }
+        })
+    }
+
+    $('#show_breadcrumb').on("click", function () {
+        $('#nav_breadcrumb li').each((index, item) => {
+            if ($(item).attr('id') == 'show_breadcrumb') {
+                $(item).addClass('d-none');
+            } else {
+                $(item).removeClass('d-none');
+            }
+        });
+    })
+
 });
 
-const showWhatsApp = ()=>{
+const showWhatsApp = () => {
     //whatsApp
     $("#whatsAppPopup").removeClass('d-none');
-    setTimeout(()=>{
+    setTimeout(() => {
         $("#whatsAppPopup").addClass('transation');
 
-    },200)
+    }, 200)
     localStorage.setItem("WAPShowed", true);
     setTime();
-    myIntervel =  setInterval(setTime, 60000);
+    myIntervel = setInterval(setTime, 60000);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         $('#typing').addClass('d-none');
-    },3000)
+        $('#wap_message').removeClass('d-none');
+    }, 3000)
+
+    setTimeout(() => {
+    }, 3500)
 }
 
 const setTime = () => {
