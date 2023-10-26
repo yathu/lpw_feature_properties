@@ -5,6 +5,7 @@
 .saleDetails {
 
   background-color: #F2F2F2;
+  position: relative;
 
   .back-nav-container {
     padding-left: 43px;
@@ -3571,8 +3572,10 @@ input[type="date"]:focus:before {
 }
 
 .transation{
-  transform: translate(-50%, 0) !important;
-  transition: all ease-in-out .5s;
+  @media (max-width: 767.98px) {
+    transform: translate(0, 0) !important;
+    transition: all ease-in-out .5s;
+  }
 }
 
 .whatsAppPopup {
@@ -3586,11 +3589,14 @@ input[type="date"]:focus:before {
   box-shadow: 0 0 5px 0 #a7a7a7;
 
   @media (max-width: 767.98px) {
-    left: 50%;
-    transform: translate(-50%, 110%);
-    bottom: 15px;
-    max-width: calc(100% - 30px);
+    //left: 50%;
+    right: 0;
+    left: 0;
+    transform: translate(0, 110%);
+    bottom: 0px;
+    max-width: 100%;
     transition: all ease-in-out .5s;
+    width: 100%;
   }
 
   .wap-header {
@@ -3643,6 +3649,7 @@ input[type="date"]:focus:before {
     background-color: #e6ddd4;
     padding: 15px 20px 15px 15px;
     position: relative;
+    min-height: 144px;
 
     &:before{
       content: "";
