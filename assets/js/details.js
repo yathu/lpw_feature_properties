@@ -133,6 +133,25 @@ $(document).ready(() => {
         },
     });
 
+    var shareDetailForm = $("#shareDetailForm");
+    shareDetailForm.validate(
+        {
+            rules: {
+                shareName: {
+                    required: true,
+                },
+                shareEmail: {
+                    required: true,
+                    email: true
+                },
+                sharePhone: {
+                    required: true,
+                    number: true,
+                }
+            }
+        }
+    );
+
     var enqForm = $("#enqForm");
     enqForm.validate({
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
@@ -159,6 +178,7 @@ $(document).ready(() => {
             $(element).removeClass('is-invalid').addClass('is-valid');
         },
     });
+
 
     form.children("div").steps({
         headerTag: "h3",
@@ -904,6 +924,7 @@ $(document).ready(() => {
         $('#phoneInfo').removeClass('hide');
         $('#viewAgent').removeClass('d-md-inline-block');
         $('#viewAgent').addClass('d-none');
+        showShareDetail();
     });
 
     $('#agentNum').on('click', function () {
@@ -911,8 +932,18 @@ $(document).ready(() => {
             $('#phoneInfo').removeClass('hide');
             $('#viewAgent').removeClass('d-md-inline-block');
             $('#viewAgent').addClass('d-none');
+            showShareDetail();
         }, 1000)
     });
+
+    var shareDetailModal = new bootstrap.Modal(document.getElementById('shareDetailModal'), {
+        keyboard: false
+    });
+
+    const showShareDetail = () => setTimeout(() => {
+        shareDetailModal.show();
+    }, 1000);
+
 
     $('#saveBtn').on('click', function () {
         $(this).toggleClass('saved');

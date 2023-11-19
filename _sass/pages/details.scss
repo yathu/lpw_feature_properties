@@ -2478,23 +2478,24 @@
       .avatar-container{
         position: relative;
         display: inline-block;
+        padding: 25px;
+        //background-color: red;
+        border-radius: 50%;
+        overflow: hidden;
 
-        .profile-badge{
+        .avatar {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          //margin-bottom: 10px;
+          object-fit: cover;
           position: absolute;
-          top: -7px;
-          width: 25px;
-          height: 25px;
-          left: -2px;
-          border-radius: 25px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
         }
       }
-      .avatar {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        object-fit: cover;
-      }
+
 
       p {
         font-family: Rubik-Medium;
@@ -3386,6 +3387,14 @@
   }
 }
 
+#shareDetailModal{
+  .form-control{
+    font-size: 15px;
+    font-family: Rubik-Regular;
+    padding: 8px 12px;
+  }
+}
+
 .swiper-button-disabled {
   opacity: 0 !important;
 }
@@ -3484,6 +3493,14 @@ input[type="date"]:focus:before {
 
     i {
       margin-right: 5px;
+    }
+  }
+
+  .btn{
+    img{
+      height: 14px;
+      width: auto;
+      margin-top: -2px;
     }
   }
 

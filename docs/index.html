@@ -5282,12 +5282,21 @@ Access Engineering (Agent)
                     <h2 class="title-content-1 mb-3">Contact Advertiser</h2>
 
                     <div class="avatar-container">
+
+                        <svg width="110" height="110" viewBox="0 0 220 220">
+                            <path fill="#27B778" d="M0,110a110,110 0 1,0 220,0a110,110 0 1,0 -220,0"/>
+                            <path fill="none" id="innerCircle" d="M10,110a100,100 0 1,0 200,0a100,100 0 1,0 -200,0"/>
+                            <text font-size="24" font-weight="bold" style="letter-spacing: 2" fill="#ffc107" x="50">
+                                <textPath xlink:href="#innerCircle" class="qr--label">Gold</textPath>
+                            </text>
+                        </svg>
+
                         <img class="avatar"
                              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
                              alt="">
-                        <img class="profile-badge"
-                             src="https://e7.pngegg.com/pngimages/212/122/png-clipart-bitcoin-computer-icons-cryptocurrency-exchange-bitcoin-orange-bitcoin.png"
-                             alt="">
+                        <!--                        <img class="profile-badge"-->
+                        <!--                             src="assets/img/badge.svg"-->
+                        <!--                             alt="">-->
                     </div>
                     <p>Meena Almeida (Agent)</p>
                     <div class="d-flex justify-content-center align-items-center stars">
@@ -5884,7 +5893,8 @@ Access Engineering (Agent)
     </div>
     <div class="col-auto">
         <a class="btn btn-secondary" href="#Enquiry" data-bs-toggle="modal" data-bs-target="#shareMobileModal">
-            <i class="fa fa-share-alt me-0" aria-hidden="true"></i>
+            <!--            <i class="fa fa-share-alt me-0" aria-hidden="true"></i>-->
+            <img src="assets/img/share-alt-svgrepo-com.svg" alt="">
         </a>
     </div>
 </div>
@@ -5985,7 +5995,7 @@ Access Engineering (Agent)
 
 
 <div class="whatsAppPopup d-none" id="whatsAppPopup">
-<!--    <div class="overlay-wap"></div>-->
+    <!--    <div class="overlay-wap"></div>-->
     <div class="wap-header d-flex align-items-center position-relative">
         <div class="position-relative d-inline-block col-auto">
             <img class="rounded-circle"
@@ -6030,6 +6040,39 @@ Access Engineering (Agent)
             <img src="assets/img/details/wap-line.svg" alt="">
             Start Chat
         </a>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shareDetailModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="shareDetailModal" tabindex="-1" aria-labelledby="shareDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-start">
+                <h6 class="modal-title" id="shareDetailModalLabel">
+                    Do you want us to share your contact details with other agents
+                </h6>
+                <button style="font-size: 10px" type="button" class="btn-close mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="shareDetailForm">
+                    <div class="mb-3">
+                        <input type="text" required class="form-control" placeholder="Name" name="shareName" id="shareName">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" name="shareEmail" id="shareEmail">
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" class="form-control" id="sharePhone" name="sharePhone" placeholder="phone">
+                    </div>
+                    <button type="submit" class="btn btn-custom-primary w-100">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

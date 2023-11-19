@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined-Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Combined-Shape-2" transform="translate(-52.794016, 0.455506)" fill="#64C640" fill-rule="nonzero">
+            <g transform="translate(136.294494, 136.294494) rotate(45.000000) translate(-136.294494, -136.294494) translate(7.794972, 72.044494)" id="Combined-Shape">
+                <path d="M256.995,0.5 L256.999044,3.91919855e-23 C256.999044,70.9685903 199.467634,128.5 128.499044,128.5 C57.6975173,128.5 0.26998211,71.239135 1.56352797e-15,0.500966646 L40.003,0.5 L40.0109006,1.46350932 C40.7924256,49.6656941 80.1106158,88.5 128.499044,88.5 C177.2092,88.5 216.728104,49.1475701 216.997657,0.500807799 L256.995,0.5 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
