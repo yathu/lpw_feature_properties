@@ -1,1 +1,41 @@
-<svg width="1400" height="270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient x1="1.412%" y1="77.708%" x2="91.177%" y2="44.937%" id="d"><stop stop-color="#EEE" stop-opacity=".5" offset="0%"/><stop stop-color="#FFF" stop-opacity="0" offset="100%"/></linearGradient><linearGradient x1="20.403%" y1="47.223%" x2="26.296%" y2="50%" id="e"><stop stop-color="#FFF" stop-opacity=".3" offset="0%"/><stop stop-color="#FFF" stop-opacity="0" offset="100%"/></linearGradient><linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="f"><stop stop-color="#3023AE" offset="0%"/><stop stop-color="#C86DD7" offset="100%"/></linearGradient><filter x="-1.1%" y="-6%" width="102.2%" height="112%" filterUnits="objectBoundingBox" id="b"><feOffset in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" in="shadowBlurOuter1"/></filter><rect id="a" x="0" y="0" width="1380" height="250" rx="4"/></defs><g transform="translate(10 10)" fill="none" fill-rule="evenodd"><mask id="c" fill="#fff"><use xlink:href="#a"/></mask><use fill="#000" filter="url(#b)" xlink:href="#a"/><use fill="#FFF" xlink:href="#a"/><path fill-opacity=".5" fill="#D8D8D8" mask="url(#c)" d="M1047 300L1198 0h252v300z"/><path fill="url(#d)" mask="url(#c)" d="M1 300L152 0h252v300z"/><path fill="url(#e)" mask="url(#c)" d="M1007 300L1158 0h252v300z"/><path fill-opacity=".8" fill="url(#f)" mask="url(#c)" d="M0 0h1380v250H0z"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="270px" viewBox="0 0 1400 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 23</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1380" height="250" rx="4"></rect>
+        <filter x="-1.1%" y="-6.0%" width="102.2%" height="112.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="1.41225962%" y1="77.7078241%" x2="91.1765276%" y2="44.9368281%" id="linearGradient-4">
+            <stop stop-color="#EEEEEE" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="20.4026442%" y1="47.2234451%" x2="26.2959445%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-6">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lpw-featured-development-landing-page-2.1" transform="translate(-260.000000, -896.000000)">
+            <g id="Group-23" transform="translate(270.000000, 906.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <polygon id="Path-3" fill-opacity="0.5" fill="#D8D8D8" mask="url(#mask-2)" points="1047 300 1198 0 1450 0 1450 300"></polygon>
+                <polygon id="Path-3" fill="url(#linearGradient-4)" mask="url(#mask-2)" points="1 300 152 0 404 0 404 300"></polygon>
+                <polygon id="Path-3" fill="url(#linearGradient-5)" mask="url(#mask-2)" points="1007 300 1158 0 1410 0 1410 300"></polygon>
+                <rect id="Rectangle" fill-opacity="0.8" fill="url(#linearGradient-6)" mask="url(#mask-2)" x="0" y="0" width="1380" height="250"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
