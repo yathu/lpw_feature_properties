@@ -1737,6 +1737,17 @@
         color: #4C4F5F;
       }
 
+      .filter-buttons{
+        .btn{
+          font-family: Rubik-Regular;
+          font-size: 14px;
+          border-radius: 25px;
+          &:not(:last-child){
+            margin-right: 10px;
+          }
+        }
+      }
+
       .other-project-swiper {
         .swiper-slide {
           box-shadow: 0px 2px 6px 0px rgb(210, 210, 210);
@@ -2111,7 +2122,7 @@
           flex-wrap: wrap;
           overflow-wrap: anywhere;
           font-family: Rubik-Light;
-          font-size: 23px;
+          font-size: 18px;
           color: #202330;
         }
       }
@@ -2120,7 +2131,7 @@
     .list-group {
       .list-group-item {
         font-family: Rubik-Regular;
-        font-size: 18px;
+        font-size: 14px;
         color: #71757B;
         line-height: 30px;
         background-color: transparent;
@@ -2171,6 +2182,8 @@
       color: #202330;
       line-height: 1;
       margin-bottom: 7px;
+      font-size: 21px;
+
     }
 
     .apply-btn {
@@ -2180,7 +2193,7 @@
     .price {
       color: #202330;
       line-height: 1;
-
+      font-size: 18px;
     }
 
     .title-light-1 {
@@ -2478,10 +2491,11 @@
       .avatar-container{
         position: relative;
         display: inline-block;
-        padding: 25px;
+        //padding: 25px;
         //background-color: red;
         border-radius: 50%;
         overflow: hidden;
+        margin-bottom: 5px;
 
         .avatar {
           width: 75px;
@@ -2536,10 +2550,16 @@
         background-color: #D9D9D9;
       }
 
-      .btn {
-        font-size: 15px !important;
-      }
+      .agent-buttons{
+        .btn {
+          font-size: 14px !important;
+          padding: 10px 12px;
 
+          i{
+            font-size: 18px;
+          }
+        }
+      }
     }
 
 
@@ -2548,7 +2568,7 @@
 
 #bannerModal {
   .modal-content {
-
+    border: 0px;
     @media (max-width: 767.98px) {
       background-color: transparent !important;
     }
