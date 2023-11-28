@@ -1285,13 +1285,18 @@ $(document).ready(() => {
 
     setTimeout(() => {
         if (!isWAPShowed) {
-            showWhatsApp()
+            showWhatsApp('#whatsAppPopupV2');
         }
 
     }, 3000);
 
     $('#closeWap').on("click", function () {
         $("#whatsAppPopup").addClass('d-none');
+        clearInterval(myIntervel);
+    })
+
+    $('#closeWapV2').on("click", function () {
+        $("#whatsAppPopupV2").addClass('d-none');
         clearInterval(myIntervel);
     })
 
@@ -1331,11 +1336,11 @@ $(document).ready(() => {
 
 });
 
-const showWhatsApp = () => {
+const showWhatsApp = (id) => {
     //whatsApp
-    $("#whatsAppPopup").removeClass('d-none');
+    $(id).removeClass('d-none');
     setTimeout(() => {
-        $("#whatsAppPopup").addClass('transation');
+        $(id).addClass('transation');
 
     }, 200)
     localStorage.setItem("WAPShowed", true);
@@ -1346,9 +1351,6 @@ const showWhatsApp = () => {
         $('#typing').addClass('d-none');
         $('#wap_message').removeClass('d-none');
     }, 3000)
-
-    setTimeout(() => {
-    }, 3500)
 }
 
 const setTime = () => {

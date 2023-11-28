@@ -1737,12 +1737,13 @@
         color: #4C4F5F;
       }
 
-      .filter-buttons{
-        .btn{
+      .filter-buttons {
+        .btn {
           font-family: Rubik-Regular;
           font-size: 14px;
           border-radius: 25px;
-          &:not(:last-child){
+
+          &:not(:last-child) {
             margin-right: 10px;
           }
         }
@@ -2488,7 +2489,7 @@
       border-radius: 5px;
       padding: 15px 20px 20px;
 
-      .avatar-container{
+      .avatar-container {
         position: relative;
         display: inline-block;
         //padding: 25px;
@@ -2550,12 +2551,12 @@
         background-color: #D9D9D9;
       }
 
-      .agent-buttons{
+      .agent-buttons {
         .btn {
           font-size: 14px !important;
           padding: 10px 12px;
 
-          i{
+          i {
             font-size: 18px;
           }
         }
@@ -3408,8 +3409,8 @@
   }
 }
 
-#shareDetailModal{
-  .form-control{
+#shareDetailModal {
+  .form-control {
     font-size: 15px;
     font-family: Rubik-Regular;
     padding: 8px 12px;
@@ -3517,8 +3518,8 @@ input[type="date"]:focus:before {
     }
   }
 
-  .btn{
-    img{
+  .btn {
+    img {
       height: 14px;
       width: auto;
       margin-top: -2px;
@@ -3622,7 +3623,7 @@ input[type="date"]:focus:before {
   white-space: normal !important;
 }
 
-.transation{
+.transation {
   @media (max-width: 767.98px) {
     transform: translate(0, 0) !important;
     transition: all ease-in-out .5s;
@@ -3679,7 +3680,7 @@ input[type="date"]:focus:before {
 
     }
 
-    .online{
+    .online {
       position: absolute;
       content: "";
       width: 10px;
@@ -3692,35 +3693,39 @@ input[type="date"]:focus:before {
       border: 2px solid #086054;
     }
 
-    .name-container{
+    .name-container {
       color: #FFFFFF;
 
-      .name{
+      .name {
         font-family: Rubik-Medium;
         font-size: 15px;
         line-height: 1;
         margin-bottom: 5px;
       }
-      .desc{
+
+      .desc {
         font-family: Rubik-Regular;
         font-size: 12px;
       }
     }
 
-    .btn-close{
+    .btn-close {
       top: 11px;
       right: 9px;
       font-size: 10px;
+      &:focus{
+        box-shadow: none !important;
+      }
     }
   }
 
-  .wap-body{
+  .wap-body {
     background-color: #e6ddd4;
     padding: 15px 20px 15px 15px;
     position: relative;
     min-height: 144px;
 
-    &:before{
+    &:before {
       content: "";
       background-image: url("../img/details/whatsapp-bg.png");
       background-size: cover;
@@ -3756,7 +3761,8 @@ input[type="date"]:focus:before {
       border: 32px solid;
       border-color: #666 transparent transparent transparent;
     }
-    .tri-right.left-top:after{
+
+    .tri-right.left-top:after {
       content: " ";
       position: absolute;
       width: 0;
@@ -3769,18 +3775,20 @@ input[type="date"]:focus:before {
       border-top-color: #fff;
     }
 
-    strong{
+    strong {
       color: #828282;
       font-size: 13px;
       margin-bottom: 5px;
       display: block;
     }
-    p{
+
+    p {
       font-size: 14px;
       font-weight: 300;
       margin-bottom: 5px;
     }
-    span.time{
+
+    span.time {
       font-size: 12px;
       color: #797979;
       text-align: right;
@@ -3788,15 +3796,16 @@ input[type="date"]:focus:before {
     }
   }
 
-  .wap-footer{
+  .wap-footer {
     padding: 15px;
-    .btn{
+
+    .btn {
       background-color: #16c655;
       border-radius: 25px;
       padding: 10px 12px;
       color: #FFFFFF;
 
-      img{
+      img {
         width: 18px;
         height: auto;
         margin-right: 3px;
@@ -3808,10 +3817,11 @@ input[type="date"]:focus:before {
   $dot-color: #3b5998;
   $speed: 1.5s;
 
-  .typing-container{
+  .typing-container {
     padding: 15px 18px;
     margin-bottom: 5px;
   }
+
   .typing {
     position: relative;
     width: 20px;
@@ -3825,8 +3835,8 @@ input[type="date"]:focus:before {
       width: $dot-width;
       background: $dot-color;
       position: absolute;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
       border-radius: 50%;
 
       &:nth-child(2) {
@@ -3851,6 +3861,78 @@ input[type="date"]:focus:before {
     }
     100% {
       opacity: .1;
+    }
+  }
+}
+
+.whatsAppPopupV2 {
+  @extend .whatsAppPopup;
+
+  width: 290px;
+
+  .wap-header {
+    padding: 17px 15px;
+    .name-container {
+      .name {
+        margin-bottom: 0;
+        font-weight: normal;
+        font-family: Rubik-Regular;
+        font-size: 13px;
+      }
+    }
+    .btn-close{
+      top: 17px;
+      right: 12px;
+      font-size: 9px;
+    }
+  }
+
+  .wap-body {
+    padding: 15px;
+
+    .inputBox{
+      input{
+        &:focus{
+          outline: none;
+          border: 0;
+          box-shadow: none !important;
+        }
+        outline: none;
+        border: 0;
+        border-radius: 25px;
+        z-index: 999;
+        padding: 3px 12px;
+        height: 38px;
+        margin-right: 10px;
+        font-size: 13px;
+        background-color: white !important;
+
+      }
+      .btn{
+        background-color: #0a5f54;
+        z-index: 999;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 8px;
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  #wap_messageV2 {
+    margin: 0;
+    display: block;
+    width: 100%;
+
+    &:after {
+      display: none;
     }
   }
 }
