@@ -449,7 +449,7 @@ $(document).ready(() => {
         },
     });
 
-    new Swiper('.other-project-swiper', {
+    const similarSwiper = new Swiper('.other-project-swiper', {
         loop: false,
         navigation: {
             nextEl: '.other-project-next',
@@ -475,6 +475,29 @@ $(document).ready(() => {
                 slidesPerView: 3.5,
             }
         }
+    });
+
+
+    $('.similar-filter-btn').on("click",function () {
+        const filterPrice = $(this).data("simmler-filter");
+
+        $('.other-project-swiper').find('.swiper-slide-item').each((i,el)=>{
+
+            const priceData = $(el).data("price");
+
+            if(filterPrice == priceData){
+                //show
+                $(el).removeClass('d-none');
+                $(el).addClass('swiper-slide');
+            }else {
+                //hide
+                $(el).addClass('d-none');
+                $(el).removeClass('swiper-slide');
+            }
+
+            similarSwiper.updateSlides();
+
+        })
     });
 
     // new Swiper('.mapview-swiper', {
