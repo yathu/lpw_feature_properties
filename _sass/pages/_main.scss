@@ -162,6 +162,42 @@ a {
   background-color: #2a8e36;
 }
 
+.bootstrap-picker-container{
+  .dropdown-toggle{
+    &:focus{
+      outline: 0 !important;
+      box-shadow: none;
+    }
+  }
+  .filter-option-inner-inner{
+    min-height: 32px;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    span{
+      margin-left: 5px;
+    }
+  }
+  .bootstrap-select{
+    .dropdown-item{
+      .text{
+        display: flex;
+        align-items: center;
+        min-height: 32px;
+        span{
+          margin-left: 5px;
+        }
+      }
+    }
+    .dropdown-item.active, .dropdown-item:active{
+      //background-color: transparent !important;
+      //color: #029432;
+    }
+  }
+}
+
+
+
 @mixin switch($res: 'sm') {
   $index: 1rem;
   $mainVal: 1rem;

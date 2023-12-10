@@ -529,35 +529,6 @@
     //  }
     //}
 
-    .dropdown {
-      button {
-        img {
-          width: 20px;
-          height: 20px;
-          margin-right: 4px;
-        }
-      }
-
-      ul.show {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        li {
-          width: 33%;
-          text-align: center;
-          padding: 10px 0;
-
-          a {
-            img {
-              width: 30px;
-              height: 30px;
-            }
-          }
-        }
-      }
-    }
-
   }
 
   .menuContainer {
@@ -3747,6 +3718,7 @@ input[type="date"]:focus:before {
       background-color: #fff;
       padding: 5px 12px 5px;
       border-radius: 6px;
+      min-height: 99px;
     }
 
     .tri-right.border.left-top:before {
@@ -3794,24 +3766,62 @@ input[type="date"]:focus:before {
       text-align: right;
       margin-top: 0px;
     }
-  }
 
-  .wap-footer {
-    padding: 15px;
+    a{
+      z-index: 99999;
+    }
 
-    .btn {
-      background-color: #16c655;
-      border-radius: 25px;
-      padding: 10px 12px;
-      color: #FFFFFF;
+    .inputBox{
+      input{
+        &:focus{
+          outline: none;
+          border: 0;
+          box-shadow: none !important;
+        }
+        outline: none;
+        border: 0;
+        border-radius: 25px;
+        //z-index: 999;
+        padding: 3px 12px;
+        height: 38px;
+        margin-right: 10px;
+        font-size: 13px;
+        background-color: white !important;
 
-      img {
-        width: 18px;
-        height: auto;
-        margin-right: 3px;
+      }
+      .btn{
+        background-color: #0a5f54;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 8px;
+        img{
+          max-width: 100%;
+        }
       }
     }
   }
+
+  //.wap-footer {
+  //  padding: 15px;
+  //
+  //  .btn {
+  //    background-color: #16c655;
+  //    border-radius: 25px;
+  //    padding: 10px 12px;
+  //    color: #FFFFFF;
+  //
+  //    img {
+  //      width: 18px;
+  //      height: auto;
+  //      margin-right: 3px;
+  //    }
+  //  }
+  //}
 
   $dot-width: 5px;
   $dot-color: #3b5998;
@@ -3865,74 +3875,74 @@ input[type="date"]:focus:before {
   }
 }
 
-.whatsAppPopupV2 {
-  @extend .whatsAppPopup;
-
-  width: 290px;
-
-  .wap-header {
-    padding: 17px 15px;
-    .name-container {
-      .name {
-        margin-bottom: 0;
-        font-weight: normal;
-        font-family: Rubik-Regular;
-        font-size: 13px;
-      }
-    }
-    .btn-close{
-      top: 17px;
-      right: 12px;
-      font-size: 9px;
-    }
-  }
-
-  .wap-body {
-    padding: 15px;
-
-    .inputBox{
-      input{
-        &:focus{
-          outline: none;
-          border: 0;
-          box-shadow: none !important;
-        }
-        outline: none;
-        border: 0;
-        border-radius: 25px;
-        z-index: 999;
-        padding: 3px 12px;
-        height: 38px;
-        margin-right: 10px;
-        font-size: 13px;
-        background-color: white !important;
-
-      }
-      .btn{
-        background-color: #0a5f54;
-        z-index: 999;
-        border-radius: 50%;
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px 8px;
-        img{
-          max-width: 100%;
-        }
-      }
-    }
-  }
-
-  #wap_messageV2 {
-    margin: 0;
-    display: block;
-    width: 100%;
-
-    &:after {
-      display: none;
-    }
-  }
-}
+//.whatsAppPopupV2 {
+//  @extend .whatsAppPopup;
+//
+//  width: 290px;
+//
+//  .wap-header {
+//    padding: 17px 15px;
+//    .name-container {
+//      .name {
+//        margin-bottom: 0;
+//        font-weight: normal;
+//        font-family: Rubik-Regular;
+//        font-size: 13px;
+//      }
+//    }
+//    .btn-close{
+//      top: 17px;
+//      right: 12px;
+//      font-size: 9px;
+//    }
+//  }
+//
+//  .wap-body {
+//    padding: 15px;
+//
+//    .inputBox{
+//      input{
+//        &:focus{
+//          outline: none;
+//          border: 0;
+//          box-shadow: none !important;
+//        }
+//        outline: none;
+//        border: 0;
+//        border-radius: 25px;
+//        z-index: 999;
+//        padding: 3px 12px;
+//        height: 38px;
+//        margin-right: 10px;
+//        font-size: 13px;
+//        background-color: white !important;
+//
+//      }
+//      .btn{
+//        background-color: #0a5f54;
+//        z-index: 999;
+//        border-radius: 50%;
+//        width: 38px;
+//        height: 38px;
+//        min-width: 38px;
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//        padding: 6px 8px;
+//        img{
+//          max-width: 100%;
+//        }
+//      }
+//    }
+//  }
+//
+//  #wap_messageV2 {
+//    margin: 0;
+//    display: block;
+//    width: 100%;
+//
+//    &:after {
+//      display: none;
+//    }
+//  }
+//}

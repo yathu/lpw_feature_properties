@@ -1285,7 +1285,7 @@ $(document).ready(() => {
 
     setTimeout(() => {
         if (!isWAPShowed) {
-            showWhatsApp('#whatsAppPopupV2');
+            showWhatsApp('#whatsAppPopup');
         }
 
     }, 3000);
@@ -1332,7 +1332,10 @@ $(document).ready(() => {
                 $(item).removeClass('d-none');
             }
         });
-    })
+    });
+
+
+    $('.currencyPicker').selectpicker();
 
 });
 
