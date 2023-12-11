@@ -810,7 +810,19 @@ $(document).ready(() => {
             768: {
                 slidesPerView: 1,
             },
-        }
+            992: {
+                // slidesPerView: 2,
+            },
+        },
+    });
+
+    myVideoPlayer =  videojs.getPlayer('myVideo');
+
+    const ytVideo = $('#youtubeVideo');
+
+    bannerSwiper.on("slideChange",()=>{
+        ytVideo[0].src = ytVideo[0].src;
+        myVideoPlayer.pause();
     });
 
     var bannerModal = document.querySelector('#bannerModal');
@@ -825,6 +837,11 @@ $(document).ready(() => {
 
         bannerSwiper.slideTo(index);
 
+    });
+
+    bannerModal.addEventListener('hide.bs.modal',()=>{
+        ytVideo[0].src = ytVideo[0].src;
+        myVideoPlayer.pause();
     });
 
 

@@ -1034,6 +1034,64 @@
     </div>
 </div>
 
+<div class="banner-img-container-2 mt-4 all-img">
+
+    
+
+    <div class="img-1">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    
+
+    <div class="img-2">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    
+
+    <div class="img-3">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    
+
+    <div class="img-4">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    
+
+    <div class="img-5">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    
+
+
+    <!--    <div class="row h-100 mx-0">-->
+    <!--        <div class="column col-6 col-md-8">-->
+    <!--            <img class="img-fluid long" src="assets/img/details/banner_1.jpg" data-index="0"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="3"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--        </div>-->
+    <!--        <div class="col-6 col-md-4 column h-100">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="1"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="2"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="5"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--        </div>-->
+    <!--    </div>-->
+</div>
+
 <div class="container">
 
     <div class="row title-container flex-column flex-sm-row mt-2 mt-md-3 mt-lg-4">
@@ -1075,18 +1133,18 @@
                 <!--                </div>-->
 
 
-<!--                this picker class is an common resuable-->
+                <!--                this picker class is an common resuable-->
                 <div class="bootstrap-picker-container me-3">
                     <select class="selectpicker currencyPicker">
                         <option selected>View in other Currency</option>
 
                         <option data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
                             USD 845
-                    </option>
-                    <option data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
-                        EUR 600
-                    </option>
-                </select></div>
+                        </option>
+                        <option data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
+                            EUR 600
+                        </option>
+                    </select></div>
 
                 <div class="move-in px-4 py-2 mt-2 mt-lg-0">
                     Ready to move in
@@ -2464,7 +2522,7 @@ Access Engineering (Agent)
                 <div class="other-project-swiper-container">
                     <h3 class="title-content-1 mb-3">Find Similar Properties</h3>
 
-                    <div class="mb-3 filter-buttons d-flex align-items-center">
+                    <div class="mb-3 filter-buttons d-flex align-items-center filter-btn-container">
                         <button class="btn btn-custom-primary similar-filter-btn" data-simmler-filter="1">Rs. 70M -
                             100M
                         </button>
@@ -2477,6 +2535,9 @@ Access Engineering (Agent)
                         <button class="btn btn-outline-primary similar-filter-btn" data-simmler-filter="4">Rs. 70M -
                             100M
                         </button>
+                        <a href="#" class="btn btn-outline-primary similar-filter-btn me-3">
+                            View More
+                        </a>
                     </div>
 
                     <div class="position-relative">
@@ -5746,7 +5807,7 @@ Access Engineering (Agent)
 </div>
 
 <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered mx-0 mx-sm-auto">
+    <div class="modal-dialog modal-lg modal-dialog-centered mx-0 mx-sm-auto">
         <div class="modal-content">
             <div class="modal-body p-0">
 
@@ -5812,7 +5873,7 @@ Access Engineering (Agent)
 
                                     <div class="swiper-slide d-flex align-items-lg-center">
                                         <div class="ratio ratio-16x9 h-100">
-                                            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                                                     title="YouTube video" allowfullscreen></iframe>
                                         </div>
                                     </div>
@@ -6440,12 +6501,12 @@ Access Engineering (Agent)
         </a>
 
     </div>
-<!--    <div class="wap-footer bg-white">-->
-<!--        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">-->
-<!--            <img src="assets/img/details/wap-line.svg" alt="">-->
-<!--            Start Chat-->
-<!--        </a>-->
-<!--    </div>-->
+    <!--    <div class="wap-footer bg-white">-->
+    <!--        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">-->
+    <!--            <img src="assets/img/details/wap-line.svg" alt="">-->
+    <!--            Start Chat-->
+    <!--        </a>-->
+    <!--    </div>-->
 </div>
 
 
@@ -6700,8 +6761,6 @@ Access Engineering (Agent)
 
 
 
-<script src="assets/js/details.js"></script>
-
 
 
 <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
@@ -6720,6 +6779,10 @@ Access Engineering (Agent)
 <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
         defer></script>
+
+
+
+<script src="assets/js/details.js"></script>
 
 
 <script src="assets/js/common.js"></script>
