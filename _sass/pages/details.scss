@@ -387,6 +387,84 @@
 
   }
 
+  .banner-img-container-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: flex-start;
+    background-color: red;
+
+    @media (max-width: 767.98px) {
+      height: 60vh;
+      overflow: hidden;
+    }
+    @media (max-width: 575.98px) {
+      height: 50vh;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      height: 500px;
+    }
+
+
+    div {
+      width: 50%;
+      overflow: hidden;
+      flex-basis: 33.3%;
+
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .row {
+      .column {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0;
+
+        img {
+          object-fit: cover;
+          flex: 1;
+        }
+
+        .long {
+          flex-basis: 66%;
+        }
+      }
+    }
+  }
+
+  .all-img {
+    .img-1 {
+      flex-basis: 66.6%;
+      @media (min-width: 768px) {
+        flex-basis: 100%;
+      }
+    }
+
+    div {
+      @media (min-width: 768px) {
+        //flex-basis: 50%;
+      }
+    }
+
+    .img-4, .img-5 {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
   .title-container {
     h1 {
       font-family: Rubik-Medium;
@@ -528,35 +606,6 @@
     //    max-width: 181px;
     //  }
     //}
-
-    .dropdown {
-      button {
-        img {
-          width: 20px;
-          height: 20px;
-          margin-right: 4px;
-        }
-      }
-
-      ul.show {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        li {
-          width: 33%;
-          text-align: center;
-          padding: 10px 0;
-
-          a {
-            img {
-              width: 30px;
-              height: 30px;
-            }
-          }
-        }
-      }
-    }
 
   }
 
@@ -1501,12 +1550,13 @@
       }
 
       a.view-btn {
-        font-family: Rubik-Regular;
-        font-size: 14px;
+        font-family: Rubik-Medium;
+        font-size: 15px;
         color: #FFFFFF;
         text-align: center;
-        line-height: 20px;
-
+        line-height: 25px;
+        font-weight: bold;
+        border: 2px solid #FFFFFF;
         //@media (max-width: 767.98px) {
         //  display: none;
         //}
@@ -1737,11 +1787,21 @@
         color: #4C4F5F;
       }
 
+      .filter-btn-container {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+      }
+
       .filter-buttons {
         .btn {
           font-family: Rubik-Regular;
           font-size: 14px;
           border-radius: 25px;
+          min-width: 125px;
 
           &:not(:last-child) {
             margin-right: 10px;
@@ -2615,7 +2675,7 @@
     }
 
     .swiper-wrapper {
-      width: 100vw;
+      //width: 100vw;
     }
 
     .swiper-button {
@@ -2671,23 +2731,28 @@
       //border-radius: 4px;
       overflow: hidden;
       max-width: 100%;
+      width: 100%;
+      height: 300px;
       //min-height: 300px;
       //max-height: 300px;
 
-      //@media (min-width: 992px) {
-      //  max-height: 465px;
-      //}
+      @media (min-width: 768px) {
+        height: 450px;
+        //max-height: 600px;
+      }
 
       img {
         height: 100%;
+        width: 100%;
         object-fit: cover;
-        max-height: 91vh;
+        //max-height: 91vh;
 
+
+        @media (max-width: 767.98px) {
+          //object-fit: cover;
+        }
         @media (max-width: 575.98px) {
           //min-height: 400px;
-        }
-        @media (max-width: 767.98px) {
-          object-fit: contain;
         }
       }
     }
@@ -3376,7 +3441,7 @@
         a {
           display: flex;
           align-items: center;
-          color: #018e37;
+          color: #282828;
           font-family: 'Rubik-Regular';
           font-size: 15px;
           cursor: pointer !important;
@@ -3713,7 +3778,8 @@ input[type="date"]:focus:before {
       top: 11px;
       right: 9px;
       font-size: 10px;
-      &:focus{
+
+      &:focus {
         box-shadow: none !important;
       }
     }
@@ -3747,6 +3813,7 @@ input[type="date"]:focus:before {
       background-color: #fff;
       padding: 5px 12px 5px;
       border-radius: 6px;
+      min-height: 99px;
     }
 
     .tri-right.border.left-top:before {
@@ -3794,24 +3861,65 @@ input[type="date"]:focus:before {
       text-align: right;
       margin-top: 0px;
     }
-  }
 
-  .wap-footer {
-    padding: 15px;
+    a {
+      z-index: 99999;
+    }
 
-    .btn {
-      background-color: #16c655;
-      border-radius: 25px;
-      padding: 10px 12px;
-      color: #FFFFFF;
+    .inputBox {
+      input {
+        &:focus {
+          outline: none;
+          border: 0;
+          box-shadow: none !important;
+        }
 
-      img {
-        width: 18px;
-        height: auto;
-        margin-right: 3px;
+        outline: none;
+        border: 0;
+        border-radius: 25px;
+        //z-index: 999;
+        padding: 3px 12px;
+        height: 38px;
+        margin-right: 10px;
+        font-size: 13px;
+        background-color: white !important;
+
+      }
+
+      .btn {
+        background-color: #0a5f54;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 8px;
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
+
+  //.wap-footer {
+  //  padding: 15px;
+  //
+  //  .btn {
+  //    background-color: #16c655;
+  //    border-radius: 25px;
+  //    padding: 10px 12px;
+  //    color: #FFFFFF;
+  //
+  //    img {
+  //      width: 18px;
+  //      height: auto;
+  //      margin-right: 3px;
+  //    }
+  //  }
+  //}
 
   $dot-width: 5px;
   $dot-color: #3b5998;
@@ -3865,74 +3973,74 @@ input[type="date"]:focus:before {
   }
 }
 
-.whatsAppPopupV2 {
-  @extend .whatsAppPopup;
-
-  width: 290px;
-
-  .wap-header {
-    padding: 17px 15px;
-    .name-container {
-      .name {
-        margin-bottom: 0;
-        font-weight: normal;
-        font-family: Rubik-Regular;
-        font-size: 13px;
-      }
-    }
-    .btn-close{
-      top: 17px;
-      right: 12px;
-      font-size: 9px;
-    }
-  }
-
-  .wap-body {
-    padding: 15px;
-
-    .inputBox{
-      input{
-        &:focus{
-          outline: none;
-          border: 0;
-          box-shadow: none !important;
-        }
-        outline: none;
-        border: 0;
-        border-radius: 25px;
-        z-index: 999;
-        padding: 3px 12px;
-        height: 38px;
-        margin-right: 10px;
-        font-size: 13px;
-        background-color: white !important;
-
-      }
-      .btn{
-        background-color: #0a5f54;
-        z-index: 999;
-        border-radius: 50%;
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px 8px;
-        img{
-          max-width: 100%;
-        }
-      }
-    }
-  }
-
-  #wap_messageV2 {
-    margin: 0;
-    display: block;
-    width: 100%;
-
-    &:after {
-      display: none;
-    }
-  }
-}
+//.whatsAppPopupV2 {
+//  @extend .whatsAppPopup;
+//
+//  width: 290px;
+//
+//  .wap-header {
+//    padding: 17px 15px;
+//    .name-container {
+//      .name {
+//        margin-bottom: 0;
+//        font-weight: normal;
+//        font-family: Rubik-Regular;
+//        font-size: 13px;
+//      }
+//    }
+//    .btn-close{
+//      top: 17px;
+//      right: 12px;
+//      font-size: 9px;
+//    }
+//  }
+//
+//  .wap-body {
+//    padding: 15px;
+//
+//    .inputBox{
+//      input{
+//        &:focus{
+//          outline: none;
+//          border: 0;
+//          box-shadow: none !important;
+//        }
+//        outline: none;
+//        border: 0;
+//        border-radius: 25px;
+//        z-index: 999;
+//        padding: 3px 12px;
+//        height: 38px;
+//        margin-right: 10px;
+//        font-size: 13px;
+//        background-color: white !important;
+//
+//      }
+//      .btn{
+//        background-color: #0a5f54;
+//        z-index: 999;
+//        border-radius: 50%;
+//        width: 38px;
+//        height: 38px;
+//        min-width: 38px;
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//        padding: 6px 8px;
+//        img{
+//          max-width: 100%;
+//        }
+//      }
+//    }
+//  }
+//
+//  #wap_messageV2 {
+//    margin: 0;
+//    display: block;
+//    width: 100%;
+//
+//    &:after {
+//      display: none;
+//    }
+//  }
+//}

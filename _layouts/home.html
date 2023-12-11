@@ -82,17 +82,15 @@
 {% endif %}
 
 
-{% if page.title == "home" %}
-<script src="assets/js/main.js"></script>
-<script src="assets/js/map.js"></script>
-{% else %}
-<script src="assets/js/details.js"></script>
-{% endif %}
+
 
 {% if page.title == "details" %}
 <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+<script src="assets/js/bootstrap-select.min.js"></script>
+
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
@@ -103,6 +101,13 @@
 <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscfwXSs8LQxe28L8q9ZgNpL4xDJM4C6k&callback=initMap&libraries=places&v=weekly"
         defer></script>
+{% endif %}
+
+{% if page.title == "home" %}
+<script src="assets/js/main.js"></script>
+<script src="assets/js/map.js"></script>
+{% else %}
+<script src="assets/js/details.js"></script>
 {% endif %}
 
 <script src="assets/js/common.js"></script>

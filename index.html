@@ -132,6 +132,36 @@ permalink: /index.html
     </div>
 </div>
 
+<div class="banner-img-container-2 mt-4 all-img">
+
+    {% for i in (1..5) %}
+
+    <div class="img-{{i}}">
+        <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="0"
+             alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+    </div>
+
+    {% endfor %}
+
+
+    <!--    <div class="row h-100 mx-0">-->
+    <!--        <div class="column col-6 col-md-8">-->
+    <!--            <img class="img-fluid long" src="assets/img/details/banner_1.jpg" data-index="0"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="3"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--        </div>-->
+    <!--        <div class="col-6 col-md-4 column h-100">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="1"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="2"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--            <img class="img-fluid" src="assets/img/details/banner_1.jpg" data-index="5"-->
+    <!--                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">-->
+    <!--        </div>-->
+    <!--    </div>-->
+</div>
+
 <div class="container">
 
     <div class="row title-container flex-column flex-sm-row mt-2 mt-md-3 mt-lg-4">
@@ -172,11 +202,19 @@ permalink: /index.html
                 <!--                    </svg>-->
                 <!--                </div>-->
 
-                <select class="form-select w-auto me-3 mt-2 mt-md-0" aria-label="Default select example">
-                    <option selected>View in other Currency</option>
-                    <option value="2">USD 845</option>
-                    <option value="1">EUR 600</option>
-                </select>
+
+                <!--                this picker class is an common resuable-->
+                <div class="bootstrap-picker-container me-3">
+                    <select class="selectpicker currencyPicker">
+                        <option selected>View in other Currency</option>
+
+                        <option data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
+                            USD 845
+                        </option>
+                        <option data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
+                            EUR 600
+                        </option>
+                    </select></div>
 
                 <div class="move-in px-4 py-2 mt-2 mt-lg-0">
                     Ready to move in
@@ -1351,7 +1389,7 @@ Access Engineering (Agent)
                 <div class="other-project-swiper-container">
                     <h3 class="title-content-1 mb-3">Find Similar Properties</h3>
 
-                    <div class="mb-3 filter-buttons d-flex align-items-center">
+                    <div class="mb-3 filter-buttons d-flex align-items-center filter-btn-container">
                         <button class="btn btn-custom-primary similar-filter-btn" data-simmler-filter="1">Rs. 70M -
                             100M
                         </button>
@@ -1364,6 +1402,9 @@ Access Engineering (Agent)
                         <button class="btn btn-outline-primary similar-filter-btn" data-simmler-filter="4">Rs. 70M -
                             100M
                         </button>
+                        <a href="#" class="btn btn-outline-primary similar-filter-btn me-3">
+                            View More
+                        </a>
                     </div>
 
                     <div class="position-relative">
@@ -2528,7 +2569,7 @@ Access Engineering (Agent)
 </div>
 
 <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered mx-0 mx-sm-auto">
+    <div class="modal-dialog modal-lg modal-dialog-centered mx-0 mx-sm-auto">
         <div class="modal-content">
             <div class="modal-body p-0">
 
@@ -2558,7 +2599,7 @@ Access Engineering (Agent)
 
                                     <div class="swiper-slide d-flex align-items-lg-center">
                                         <div class="ratio ratio-16x9 h-100">
-                                            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                                                     title="YouTube video" allowfullscreen></iframe>
                                         </div>
                                     </div>
@@ -3150,11 +3191,9 @@ Access Engineering (Agent)
             <div class="desc">Agent Description message</div>
         </div>
 
-        <button type="button" id="closeWap" class="btn-close btn-close-white position-absolute"
-                aria-label="Close"></button>
 
     </div>
-    <div class="wap-body d-flex flex-column align-items-start">
+    <div class="wap-body d-flex flex-column align-items-start justify-content-end">
         <div id="typing"
              class="typing-container d-inline-flex bg-white rounded-pill justify-content-center align-items-center">
             <div class="typing">
@@ -3176,61 +3215,72 @@ Access Engineering (Agent)
                 15.45
             </span>
         </div>
-    </div>
-    <div class="wap-footer bg-white">
-        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">
-            <img src="assets/img/details/wap-line.svg" alt="">
-            Start Chat
-        </a>
-    </div>
-</div>
 
 
-<div class="whatsAppPopupV2 d-none" id="whatsAppPopupV2">
-    <!--    <div class="overlay-wap"></div>-->
-    <div class="wap-header d-flex align-items-center position-relative">
-        <div class="col name-container">
-            <div class="name">
-                👋 &nbsp; Chat with us on WhatsApp!
+        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="d-block w-100">
+            <div class="d-flex inputBox mt-3 justify-content-between align-items-center input-group-btn w-100">
+                <div class="input-group-text col me-2 bg-white rounded-pill text-black-50">Type Here</div>
+                <button class="btn">
+                    <img src="assets/img/share_icons/send-msg-icon.png" alt="">
+                </button>
             </div>
-        </div>
-
-        <button type="button" id="closeWapV2" class="btn-close btn-close-white position-absolute"
-                aria-label="Close"></button>
+        </a>
 
     </div>
-    <div class="wap-body d-flex flex-column align-items-start">
-
-        <div id="wap_messageV2" class="talk-bubble tri-right left-top">
-            <p>
-                Hi 👋
-            </p>
-            <p class="py-3">
-                type message here. it will go straight to our phone!
-            </p>
-            <p class="mb-0">
-                LPW Team
-            </p>
-<!--            <span class="time d-block" id="wap-timeV2">-->
-<!--                15.45-->
-<!--            </span>-->
-        </div>
-
-        <div class="d-flex inputBox mt-3 justify-content-between align-items-center w-100">
-            <input type="text" class="form-control flex-grow-1" placeholder="Type Here" disabled/>
-
-                        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn">
-                <img src="assets/img/share_icons/send-msg-icon.png" alt="">
-            </a>
-        </div>
-    </div>
-<!--    <div class="wap-footer d-flex">-->
-<!--        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">-->
-<!--            <img src="assets/img/details/wap-line.svg" alt="">-->
-<!--            Start Chat-->
-<!--        </a>-->
-<!--    </div>-->
+    <!--    <div class="wap-footer bg-white">-->
+    <!--        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">-->
+    <!--            <img src="assets/img/details/wap-line.svg" alt="">-->
+    <!--            Start Chat-->
+    <!--        </a>-->
+    <!--    </div>-->
 </div>
+
+
+<!--<div class="whatsAppPopupV2 d-none" id="whatsAppPopupV2">-->
+<!--    &lt;!&ndash;    <div class="overlay-wap"></div>&ndash;&gt;-->
+<!--    <div class="wap-header d-flex align-items-center position-relative">-->
+<!--        <div class="col name-container">-->
+<!--            <div class="name">-->
+<!--                👋 &nbsp; Chat with us on WhatsApp!-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <button type="button" id="closeWapV2" class="btn-close btn-close-white position-absolute"-->
+<!--                aria-label="Close"></button>-->
+
+<!--    </div>-->
+<!--    <div class="wap-body d-flex flex-column align-items-start">-->
+
+<!--        <div id="wap_messageV2" class="talk-bubble tri-right left-top">-->
+<!--            <p>-->
+<!--                Hi 👋-->
+<!--            </p>-->
+<!--            <p class="py-3">-->
+<!--                type message here. it will go straight to our phone!-->
+<!--            </p>-->
+<!--            <p class="mb-0">-->
+<!--                LPW Team-->
+<!--            </p>-->
+<!--&lt;!&ndash;            <span class="time d-block" id="wap-timeV2">&ndash;&gt;-->
+<!--&lt;!&ndash;                15.45&ndash;&gt;-->
+<!--&lt;!&ndash;            </span>&ndash;&gt;-->
+<!--        </div>-->
+
+<!--        <div class="d-flex inputBox mt-3 justify-content-between align-items-center w-100">-->
+<!--            <input type="text" class="form-control flex-grow-1" placeholder="Type Here" disabled/>-->
+
+<!--                        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn">-->
+<!--                <img src="assets/img/share_icons/send-msg-icon.png" alt="">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <div class="wap-footer d-flex">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="https://api.whatsapp.com/send?text=YourShareTextHere&phone=0777121232" class="btn d-block">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="assets/img/details/wap-line.svg" alt="">&ndash;&gt;-->
+<!--&lt;!&ndash;            Start Chat&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--</div>-->
 
 <!-- Modal -->
 <div class="modal fade" id="shareDetailModal" tabindex="-1" aria-labelledby="shareDetailModalLabel" aria-hidden="true">
