@@ -1019,7 +1019,7 @@ $(document).ready(() => {
         const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
         const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
-        console.log("scrollPos==>", scrollPos);
+        // console.log("scrollPos==>", scrollPos);
 
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             // var totalSlides =  detailsMenuSwiper.slides.length - 2;
@@ -1310,12 +1310,16 @@ $(document).ready(() => {
     $('#closeWap').on("click", function () {
         $("#whatsAppPopup").addClass('d-none');
         clearInterval(myIntervel);
-    })
-
-    $('#closeWapV2').on("click", function () {
-        $("#whatsAppPopupV2").addClass('d-none');
+    });
+    $('.overlay-wap').on("click", function () {
+        $("#whatsAppPopup").addClass('d-none');
         clearInterval(myIntervel);
-    })
+    });
+
+    // $('#closeWapV2').on("click", function () {
+    //     $("#whatsAppPopupV2").addClass('d-none');
+    //     clearInterval(myIntervel);
+    // })
 
     const levelLength = $('#nav_breadcrumb').children().length;
     console.log("levelLength", levelLength);
