@@ -905,6 +905,14 @@ $(document).ready(() => {
         allowDropdown: true,
     });
 
+    //inqContact
+
+    var sharePhone = document.querySelector("#sharePhone");
+    window.intlTelInput(sharePhone, {
+        initialCountry: "lk",
+        allowDropdown: true,
+    });
+
     // var bannercontactNo = document.querySelector("#bannercontactNo");
     // window.intlTelInput(bannercontactNo, {
     //     initialCountry: "lk",
@@ -961,10 +969,19 @@ $(document).ready(() => {
     // });
 
     $('#viewAgent').on('click', function () {
-        $('#phoneInfo').removeClass('hide');
-        $('#viewAgent').removeClass('d-md-inline-block');
-        $('#viewAgent').addClass('d-none');
         showShareDetail();
+    });
+
+    //show phones after popup submited
+
+    $('#btnShowPhoneDetailModal').on("click",function () {
+
+        if(shareDetailForm.valid()){
+            $('#phoneInfo').removeClass('hide');
+            $('#viewAgent').removeClass('d-md-inline-flex');
+            $('#viewAgent').addClass('d-none');
+        }
+
     });
 
     $('#agentNum').on('click', function () {
@@ -1357,6 +1374,15 @@ $(document).ready(() => {
 
 
     $('.currencyPicker').selectpicker();
+
+    //bannerImg3
+
+    if($('.banner-img-count-4').length){
+        const img3 = $('#bannerImg3').attr('src');
+        $('#bannerImg5').attr('src',img3);
+    }
+
+
 
 });
 

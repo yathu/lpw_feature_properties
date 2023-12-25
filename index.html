@@ -59,10 +59,11 @@ permalink: /index.html
     </div>
 </div>
 
-<div class="banner-img-container px-0 px-md-3 banner-img-count-5">
+<!--no logic need from backend-->
+<div class="banner-img-container px-0 px-md-3 banner-img-count-4">
     <div class="row gx-0 gx-md-3 box-1 h-100">
         <div class="col-6 col-md-8 col-lg-9 position-relative mobile-top-block border-end border-bottom border-md-none">
-<!--           image 1-->
+            <!--           image 1-->
             <img class="img-fluid h-100 w-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" data-index="0"
                  alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
 
@@ -104,13 +105,14 @@ permalink: /index.html
         <div class="col-6 d-md-none mobile-top-block mob-top-right">
             <div class="row gx-0 gx-md-3 h-100">
                 <div class="col-12 d-md-none m-50 border-bottom border-md-none">
-<!--                    image -4-->
+                    <!--                    image -4-->
                     <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" alt="banner"
                          data-index="1" data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
                 <div class="col-12 d-md-none m-50 border-bottom border-md-none">
-                    <!--                    image -5 if total 4 3rd will be here-->
-                    <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" alt="banner"
+                    <!--                    image -5 -->
+                    <img id="bannerImg5" class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg"
+                         alt="banner"
                          data-index="2" data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
             </div>
@@ -119,12 +121,13 @@ permalink: /index.html
         <div class="col-12 col-md-4 col-md-4 col-lg-3 mobile-bottom-block">
             <div class="row gx-0 gx-md-3 box-2 h-100 row-cols-2 row-cols-md-1 gy-0 mt-0">
                 <div class="col mt-0 video-cont pb-md-2 border-end border-md-none mh-100 banner-img-4">
-<!--                    image 3 ==> if 4 image this will be hide-->
-                    <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" data-index="3"
+                    <!--                    image 3-->
+                    <img id="bannerImg3" class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg"
+                         data-index="3"
                          alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
                 </div>
                 <div class="col pt-md-2 images mh-100 banner-img-5">
-<!--                    image 2 -->
+                    <!--                    image 2 -->
                     <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" alt="banner">
                     <div class="overlay" data-index="4" data-bs-toggle="modal" data-bs-target="#bannerModal">
                         <span>
@@ -1259,7 +1262,8 @@ Access Engineering (Agent)
                         </span>
 
                         <div class="mb-4">
-                            <a id="viewAgent" class="btn btn-outline-secondary view-btn pt-2 d-none d-md-inline-flex align-items-center">
+                            <a id="viewAgent"
+                               class="btn btn-outline-secondary view-btn pt-2 d-none d-md-inline-flex align-items-center">
                                 <i class="Phone is-animating me-1"></i>
                                 +94 123 ...
                                 <span>
@@ -1554,7 +1558,8 @@ Access Engineering (Agent)
 
                                 {% endfor %}
 
-                                <div class="swiper-slide swiper-slide-item d-flex justify-content-center align-items-center flex-column view-more-slide" data-price="2">
+                                <div class="swiper-slide swiper-slide-item d-flex justify-content-center align-items-center flex-column view-more-slide"
+                                     data-price="2">
                                     <div class="icon-circle">
                                         <img src="assets/img/icons/right-arrow.svg" alt="">
                                     </div>
@@ -2476,10 +2481,9 @@ Access Engineering (Agent)
                     {% for i in (1...10) %}
 
                     <div class="item">
-                       House sale in colombo
+                        House sale in colombo
                     </div>
                     {% endfor %}
-
 
 
                 </div>
@@ -2602,7 +2606,8 @@ Access Engineering (Agent)
                                     <path fill="#009688" d="M0,110a110,110 0 1,0 220,0a110,110 0 1,0 -220,0"/>
                                     <path fill="none" id="innerCircle"
                                           d="M10,110a100,100 0 1,0 200,0a100,100 0 1,0 -200,0"/>
-                                    <text font-size="24" font-weight="bold" style="letter-spacing: 2" fill="#ffc107" x="50">
+                                    <text font-size="24" font-weight="bold" style="letter-spacing: 2" fill="#ffc107"
+                                          x="50">
                                         <textPath xlink:href="#innerCircle" class="qr--label">Gold</textPath>
                                     </text>
                                 </svg>
@@ -2698,7 +2703,8 @@ Access Engineering (Agent)
 
                                     <div class="swiper-slide d-flex align-items-lg-center">
                                         <div class="ratio ratio-16x9 h-100">
-                                            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                            <iframe id="youtubeVideo"
+                                                    src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                                                     title="YouTube video" allowfullscreen></iframe>
                                         </div>
                                     </div>
@@ -3277,7 +3283,7 @@ Access Engineering (Agent)
 
 
 <div class="whatsAppPopup d-none" id="whatsAppPopup">
-        <div class="overlay-wap"></div>
+    <div class="overlay-wap"></div>
     <div class="wap-header d-flex align-items-center position-relative">
         <div class="position-relative d-inline-block col-auto">
             <img class="rounded-circle"
@@ -3294,8 +3300,8 @@ Access Engineering (Agent)
 
         </div>
 
-                <button type="button" id="closeWap" class="btn-close btn-close-white position-absolute"
-                        aria-label="Close"></button>
+        <button type="button" id="closeWap" class="btn-close btn-close-white position-absolute"
+                aria-label="Close"></button>
     </div>
     <div class="wap-body d-flex flex-column align-items-start justify-content-end">
         <div id="typing"
@@ -3388,28 +3394,41 @@ Access Engineering (Agent)
 
 <!-- Modal -->
 <div class="modal fade" id="shareDetailModal" tabindex="-1" aria-labelledby="shareDetailModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header d-flex align-items-start">
-                <h6 class="modal-title" id="shareDetailModalLabel">
-                    Do you want us to share your contact details with other agents
-                </h6>
-                <button style="font-size: 10px" type="button" class="btn-close mt-1" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+            <div class="modal-header d-flex align-items-start border-0 pb-0">
+                <div class="d-flex flex-column">
+                    <h5 class="modal-title text-center" id="shareDetailModalLabel">
+                        Please Enter Your Details
+
+                        <!--                        Do you want us to share your contact details with other agents-->
+                    </h5>
+                    <p class="mt-1 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, erat vel vestibulum
+                        aliquam, ex ipsum aliquet massa.
+                    </p>
+                </div>
+                <button type="button" class="btn p-0" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+
+                </button>
             </div>
             <div class="modal-body">
                 <form id="shareDetailForm">
                     <div class="mb-3">
-                        <input type="text" required class="form-control" placeholder="Name" name="shareName"
+                        <input type="text" required class="form-control" placeholder="Your Name" name="shareName"
                                id="shareName">
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email" name="shareEmail" id="shareEmail">
+                        <input type="email" class="form-control" placeholder="Your Email" name="shareEmail"
+                               id="shareEmail">
                     </div>
                     <div class="mb-4">
-                        <input type="text" class="form-control" id="sharePhone" name="sharePhone" placeholder="phone">
+                        <input type="text" class="form-control ps-5" id="sharePhone" name="sharePhone"
+                               placeholder="Phone Number">
                     </div>
-                    <button type="submit" class="btn btn-custom-primary w-100">Submit</button>
+                    <button id="btnShowPhoneDetailModal" type="submit" class="btn btn-custom-primary w-100">Show Phone Number</button>
                 </form>
             </div>
         </div>
