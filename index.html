@@ -1267,13 +1267,14 @@ Access Engineering (Agent)
                                 <i class="Phone is-animating me-1"></i>
                                 +94 123 ...
                                 <span>
-                                Click to view Telephone Number
+                                Click to view Number
                             </span>
                             </a>
-                            <a class="btn btn-outline-secondary view-btn pt-2 d-md-none openPopUP">
+                            <a class="btn btn-outline-secondary view-btn pt-2 d-flex align-items-center d-md-none openPopUP">
+                                <i class="Phone is-animating me-1"></i>
                                 +94 123 ...
                                 <span>
-                                Click to view Telephone Number
+                                Click to view Number
                             </span>
                             </a>
                         </div>
@@ -1470,6 +1471,8 @@ Access Engineering (Agent)
                         <button class="btn btn-outline-primary similar-filter-btn" data-simmler-filter="4">Rs. 70M -
                             100M
                         </button>
+
+                        <a href="#" class="btn btn-link-custom px-xl-4">View all</a>
                     </div>
 
                     <div class="position-relative">
@@ -1558,7 +1561,7 @@ Access Engineering (Agent)
 
                                 {% endfor %}
 
-                                <div class="swiper-slide swiper-slide-item d-flex justify-content-center align-items-center flex-column view-more-slide"
+                                <a href="#" class="swiper-slide swiper-slide-item d-flex justify-content-center align-items-center flex-column view-more-slide"
                                      data-price="2">
                                     <div class="icon-circle">
                                         <img src="assets/img/icons/right-arrow.svg" alt="">
@@ -1566,7 +1569,7 @@ Access Engineering (Agent)
                                     <p class="mt-4">
                                         View More Properties
                                     </p>
-                                </div>
+                                </a>
 
 
                             </div>
@@ -2595,14 +2598,11 @@ Access Engineering (Agent)
                 <div class="agent text-center">
                     <h2 class="title-content-1 mb-3">Contact Advertiser</h2>
 
-                    <div class="avatar-box-container d-flex flex-wrap">
-
-
-                        <div class="d-flex agent-content">
+                    <div class="avatar-box-container d-flex flex-wrap align-items-center">
 
                             <div class="avatar-container">
 
-                                <svg width="70" height="70" viewBox="0 0 220 220">
+                                <svg width="90" height="90" viewBox="0 0 220 220">
                                     <path fill="#009688" d="M0,110a110,110 0 1,0 220,0a110,110 0 1,0 -220,0"/>
                                     <path fill="none" id="innerCircle"
                                           d="M10,110a100,100 0 1,0 200,0a100,100 0 1,0 -200,0"/>
@@ -2620,23 +2620,27 @@ Access Engineering (Agent)
                                 <!--                             alt="">-->
                             </div>
 
-                            <i class="fa fa-check-circle-o fa-2x me-2 ms-2"></i>
-                            <div>This advertiser has been advertising with us for 8 years</div>
-                            <div class="vr"></div>
+                            <div class="ms-3">
 
-                            <a href="#" class="btn btn-link">Rate Agent</a>
-                        </div>
+                                <p class="mb-1">Meena Almeida (Agent)</p>
+                                <div class="d-flex align-items-center stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                            </div>
 
                     </div>
-                    <p class="mt-3">Meena Almeida (Agent)</p>
-                    <div class="d-flex justify-content-center align-items-center stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
 
+                    <div class="rate-container d-flex pt-2">
+<!--                        <i class="fa fa-check-circle-o fa-2x me-2 ms-2"></i>-->
+                        <div>This advertiser has been advertising with us for 8 years</div>
+<!--                        <div class="vr"></div>-->
+
+<!--                        <a href="#" class="btn btn-link">Rate Agent</a>-->
+                    </div>
                     <hr class="my-3">
 
                     <h2 class="title-content-2 text-start mb-3">
@@ -2960,6 +2964,7 @@ Access Engineering (Agent)
                             <div class="phone-no-box">
                                 <div class="iconBox">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span></span>
                                 </div>
                                 Call Now
                             </div>
@@ -2978,6 +2983,7 @@ Access Engineering (Agent)
                             <div class="phone-no-box">
                                 <div class="iconBox">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span></span>
                                 </div>
                                 Call Now
                             </div>
@@ -3219,6 +3225,7 @@ Access Engineering (Agent)
                                class="phone-no-box">
                                 <div class="iconBox">
                                     <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    <span></span>
                                 </div>
                                 WhatsApp
                             </a>
@@ -3237,6 +3244,7 @@ Access Engineering (Agent)
                                class="phone-no-box">
                                 <div class="iconBox">
                                     <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    <span></span>
                                 </div>
                                 WhatsApp
                             </a>
@@ -3428,7 +3436,7 @@ Access Engineering (Agent)
                         <input type="text" class="form-control ps-5" id="sharePhone" name="sharePhone"
                                placeholder="Phone Number">
                     </div>
-                    <button id="btnShowPhoneDetailModal" type="submit" class="btn btn-custom-primary w-100">Show Phone Number</button>
+                    <button id="btnShowPhoneDetailModal" type="button" class="btn btn-custom-primary w-100">Show Phone Number</button>
                 </form>
             </div>
         </div>

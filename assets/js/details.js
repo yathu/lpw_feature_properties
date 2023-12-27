@@ -1,4 +1,6 @@
 $(document).ready(() => {
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    isMobileView = vw < 768;
 
     $('.spec-grid').masonry({
         // options
@@ -478,18 +480,18 @@ $(document).ready(() => {
     });
 
 
-    $('.similar-filter-btn').on("click",function () {
+    $('.similar-filter-btn').on("click", function () {
         const filterPrice = $(this).data("simmler-filter");
 
-        $('.other-project-swiper').find('.swiper-slide-item').each((i,el)=>{
+        $('.other-project-swiper').find('.swiper-slide-item').each((i, el) => {
 
             const priceData = $(el).data("price");
 
-            if(filterPrice == priceData){
+            if (filterPrice == priceData) {
                 //show
                 $(el).removeClass('d-none');
                 $(el).addClass('swiper-slide');
-            }else {
+            } else {
                 //hide
                 $(el).addClass('d-none');
                 $(el).removeClass('swiper-slide');
@@ -816,11 +818,11 @@ $(document).ready(() => {
         },
     });
 
-    myVideoPlayer =  videojs.getPlayer('myVideo');
+    myVideoPlayer = videojs.getPlayer('myVideo');
 
     const ytVideo = $('#youtubeVideo');
 
-    bannerSwiper.on("slideChange",()=>{
+    bannerSwiper.on("slideChange", () => {
         ytVideo[0].src = ytVideo[0].src;
         myVideoPlayer.pause();
     });
@@ -839,7 +841,7 @@ $(document).ready(() => {
 
     });
 
-    bannerModal.addEventListener('hide.bs.modal',()=>{
+    bannerModal.addEventListener('hide.bs.modal', () => {
         ytVideo[0].src = ytVideo[0].src;
         myVideoPlayer.pause();
     });
@@ -974,12 +976,23 @@ $(document).ready(() => {
 
     //show phones after popup submited
 
-    $('#btnShowPhoneDetailModal').on("click",function () {
+    $('#btnShowPhoneDetailModal').on("click", function () {
 
-        if(shareDetailForm.valid()){
-            $('#phoneInfo').removeClass('hide');
-            $('#viewAgent').removeClass('d-md-inline-flex');
-            $('#viewAgent').addClass('d-none');
+        if (shareDetailForm.valid()) {
+
+            if (isMobileView) {
+                if(isWhatsApp){
+                    showWhatsAppModal();
+
+                } else {
+                    showPhoneNoModal();
+                }
+
+            } else {
+                $('#phoneInfo').removeClass('hide');
+                $('#viewAgent').removeClass('d-md-inline-flex');
+                $('#viewAgent').addClass('d-none');
+            }
         }
 
     });
@@ -993,13 +1006,19 @@ $(document).ready(() => {
         }, 1000)
     });
 
-    var shareDetailModal = new bootstrap.Modal(document.getElementById('shareDetailModal'), {
+    const shareModalEl = document.getElementById('shareDetailModal');
+    var shareDetailModal = new bootstrap.Modal(shareModalEl, {
         keyboard: false
     });
 
+    shareModalEl.addEventListener('shown.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+    });
+
+
     const showShareDetail = () => setTimeout(() => {
         shareDetailModal.show();
-    }, 1000);
+    }, 500);
 
 
     $('#saveBtn').on('click', function () {
@@ -1304,12 +1323,18 @@ $(document).ready(() => {
         setTimeout(() => WhatsAppModal.show(), 0);
     }
 
+    let isWhatsApp = false;
+
     $('.openPopUP').on("click", function () {
-        showPhoneNoModal();
+        isWhatsApp = false;
+        showShareDetail();
+        // showPhoneNoModal();
     });
 
     $('.bottomFloat .openPopWhatsApp').on("click", function () {
-        showWhatsAppModal();
+        isWhatsApp = true;
+        showShareDetail();
+        // showWhatsAppModal();
     });
 
     let myIntervel;
@@ -1377,11 +1402,10 @@ $(document).ready(() => {
 
     //bannerImg3
 
-    if($('.banner-img-count-4').length){
+    if ($('.banner-img-count-4').length) {
         const img3 = $('#bannerImg3').attr('src');
-        $('#bannerImg5').attr('src',img3);
+        $('#bannerImg5').attr('src', img3);
     }
-
 
 
 });
