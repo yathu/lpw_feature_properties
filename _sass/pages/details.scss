@@ -3926,6 +3926,25 @@
 }
 
 #shareDetailModal {
+  .modal-dialog{
+    @media (max-width: 767.98px) {
+      //height: 100% !important;
+      //margin-bottom: 0 !important;
+      align-items: end !important;
+      //margin-left: 0;
+      //margin-right: 0;
+
+      margin: 0;
+      height: 100%;
+
+      .modal-content{
+        border: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+    }
+  }
   .form-control {
     font-size: 13px;
     font-family: Rubik-Regular;
