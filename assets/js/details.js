@@ -1011,10 +1011,6 @@ $(document).ready(() => {
         keyboard: false
     });
 
-    shareModalEl.addEventListener('shown.bs.modal', function (event) {
-        console.log(event.relatedTarget);
-    });
-
 
     const showShareDetail = () => setTimeout(() => {
         shareDetailModal.show();
