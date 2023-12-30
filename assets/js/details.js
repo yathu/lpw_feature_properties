@@ -997,11 +997,27 @@ $(document).ready(() => {
 
     });
 
+    $('#btnShowPhoneDetailNow').on("click",function () {
+        shareDetailModal.hide();
+
+        if (isMobileView) {
+            if(isWhatsApp){
+                showWhatsAppModal();
+
+            } else {
+                showPhoneNoModal();
+            }
+
+        } else {
+            $('#phoneInfo').removeClass('hide');
+            $('#viewAgent').removeClass('d-md-inline-flex');
+            $('#viewAgent').addClass('d-none');
+        }
+
+    });
+
     $('#agentNum').on('click', function () {
         setTimeout(() => {
-            $('#phoneInfo').removeClass('hide');
-            $('#viewAgent').removeClass('d-md-inline-block');
-            $('#viewAgent').addClass('d-none');
             showShareDetail();
         }, 1000)
     });
@@ -1068,6 +1084,8 @@ $(document).ready(() => {
         $('.detailsMenuSwiper a').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
+
+            console.log("refElement==>",refElement);
 
             var elementHeight = refElement.height();
             var elementPosition = refElement.position().top;
