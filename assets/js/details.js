@@ -16,6 +16,7 @@ $(document).ready(() => {
 
     $('.copyUrl').on("click", function () {
         navigator.clipboard.writeText(window.location.href);
+        $(this).children('span').html('Copied');
     });
 
     document.querySelector('.nativeShare')
@@ -1033,14 +1034,6 @@ $(document).ready(() => {
     }, 500);
 
 
-    $('#saveBtn').on('click', function () {
-        $(this).toggleClass('saved');
-        const text = $(this).children('span').text();
-        const appendText = text.toLowerCase() == 'save' ? 'Saved' : 'Save';
-        $(this).children('span').html(appendText);
-    });
-
-
     var lastScrollTop = 0;
     $(window).scroll(function (event) {
         var st = $(this).scrollTop();
@@ -1411,6 +1404,42 @@ $(document).ready(() => {
         });
     });
 
+    //mobile version
+
+    const mobilelevelLength = $('#nav_breadcrumb_mobile').children().length;
+    console.log("mobilelevelLength==>", mobilelevelLength);
+
+    if (mobilelevelLength > 2) {
+        $('#nav_breadcrumb_mobile li').each((index, item) => {
+
+            console.log("index=========>", index);
+
+            if (index > 0 && index < mobilelevelLength - 1) {
+                console.log("item==>", item);
+
+                if ($(item).attr('id') == 'show_breadcrumb_mobile') {
+                    $(item).removeClass('d-none');
+                } else {
+                    $(item).addClass('d-none');
+                }
+            }
+
+            if (index == (mobilelevelLength - 1)) {
+
+            }
+        })
+    }
+
+    $('#show_breadcrumb_mobile').on("click", function () {
+        $('#nav_breadcrumb_mobile li').each((index, item) => {
+            if ($(item).attr('id') == 'show_breadcrumb_mobile') {
+                $(item).addClass('d-none');
+            } else {
+                $(item).removeClass('d-none');
+            }
+        });
+    });
+
 
     $('.currencyPicker').selectpicker();
 
@@ -1421,8 +1450,32 @@ $(document).ready(() => {
         $('#bannerImg5').attr('src', img3);
     }
 
+    const saveModal = new bootstrap.Modal('#saveModal');
+
+
+    $('#saveBtn').on('click', function () {
+        $(this).toggleClass('saved');
+        const text = $(this).children('span').text();
+        const appendText = text.toLowerCase() == 'save' ? 'Saved' : 'Save';
+        $(this).children('span').html(appendText);
+
+
+        let isCloseShowed = localStorage.getItem("closeModalShowed");
+        console.log("isCloseShowed==>",isCloseShowed);
+
+        if(!isCloseShowed){
+            saveModal.show();
+            localStorage.setItem("closeModalShowed", true);
+        }
+    });
+
+    $('#closeSaveModal').on("click",()=>{
+        saveModal.hide();
+    });
 
 });
+
+//document ends
 
 const showWhatsApp = (id) => {
     //whatsApp
