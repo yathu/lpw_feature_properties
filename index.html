@@ -233,7 +233,7 @@ permalink: /index.html
                 <!--                this picker class is an common resuable-->
                 <div class="bootstrap-picker-container me-3">
                     <select class="selectpicker currencyPicker">
-                        <option selected>View in other Currency</option>
+                        <option selected>LKR</option>
 
                         <option data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
                             USD 845
@@ -1190,8 +1190,12 @@ permalink: /index.html
                         Contact Advertiser
                     </h2>
 
-                    <div class="gold-badge d-md-none">
-                        <span>golden member</span>
+                    <div class="gold-badge-container d-md-none">
+                        <!--                            <i class="fa-solid fa-shield"></i>-->
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+                        <div class="gold-badge">
+                            <span>golden member</span>
+                        </div>
                     </div>
 
                 </div>
@@ -2614,8 +2618,10 @@ Access Engineering (Agent)
                              alt="">
                         <!--                        <img class="img-fluid badge-img" src="https://b.kisscc0.com/20180705/yyq/kisscc0-web-button-computer-icons-gold-download-gold-button-009-5b3e66ae142d05.0361269015308161740827.png"-->
                         <!--                             alt="badge">-->
-                        <div class="d-flex justify-content-center align-items-center badge-container">
-                            <img src="https://www.clker.com/cliparts/W/n/o/b/2/g/gold-shield-th.png" alt="">
+                        <div class="d-flex justify-content-center align-items-center badge-container gold-badge-container">
+<!--                            <i class="fa-solid fa-shield"></i>-->
+                            <i class="fa fa-shield" aria-hidden="true"></i>
+
                             <div class="gold-badge">
                                 <span>golden member</span>
                             </div>
@@ -2945,6 +2951,63 @@ Access Engineering (Agent)
     </div>
 </div>
 
+<!--email to friend-->
+<div class="modal fade" id="EmailToFriendModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header position-relative border-0">
+                <h1 class="title-light-1 text-center w-100 mb-0 mt-4">
+                    LankaProperty web - Email property to a friend
+                </h1>
+                <div id="closeEmailFriend" class="close-btn">
+
+                    <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path d="M32.5875,27.0943259 L21.6541667,16.125039 L32.6125,5.29734513 C33.0625,4.84757939 33.0625,4.1146278 32.6125,3.66486205 L29.4958333,0.533159813 C29.2791667,0.316605934 28.9875,0.2 28.6791667,0.2 C28.3708333,0.2 28.0791667,0.32493493 27.8625,0.533159813 L16.9541667,11.3275377 L6.02916667,0.541488808 C5.8125,0.32493493 5.52083333,0.208328995 5.2125,0.208328995 C4.90416667,0.208328995 4.6125,0.333263925 4.39583333,0.541488808 L1.2875,3.67319105 C0.8375,4.12295679 0.8375,4.85590838 1.2875,5.30567413 L12.2458333,16.133368 L1.32083333,27.0943259 C1.10416667,27.3108798 0.979166667,27.6023946 0.979166667,27.9105674 C0.979166667,28.2187402 1.09583333,28.5102551 1.32083333,28.726809 L4.4375,31.8585112 C4.6625,32.0833941 4.95416667,32.2 5.25416667,32.2 C5.54583333,32.2 5.84583333,32.0917231 6.07083333,31.8585112 L16.9541667,20.9308693 L27.8458333,31.8501822 C28.0708333,32.0750651 28.3625,32.191671 28.6625,32.191671 C28.9541667,32.191671 29.2541667,32.0833941 29.4791667,31.8501822 L32.5958333,28.71848 C32.8125,28.5019261 32.9375,28.2104112 32.9375,27.9022384 C32.9291667,27.6023946 32.8041667,27.3108798 32.5875,27.0943259 Z"
+                                  id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="modal-body pt-2 px-4">
+                <form id="frm_mailToFriend">
+                    <div class="mb-3">
+                        <input placeholder="Friend's name" type="text" class="form-control" id="fr_name" name="fr_name">
+                    </div>
+                    <div class="mb-3">
+                        <input placeholder="Friend's email address" type="email" class="form-control" id="fr_email" name="fr_email">
+                    </div>
+
+                    <div class="mb-3 pt-3">
+                        <input placeholder="Your name" type="text" class="form-control" id="you_name" name="you_name">
+                    </div>
+
+                    <div class="mb-3">
+                        <input placeholder="Your Email" type="text" class="form-control" id="you_mail" name="you_mail">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea placeholder="Message" class="form-control" id="fr_Message" name="fr_message" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom-primary px-4 mt-4">Send Email</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--email to friend-->
+
+<!--whatsapp chat-->
+
+<div id="whatsAppChat" class="whatsAppChatIcon">
+    <img class="img-fluid lg-img d-none d-md-inline-block" src="assets/img/chat-whatsapp-xl.png" alt="">
+    <img class="img-fluid xs-img d-md-none" src="assets/img/whatsapp.png" alt="">
+</div>
+
 <div class="modal fade" id="DetailsPhoneNoModal" tabindex="-1" aria-labelledby="phoneNoModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
@@ -2962,8 +3025,13 @@ Access Engineering (Agent)
                         Verified Agent
                     </span>
 
-                    <div class="gold-badge d-md-none">
-                        <span>golden member</span>
+                    <div class="gold-badge-container d-md-none">
+                        <!--                            <i class="fa-solid fa-shield"></i>-->
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+
+                        <div class="gold-badge">
+                            <span>golden member</span>
+                        </div>
                     </div>
 
                 </div>
@@ -3198,7 +3266,7 @@ Access Engineering (Agent)
         </a>
     </div>
     <div class="col-auto">
-        <a class="btn btn-secondary" href="#Enquiry">
+        <a class="btn btn-secondary" id="shareToMailBtn" href="#Enquiry">
             <i class="fa fa-envelope-o me-0" aria-hidden="true"></i>
         </a>
     </div>
