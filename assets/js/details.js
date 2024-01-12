@@ -182,7 +182,6 @@ $(document).ready(() => {
         },
     });
 
-
     form.children("div").steps({
         headerTag: "h3",
         bodyTag: "section",
@@ -1471,6 +1470,47 @@ $(document).ready(() => {
 
     $('#closeSaveModal').on("click",()=>{
         saveModal.hide();
+    });
+
+    $('#whatsAppChat').on("click",()=>{
+        showWhatsApp('#whatsAppPopup');
+    });
+
+    let frm_mailToFriend = $('#frm_mailToFriend');
+    frm_mailToFriend.validate({
+        rules:{
+            fr_name: {
+                required: true,
+            },
+            fr_email: {
+                required: true,
+                email: true
+            },
+            you_name: {
+                required: true,
+            },
+            you_mail: {
+                required: true,
+                email: true
+            },
+            fr_message: {
+                required: true,
+            },
+        }
+    });
+
+    const FriendModal = new bootstrap.Modal('#EmailToFriendModal');
+
+    $('#CustomID').on("click",function (){
+        FriendModal.show();
+
+    });
+    $('#shareToMailBtn').on("click",function (){
+        FriendModal.show();
+    });
+
+    $('#closeEmailFriend').on("click",function (){
+        FriendModal.hide();
     });
 
 });

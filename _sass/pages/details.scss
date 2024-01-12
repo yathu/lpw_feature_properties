@@ -2,27 +2,38 @@
 
 }
 
-.gold-badge {
-  //height: 30px;
-  //object-fit: contain;
+.gold-badge-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  padding: 4px 8px;
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 
-  span {
-    line-height: 1;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #ffffff !important;
-    font-size: 12px !important;
-    font-weight: 600;
-    margin-bottom: 0 !important;
+  i{
+    font-size: 20px;
+    margin-top: 0px;
+    color: #d1b667;
   }
+  .gold-badge {
+     //height: 30px;
+     //object-fit: contain;
+    display: inline-flex;
+     width: auto;
+     padding: 4px 8px;
+     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+
+     span {
+       line-height: 1;
+       display: inline-block;
+       text-transform: uppercase;
+       color: #ffffff !important;
+       font-size: 12px !important;
+       font-weight: 600;
+       margin-bottom: 0 !important;
+     }
+   }
 }
+
+
 
 .saleDetails {
 
@@ -3003,12 +3014,6 @@
 
         .badge-container{
           margin-top: 4px;
-
-          i{
-            font-size: 20px;
-            margin-top: 4px;
-            color: #d1b667;
-          }
         }
 
       }
@@ -3345,6 +3350,45 @@
       font-size: 14px;
       font-weight: 600;
     }
+  }
+}
+
+#EmailToFriendModal{
+  #closeEmailFriend{
+    background-color: #008e37;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 4px;
+
+    svg{
+      width: 12px;
+    }
+  }
+}
+
+.whatsAppChatIcon{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 999;
+
+  @media (max-width: 767.98px) {
+    bottom: 75px;
+  }
+
+  img.lg-img{
+    width: 120px;
+    height: auto;
+  }
+  .xs-img{
+    width: 50px;
+    height: auto;
   }
 }
 
