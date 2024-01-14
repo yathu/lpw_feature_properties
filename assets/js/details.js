@@ -1444,10 +1444,10 @@ $(document).ready(() => {
 
     //bannerImg3
 
-    if ($('.banner-img-count-4').length) {
-        const img3 = $('#bannerImg3').attr('src');
-        $('#bannerImg5').attr('src', img3);
-    }
+    // if ($('.banner-img-count-4').length) {
+    //     const img3 = $('#bannerImg3').attr('src');
+    //     $('#bannerImg5').attr('src', img3);
+    // }
 
     const saveModal = new bootstrap.Modal('#saveModal');
 
