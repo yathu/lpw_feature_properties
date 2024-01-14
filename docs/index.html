@@ -963,11 +963,10 @@
 </div>
 
 <!--no logic need from backend-->
-<div class="banner-img-container px-0 px-md-3 banner-img-count-3">
-    <div class="row gx-0 gx-md-3 box-1 h-100">
-        <div class="col-6 col-md-8 col-lg-9 position-relative mobile-top-block border-end border-bottom border-md-none">
+<div class="banner-img-container px-0 px-md-3 banner-img-count-5">
+        <div class="position-relative main-img">
             <!--           image 1-->
-            <img class="img-fluid h-100 w-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" data-index="0"
+            <img class="banner-img" src="assets/img/details/banner_1.jpg" data-index="0"
                  alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
 
             <div class="position-absolute verified-container">
@@ -1005,66 +1004,55 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 d-md-none mobile-top-block mob-top-right">
-            <div class="row gx-0 gx-md-3 h-100">
-                <div class="col-12 d-md-none m-50 border-bottom border-md-none">
-                    <!--                    image -4-->
-                    <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" alt="banner"
-                         data-index="1" data-bs-toggle="modal" data-bs-target="#bannerModal">
-                </div>
-                <div class="col-12 d-md-none m-50 border-bottom border-md-none">
-                    <!--                    image -5 -->
-                    <img id="bannerImg5" class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg"
-                         alt="banner"
-                         data-index="2" data-bs-toggle="modal" data-bs-target="#bannerModal">
-                </div>
-            </div>
+
+        <div class="main-img-1">
+            <img class="banner-img" src="assets/img/details/banner_1.jpg" alt="banner"
+                 data-index="1" data-bs-toggle="modal" data-bs-target="#bannerModal">
         </div>
 
-        <div class="col-12 col-md-4 col-md-4 col-lg-3 mobile-bottom-block">
-            <div class="row gx-0 gx-md-3 box-2 h-100 row-cols-2 row-cols-md-1 gy-0 mt-0">
-                <div class="col mt-0 video-cont pb-md-2 border-end border-md-none mh-100 banner-img-4">
-                    <!--                    image 3-->
-                    <img id="bannerImg3" class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg"
-                         data-index="3"
-                         alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
-                </div>
-                <div class="col pt-md-2 images mh-100 banner-img-5">
-                    <!--                    image 2 -->
-                    <img class="img-fluid h-100 obj-fit-cover" src="assets/img/details/banner_1.jpg" alt="banner">
-                    <div class="overlay" data-index="4" data-bs-toggle="modal" data-bs-target="#bannerModal">
+        <div class="">
+            <img class="banner-img" src="assets/img/details/banner_1.jpg"
+                 alt="banner"
+                 data-index="2" data-bs-toggle="modal" data-bs-target="#bannerModal">
+        </div>
+
+        <div class="img-4-container">
+            <img class="banner-img" src="assets/img/details/banner_1.jpg"
+                 data-index="3"
+                 alt="banner" data-bs-toggle="modal" data-bs-target="#bannerModal">
+        </div>
+
+        <div class="images">
+            <img class="banner-img" src="assets/img/details/banner_1.jpg" alt="banner">
+            <div class="overlay" data-index="4" data-bs-toggle="modal" data-bs-target="#bannerModal">
                         <span>
                             + <br>
                             19 more
                         </span>
-                    </div>
+            </div>
 
-                    <div class="d-flex btns d-flex justify-content-center" data-bs-toggle="modal"
-                         data-bs-target="#bannerModal">
-                        <div>
-                            <img src="assets/img/details/btnIcons/camera.svg" alt="">
-                            <span class="">
+            <div class="d-flex btns d-flex justify-content-center" data-bs-toggle="modal"
+                 data-bs-target="#bannerModal">
+                <div>
+                    <img src="assets/img/details/btnIcons/camera.svg" alt="">
+                    <span class="">
                                     10
                                 </span>
-                        </div>
-                        <div class="ms-4">
-                            <img src="assets/img/details/btnIcons/rotation.svg" alt="">
-                            <span>
+                </div>
+                <div class="ms-2 ms-md-4">
+                    <img src="assets/img/details/btnIcons/rotation.svg" alt="">
+                    <span>
                                     3D
                                 </span>
-                        </div>
-                        <div class="ms-4">
-                            <img class="ms-2" src="assets/img/details/btnIcons/video-camera.svg" alt="">
-                            <span class="">
+                </div>
+                <div class="ms-2 ms-md-4">
+                    <img class="" src="assets/img/details/btnIcons/video-camera.svg" alt="">
+                    <span class="">
                                     1
                                 </span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
 </div>
 
 <div class="container">
@@ -1138,10 +1126,10 @@
                     <select class="selectpicker currencyPicker">
                         <option selected>LKR</option>
 
-                        <option data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
+                        <option disabled data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
                             USD 845
                         </option>
-                        <option data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
+                        <option disabled data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
                             EUR 600
                         </option>
                     </select>
@@ -2268,7 +2256,7 @@
                         Contact Advertiser
                     </h2>
 
-                    <div class="gold-badge-container d-md-none">
+                    <div class="gold-badge-container">
                         <!--                            <i class="fa-solid fa-shield"></i>-->
                         <i class="fa fa-shield" aria-hidden="true"></i>
                         <div class="gold-badge">
@@ -6086,7 +6074,7 @@ Access Engineering (Agent)
             <div class="modal-body pt-1 pb-0">
                 <ul class="mb-0 p-0">
                     <li>
-                        <a class="d-flex align-items-center lh-1 copyUrl">
+                        <a class="d-flex align-items-center lh-1" id="shareToMailBtn">
                             <i class="fa fa-envelope-o ms-1" aria-hidden="true"></i> Email to a friend
                         </a>
 
@@ -6558,7 +6546,7 @@ Access Engineering (Agent)
         </a>
     </div>
     <div class="col-auto">
-        <a class="btn btn-secondary" id="shareToMailBtn" href="#Enquiry">
+        <a class="btn btn-secondary" href="#Enquiry">
             <i class="fa fa-envelope-o me-0" aria-hidden="true"></i>
         </a>
     </div>
