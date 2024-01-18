@@ -43,7 +43,7 @@
 }
 
 .btn-link-custom {
-  font-family: Rubik-Regular;
+  font-family: Raleway Regular;
   font-size: 14px;
   color: #018E37;
   line-height: 20px;
@@ -55,14 +55,14 @@
 }
 
 .btn-link {
-  font-family: Rubik-Regular;
+  font-family: Raleway Regular;
   font-size: 13px;
   padding: 0;
 }
 
 
 .btn-light {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 15px;
   color: #018E37;
   text-align: center;
@@ -100,14 +100,14 @@ a {
   color: #FFFFFF !important;
   background: #FF4501 !important;
   border-radius: 3px !important;
-  font-family: Rubik-Medium !important;
+  font-family: Raleway Medium !important;
   font-size: 14px !important;
   text-align: center !important;
   border: 1px solid #FF4501;
 }
 
 .btn-outline-danger {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 13px;
   text-align: center;
   background: #FFFFFF;
@@ -124,7 +124,7 @@ a {
 }
 
 .btn-outline-primary {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 13px;
   text-align: center;
   background: #FFFFFF;
@@ -144,7 +144,7 @@ a {
 .btn-custom-primary, btn-custom-primary:hover, btn-custom-primary:focus {
   background: #018E37;
   border-radius: 4px;
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 14px;
   color: #FFFFFF !important;
   text-align: center;
@@ -259,12 +259,12 @@ a {
   @include switch('xl');
 }
 
-.rubik-light {
-  font-family: Rubik-Light !important;
+.Raleway Light {
+  font-family: Raleway Light !important;
 }
 
 .title-light {
-  font-family: Rubik-Light;
+  font-family: Raleway Light;
   font-size: 35px;
   color: #202330;
   letter-spacing: 0;
@@ -283,7 +283,7 @@ a {
 }
 
 .title-2 {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 26px;
 
   @media (min-width: 992px) and (max-width: 1199.8px) {
@@ -307,7 +307,7 @@ a {
 }
 
 .title-light-1 {
-  font-family: Rubik-Regular;
+  font-family: Raleway Regular;
   font-size: 20px;
   color: #71757B;
   line-height: 20px;
@@ -322,7 +322,7 @@ a {
 }
 
 .title-content-1 {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 25px;
   color: #202330;
   letter-spacing: -0.46px;
@@ -333,7 +333,7 @@ a {
 }
 
 .title-content-1-light {
-  font-family: Rubik-Light;
+  font-family: Raleway Light;
   font-size: 25px;
   @media (max-width: 767.98px) {
     font-size: 17px;
@@ -341,7 +341,7 @@ a {
 }
 
 .title-content-2 {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 18px;
   line-height: 20px;
 
@@ -352,14 +352,14 @@ a {
 }
 
 .text-body {
-  font-family: Rubik-Regular !important;
+  font-family: Raleway Regular !important;
   font-size: 13px !important;
   color: #71757B !important;
   line-height: 20px !important;
 }
 
 .text-body-b-1 {
-  font-family: Rubik-Medium;
+  font-family: Raleway Medium;
   font-size: 14px;
   color: #FFFFFF;
   line-height: 20px;
@@ -521,7 +521,7 @@ body ::-webkit-scrollbar-track {
   input[type="checkbox"] + label, input[type="radio"] + label {
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
-    font-family: Rubik-Regular;
+    font-family: Raleway Regular;
     font-size: 15px;
     color: #4E5156;
     text-align: center;
@@ -725,12 +725,12 @@ body ::-webkit-scrollbar-track {
 
     span {
       color: #333333;
-      font-family: Rubik-Regular;
+      font-family: Raleway Regular;
       font-size: 13px;
     }
 
     .btn-custom-primary {
-      font-family: Rubik-Regular;
+      font-family: Raleway Regular;
       font-size: 13px;
     }
   }
@@ -1164,7 +1164,7 @@ body ::-webkit-scrollbar-track {
   p {
     font-size: 13px;
     color: #3d3d3dee;
-    font-family: 'Rubik-Regular';
+    font-family: 'Raleway Regular';
     text-align: center;
     margin-bottom: 20px;
   }

@@ -275,7 +275,7 @@ $(document).ready(() => {
 
     $("#nextStepItems >.item-col").each(function (index, element) {
         // console.log("index=>",index);
-        console.log("index=>", index);
+        // console.log("index=>", index);
 
         if (index > 3) {
             if ($(window).width() < 768) {
@@ -981,7 +981,7 @@ $(document).ready(() => {
         if (shareDetailForm.valid()) {
 
             if (isMobileView) {
-                if(isWhatsApp){
+                if (isWhatsApp) {
                     showWhatsAppModal();
 
                 } else {
@@ -997,11 +997,11 @@ $(document).ready(() => {
 
     });
 
-    $('#btnShowPhoneDetailNow').on("click",function () {
+    $('#btnShowPhoneDetailNow').on("click", function () {
         shareDetailModal.hide();
 
         if (isMobileView) {
-            if(isWhatsApp){
+            if (isWhatsApp) {
                 showWhatsAppModal();
 
             } else {
@@ -1077,7 +1077,7 @@ $(document).ready(() => {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
 
-            console.log("refElement==>",refElement);
+            // console.log("refElement==>", refElement);
 
             var elementHeight = refElement.height();
             var elementPosition = refElement.position().top;
@@ -1099,7 +1099,7 @@ $(document).ready(() => {
                 // console.log("nextIndex==>",nextIndex);
 
                 if (nextIndex != detailsMenuSwiper.activeIndex) {
-                    console.log(refElement, scrollPos, elementPosition, elementHeight);
+                    // console.log(refElement, scrollPos, elementPosition, elementHeight);
 
                     // console.log(nextIndex);
 
@@ -1449,7 +1449,8 @@ $(document).ready(() => {
     //     $('#bannerImg5').attr('src', img3);
     // }
 
-    const saveModal = new bootstrap.Modal('#saveModal');
+    // const saveModal = new bootstrap.Modal('#saveModal');
+    const saveModal = document.getElementById('saveModal');
 
 
     $('#saveBtn').on('click', function () {
@@ -1460,25 +1461,25 @@ $(document).ready(() => {
 
 
         let isCloseShowed = localStorage.getItem("closeModalShowed");
-        console.log("isCloseShowed==>",isCloseShowed);
+        console.log("isCloseShowed==>", isCloseShowed);
 
-        if(!isCloseShowed){
+        if (!isCloseShowed) {
             saveModal.show();
             localStorage.setItem("closeModalShowed", true);
         }
     });
 
-    $('#closeSaveModal').on("click",()=>{
+    $('#closeSaveModal').on("click", () => {
         saveModal.hide();
     });
 
-    $('#whatsAppChat').on("click",()=>{
+    $('#whatsAppChat').on("click", () => {
         showWhatsApp('#whatsAppPopup');
     });
 
     let frm_mailToFriend = $('#frm_mailToFriend');
     frm_mailToFriend.validate({
-        rules:{
+        rules: {
             fr_name: {
                 required: true,
             },
@@ -1499,17 +1500,22 @@ $(document).ready(() => {
         }
     });
 
-    const FriendModal = new bootstrap.Modal('#EmailToFriendModal');
+    // const FriendModal = new bootstrap.Modal('#EmailToFriendModal');
+    var FriendModal = new bootstrap.Modal(document.getElementById('EmailToFriendModal'));
 
-    $('#CustomID').on("click",function (){
+    var shareMobileModal = new bootstrap.Modal(document.getElementById('shareMobileModal'),);
+
+
+    $('#CustomID').on("click", function () {
         FriendModal.show();
 
     });
-    $('#shareToMailBtn').on("click",function (){
+    $('#shareToMailBtn').on("click", function () {
+        shareMobileModal.hide();
         FriendModal.show();
     });
 
-    $('#closeEmailFriend').on("click",function (){
+    $('#closeEmailFriend').on("click", function () {
         FriendModal.hide();
     });
 
