@@ -479,10 +479,8 @@ $(document).ready(() => {
         }
     });
 
-
-    $('.similar-filter-btn').on("click", function () {
-        const filterPrice = $(this).data("simmler-filter");
-
+    const filterSimilar = (filterPrice)=>{
+        console.log("filter Similar ==>",filterPrice);
         $('.other-project-swiper').find('.swiper-slide-item').each((i, el) => {
 
             const priceData = $(el).data("price");
@@ -499,7 +497,24 @@ $(document).ready(() => {
 
             similarSwiper.updateSlides();
 
-        })
+        });
+
+        $('.view-all-similar').addClass('d-none');
+        $('.view-all-similar[data-all="'+ filterPrice+'"]').removeClass('d-none');
+    }
+
+   const initPrice =  $('#Developer .filter-buttons button:first')?.data('simmler-filter');
+   if(initPrice){
+       filterSimilar(initPrice);
+   }
+
+    $('.similar-filter-btn').on("click", function () {
+        const filterPrice = $(this).data("simmler-filter");
+        filterSimilar(filterPrice);
+
+        $('#Developer .filter-buttons button').removeClass('btn-custom-primary');
+        $('#Developer .filter-buttons button').addClass('btn-outline-primary');
+        $(this).addClass('btn-custom-primary');
     });
 
     // new Swiper('.mapview-swiper', {
@@ -1449,8 +1464,8 @@ $(document).ready(() => {
     //     $('#bannerImg5').attr('src', img3);
     // }
 
-    // const saveModal = new bootstrap.Modal('#saveModal');
-    const saveModal = document.getElementById('saveModal');
+    var saveModal = new bootstrap.Modal(document.getElementById('saveModal'));
+
 
 
     $('#saveBtn').on('click', function () {

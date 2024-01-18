@@ -421,6 +421,19 @@
     .img-4-container{
       grid-column: span 2;
     }
+    @media (max-width: 767.98px) {
+      >div{
+        grid-column: span 3;
+      }
+
+      div.main-img-1{
+        grid-row: span 1 !important;
+      }
+
+      .img-4-container{
+        grid-column: span 6;
+      }
+    }
   }
 
   .banner-img-count-3 {
@@ -433,6 +446,15 @@
     > div.main-img{
       grid-column: span 1;
     }
+
+    @media (max-width: 767.98px) {
+
+      >div:not(.main-img){
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+      }
+    }
+
   }
 
   .banner-img-count-2 {
@@ -440,6 +462,9 @@
     grid-template-rows: repeat(1, 100%);
     > div.main-img{
       grid-column: span 1;
+    }
+    .main-img-1{
+      grid-column: span 1 !important;
     }
   }
 
