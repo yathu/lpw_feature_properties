@@ -479,10 +479,8 @@ $(document).ready(() => {
         }
     });
 
-
-    $('.similar-filter-btn').on("click", function () {
-        const filterPrice = $(this).data("simmler-filter");
-
+    const filterSimilar = (filterPrice) => {
+        console.log("filter Similar ==>", filterPrice);
         $('.other-project-swiper').find('.swiper-slide-item').each((i, el) => {
 
             const priceData = $(el).data("price");
@@ -499,7 +497,24 @@ $(document).ready(() => {
 
             similarSwiper.updateSlides();
 
-        })
+        });
+
+        $('.view-all-similar').addClass('d-none');
+        $('.view-all-similar[data-all="' + filterPrice + '"]').removeClass('d-none');
+    }
+
+    const initPrice = $('#Developer .filter-buttons button:first')?.data('simmler-filter');
+    if (initPrice) {
+        filterSimilar(initPrice);
+    }
+
+    $('.similar-filter-btn').on("click", function () {
+        const filterPrice = $(this).data("simmler-filter");
+        filterSimilar(filterPrice);
+
+        $('#Developer .filter-buttons button').removeClass('btn-custom-primary');
+        $('#Developer .filter-buttons button').addClass('btn-outline-primary');
+        $(this).addClass('btn-custom-primary');
     });
 
     // new Swiper('.mapview-swiper', {
@@ -1355,6 +1370,13 @@ $(document).ready(() => {
 
     }, 3000);
 
+    setTimeout(() => {
+        if (isWAPShowed) {
+            $('#whatsAppChat').removeClass('d-none');
+        }
+
+    }, 0);
+
     $('#closeWap').on("click", function () {
         $("#whatsAppPopup").addClass('d-none');
         clearInterval(myIntervel);
@@ -1449,8 +1471,7 @@ $(document).ready(() => {
     //     $('#bannerImg5').attr('src', img3);
     // }
 
-    // const saveModal = new bootstrap.Modal('#saveModal');
-    const saveModal = document.getElementById('saveModal');
+    var saveModal = new bootstrap.Modal(document.getElementById('saveModal'));
 
 
     $('#saveBtn').on('click', function () {
@@ -1519,9 +1540,33 @@ $(document).ready(() => {
         FriendModal.hide();
     });
 
+    $('.stars span').addClass('d-none');
+
+    $('.star').on("click", function () {
+        $(this).children('span').removeClass('d-none');
+    });
+
+    $(document).on("scroll",function () {
+        const element = $('#Enquiry');
+        const isVisible = isScrolledIntoView(element);
+        if(isVisible){
+            showWhatsApp('#whatsAppPopup');
+        }
+    });
+
 });
 
 //document ends
+
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
 const showWhatsApp = (id) => {
     //whatsApp
@@ -1537,6 +1582,7 @@ const showWhatsApp = (id) => {
     setTimeout(() => {
         $('#typing').addClass('d-none');
         $('#wap_message').removeClass('d-none');
+        $('#whatsAppChat').removeClass('d-none');
     }, 3000)
 }
 
