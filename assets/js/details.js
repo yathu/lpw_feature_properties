@@ -1549,8 +1549,10 @@ $(document).ready(() => {
     $(document).on("scroll",function () {
         const element = $('#Enquiry');
         const isVisible = isScrolledIntoView(element);
-        if(isVisible){
+        const scrollWapVisible = localStorage.getItem("scrollWapShowed");
+        if(isVisible && !scrollWapVisible){
             showWhatsApp('#whatsAppPopup');
+            localStorage.setItem('scrollWapShowed',true);
         }
     });
 
@@ -1559,7 +1561,7 @@ $(document).ready(() => {
 //document ends
 
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
+    var docViewTop = $(window).scrollTop() + 100;
     var docViewBottom = docViewTop + $(window).height();
 
     var elemTop = $(elem).offset().top;
