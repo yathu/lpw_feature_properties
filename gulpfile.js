@@ -20,11 +20,11 @@ const browserSync = require('browser-sync').create();
 const files = {
     scssPath: '_sass/**/*.scss',
     cssPath: 'assets/css/**/*.scss',
+    allJsPath: 'assets/js/**/*.js',
     jsPath: 'assets/js/main.js',
     jsPath1: 'assets/js/map.js',
     jsPath2: 'assets/js/details.js',
     jsPath3: 'assets/js/common.js',
-    allJsPath: 'assets/js/*.js',
     imgPath: 'assets/img/**/*',
     _site: '_site/**/*',
 }
@@ -42,12 +42,7 @@ function scssTask() {
 
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
-    return src([
-        files.jsPath,
-        files.jsPath1,
-        files.jsPath2,
-        files.jsPath3
-    ])
+    return src(files.allJsPath)
         .pipe(uglify())
         .pipe(dest('_site/assets/js/'))
         .pipe(browserSync.reload({stream: true}))
@@ -80,7 +75,7 @@ function copyToLive() {
 function watchTask() {
     watch(files.scssPath, scssTask);
     watch([files.allJsPath], jsTask);
-    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll,browserSyncReload));
+    watch(['_includes/**/*.html', '_layouts/**/*.html', 'pages/**/*.html', '*.html'], series(jekyll, browserSyncReload));
     watch(files.imgPath, imgTask);
     watch(files._site, copyToLive);
 }

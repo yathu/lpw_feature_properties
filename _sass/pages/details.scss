@@ -8,7 +8,7 @@
   align-items: center;
 
   i {
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 0px;
     color: #d1b667;
   }
@@ -19,8 +19,7 @@
     display: inline-flex;
     width: auto;
     padding: 4px 8px;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, #ac8703b0 80%), radial-gradient(ellipse farthest-corner at left top, #fff 0, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 
     span {
       line-height: 1;
@@ -113,12 +112,6 @@
       }
       border: 0.5px solid #FFFFFF;
       overflow: hidden;
-
-      img:hover {
-        transition: all ease-in-out 2s;
-        transform: scale(1.1);
-      }
-
     }
 
     > div.main-img, {
@@ -510,8 +503,13 @@
 
     .location {
       line-height: 1;
-      margin-bottom: 14px;
+      margin-bottom: 15px;
+      margin-top: 8px;
       color: #565656;
+
+      @media (max-width: 767.98px) {
+        margin-top: 15px;
+      }
 
       i {
         color: #029432;
@@ -522,6 +520,11 @@
       margin-top: 30px;
       margin-bottom: 18px;
 
+      @media (max-width: 767.98px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
       > div {
         display: flex;
         align-items: center;
@@ -531,7 +534,7 @@
         }
 
         img {
-          height: 30px;
+          height: 22px;
           width: auto;
           margin-right: 16px;
         }
@@ -546,8 +549,12 @@
 
     .price-container {
       font-family: Raleway Medium;
-      font-size: 30px;
+      font-size: 23.8px;
       color: #029432;
+
+      @media (max-width: 575.98px) {
+        align-items: end !important;
+      }
 
       span.price {
         line-height: 1;
@@ -561,7 +568,6 @@
 
       @media (max-width: 767.98px) {
         font-size: 22px;
-
 
         .price-label {
           font-size: 16px;
@@ -617,6 +623,10 @@
         color: #B56221;
         text-align: center;
         line-height: 20px;
+
+        @media (max-width: 767.98px) {
+          margin-top: 15px;
+        }
       }
     }
 
@@ -641,6 +651,12 @@
   .menuContainer {
     z-index: 100;
     background-color: #f2f2f2;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media (max-width: 767.98px) {
+      padding-top: 15px;
+    }
 
     .detailsMenuSwiper {
       border-bottom: 1px solid #D9D9D9;
@@ -1575,11 +1591,7 @@
         }
       }
 
-      .agent-type {
-        font-size: 12px;
-      }
-
-      span.title {
+      div.title {
         font-family: Raleway Medium;
         font-size: 20px;
         color: #FFFFFF;
@@ -2911,8 +2923,16 @@
         }
       }
     }
+  }
 
-
+  .agent-type-label {
+    font-size: 12px !important;
+    background-color: #dddddd;
+    color: #000 !important;
+    border-radius: 4px;
+    padding: 4px 6px;
+    display: inline-block;
+    line-height: 1;
   }
 }
 
@@ -3002,6 +3022,9 @@
 
     .banner-next {
       margin-right: 0px;
+      //opacity: 1 !important;
+      //pointer-events: auto !important;
+      //cursor: pointer !important;
     }
 
     .banner-prev {
