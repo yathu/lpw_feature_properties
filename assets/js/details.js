@@ -496,6 +496,7 @@ $(document).ready(() => {
             }
 
             similarSwiper.updateSlides();
+            similarSwiper.slideTo(0);
 
         });
 
@@ -841,8 +842,6 @@ $(document).ready(() => {
 
         var index = $(element).data("index") || 0;
         bannerSwiper.slideTo(index);
-        rewind.rewind()
-
     });
 
     // bannerSwiper.on('reachEnd', function(){
