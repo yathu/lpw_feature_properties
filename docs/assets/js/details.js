@@ -479,8 +479,8 @@ $(document).ready(() => {
         }
     });
 
-    const filterSimilar = (filterPrice)=>{
-        console.log("filter Similar ==>",filterPrice);
+    const filterSimilar = (filterPrice) => {
+        console.log("filter Similar ==>", filterPrice);
         $('.other-project-swiper').find('.swiper-slide-item').each((i, el) => {
 
             const priceData = $(el).data("price");
@@ -496,17 +496,18 @@ $(document).ready(() => {
             }
 
             similarSwiper.updateSlides();
+            similarSwiper.slideTo(0);
 
         });
 
         $('.view-all-similar').addClass('d-none');
-        $('.view-all-similar[data-all="'+ filterPrice+'"]').removeClass('d-none');
+        $('.view-all-similar[data-all="' + filterPrice + '"]').removeClass('d-none');
     }
 
-   const initPrice =  $('#Developer .filter-buttons button:first')?.data('simmler-filter');
-   if(initPrice){
-       filterSimilar(initPrice);
-   }
+    const initPrice = $('#Developer .filter-buttons button:first')?.data('simmler-filter');
+    if (initPrice) {
+        filterSimilar(initPrice);
+    }
 
     $('.similar-filter-btn').on("click", function () {
         const filterPrice = $(this).data("simmler-filter");
@@ -812,35 +813,26 @@ $(document).ready(() => {
     // });
 
     var bannerSwiper = new Swiper(".banner-swiper", {
-        loop: false,
+        rewind: true,
+        // loop: false,
         navigation: {
             nextEl: ".banner-next",
             prevEl: ".banner-prev",
         },
         slidesPerView: 1,
         spaceBetween: 0,
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 1,
-            },
-            992: {
-                // slidesPerView: 2,
-            },
-        },
     });
 
     myVideoPlayer = videojs.getPlayer('myVideo');
 
     const ytVideo = $('#youtubeVideo');
 
-    bannerSwiper.on("slideChange", () => {
-        ytVideo[0].src = ytVideo[0].src;
-        myVideoPlayer.pause();
-    });
+    if (ytVideo.length) {
+        bannerSwiper.on("slideChange", () => {
+            ytVideo[0].src = ytVideo[0].src;
+            myVideoPlayer.pause();
+        });
+    }
 
     var bannerModal = document.querySelector('#bannerModal');
     //
@@ -849,12 +841,20 @@ $(document).ready(() => {
         const element = event.relatedTarget;
 
         var index = $(element).data("index") || 0;
-
-        console.log("index", index);
-
         bannerSwiper.slideTo(index);
-
     });
+
+    // bannerSwiper.on('reachEnd', function(){
+    //     console.log("reach to End....");
+    // });
+
+    // $('.banner-next').on('click', function () {
+    //     const isDisabled = $(this).hasClass('swiper-button-disabled');
+    //
+    //     if(isDisabled){
+    //         bannerSwiper.slideTo(0  );
+    //     }
+    // });
 
     bannerModal.addEventListener('hide.bs.modal', () => {
         ytVideo[0].src = ytVideo[0].src;
@@ -1366,9 +1366,18 @@ $(document).ready(() => {
     setTimeout(() => {
         if (!isWAPShowed) {
             showWhatsApp('#whatsAppPopup');
+        } else {
+            $('#whatsAppChat').removeClass('d-none');
         }
 
     }, 3000);
+
+    setTimeout(() => {
+        if (isWAPShowed) {
+            $('#whatsAppChat').removeClass('d-none');
+        }
+
+    }, 0);
 
     $('#closeWap').on("click", function () {
         $("#whatsAppPopup").addClass('d-none');
@@ -1467,7 +1476,6 @@ $(document).ready(() => {
     var saveModal = new bootstrap.Modal(document.getElementById('saveModal'));
 
 
-
     $('#saveBtn').on('click', function () {
         $(this).toggleClass('saved');
         const text = $(this).children('span').text();
@@ -1534,9 +1542,35 @@ $(document).ready(() => {
         FriendModal.hide();
     });
 
+    $('.star span').addClass('d-none');
+
+    $('.star').on("click", function () {
+        $(this).children('span').removeClass('d-none');
+    });
+
+    $(document).on("scroll", function () {
+        const element = $('#Enquiry');
+        const isVisible = isScrolledIntoView(element);
+        const scrollWapVisible = localStorage.getItem("scrollWapShowed");
+        if (isVisible && !scrollWapVisible) {
+            showWhatsApp('#whatsAppPopup');
+            localStorage.setItem('scrollWapShowed', true);
+        }
+    });
+
 });
 
 //document ends
+
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop() + 100;
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
 const showWhatsApp = (id) => {
     //whatsApp
@@ -1552,6 +1586,7 @@ const showWhatsApp = (id) => {
     setTimeout(() => {
         $('#typing').addClass('d-none');
         $('#wap_message').removeClass('d-none');
+        $('#whatsAppChat').removeClass('d-none');
     }, 3000)
 }
 
