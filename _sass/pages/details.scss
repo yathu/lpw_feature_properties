@@ -167,15 +167,6 @@
       min-width: 100%;
     }
 
-    @media (max-width: 767.98px) {
-      height: 60vh;
-      overflow: hidden;
-    }
-    @media (max-width: 575.98px) {
-      height: 50vh;
-      overflow: hidden;
-    }
-
     .verified-container {
       top: 0;
       left: 8px;
@@ -213,9 +204,9 @@
       }
     }
 
-
     @media (max-width: 767.98px) {
       height: 37.5vh;
+      overflow: hidden;
     }
 
     @media (min-width: 768px) {
@@ -2054,6 +2045,7 @@
           box-shadow: 0px 2px 6px 0px rgb(210, 210, 210);
           border-radius: 4px;
           overflow: hidden;
+          height: auto;
 
           img {
             width: 100%;
@@ -3965,6 +3957,7 @@
 #reportModal {
   .modal-dialog {
     max-width: 375px;
+    margin: auto;
   }
 }
 

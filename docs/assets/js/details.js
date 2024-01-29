@@ -857,8 +857,10 @@ $(document).ready(() => {
     // });
 
     bannerModal.addEventListener('hide.bs.modal', () => {
-        ytVideo[0].src = ytVideo[0].src;
-        myVideoPlayer.pause();
+        if (ytVideo.length) {
+            ytVideo[0].src = ytVideo[0].src;
+            myVideoPlayer.pause();
+        }
     });
 
 
