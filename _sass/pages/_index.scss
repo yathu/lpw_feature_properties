@@ -940,7 +940,7 @@
         margin-bottom: 20px;
       }
 
-      a.btn {
+      a.btn:not(.gold-badge-btn) {
         font-family: Raleway Medium;
         font-size: 12px;
         color: #FFFFFF;

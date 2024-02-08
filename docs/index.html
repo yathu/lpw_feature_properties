@@ -890,8 +890,10 @@
 
                         </li>
                         <li class="nav-item">
-                            <a href="/myaccountV2/dashboard/manage-my-favourite-properties" class="nav-link">
-                            <span class="fa fa-star" title="My Favourite Properties">
+                            <a href="/myaccountV2/dashboard/manage-my-favourite-properties" class="nav-link saved">
+                                <span class="fa fa-star" title="My Favourite Properties"></span>
+                                <span class="count">
+                                3
                             </span>
                             </a>
                         </li>
@@ -1084,7 +1086,7 @@
 
     <div class="row title-container flex-column flex-sm-row mt-2 mt-md-3 mt-lg-4">
         <div class="col pt-2">
-            <h1>1950 Specious 2 Bedrooms Apartment</h1>
+            <h1>Apartment for Sale - 447 Luna Tower - Colombo 02 | Price Upon Enquiry</h1>
             <div class="location title-light-1">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 Mount Lavinia
@@ -1105,39 +1107,35 @@
                 </div>
             </div>
 
-            <div class="title-content-2 price-container d-flex align-items-center flex-wrap">
-                <span class="price mb-lg-0">LKR 2,83,415</span>
+            <div class="title-content-2 price-container d-flex flex-wrap flex-column flex-sm-row align-items-sm-center">
+                <span class="price mb-lg-0 me-3">LKR 2,83,415</span>
                 <!--                <span class="price-label">Upwards</span>-->
-                <span class="pt-md-2 pt-lg-0 sqft mx-2">
+
+                <div class="d-flex align-items-center justify-content-start flex-wrap pt-2 pt-sm-0">
+                    <span class="price lh-lg">USD 2,000</span>
+
+                    <span class="pt-lg-0 sqft mx-2">
                   per month (or nearest offer)
                 </span>
 
-                <!--                <div class="usd-btn">USD 845-->
-                <!--                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"-->
-                <!--                         class="bi bi-chevron-down" viewBox="0 0 16 16">-->
-                <!--                        <path fill-rule="evenodd"-->
-                <!--                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>-->
-                <!--                    </svg>-->
-                <!--                </div>-->
+                    <!--                this picker class is an common resuable-->
+                    <div class="bootstrap-picker-container">
+                        <select class="selectpicker currencyPicker">
+                            <option selected>LKR</option>
 
-
-                <!--                this picker class is an common resuable-->
-                <div class="bootstrap-picker-container me-3">
-                    <select class="selectpicker currencyPicker">
-                        <option selected>LKR</option>
-
-                        <option disabled
-                                data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
-                            USD 845
-                        </option>
-                        <option disabled
-                                data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
-                            EUR 600
-                        </option>
-                    </select>
+                            <option disabled
+                                    data-content="<img src='assets/img/details/flags/united-states.png'/><span>USD 845</span>">
+                                USD 845
+                            </option>
+                            <option disabled
+                                    data-content="<img src='assets/img/details/flags/european-union.png'/><span>EUR 600</span>">
+                                EUR 600
+                            </option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="move-in px-4 py-2">
+                <div class="ms-lg-3 move-in px-4 py-2">
                     Ready to move in
                 </div>
             </div>
@@ -1991,7 +1989,7 @@
                     Find out how much you can save with our Home Loan Calculator
                 </h2>
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-12 col-sm-9 d-flex align-items-center mb-2 mb-sm-0">
+                    <div class="col-12 col-sm-8 d-flex align-items-center mb-2 mb-sm-0">
 
                         <svg width="74px" height="80px" viewBox="0 0 74 80" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2009,11 +2007,14 @@
                             <div class="title-2 price">
                                 Rs. 293, 750/month
                             </div>
+                            <div class="price-info">
+                                ZXCXCX
+                            </div>
                         </div>
 
                     </div>
-                    <div class="col-12 col-sm-auto">
-                        <a href="#" class="btn btn-danger px-3 apply-btn d-inline-flex align-items-center">
+                    <div class="col-12 col-sm-4 pt-2 d-flex justify-content-end">
+                        <a href="#" class="btn btn-danger px-3 py-1 apply-btn d-inline-flex align-items-center">
                             <span class="pt-1 me-3">More Details</span>
                             <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                         </a>
@@ -2204,18 +2205,20 @@
 
                 <div class="row info mb-4">
                     <div class="col-12 col-md-4 top-sec">
-                        <img class="img-fluid w-100 obj-fit-cover mb-1" src="assets/img/details/access-e.jpg"
-                             alt="engineer">
-
-                        <div class="gold-badge-container my-3 justify-content-start">
-                            <!--                            <i class="fa-solid fa-shield"></i>-->
-                            <i class="fa fa-shield" aria-hidden="true"></i>
-                            <div class="gold-badge">
-                                <span>golden member</span>
-                            </div>
+                        <div class="img-box mb-3">
+                            <img class="img-fluid w-100 obj-fit-cover" src="assets/img/details/access-e.jpg"
+                                 alt="engineer">
                         </div>
 
-                        <p>
+
+                        <a href="#" class="btn btn-sm gold-badge-btn">
+                            <img src="assets/img/details/btnIcons/correct.svg" alt="">
+                            <span>golden member</span>
+                        </a>
+
+                        <a href="#" class="btn btn-outline-primary py-1 view-Agent mt-2 d-md-none">view agent’s ads</a>
+
+                        <p class="mt-2">
                             This advisor has been advertising with us for 2 years
                         </p>
 
@@ -2245,7 +2248,7 @@
                         <div class="title lh-1 mb-3">
                             Access Engineering
                             <span class="agent-type-label">
-                            (Agent)
+                            Agent
                             </span>
                         </div>
 
@@ -5352,17 +5355,14 @@
                     <div class="d-flex flex-column align-items-center agent-v2-container">
                         <img class="img-fluid logo"
                              src="https://www.downgraf.com/wp-content/uploads/2018/01/Bicycle-Logo-Design-Ideas-20.gif"
-                             alt="">
+                             alt=""/>
                         <!--                        <img class="img-fluid badge-img" src="https://b.kisscc0.com/20180705/yyq/kisscc0-web-button-computer-icons-gold-download-gold-button-009-5b3e66ae142d05.0361269015308161740827.png"-->
                         <!--                             alt="badge">-->
-                        <div class="d-flex justify-content-center align-items-center badge-container gold-badge-container">
-                            <!--                            <i class="fa-solid fa-shield"></i>-->
-                            <i class="fa fa-shield" aria-hidden="true"></i>
 
-                            <div class="gold-badge">
-                                <span>golden member</span>
-                            </div>
-                        </div>
+                        <a href="#" class="btn btn-sm gold-badge-btn">
+                            <img src="assets/img/details/btnIcons/correct.svg" alt="">
+                            <span>golden member</span>
+                        </a>
 
                         <p class="mt-3">Meena Almeida
                             <span class="agent-type-label">
@@ -5812,7 +5812,7 @@
             </div>
             <div class="modal-body text-center">
                 <div class="desktop-content">
-                    <img class="rounded-circle" src="assets/img/number_modal.png" alt="comapny">
+                    <img class="rounded-circle logo-img" src="assets/img/number_modal.png" alt="comapny"/>
                     <h1 class="title-content-1">Call Access Engineering</h1>
                     <span class="d-none">
                         <i class="fa fa-check-circle">
@@ -5820,15 +5820,10 @@
                         Verified Agent
                     </span>
 
-                    <div class="gold-badge-container d-md-none">
-                        <!--                            <i class="fa-solid fa-shield"></i>-->
-                        <i class="fa fa-shield" aria-hidden="true"></i>
-
-                        <div class="gold-badge">
-                            <span>golden member</span>
-                        </div>
-                    </div>
-
+                    <a href="#" class="btn btn-sm gold-badge-btn">
+                        <img src="assets/img/details/btnIcons/correct.svg" alt="">
+                        <span>golden member</span>
+                    </a>
                 </div>
 
                 <div class="mobile-content">

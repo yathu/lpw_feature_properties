@@ -2,6 +2,34 @@
 
 }
 
+.gold-badge-btn{
+  margin-top: 8px;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, #ac8703b0 80%), radial-gradient(ellipse farthest-corner at left top, #fff 0, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  padding: 8px !important;
+  min-width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  img{
+    height: 20px;
+    width: auto !important;
+    max-height: 20px;
+    margin-right: 8px;
+  }
+  span {
+    line-height: 1;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+    font-family: Rubik-Regular;
+  }
+}
+
 .gold-badge-container {
   display: flex;
   justify-content: center;
@@ -19,7 +47,6 @@
     display: inline-flex;
     width: auto;
     padding: 4px 8px;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, #ac8703b0 80%), radial-gradient(ellipse farthest-corner at left top, #fff 0, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 
     span {
       line-height: 1;
@@ -167,15 +194,6 @@
       min-width: 100%;
     }
 
-    @media (max-width: 767.98px) {
-      height: 60vh;
-      overflow: hidden;
-    }
-    @media (max-width: 575.98px) {
-      height: 50vh;
-      overflow: hidden;
-    }
-
     .verified-container {
       top: 0;
       left: 8px;
@@ -213,9 +231,9 @@
       }
     }
 
-
     @media (max-width: 767.98px) {
       height: 37.5vh;
+      overflow: hidden;
     }
 
     @media (min-width: 768px) {
@@ -492,7 +510,7 @@
       font-family: Raleway Medium;
       font-size: 32px;
       color: #202330;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 0;
 
       @media (max-width: 767.98px) {
@@ -504,7 +522,7 @@
     .location {
       line-height: 1;
       margin-bottom: 15px;
-      margin-top: 8px;
+      margin-top: 10px;
       color: #565656;
 
       @media (max-width: 767.98px) {
@@ -530,13 +548,13 @@
         align-items: center;
 
         &:not(:first-child) {
-          margin-left: 40px;
+          margin-left: 24px;
         }
 
         img {
           height: 22px;
           width: auto;
-          margin-right: 16px;
+          margin-right: 8px;
         }
 
         span {
@@ -553,7 +571,7 @@
       color: #029432;
 
       @media (max-width: 575.98px) {
-        align-items: end !important;
+        align-items: start !important;
       }
 
       span.price {
@@ -1572,6 +1590,11 @@
 
     .info {
       .top-sec {
+        .img-box{
+          width: 75%;
+          padding: 5px;
+          border: 1px solid #FFFFFF;
+        }
         svg {
           max-width: 100%;
           @media (max-width: 575.98px) {
@@ -2044,7 +2067,7 @@
         }
 
         .btn-link-custom {
-          min-width: auto;
+          min-width: max-content;
           margin-left: auto;
         }
       }
@@ -2054,6 +2077,7 @@
           box-shadow: 0px 2px 6px 0px rgb(210, 210, 210);
           border-radius: 4px;
           overflow: hidden;
+          height: auto;
 
           img {
             width: 100%;
@@ -2106,10 +2130,10 @@
             margin-bottom: 7px;
           }
 
-          .title {
-            font-family: Raleway Medium;
-            font-size: 15px;
-            color: #202330;
+          .title, .title a {
+            font-family: Rubik-Medium !important;
+            font-size: 15px !important;
+            color: #202330 !important;
             letter-spacing: -0.31px;
             margin-bottom: 3px;
           }
@@ -2140,6 +2164,7 @@
 
         .view-more-slide {
           height: auto;
+          padding: 15px;
 
           .icon-circle {
             width: 75px;
@@ -2159,7 +2184,7 @@
           p {
             text-transform: uppercase;
             color: #008e37;
-            font-family: Raleway Regular;
+            font-family: Rubik-Medium;
             font-size: 14px;
           }
         }
@@ -2527,6 +2552,12 @@
       font-size: 18px;
     }
 
+    .price-info{
+      font-size: 14px;
+      margin-top: 5px;
+      color: #494949;
+    }
+
     .title-light-1 {
       color: #202330;
       margin-top: 24px;
@@ -2546,6 +2577,11 @@
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
       border-radius: 3px;
 
+      @media (max-width: 767.98px) {
+        width: 150px;
+        height: 85px;
+      }
+
       &:after {
         display: none;
       }
@@ -2564,6 +2600,9 @@
       max-height: 70px;
       flex: 1;
       object-fit: contain;
+      @media (max-width: 767.98px) {
+        max-height: 50px;
+      }
     }
 
     label {
@@ -2917,6 +2956,10 @@
           font-size: 14px !important;
           padding: 10px 12px;
 
+          span{
+            font-family: Rubik-Medium !important;
+          }
+
           i {
             font-size: 18px;
           }
@@ -2927,6 +2970,7 @@
 
   .agent-type-label {
     font-size: 12px !important;
+    font-family: Rubik-Medium !important;
     background-color: #dddddd;
     color: #000 !important;
     border-radius: 4px;
@@ -3279,7 +3323,7 @@
     align-items: center !important;
     margin-bottom: 20px;
 
-    img {
+    .logo-img {
       width: 75px;
       height: 75px;
       box-shadow: 0 0 30px 0 rgb(0 0 0 / 40%);
@@ -3965,6 +4009,7 @@
 #reportModal {
   .modal-dialog {
     max-width: 375px;
+    margin: auto;
   }
 }
 
