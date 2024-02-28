@@ -15626,7 +15626,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 575.98px) {
   .saleDetails .title-container .price-container {
-    align-items: end !important;
+    align-items: start !important;
   }
 }
 .saleDetails .title-container .price-container span.price {

@@ -77,21 +77,32 @@
                         </div>
                     <?php } ?>
                 </div>
-            <div class="title-content-2 price-container d-flex  align-items-center flex-wrap">
+            <div class="title-content-2 price-container d-flex flex-wrap flex-column flex-sm-row align-items-sm-center">
                 <?php if ($price_val > 0) { echo $price;?>
-                      <?php if ($price_type != 'Total') {?><span class="pt-md-2 pt-lg-0 sqft mx-2"><?=$price_type?></span><?php }?>
+                      <?php if ($price_type != 'Total') {?><span class="price mb-lg-0 me-3"><?=$price_type?></span><?php }?>
                 <?php }?>
                 <?php if ($price_val > 0) { ?>
-                    <div class="bootstrap-picker-container me-3 ms-2">
-                    <select class="selectpicker currencyPicker">
-                        <option selected><?=$alt_currency_v1?></option>
-                         <?php foreach ($price_in_other_currencies as $k => $val) { ?>
-                        <option disabled data-content="<img src='/includes/img/details/details/flags/<?=$k?>.png'/><span><?php echo $k . str_repeat(" ", 3) . $val; ?></span>">
-                            <?php echo $k . str_repeat(" ", 3) . $val; ?>
-                        </option>
-                        <?php } ?>
-                    </select>
-                </div>
+
+                    <div class="d-flex align-items-center justify-content-start flex-wrap pt-2 pt-sm-0">
+
+                        <span class="price lh-lg">USD 2,000</span>
+
+                        <span class="pt-lg-0 sqft mx-2">
+                            per month (or nearest offer)
+                        </span>
+
+                        <div class="bootstrap-picker-container">
+                            <select class="selectpicker currencyPicker">
+                                <option selected><?=$alt_currency_v1?></option>
+                                <?php foreach ($price_in_other_currencies as $k => $val) { ?>
+                                <option disabled data-content="<img src='/includes/img/details/details/flags/<?=$k?>.png'/><span><?php echo $k . str_repeat(" ", 3) . $val; ?></span>">
+                                    <?php echo $k . str_repeat(" ", 3) . $val; ?>
+                                </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
                 <?php } ?>
 
                 <?php
@@ -99,7 +110,7 @@
                 if (!empty($constructed_status)) {
                     ?>
                     <!--                        echo 111;-->
-                    <div class="move-in px-4 py-2 mt-2 mt-lg-0"> <?php echo $constructed_status; ?></div>
+                    <div class="ms-lg-3 move-in px-4 py-2"> <?php echo $constructed_status; ?></div>
                 <?php } ?>
             </div>
         </div>
