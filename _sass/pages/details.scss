@@ -1,18 +1,31 @@
 .saleDetails .banner-img-container {
-
 }
 
-.gold-badge-btn{
+.gold-badge-btn {
   margin-top: 8px;
-  background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, #ac8703b0 80%), radial-gradient(ellipse farthest-corner at left top, #fff 0, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      #ac8703b0 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #fff 0,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
   padding: 8px !important;
   min-width: auto !important;
   display: flex;
   justify-content: center;
   align-items: center;
 
-
-  img{
+  img {
     height: 20px;
     width: auto !important;
     max-height: 20px;
@@ -60,10 +73,8 @@
   }
 }
 
-
 .saleDetails {
-
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   position: relative;
 
   .back-nav-container {
@@ -73,7 +84,6 @@
 
     a.btn-link-custom {
       margin-right: 43px;
-
     }
 
     div {
@@ -84,7 +94,6 @@
             font-size: 15px;
             color: #373737;
             line-height: 20px;
-
           }
         }
       }
@@ -96,7 +105,7 @@
     padding: 15px 17px 12px 17px;
 
     i {
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 20px;
     }
 
@@ -119,7 +128,6 @@
     @media (max-width: 767.98px) {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 33.3%);
-
     }
 
     > div {
@@ -137,11 +145,11 @@
       @media (max-width: 767.98px) {
         grid-column: span 2;
       }
-      border: 0.5px solid #FFFFFF;
+      border: 0.5px solid #ffffff;
       overflow: hidden;
     }
 
-    > div.main-img, {
+    > div.main-img {
       //width: 50%;
       //height: 100%;
       //flex: 1;
@@ -161,7 +169,7 @@
         bottom: 0;
         left: 8px;
         right: 8px;
-        background: rgba(32, 35, 48, .6);
+        background: rgba(32, 35, 48, 0.6);
         display: none;
 
         .btns {
@@ -220,14 +228,14 @@
         span {
           font-family: Raleway Medium;
           font-size: 14px;
-          color: #FFFFFF;
+          color: #ffffff;
           line-height: 1;
           margin-top: 3px;
         }
       }
 
       .btn-agent {
-        background-color: #B53895;
+        background-color: #b53895;
       }
     }
 
@@ -241,7 +249,6 @@
     }
 
     @media (min-width: 576px) {
-
     }
 
     .btn-link-custom {
@@ -258,7 +265,7 @@
       align-items: center;
 
       a {
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -299,7 +306,6 @@
       overflow: hidden;
 
       @media (min-width: 576px) {
-
       }
       @media (min-width: 768px) {
         height: 50%;
@@ -328,15 +334,12 @@
         @media (max-width: 575.98px) {
           height: 200px;
         }
-
       }
 
       video[poster] {
         object-fit: contain;
         max-height: 100%;
         border-radius: 4px;
-
-
       }
 
       .vjs-poster {
@@ -344,7 +347,6 @@
         background-position: center;
         max-height: 100%;
         border-radius: 4px;
-
       }
 
       button.vjs-big-play-button {
@@ -370,7 +372,7 @@
         right: 0;
         bottom: 0;
         border-radius: 0;
-        background: rgba(32, 35, 48, 0.60);
+        background: rgba(32, 35, 48, 0.6);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -388,12 +390,11 @@
         span {
           font-family: Raleway Regular;
           font-size: 18px;
-          color: #FFFFFF;
+          color: #ffffff;
           text-align: center;
           line-height: 20px;
           margin-bottom: 5px;
         }
-
       }
 
       .btns {
@@ -414,10 +415,11 @@
         div {
           display: flex;
 
-          img, i {
+          img,
+          i {
             width: 20px;
             height: 20px;
-            color: #FFFFFF;
+            color: #ffffff;
             font-size: 18px;
             object-fit: contain;
             margin-right: 5px;
@@ -427,12 +429,11 @@
             display: inline-block;
             font-size: 14px;
             font-family: Raleway Regular;
-            color: #FFFFFF;
+            color: #ffffff;
           }
         }
       }
     }
-
   }
 
   .banner-img-count-4 {
@@ -468,13 +469,11 @@
     }
 
     @media (max-width: 767.98px) {
-
       > div:not(.main-img) {
         grid-column: span 1 !important;
         grid-row: span 1 !important;
       }
     }
-
   }
 
   .banner-img-count-2 {
@@ -504,7 +503,6 @@
     }
   }
 
-
   .title-container {
     h1 {
       font-family: Raleway Medium;
@@ -516,7 +514,6 @@
       @media (max-width: 767.98px) {
         font-size: 24px;
       }
-
     }
 
     .location {
@@ -579,9 +576,8 @@
       }
 
       .price-label {
-        color: #71757B;
+        color: #71757b;
         font-size: 20px;
-
       }
 
       @media (max-width: 767.98px) {
@@ -595,7 +591,7 @@
       .sqft {
         font-family: Raleway Medium;
         font-size: 16px;
-        color: #7D838E;
+        color: #7d838e;
         //line-height: 20px;
 
         @media (max-width: 767.98px) {
@@ -606,7 +602,7 @@
       select {
         font-family: Raleway Regular;
         font-size: 16px;
-        color: #71757B;
+        color: #71757b;
         line-height: 30px;
 
         &:focus {
@@ -634,11 +630,11 @@
       //}
 
       .move-in {
-        background: #FFE0C8;
+        background: #ffe0c8;
         border-radius: 18px;
         font-family: Raleway Regular;
         font-size: 17px;
-        color: #B56221;
+        color: #b56221;
         text-align: center;
         line-height: 20px;
 
@@ -647,7 +643,6 @@
         }
       }
     }
-
 
     //.est {
     //  background: #E3F4EA;
@@ -663,7 +658,6 @@
     //    max-width: 181px;
     //  }
     //}
-
   }
 
   .menuContainer {
@@ -677,7 +671,7 @@
     }
 
     .detailsMenuSwiper {
-      border-bottom: 1px solid #D9D9D9;
+      border-bottom: 1px solid #d9d9d9;
       //padding-bottom: 7px;
 
       .swiper-slide {
@@ -692,8 +686,8 @@
       }
 
       .active {
-        color: #018E37;
-        border-bottom: 2px solid #018E37;
+        color: #018e37;
+        border-bottom: 2px solid #018e37;
       }
     }
   }
@@ -715,7 +709,7 @@
         padding: 5px;
 
         .overview-item {
-          background: #F2F2F2;
+          background: #f2f2f2;
           border-radius: 5px;
           padding: 27px 10px 21px 10px;
           height: 100%;
@@ -726,7 +720,7 @@
           .label {
             font-family: Raleway Medium;
             font-size: 15px;
-            color: #7C828D;
+            color: #7c828d;
             text-align: center;
             line-height: 20px;
           }
@@ -740,7 +734,6 @@
           }
         }
       }
-
     }
   }
 
@@ -751,7 +744,7 @@
     margin-bottom: 35px;
 
     h2 {
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     .list-group {
@@ -760,7 +753,7 @@
         border: none;
         font-family: Raleway Regular;
         font-size: 16px;
-        color: #CDD2D9;
+        color: #cdd2d9;
         line-height: 30px;
         padding: 4px 0 4px 25px;
         position: relative;
@@ -771,16 +764,16 @@
         }
 
         i {
-          color: #FFC107;
+          color: #ffc107;
           margin-right: 7px;
-          font-size: 19px
+          font-size: 19px;
         }
 
         &:before {
           content: "\f005";
           position: absolute;
           font: normal normal normal 14px/1 FontAwesome;
-          color: #FFC107;
+          color: #ffc107;
           font-size: 19px;
           left: 0;
           top: 50%;
@@ -791,7 +784,7 @@
   }
 
   .insight-tools-container {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px;
     padding: 20px;
 
@@ -823,7 +816,7 @@
           p {
             font-family: Raleway Regular;
             font-size: 14px;
-            color: #71757B;
+            color: #71757b;
             margin-bottom: 0;
           }
         }
@@ -839,38 +832,37 @@
       }
 
       .slide-1 {
-        background: #DFE6FF;
+        background: #dfe6ff;
 
         .link-area {
-          background-color: #D1DBFF;
+          background-color: #d1dbff;
 
           a {
-            color: #4B61AD;
-
+            color: #4b61ad;
           }
         }
       }
 
       .slide-2 {
-        background: #DDF4F3;
+        background: #ddf4f3;
 
         .link-area {
-          background-color: #B4E8E6;
+          background-color: #b4e8e6;
 
           a {
-            color: #35938F;
+            color: #35938f;
           }
         }
       }
 
       .slide-3 {
-        background: #F8E8E0;
+        background: #f8e8e0;
 
         .link-area {
-          background-color: #EEC9B7;
+          background-color: #eec9b7;
 
           a {
-            color: #9D5431;
+            color: #9d5431;
           }
         }
       }
@@ -904,8 +896,8 @@
 
     .feature-project-swiper {
       .swiper-slide {
-        background: #FFFFFF;
-        border: 1px solid #E6E6E6;
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
         border-radius: 3px;
         padding: 7px;
@@ -933,7 +925,7 @@
   }
 
   .about-container {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px;
     padding: 25px 20px;
 
@@ -944,7 +936,7 @@
     p {
       font-family: Raleway Regular;
       font-size: 15px;
-      color: #71757B;
+      color: #71757b;
       line-height: 30px;
 
       @media (max-width: 767.98px) {
@@ -991,13 +983,12 @@
       @media (max-width: 767.98px) {
         font-size: 18px;
       }
-
     }
 
     p {
       font-family: Raleway Regular;
       font-size: 15px;
-      color: #71757B;
+      color: #71757b;
       line-height: 30px;
 
       @media (max-width: 767.98px) {
@@ -1023,9 +1014,8 @@
     }
   }
 
-
   .floor-plan-container {
-    background: #E4E8F6;
+    background: #e4e8f6;
     border-radius: 4px;
 
     h2.title-content-1 {
@@ -1036,14 +1026,14 @@
 
     .accordion {
       .accordion-button {
-        background-color: #CFD4EB;
+        background-color: #cfd4eb;
         outline: none;
         box-shadow: none;
         border: 0;
         padding: 10px 20px;
         font-family: Raleway Medium;
         font-size: 15px;
-        color: #5C668B;
+        color: #5c668b;
 
         @media (max-width: 767.98px) {
           font-size: 13px;
@@ -1055,9 +1045,9 @@
       }
 
       .accordion-body {
-        border-left: 1px solid #E4E8F6;
-        border-right: 1px solid #E4E8F6;
-        border-bottom: 1px solid #E4E8F6;
+        border-left: 1px solid #e4e8f6;
+        border-right: 1px solid #e4e8f6;
+        border-bottom: 1px solid #e4e8f6;
 
         padding: 0;
 
@@ -1080,9 +1070,9 @@
             font-family: Raleway Regular;
 
             &.active {
-              color: #018E37;
+              color: #018e37;
               background-color: transparent;
-              border-bottom: 2px solid #018E37;
+              border-bottom: 2px solid #018e37;
               font-family: Raleway Medium;
             }
 
@@ -1100,7 +1090,6 @@
           padding: 20px;
 
           .info-container {
-
             @media (max-width: 767.98px) {
               display: flex;
               flex-wrap: wrap;
@@ -1118,7 +1107,7 @@
               > label {
                 font-family: Raleway Medium;
                 font-size: 13px;
-                color: #A0A5AD;
+                color: #a0a5ad;
                 line-height: 1;
                 margin-bottom: 4px;
               }
@@ -1126,7 +1115,7 @@
               span {
                 font-family: Raleway Regular;
                 font-size: 15px;
-                color: #71757B;
+                color: #71757b;
                 line-height: 1;
               }
 
@@ -1144,7 +1133,6 @@
               .custom-chip-checks {
                 margin-top: 2px;
 
-
                 label {
                   font-size: 13px;
 
@@ -1153,15 +1141,15 @@
                   }
                 }
 
-                .custom-chip-checks input[type=checkbox] + label, .custom-chip-checks input[type=radio] + label {
-                  color: #4E5156;
+                .custom-chip-checks input[type="checkbox"] + label,
+                .custom-chip-checks input[type="radio"] + label {
+                  color: #4e5156;
                 }
 
                 .form-check {
                   pointer-events: none;
                 }
               }
-
             }
           }
 
@@ -1171,14 +1159,14 @@
             .form-check-label {
               font-family: Raleway Regular;
               font-size: 15px;
-              color: #171D1F;
+              color: #171d1f;
               line-height: 20px;
             }
 
             span {
               font-family: Raleway Italic;
               font-size: 15px;
-              color: #71757B;
+              color: #71757b;
               line-height: 30px;
               margin-top: 10px;
             }
@@ -1202,7 +1190,6 @@
             }
           }
         }
-
       }
 
       .accordion-item:not(:last-child) {
@@ -1227,13 +1214,14 @@
       .item {
         font-family: Raleway Regular;
         font-size: 15px;
-        color: #71757B;
+        color: #71757b;
         line-height: 30px;
         display: flex;
         width: 25%;
         margin-bottom: 20px;
 
-        img, svg {
+        img,
+        svg {
           width: 25px;
           height: 25px;
           margin-right: 15px;
@@ -1253,12 +1241,11 @@
           width: 33%;
           font-size: 14px;
         }
-
       }
     }
 
     h3 {
-      color: #4C4F5F;
+      color: #4c4f5f;
     }
 
     .additional-item {
@@ -1267,7 +1254,7 @@
       justify-content: space-between;
 
       .item {
-        background: #F4F4F4;
+        background: #f4f4f4;
         border-radius: 3px;
         padding: 15px;
         line-height: 1;
@@ -1276,7 +1263,7 @@
 
         font-family: Raleway Regular;
         font-size: 15px;
-        color: #71757B;
+        color: #71757b;
 
         @media (max-width: 575.98px) {
           width: calc(50% - 6px);
@@ -1286,7 +1273,6 @@
           width: 32%;
           font-size: 14px;
         }
-
       }
     }
   }
@@ -1315,9 +1301,7 @@
       .vjs-poster {
         //background-size: cover;
       }
-
     }
-
   }
 
   .walkthrough {
@@ -1326,14 +1310,13 @@
     margin-bottom: 20px;
 
     img {
-
     }
   }
 
   .land-amenities-container {
     font-family: Raleway Regular;
     font-size: 15px;
-    color: #71757B;
+    color: #71757b;
     line-height: 30px;
 
     ul {
@@ -1365,17 +1348,16 @@
           position: absolute;
           margin-left: -20px;
         }
-
       }
 
       li::marker {
-        font-size: 24px
+        font-size: 24px;
       }
     }
   }
 
   .specification-container {
-    background: #DDF4F3;
+    background: #ddf4f3;
     border-radius: 4px;
     padding: 25px 20px 15px 20px;
 
@@ -1413,7 +1395,8 @@
 
       table {
         tr {
-          td, th {
+          td,
+          th {
             line-height: 1;
             font-family: Raleway Regular;
             font-size: 14px;
@@ -1425,7 +1408,7 @@
           }
 
           td {
-            color: #71757B;
+            color: #71757b;
           }
 
           th {
@@ -1443,7 +1426,6 @@
       display: none;
     }
 
-
     .show-less {
       max-height: 250px;
       overflow: hidden;
@@ -1451,11 +1433,13 @@
       .hide-btn-container {
         position: absolute;
 
-        #specMore, .fa-caret-down {
+        #specMore,
+        .fa-caret-down {
           display: inline-block;
         }
 
-        #SpecLess, .fa-caret-up {
+        #SpecLess,
+        .fa-caret-up {
           display: none;
         }
       }
@@ -1464,10 +1448,13 @@
     .hide-btn-container {
       background-color: #ddf4f3;
       background: rgb(221, 244, 243) !important;
-      background: linear-gradient(0deg, rgba(221, 244, 243, 1) 0%, rgba(221, 244, 243, 0.8547794117647058) 95%, rgba(221, 244, 243, 0.6306897759103641) 100%) !important;
-
+      background: linear-gradient(
+        0deg,
+        rgba(221, 244, 243, 1) 0%,
+        rgba(221, 244, 243, 0.8547794117647058) 95%,
+        rgba(221, 244, 243, 0.6306897759103641) 100%
+      ) !important;
     }
-
   }
 
   .videos-container {
@@ -1476,11 +1463,11 @@
     padding: 20px;
 
     h2 {
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     nav {
-      border-bottom: 1px solid #4F5261;
+      border-bottom: 1px solid #4f5261;
       margin-bottom: 15px;
 
       .nav::-webkit-scrollbar {
@@ -1504,11 +1491,10 @@
           }
         }
 
-
         .nav-link {
           font-family: Raleway Regular;
           font-size: 15px;
-          color: #FFFFFF;
+          color: #ffffff;
           border-radius: 0;
           padding: 8px 10px;
           min-width: max-content;
@@ -1516,9 +1502,9 @@
 
         .active {
           font-family: Raleway Medium;
-          color: #018E37;
+          color: #018e37;
           background-color: transparent;
-          border-bottom: 2px solid #018E37;
+          border-bottom: 2px solid #018e37;
         }
 
         .custom-swiper-nav {
@@ -1530,7 +1516,7 @@
           box-shadow: none !important;
 
           &:after {
-            color: #FFFFFF;
+            color: #ffffff;
           }
         }
 
@@ -1541,7 +1527,6 @@
         .swiper-button-prev {
           margin-left: -35px;
         }
-
       }
     }
 
@@ -1574,7 +1559,6 @@
         .vjs-poster {
           //background-size: cover;
         }
-
       }
     }
   }
@@ -1585,20 +1569,22 @@
     border-radius: 4px;
 
     h2 {
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     .info {
       .top-sec {
-        .img-box{
+        .img-box {
           width: 75%;
           padding: 5px;
-          border: 1px solid #FFFFFF;
+          border: 1px solid #ffffff;
+          img {
+            max-width: 125px;
+          }
         }
         svg {
           max-width: 100%;
           @media (max-width: 575.98px) {
-
           }
         }
       }
@@ -1606,7 +1592,7 @@
       span {
         font-family: Raleway Regular;
         font-size: 15px;
-        color: #A0A5AD;
+        color: #a0a5ad;
         line-height: 1;
 
         @media (max-width: 767.98px) {
@@ -1617,7 +1603,7 @@
       div.title {
         font-family: Raleway Medium;
         font-size: 20px;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 23px;
 
         @media (max-width: 767.98px) {
@@ -1628,11 +1614,11 @@
       a.view-btn {
         font-family: Raleway Medium;
         font-size: 15px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-align: center;
         line-height: 25px;
         font-weight: bold;
-        border: 3px solid #FFFFFF;
+        border: 3px solid #ffffff;
         //@media (max-width: 767.98px) {
         //  display: none;
         //}
@@ -1657,7 +1643,7 @@
           background-color: transparent;
           border-radius: 0.5em;
           box-shadow: 0 0 0 0em rgba(#3498db, 0),
-          0em 0.05em 0.1em rgba(#000000, 0.2);
+            0em 0.05em 0.1em rgba(#000000, 0.2);
           transform: translate3d(0, 0, 0) scale(1);
         }
 
@@ -1706,22 +1692,22 @@
           0% {
             transform: translate3d(0, 0, 0) scale(1);
             box-shadow: 0 0 0 0em rgba(#3498db, 0),
-            0em 0.05em 0.1em rgba(#000000, 0.2);
+              0em 0.05em 0.1em rgba(#000000, 0.2);
           }
           33.3333% {
             transform: translate3d(0, 0, 0) scale(1.1);
             box-shadow: 0 0 0 0em rgba(#3498db, 0.1),
-            0em 0.05em 0.1em rgba(#000000, 0.5);
+              0em 0.05em 0.1em rgba(#000000, 0.5);
           }
           66.6666% {
             transform: translate3d(0, 0, 0) scale(1);
             box-shadow: 0 0 0 0.5em rgba(#3498db, 0),
-            0em 0.05em 0.1em rgba(#000000, 0.2);
+              0em 0.05em 0.1em rgba(#000000, 0.2);
           }
           100% {
             transform: translate3d(0, 0, 0) scale(1);
             box-shadow: 0 0 0 0em rgba(#3498db, 0),
-            0em 0.05em 0.1em rgba(#000000, 0.2);
+              0em 0.05em 0.1em rgba(#000000, 0.2);
           }
         }
 
@@ -1826,7 +1812,7 @@
         .contact {
           font-family: Raleway Medium;
           font-size: 18px;
-          color: #FFD781;
+          color: #ffd781;
         }
 
         img {
@@ -1909,14 +1895,15 @@
     form {
       font-family: Raleway Regular;
       font-size: 15px;
-      color: #71757B;
+      color: #71757b;
       //line-height: 30px;
 
       @media (max-width: 767.98px) {
         font-size: 14px;
       }
 
-      .form-control, select {
+      .form-control,
+      select {
         padding: 7px 12px;
       }
 
@@ -1925,11 +1912,11 @@
       }
 
       label {
-        color: #A0A5AD;
+        color: #a0a5ad;
       }
 
       a {
-        color: #018E37;
+        color: #018e37;
       }
 
       .selected-flag {
@@ -1944,7 +1931,6 @@
       //  margin-top: 5px;
       //  color: red;
       //}
-
     }
 
     .intl-tel-input {
@@ -1954,23 +1940,22 @@
     p {
       font-family: Raleway Medium;
       font-size: 13px;
-      color: #767B83;
+      color: #767b83;
       line-height: 16px;
     }
 
     .report-container {
-
       span {
         font-family: Raleway Regular;
         font-size: 15px;
-        color: #7C828D;
+        color: #7c828d;
         line-height: 17px;
       }
 
       a.btn-outline-danger {
         font-family: Raleway Medium;
         font-size: 14px;
-        color: #F05059;
+        color: #f05059;
         text-align: center;
         border: none;
 
@@ -1979,11 +1964,10 @@
         }
       }
     }
-
   }
 
   .the-team-container {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 25px 0 21px 15px;
 
     .content {
@@ -1995,13 +1979,12 @@
         @media (max-width: 767.98px) {
           font-size: 18px;
         }
-
       }
 
       p {
         font-family: Raleway Regular;
         font-size: 15px;
-        color: #71757B;
+        color: #71757b;
         line-height: 30px;
       }
     }
@@ -2017,7 +2000,7 @@
         span {
           font-family: Raleway Light;
           font-size: 22px;
-          color: #018E37;
+          color: #018e37;
           text-align: center;
         }
 
@@ -2030,19 +2013,19 @@
         }
 
         &:not(:last-child):after {
-          content: '';
+          content: "";
           position: absolute;
           right: 0;
           height: 100%;
           width: 1px;
-          background-color: #D8D8D8;
+          background-color: #d8d8d8;
         }
       }
     }
 
     .other-project-swiper-container {
       h3 {
-        color: #4C4F5F;
+        color: #4c4f5f;
       }
 
       .filter-btn-container {
@@ -2051,7 +2034,6 @@
         &::-webkit-scrollbar {
           display: none;
         }
-
       }
 
       .filter-buttons {
@@ -2102,7 +2084,7 @@
               margin-left: 3px;
               font-family: Raleway Regular;
               font-size: 11px;
-              color: #FFFFFF;
+              color: #ffffff;
               line-height: 1;
             }
           }
@@ -2110,7 +2092,7 @@
           .icon-features {
             font-family: Raleway Regular;
             font-size: 15px;
-            color: #71757B;
+            color: #71757b;
             line-height: 20px;
             padding: 14px 15px 10px;
 
@@ -2130,7 +2112,8 @@
             margin-bottom: 7px;
           }
 
-          .title, .title a {
+          .title,
+          .title a {
             font-family: Rubik-Medium !important;
             font-size: 15px !important;
             color: #202330 !important;
@@ -2141,7 +2124,7 @@
           .location {
             font-family: Raleway Regular;
             font-size: 15px;
-            color: #71757B;
+            color: #71757b;
 
             i {
               color: #029432;
@@ -2156,10 +2139,9 @@
 
             span {
               font-size: 13px;
-              color: #71757B;
+              color: #71757b;
             }
           }
-
         }
 
         .view-more-slide {
@@ -2199,7 +2181,8 @@
       }
     }
 
-    #teamMore, .fa-caret-down {
+    #teamMore,
+    .fa-caret-down {
       display: none;
     }
 
@@ -2213,20 +2196,21 @@
         height: 100%;
         align-items: end;
 
-        #teamMore, .fa-caret-down {
+        #teamMore,
+        .fa-caret-down {
           display: inline-block;
         }
 
-        #teamLess, .fa-caret-up {
+        #teamLess,
+        .fa-caret-up {
           display: none;
         }
       }
     }
-
   }
 
   .next-step-container {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 25px 20px 1px 20px;
 
     div {
@@ -2237,7 +2221,7 @@
         padding: 15px 10px;
         display: flex;
         align-items: center;
-        border: 1px solid #018E37;
+        border: 1px solid #018e37;
         border-radius: 5px;
         height: 100%;
 
@@ -2253,7 +2237,7 @@
 
         font-family: Raleway Regular;
         font-size: 14px;
-        color: #018E37;
+        color: #018e37;
         //line-height: 30px;
       }
     }
@@ -2265,7 +2249,12 @@
     }
 
     .viewMoreNext {
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.88) 51%, #FFFFFF 100%);
+      background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.88) 51%,
+        #ffffff 100%
+      );
       padding: 75px 10px 15px 10px;
       display: flex;
       justify-content: center;
@@ -2288,7 +2277,6 @@
     }
     padding-right: 12px;
 
-
     .item {
       padding: 20px;
       display: block;
@@ -2296,14 +2284,14 @@
       h3 {
         font-family: Raleway Medium;
         font-size: 18px;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 5px;
       }
 
       p {
         font-family: Raleway Regular;
         font-size: 14px;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 20px;
         margin-bottom: 0;
       }
@@ -2318,11 +2306,10 @@
       svg {
         margin-bottom: 20px;
       }
-
     }
 
     .portal {
-      background: #D9D9D9;
+      background: #d9d9d9;
       border-radius: 8px;
       padding-left: 15px;
       padding-right: 15px;
@@ -2338,14 +2325,14 @@
       }
 
       h3 {
-        color: #423D3A;
+        color: #423d3a;
         line-height: 25px;
       }
 
       p {
         font-family: Raleway Regular;
         font-size: 16px;
-        color: #423D3A;
+        color: #423d3a;
         line-height: 20px;
       }
     }
@@ -2363,7 +2350,7 @@
       flex-direction: column;
       font-family: Raleway Regular;
       font-size: 14px;
-      color: #018E37;
+      color: #018e37;
       text-align: center;
       line-height: 20px;
       overflow: hidden;
@@ -2371,7 +2358,7 @@
       //width: auto;
 
       div {
-        border: 1px solid #D8D8D8;
+        border: 1px solid #d8d8d8;
         border-radius: 5px;
         padding: 12px 30px;
         margin-bottom: 7px;
@@ -2387,7 +2374,7 @@
 
     .active {
       div {
-        border: 1px solid #018E37 !important;
+        border: 1px solid #018e37 !important;
       }
     }
 
@@ -2431,21 +2418,20 @@
   .locality-container {
     //@extend .specification-container;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 5px;
     padding: 20px;
 
-
     .locality-swiper {
       .swiper-slide {
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         width: auto;
         padding: 15px;
         padding-top: 25px;
         height: auto;
         align-self: stretch;
         display: flex;
-        border: 1px solid #E6E6E6;
+        border: 1px solid #e6e6e6;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
         border-radius: 3px;
         overflow: hidden;
@@ -2488,7 +2474,7 @@
       .list-group-item {
         font-family: Raleway Regular;
         font-size: 14px;
-        color: #71757B;
+        color: #71757b;
         line-height: 30px;
         background-color: transparent;
         border: 0;
@@ -2502,7 +2488,7 @@
         }
 
         i {
-          color: #71757B;
+          color: #71757b;
           margin-right: 7px;
           font-size: 23px;
         }
@@ -2526,7 +2512,7 @@
 
   .bank-loan-container {
     //@extend .payment-plan-container;
-    background: #DBE1F2;
+    background: #dbe1f2;
     border-radius: 5px;
     padding: 25px 20px;
 
@@ -2539,7 +2525,6 @@
       line-height: 1;
       margin-bottom: 7px;
       font-size: 21px;
-
     }
 
     .apply-btn {
@@ -2552,7 +2537,7 @@
       font-size: 18px;
     }
 
-    .price-info{
+    .price-info {
       font-size: 14px;
       margin-top: 5px;
       color: #494949;
@@ -2565,8 +2550,8 @@
     }
 
     .swiper-slide {
-      background: #FFFFFF;
-      border: 1px solid #E6E6E6;
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
       border-radius: 3px;
       width: 167px;
       height: 100px;
@@ -2574,7 +2559,7 @@
       justify-content: center;
       align-items: center;
       padding: 14px 10px;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
       border-radius: 3px;
 
       @media (max-width: 767.98px) {
@@ -2608,7 +2593,7 @@
     label {
       font-family: Raleway Medium;
       font-size: 13px;
-      color: #A0A5AD;
+      color: #a0a5ad;
       text-align: center;
       line-height: 20px;
       margin-bottom: 3px;
@@ -2635,25 +2620,25 @@
       label {
         font-family: Raleway Regular;
         font-size: 14px;
-        color: #171D1F;
+        color: #171d1f;
       }
     }
 
     .by-price-container {
       > div {
         .row {
-          background: #FBF6F3;
-          border: 1px solid #E3CBBF;
+          background: #fbf6f3;
+          border: 1px solid #e3cbbf;
           border-radius: 4px;
           padding: 15px;
 
           div.col {
-            border-right: 1px solid #DABEB0;
+            border-right: 1px solid #dabeb0;
 
             span {
               font-family: Raleway Medium;
               font-size: 13px;
-              color: #9A735F;
+              color: #9a735f;
               line-height: 20px;
             }
 
@@ -2661,14 +2646,14 @@
               span {
                 font-family: Raleway Regular;
                 font-size: 16px;
-                color: #512E1B;
+                color: #512e1b;
                 line-height: 25px;
               }
 
               b {
                 font-family: Raleway Medium;
                 font-size: 16px;
-                color: #512E1B;
+                color: #512e1b;
                 line-height: 25px;
               }
             }
@@ -2680,11 +2665,10 @@
             a {
               font-family: Raleway Regular;
               font-size: 14px;
-              color: #018E37;
+              color: #018e37;
               line-height: 20px;
             }
           }
-
         }
       }
     }
@@ -2692,12 +2676,12 @@
     .hike {
       font-family: Raleway Regular;
       font-size: 15px;
-      color: #71757B;
+      color: #71757b;
       line-height: 30px;
       margin-bottom: 3px;
 
       span {
-        color: #4C9B1A;
+        color: #4c9b1a;
       }
     }
 
@@ -2708,7 +2692,7 @@
     }
 
     .price-meter-container {
-      background: #FDEFDF;
+      background: #fdefdf;
       border-radius: 5px;
       padding: 10px 15px;
 
@@ -2734,7 +2718,7 @@
         padding-bottom: 4px;
 
         &:hover {
-          background-color: #FFFFFF !important;
+          background-color: #ffffff !important;
           color: #018e37;
         }
 
@@ -2769,7 +2753,7 @@
       }
 
       a.btn {
-        color: #018E37;
+        color: #018e37;
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -2780,7 +2764,7 @@
           padding: 10px 12px !important;
 
           &:hover {
-            background-color: #FFFFFF;
+            background-color: #ffffff;
           }
 
           img {
@@ -2810,20 +2794,21 @@
                 width: 30px;
                 height: 30px;
               }
-
-
             }
           }
         }
       }
 
-      .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active, .btn-outline-primary:hover {
+      .btn-outline-primary.dropdown-toggle.show,
+      .btn-outline-primary:active,
+      .btn-outline-primary:hover {
         //color: #fff;
         background-color: #ffffff;
         //border-color: #2a8d36;
       }
 
-      .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
+      .btn-check:focus + .btn-outline-primary,
+      .btn-outline-primary:focus {
         box-shadow: none !important;
         outline: none;
       }
@@ -2831,7 +2816,7 @@
       .btn {
         font-family: Raleway Medium;
         font-size: 16px;
-        color: #71757B;
+        color: #71757b;
         height: 47px;
 
         @media (max-width: 1199.98px) {
@@ -2839,7 +2824,7 @@
         }
 
         &:hover {
-          color: #FFFFFF !important;
+          color: #ffffff !important;
         }
       }
 
@@ -2855,8 +2840,8 @@
 
     .agent {
       margin-top: 15px;
-      background: #FFFFFF;
-      border: 1px solid #E1E1E1;
+      background: #ffffff;
+      border: 1px solid #e1e1e1;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
       border-radius: 5px;
       padding: 15px 20px 20px;
@@ -2894,10 +2879,7 @@
 
         .stars {
           margin-bottom: 10px;
-
         }
-
-
       }
 
       .agent-v2-container {
@@ -2924,10 +2906,9 @@
       }
 
       .rate-container {
-
         font-family: Raleway Regular;
         font-size: 14px;
-        color: #999EA5;
+        color: #999ea5;
 
         i {
           color: #018e37;
@@ -2936,19 +2917,19 @@
         }
 
         .vr {
-          background: #D9D9D9;
+          background: #d9d9d9;
           width: 3px;
           margin-left: 5px;
           margin-right: 9px;
         }
 
         a {
-          color: #018E37;
+          color: #018e37;
         }
       }
 
       hr {
-        background-color: #D9D9D9;
+        background-color: #d9d9d9;
       }
 
       .agent-buttons {
@@ -2956,7 +2937,7 @@
           font-size: 14px !important;
           padding: 10px 12px;
 
-          span{
+          span {
             font-family: Rubik-Medium !important;
           }
 
@@ -2979,7 +2960,6 @@
     line-height: 1;
   }
 }
-
 
 .back-nav-desktop {
   @media (max-width: 767.98px) {
@@ -3026,7 +3006,6 @@
     }
 
     .banner-swiper {
-
     }
 
     .swiper-wrapper {
@@ -3034,11 +3013,11 @@
     }
 
     .swiper-button {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       width: 35px;
       height: 35px;
       border-radius: 25px;
-      border: 1px solid #E1E1E1;
+      border: 1px solid #e1e1e1;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 
       &:after {
@@ -3105,7 +3084,6 @@
         object-fit: cover;
         //max-height: 91vh;
 
-
         @media (max-width: 767.98px) {
           //object-fit: cover;
         }
@@ -3115,7 +3093,8 @@
       }
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
       @media (max-width: 767.98px) {
         display: flex !important;
         &:after {
@@ -3125,8 +3104,8 @@
     }
 
     .banner-contact-form {
-      background: #FFFFFF;
-      border: 1px solid #E1E1E1;
+      background: #ffffff;
+      border: 1px solid #e1e1e1;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
       border-radius: 3px;
       padding: 15px 20px;
@@ -3152,14 +3131,16 @@
         label {
           font-family: Raleway Regular;
           font-size: 15px;
-          color: #71757B;
+          color: #71757b;
 
           @media (max-width: 767.98px) {
             font-size: 14px;
           }
         }
 
-        input:focus, textarea:focus, select:focus {
+        input:focus,
+        textarea:focus,
+        select:focus {
           outline: none !important;
           box-shadow: none !important;
           border-color: #ced4da;
@@ -3182,7 +3163,6 @@
           height: 31px;
         }
       }
-
     }
 
     .video-js {
@@ -3381,7 +3361,6 @@
       }
 
       .phone-no-sec {
-
         .phone-no-box {
           display: flex;
           align-items: center;
@@ -3408,7 +3387,6 @@
             //@include fill(fixed);
             //flex-direction: row;
 
-
             @mixin fill($position: absolute) {
               position: $position;
               bottom: 0;
@@ -3418,7 +3396,7 @@
             }
 
             i {
-              color: #FFFFFF;
+              color: #ffffff;
 
               box-sizing: border-box;
               animation: oscillate-rotation 1s infinite ease-in-out;
@@ -3514,13 +3492,10 @@
                 transform: rotate(0) scale(1) skew(0deg);
               }
             }
-
           }
         }
       }
-
     }
-
   }
 
   .modal-dialog {
@@ -3535,7 +3510,6 @@
 
 #DetailsWhatsAppModal {
   @extend #DetailsPhoneNoModal;
-
 }
 
 #detailsPopup {
@@ -3562,13 +3536,13 @@
   }
 
   select {
-    color: #71757B;
+    color: #71757b;
   }
 
   label {
     font-family: Raleway Regular;
     font-size: 15px;
-    color: #A0A5AD;
+    color: #a0a5ad;
     line-height: 22px;
   }
 
@@ -3590,7 +3564,7 @@
   }
 
   .success {
-    font-family: 'Raleway Regular';
+    font-family: "Raleway Regular";
   }
 
   .success-item {
@@ -3651,7 +3625,6 @@
     position: absolute;
     left: -999em;
   }
-
 
   /*
       Wizard
@@ -3717,7 +3690,6 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-
   }
 
   .wizard > .steps .disabled a,
@@ -3858,7 +3830,6 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-
   }
 
   .wizard > .actions .disabled a,
@@ -3873,7 +3844,6 @@
 
   .wizard > .loading .spinner {
   }
-
 
   /*
       Tabcontrol
@@ -3980,7 +3950,7 @@
           display: flex;
           align-items: center;
           color: #282828;
-          font-family: 'Raleway Regular';
+          font-family: "Raleway Regular";
           font-size: 15px;
           cursor: pointer !important;
 
@@ -4030,7 +4000,6 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
-
     }
   }
 
@@ -4070,7 +4039,7 @@
   opacity: 0 !important;
 }
 
-input[type=date] {
+input[type="date"] {
   text-align: right;
 }
 
@@ -4089,16 +4058,21 @@ input[type="date"]:before {
 }
 
 input[type="date"]:focus:before {
-  content: '' !important;
+  content: "" !important;
 }
 
 .hide-btn-container {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 91%, rgba(255, 255, 255, 0.8883928571428571) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.85) 91%,
+    rgba(255, 255, 255, 0.8883928571428571) 100%
+  );
 }
 
 .custom-switch-container {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 0px;
   border-radius: 5px;
   border: 1px solid #c5c5c5;
@@ -4114,14 +4088,13 @@ input[type="date"]:focus:before {
     box-shadow: none;
   }
 
-
   input:checked + label {
     font-family: Raleway Regular;
     font-size: 15px;
-    color: #018E37;
+    color: #018e37;
     text-align: center;
-    background-color: #EFFFF5 !important;
-    border: 1px solid #018E37;
+    background-color: #effff5 !important;
+    border: 1px solid #018e37;
     outline: none !important;
     box-shadow: none;
   }
@@ -4184,9 +4157,9 @@ input[type="date"]:focus:before {
     padding: 4px 12px;
   }
 
-
   .call-btn {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     position: relative !important;
   }
 
@@ -4225,7 +4198,8 @@ input[type="date"]:focus:before {
   /* Hover, Focus */
   .pure-material-button-contained:hover,
   .pure-material-button-contained:focus {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   .pure-material-button-contained:hover::before {
@@ -4242,7 +4216,8 @@ input[type="date"]:focus:before {
 
   /* Active */
   .pure-material-button-contained:active {
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
 
   .pure-material-button-contained:active::after {
@@ -4275,7 +4250,7 @@ input[type="date"]:focus:before {
 .transation {
   @media (max-width: 767.98px) {
     transform: translate(0, 0) !important;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out 0.5s;
   }
 }
 
@@ -4308,7 +4283,7 @@ input[type="date"]:focus:before {
     transform: translate(0, 110%);
     bottom: 0px;
     max-width: 100%;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out 0.5s;
     width: 100%;
 
     height: 100vh;
@@ -4328,7 +4303,6 @@ input[type="date"]:focus:before {
       width: 52px;
       height: 52px;
       position: relative;
-
     }
 
     .online {
@@ -4345,7 +4319,7 @@ input[type="date"]:focus:before {
     }
 
     .name-container {
-      color: #FFFFFF;
+      color: #ffffff;
 
       .name {
         font-family: Raleway Medium;
@@ -4403,7 +4377,7 @@ input[type="date"]:focus:before {
     }
 
     .tri-right.border.left-top:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       width: 0;
       height: 0;
@@ -4469,7 +4443,6 @@ input[type="date"]:focus:before {
         margin-right: 10px;
         font-size: 13px;
         background-color: white !important;
-
       }
 
       .btn {
@@ -4522,7 +4495,7 @@ input[type="date"]:focus:before {
     height: 5px;
 
     span {
-      content: '';
+      content: "";
       animation: blink $speed infinite;
       animation-fill-mode: both;
       height: $dot-width;
@@ -4534,34 +4507,33 @@ input[type="date"]:focus:before {
       border-radius: 50%;
 
       &:nth-child(2) {
-        animation-delay: .2s;
+        animation-delay: 0.2s;
         margin-left: $dot-width * 1.5;
       }
 
       &:nth-child(3) {
-        animation-delay: .4s;
+        animation-delay: 0.4s;
         margin-left: $dot-width * 3;
       }
     }
   }
 
-
   @keyframes blink {
     0% {
-      opacity: .1;
+      opacity: 0.1;
     }
     20% {
       opacity: 1;
     }
     100% {
-      opacity: .1;
+      opacity: 0.1;
     }
   }
 }
 
 .modal.fade .modal-dialog {
   transform: translate3d(0, 100vh, 0);
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .modal.show .modal-dialog {
