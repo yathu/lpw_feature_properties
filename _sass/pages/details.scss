@@ -4540,6 +4540,32 @@ input[type="date"]:focus:before {
   transform: translate3d(0, 0, 0);
 }
 
+.new_scroll_menu {
+  background-color: white;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    //-ms-overflow-style: none; /* Internet Explorer 10+ */
+    //scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      //display: none; /* Safari and Chrome */
+    }
+    a {
+      min-width: max-content;
+      color: #000;
+    }
+    .active {
+      color: #008e37;
+      border-bottom: 1px solid #009331;
+    }
+  }
+}
+
 //.whatsAppPopupV2 {
 //  @extend .whatsAppPopup;
 //
