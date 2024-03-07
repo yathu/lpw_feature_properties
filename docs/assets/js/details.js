@@ -1072,80 +1072,90 @@ $(document).ready(() => {
     $(document).on("scroll", onScroll);
 
     function onScroll(event) {
-        var scrollPos = $(document).scrollTop();
-        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-
-        // console.log("scrollPos==>", scrollPos);
-
-        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            // var totalSlides =  detailsMenuSwiper.slides.length - 2;
-            var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
-
-            $('.detailsMenuSwiper a').each(function (index, element) {
-                // console.log(element);
-                $(element).removeClass('active');
-            });
-            $('.detailsMenuSwiper a:last-child').addClass('active');
-
+      var scrollPos = $(document).scrollTop();
+      const vh = Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      );
+      const vw = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+  
+      // console.log("scrollPos==>", scrollPos);
+  
+      // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+      //     // var totalSlides =  detailsMenuSwiper.slides.length - 2;
+      //     var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
+  
+      //     $('.detailsMenuSwiper a').each(function (index, element) {
+      //         // console.log(element);
+      //         $(element).removeClass('active');
+      //     });
+      //     $('.detailsMenuSwiper a:last-child').addClass('active');
+  
+      // }
+  
+      $("#new_scroll_menu a").each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+  
+        // console.log("refElement==>", refElement);
+  
+        var elementHeight = refElement.height();
+        var elementPosition = refElement.position().top;
+  
+        // console.log(vh,vw);
+  
+        if (vw >= 576) {
+          elementPosition -= vh / 4;
+        } else {
+          elementPosition -= 120;
         }
-
-        $('.detailsMenuSwiper a').each(function () {
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
-
-            // console.log("refElement==>", refElement);
-
-            var elementHeight = refElement.height();
-            var elementPosition = refElement.position().top;
-
-            // console.log(vh,vw);
-
-            if (vw >= 576) {
-                elementPosition -= (vh / 4);
-            } else {
-                elementPosition -= 120;
-            }
-
-
-            if (elementPosition <= scrollPos && elementPosition + elementHeight > scrollPos) {
-
-                // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
-                var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
-                // var nextIndex = currLink.data('swiper-slide-index');
-                // console.log("nextIndex==>",nextIndex);
-
-                if (nextIndex != detailsMenuSwiper.activeIndex) {
-                    // console.log(refElement, scrollPos, elementPosition, elementHeight);
-
-                    // console.log(nextIndex);
-
-                    // console.log("nextIndex==>",nextIndex);
-                    // console.log(currLink);
-
-
-                    detailsMenuSwiper.slideTo(nextIndex - 1);
-
-                    $('a').removeClass("active");
-                    currLink.addClass("active");
-
-                    return;
-                }
-
-
-            } else {
-                // console.log("currLink==>",currLink);
-                // currLink.removeClass("active");
-
-                // console.log("else...");
-            }
-        });
-
-        if (scrollPos == 0) {
-            // console.log("scrollPos++>");
-            $('.detailsMenuSwiper a:first-child').addClass('active');
+  
+        if (
+          elementPosition <= scrollPos &&
+          elementPosition + elementHeight > scrollPos
+        ) {
+          // console.log(currLink[0]);
+  
+          // const element = document.getElementById("360box");
+          currLink[0].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "start",
+          });
+  
+          //currLink[0].addClass("active");
+          $(currLink[0]).addClass("active");
+  
+          // // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
+          // var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
+          // // var nextIndex = currLink.data('swiper-slide-index');
+          // // console.log("nextIndex==>",nextIndex);
+          // if (nextIndex != detailsMenuSwiper.activeIndex) {
+          //     // console.log(refElement, scrollPos, elementPosition, elementHeight);
+          //     // console.log(nextIndex);
+          //     // console.log("nextIndex==>",nextIndex);
+          //     // console.log(currLink);
+          //     detailsMenuSwiper.slideTo(nextIndex - 1);
+          //     $('a').removeClass("active");
+          //     currLink.addClass("active");
+          //     return;
+          // }
+        } else {
+          // console.log("currLink==>",currLink);
+          // currLink.removeClass("active");
+          // console.log("else...");
+  
+          $(currLink[0]).removeClass("active");
         }
-
+      });
+  
+      if (scrollPos == 0) {
+        // console.log("scrollPos++>");
+        $(".detailsMenuSwiper a:first-child").addClass("active");
+      }
     }
 
 
