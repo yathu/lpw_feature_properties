@@ -1120,19 +1120,23 @@ $(document).ready(() => {
           elementPosition <= scrollPos &&
           elementPosition + elementHeight > scrollPos
         ) {
-          console.log("if==>",PrevElement,currLink[0]);
+        //   console.log("if==>",PrevElement,currLink[0]);
+        // console.log($(".menu_container").scrollLeft() + " px");
   
-          // const element = document.getElementById("360box");
-          currLink[0].scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "start",
-          });
+          // const element = document.getElementById("360box"); 
+
+        $(".menu_container").scrollTo(currLink[0]);
+
+        //   currLink[0].scrollIntoView({
+        //     behavior: "smooth",
+        //     block: "start",
+        //     inline: "start",
+        //   });
   
           //currLink[0].addClass("active");
 
           if(PrevElement){
-            console.log("PrevElement==>",PrevElement);
+            // console.log("PrevElement==>",PrevElement);
 
             $(PrevElement).removeClass("active");
             PrevElement = null;
