@@ -1124,7 +1124,7 @@ $(document).ready(() => {
   
           // const element = document.getElementById("360box");
           currLink[0].scrollIntoView({
-            behavior: "instant",
+            behavior: "smooth",
             block: "start",
             inline: "start",
           });
