@@ -4540,30 +4540,60 @@ input[type="date"]:focus:before {
   transform: translate3d(0, 0, 0);
 }
 
-.new_scroll_menu {
-  background-color: white;
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    //-ms-overflow-style: none; /* Internet Explorer 10+ */
-    //scrollbar-width: none; /* Firefox */
+.disable-scrollbars {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: 0px; /* Firefox */
 
-    &::-webkit-scrollbar {
-      //display: none; /* Safari and Chrome */
-    }
-    a {
-      min-width: max-content;
-      color: #000;
-    }
-    .active {
-      color: #008e37;
-      border-bottom: 1px solid #009331;
+  &::-webkit-scrollbar {
+    //display: none; /* Safari and Chrome */
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+}
+
+.new_scroll_menu {
+  overflow:hidden;
+  z-index: 100;
+  background-color: #f2f2f2;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  @media (max-width: 767.98px) {
+    margin-top: 15px;
+  }
+
+  .container{
+     overflow:hidden;
+    .menu_container {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      flex-wrap: nowrap;
+  border-bottom: 1px solid #d9d9d9;
+
+
+      a {
+        min-width: max-content;
+        width: auto;
+        font-family: Raleway Medium;
+        font-size: 14px;
+        color: #000000;
+        line-height: 20px;
+        text-decoration: none !important;
+        cursor: pointer;
+        padding-bottom: 7px;
+        padding-top: 7px;
+      }
+      .active {
+        color: #018e37;
+        border-bottom: 2px solid #018e37;
+      }
     }
   }
+
+
 }
 
 //.whatsAppPopupV2 {

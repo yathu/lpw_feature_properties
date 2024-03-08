@@ -1095,6 +1095,9 @@ $(document).ready(() => {
       //     $('.detailsMenuSwiper a:last-child').addClass('active');
   
       // }
+
+      let isActived = false;
+      let PrevElement = null;
   
       $("#new_scroll_menu a").each(function () {
         var currLink = $(this);
@@ -1117,17 +1120,26 @@ $(document).ready(() => {
           elementPosition <= scrollPos &&
           elementPosition + elementHeight > scrollPos
         ) {
-          // console.log(currLink[0]);
+          console.log("if==>",PrevElement,currLink[0]);
   
           // const element = document.getElementById("360box");
           currLink[0].scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
+            behavior: "instant",
+            block: "start",
             inline: "start",
           });
   
           //currLink[0].addClass("active");
+
+          if(PrevElement){
+            console.log("PrevElement==>",PrevElement);
+
+            $(PrevElement).removeClass("active");
+            PrevElement = null;
+          }
+
           $(currLink[0]).addClass("active");
+          isActived = true;
   
           // // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
           // var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
@@ -1148,7 +1160,11 @@ $(document).ready(() => {
           // currLink.removeClass("active");
           // console.log("else...");
   
-          $(currLink[0]).removeClass("active");
+          if(isActived){
+                     $(currLink[0]).removeClass("active");
+          }else{
+            PrevElement = currLink[0];
+          }
         }
       });
   
@@ -1569,6 +1585,38 @@ $(document).ready(() => {
             localStorage.setItem('scrollWapShowed', true);
         }
     });
+
+
+    //new meny dragable 
+
+    let mouseDown = false;
+let startX, scrollLeft;
+// const slider = document.querySelector('#new_scroll_menu .container');
+const slider = document.querySelector('.menu_container');
+
+const startDragging = (e) => {
+  mouseDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+}
+
+const stopDragging = (e) => {
+  mouseDown = false;
+}
+
+const move = (e) => {
+  e.preventDefault();
+  if(!mouseDown) { return; }
+  const x = e.pageX - slider.offsetLeft;
+  const scroll = x - startX;
+  slider.scrollLeft = scrollLeft - scroll;
+}
+
+// Add the event listeners
+slider.addEventListener('mousemove', move, false);
+slider.addEventListener('mousedown', startDragging, false);
+slider.addEventListener('mouseup', stopDragging, false);
+slider.addEventListener('mouseleave', stopDragging, false);
 
 });
 
