@@ -242,23 +242,26 @@ permalink: /index.html
 
 </div>
 
-<div id="new_scroll_menu" class="new_scroll_menu sticky-top py-2">
-  <div class="container">
-    {% for menu_items in site.data.details.menu_items %}
-    <a href="#{{ menu_items.link }}" class="px-2"> {{ menu_items.name }} </a>
+<div id="new_scroll_menu" class="new_scroll_menu disable-scrollbars sticky-top">
+    <div class="container">
+        <div class="menu_container">
+            {% for menu_items in site.data.details.menu_items %}
+            <a href="#{{ menu_items.link }}" class="px-2"> {{ menu_items.name }} </a>
+        
+            <!-- {% if forloop.index == 4 %}
+            <a id="360box" href="#{{ menu_items.link }}" class="px-2">
+              {{ menu_items.name }}
+            </a>
+        
+            {% endif %}  -->
+        
+            {% endfor %}
+          </div>
+    </div>
 
-    <!-- {% if forloop.index == 4 %}
-    <a id="360box" href="#{{ menu_items.link }}" class="px-2">
-      {{ menu_items.name }}
-    </a>
-
-    {% endif %}  -->
-
-    {% endfor %}
-  </div>
 </div>
 
-<div class="container menuContainer sticky-top">
+<div class="container menuContainer sticky-top d-none">
 
     <div class="container px-0">
         <div class="swiper detailsMenuSwiper">
