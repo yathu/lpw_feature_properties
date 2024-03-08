@@ -1,1 +1,97 @@
-$(document).ready(function(){const e=document.querySelector(".page-header"),t=document.querySelector(".mobile-nav-container"),n=t.querySelector(".toggle-menu"),s=e.querySelector(".menu-wrapper");var l=e.querySelectorAll(".level-1 > li > a");const o=e.querySelector(".list-wrapper:nth-child(2)"),i=e.querySelector(".list-wrapper:nth-child(3)"),c=o.querySelector(".sub-menu-wrapper"),r=i.querySelector(".sub-menu-wrapper");var a=e.querySelectorAll(".back-one-level");const d="is-visible",u="is-active";$(".close-mobile-nav").on("click",function(){$(".toggle-menu").trigger("click")}),n.addEventListener("click",function(){if(s.classList.toggle(d),console.log(this.classList),!this.classList.contains(d)){console.log("yes"),o.classList.remove(d),i.classList.remove(d);for(const e of s.querySelectorAll("a"))e.classList.remove(u)}});for(const v of l)v.addEventListener("click",function(e){const t=v.nextElementSibling;t&&(e.preventDefault(),this.classList.add(u),e=t.cloneNode(!0),c.innerHTML="",c.append(e),o.classList.add(d))});o.addEventListener("click",function(e){const t=e.target;if("a"===t.tagName.toLowerCase()&&t.nextElementSibling){const n=t.nextElementSibling;e.preventDefault(),t.classList.add(u);e=n.cloneNode(!0);r.innerHTML="",r.append(e),i.classList.add(d)}});for(const m of a)m.addEventListener("click",function(){const e=this.closest(".list-wrapper");e.classList.remove(d),e.previousElementSibling.querySelector(".is-active").classList.remove(u)});$(".main-nav > li > .dropdown-toggle").click(function(){window.location=$(this).attr("href")})}),(()=>{"use strict";var e=document.querySelectorAll(".needs-validation");Array.from(e).forEach(t=>{t.addEventListener("submit",e=>{t.checkValidity()||(e.preventDefault(),e.stopPropagation()),t.classList.add("was-validated")},!1)})})();
+$(document).ready(function () {
+
+    const pageHeader = document.querySelector(".page-header");
+    const mobile_nav = document.querySelector(".mobile-nav-container");
+    const toggleMenu = mobile_nav.querySelector(".toggle-menu");
+    const menuWrapper = pageHeader.querySelector(".menu-wrapper");
+    const level1Links = pageHeader.querySelectorAll(".level-1 > li > a");
+    const listWrapper2 = pageHeader.querySelector(".list-wrapper:nth-child(2)");
+    const listWrapper3 = pageHeader.querySelector(".list-wrapper:nth-child(3)");
+    const subMenuWrapper2 = listWrapper2.querySelector(".sub-menu-wrapper");
+    const subMenuWrapper3 = listWrapper3.querySelector(".sub-menu-wrapper");
+    const backOneLevelBtns = pageHeader.querySelectorAll(".back-one-level");
+    const isVisibleClass = "is-visible";
+    const isActiveClass = "is-active";
+
+    $('.close-mobile-nav').on("click", function () {
+        $(".toggle-menu").trigger("click");
+    });
+
+    toggleMenu.addEventListener("click", function () {
+        menuWrapper.classList.toggle(isVisibleClass);
+
+        console.log(this.classList);
+
+        if (!this.classList.contains(isVisibleClass)) {
+            console.log("yes");
+            listWrapper2.classList.remove(isVisibleClass);
+            listWrapper3.classList.remove(isVisibleClass);
+            const menuLinks = menuWrapper.querySelectorAll("a");
+            for (const menuLink of menuLinks) {
+                menuLink.classList.remove(isActiveClass);
+            }
+        }
+    });
+
+    for (const level1Link of level1Links) {
+        level1Link.addEventListener("click", function (e) {
+            const siblingList = level1Link.nextElementSibling;
+            if (siblingList) {
+                e.preventDefault();
+                this.classList.add(isActiveClass);
+                const cloneSiblingList = siblingList.cloneNode(true);
+                subMenuWrapper2.innerHTML = "";
+                subMenuWrapper2.append(cloneSiblingList);
+                listWrapper2.classList.add(isVisibleClass);
+            }
+        });
+    }
+
+    listWrapper2.addEventListener("click", function (e) {
+        const target = e.target;
+        if (target.tagName.toLowerCase() === "a" && target.nextElementSibling) {
+            const siblingList = target.nextElementSibling;
+            e.preventDefault();
+            target.classList.add(isActiveClass);
+            const cloneSiblingList = siblingList.cloneNode(true);
+            subMenuWrapper3.innerHTML = "";
+            subMenuWrapper3.append(cloneSiblingList);
+            listWrapper3.classList.add(isVisibleClass);
+        }
+    });
+
+    for (const backOneLevelBtn of backOneLevelBtns) {
+        backOneLevelBtn.addEventListener("click", function () {
+            const parent = this.closest(".list-wrapper");
+            parent.classList.remove(isVisibleClass);
+            parent.previousElementSibling
+                .querySelector(".is-active")
+                .classList.remove(isActiveClass);
+        });
+    }
+
+
+    $('.main-nav > li > .dropdown-toggle').click(function () {
+        window.location = $(this).attr('href');
+    });
+
+});
+
+(() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+    })
+})();
