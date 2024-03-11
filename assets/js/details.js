@@ -249,11 +249,11 @@ $(document).ready(() => {
         }
     });
 
-    var detailsMenuSwiper = new Swiper(".detailsMenuSwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        // loop:true,
-    });
+    // var detailsMenuSwiper = new Swiper(".detailsMenuSwiper", {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 20,
+    //     // loop:true,
+    // });
 
     $('.showAbout').on("click", () => {
         $('.about-container>div').toggleClass('hide-text');
