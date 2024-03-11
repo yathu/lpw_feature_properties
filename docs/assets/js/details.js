@@ -202,10 +202,10 @@ $(document).ready(() => {
     //     }
     // });
 
-    const loanModal = document.getElementById('loanPopup');
-    loanModal.addEventListener('hidden.bs.modal', event => {
-        $("#loanPopup .modal-content").removeClass('success-content');
-    })
+    // const loanModal = document.getElementById('loanPopup');
+    // loanModal.addEventListener('hidden.bs.modal', event => {
+    //     $("#loanPopup .modal-content").removeClass('success-content');
+    // })
 
     //$("#loanPopup .modal-content").addClass('success-content');
 
@@ -1083,20 +1083,6 @@ $(document).ready(() => {
         document.documentElement.clientWidth || 0,
         window.innerWidth || 0
       );
-  
-      // console.log("scrollPos==>", scrollPos);
-  
-      // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-      //     // var totalSlides =  detailsMenuSwiper.slides.length - 2;
-      //     var totalSlides = $('.detailsMenuSwiper a:not(.swiper-slide-duplicate)').length;
-  
-      //     $('.detailsMenuSwiper a').each(function (index, element) {
-      //         // console.log(element);
-      //         $(element).removeClass('active');
-      //     });
-      //     $('.detailsMenuSwiper a:last-child').addClass('active');
-  
-      // }
 
       let isActived = false;
       let PrevElement = null;
@@ -1104,8 +1090,6 @@ $(document).ready(() => {
       $("#new_scroll_menu a").each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-  
-        // console.log("refElement==>", refElement);
   
         var elementHeight = refElement.height();
         var elementPosition = refElement.position().top;
@@ -1122,23 +1106,11 @@ $(document).ready(() => {
           elementPosition <= scrollPos &&
           elementPosition + elementHeight > scrollPos
         ) {
-        //   console.log("if==>",PrevElement,currLink[0]);
-        // console.log($(".menu_container").scrollLeft() + " px");
-  
-          // const element = document.getElementById("360box"); 
 
         $(".menu_container").scrollTo(currLink[0]);
 
-        //   currLink[0].scrollIntoView({
-        //     behavior: "smooth",
-        //     block: "start",
-        //     inline: "start",
-        //   });
-  
-          //currLink[0].addClass("active");
 
           if(PrevElement){
-            // console.log("PrevElement==>",PrevElement);
 
             $(PrevElement).removeClass("active");
             PrevElement = null;
@@ -1146,25 +1118,8 @@ $(document).ready(() => {
 
           $(currLink[0]).addClass("active");
           isActived = true;
-  
-          // // var nextIndex = currLink.attr("aria-label").trim().charAt(0);
-          // var nextIndex = currLink.attr("aria-label").trim().split('/')[0];
-          // // var nextIndex = currLink.data('swiper-slide-index');
-          // // console.log("nextIndex==>",nextIndex);
-          // if (nextIndex != detailsMenuSwiper.activeIndex) {
-          //     // console.log(refElement, scrollPos, elementPosition, elementHeight);
-          //     // console.log(nextIndex);
-          //     // console.log("nextIndex==>",nextIndex);
-          //     // console.log(currLink);
-          //     detailsMenuSwiper.slideTo(nextIndex - 1);
-          //     $('a').removeClass("active");
-          //     currLink.addClass("active");
-          //     return;
-          // }
+
         } else {
-          // console.log("currLink==>",currLink);
-          // currLink.removeClass("active");
-          // console.log("else...");
   
           if(isActived){
                      $(currLink[0]).removeClass("active");
@@ -1175,8 +1130,7 @@ $(document).ready(() => {
       });
   
       if (scrollPos == 0) {
-        // console.log("scrollPos++>");
-        $(".detailsMenuSwiper a:first-child").addClass("active");
+        // $(".detailsMenuSwiper a:first-child").addClass("active");
       }
     }
 
@@ -1582,15 +1536,15 @@ $(document).ready(() => {
         $(this).children('span').removeClass('d-none');
     });
 
-    $(document).on("scroll", function () {
-        const element = $('#Enquiry');
-        const isVisible = isScrolledIntoView(element);
-        const scrollWapVisible = localStorage.getItem("scrollWapShowed");
-        if (isVisible && !scrollWapVisible) {
-            showWhatsApp('#whatsAppPopup');
-            localStorage.setItem('scrollWapShowed', true);
-        }
-    });
+    // $(document).on("scroll", function () {
+    //     const element = $('#Enquiry');
+    //     const isVisible = isScrolledIntoView(element);
+    //     const scrollWapVisible = localStorage.getItem("scrollWapShowed");
+    //     if (isVisible && !scrollWapVisible) {
+    //         showWhatsApp('#whatsAppPopup');
+    //         localStorage.setItem('scrollWapShowed', true);
+    //     }
+    // });
 
 
     //new meny dragable 
@@ -1628,15 +1582,15 @@ slider.addEventListener('mouseleave', stopDragging, false);
 
 //document ends
 
-function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop() + 100;
-    var docViewBottom = docViewTop + $(window).height();
+// function isScrolledIntoView(elem) {
+//     var docViewTop = $(window).scrollTop() + 100;
+//     var docViewBottom = docViewTop + $(window).height();
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+//     var elemTop = $(elem).offset().top;
+//     var elemBottom = elemTop + $(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+//     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+// }
 
 const showWhatsApp = (id) => {
     //whatsApp
