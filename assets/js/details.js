@@ -86,28 +86,28 @@ $(document).ready(() => {
         },
     });
 
-    var form = $("#loanForm");
-    form.validate({
-        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
-        rules: {
-            purpose: {
-                required: true,
-            },
-            fullname: {
-                required: true,
-            },
-            living_place: {
-                required: true,
-            },
-            loanPhone: {
-                required: true,
-                number: true,
-            },
-            loanEmail: {
-                required: true,
-            },
-        }
-    });
+    // var form = $("#loanForm");
+    // form.validate({
+    //     // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    //     rules: {
+    //         purpose: {
+    //             required: true,
+    //         },
+    //         fullname: {
+    //             required: true,
+    //         },
+    //         living_place: {
+    //             required: true,
+    //         },
+    //         loanPhone: {
+    //             required: true,
+    //             number: true,
+    //         },
+    //         loanEmail: {
+    //             required: true,
+    //         },
+    //     }
+    // });
 
     var detailsPopupForm = $("#details_popup_form");
     detailsPopupForm.validate({
@@ -182,25 +182,25 @@ $(document).ready(() => {
         },
     });
 
-    form.children("div").steps({
-        headerTag: "h3",
-        bodyTag: "section",
-        titleTemplate: '<span class="number">#index#</span>',
-        transitionEffect: "slideLeft",
-        onStepChanging: function (event, currentIndex, newIndex) {
-            form.validate().settings.ignore = ":disabled,:hidden";
-            return form.valid();
-        },
-        onFinishing: function (event, currentIndex) {
-            form.validate().settings.ignore = ":disabled";
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex) {
-            //submit the form
-            // alert("Submitted!");
-            $("#loanPopup .modal-content").addClass('success-content');
-        }
-    });
+    // form.children("div").steps({
+    //     headerTag: "h3",
+    //     bodyTag: "section",
+    //     titleTemplate: '<span class="number">#index#</span>',
+    //     transitionEffect: "slideLeft",
+    //     onStepChanging: function (event, currentIndex, newIndex) {
+    //         form.validate().settings.ignore = ":disabled,:hidden";
+    //         return form.valid();
+    //     },
+    //     onFinishing: function (event, currentIndex) {
+    //         form.validate().settings.ignore = ":disabled";
+    //         return form.valid();
+    //     },
+    //     onFinished: function (event, currentIndex) {
+    //         //submit the form
+    //         // alert("Submitted!");
+    //         $("#loanPopup .modal-content").addClass('success-content');
+    //     }
+    // });
 
     const loanModal = document.getElementById('loanPopup');
     loanModal.addEventListener('hidden.bs.modal', event => {
