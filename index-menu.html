@@ -242,18 +242,26 @@ permalink: /index.html
 
 </div>
 
-<!-- <div id="new_scroll_menu" class="new_scroll_menu disable-scrollbars sticky-top">
+<div id="new_scroll_menu" class="new_scroll_menu disable-scrollbars sticky-top">
     <div class="container">
         <div class="menu_container">
             {% for menu_items in site.data.details.menu_items %}
             <a href="#{{ menu_items.link }}" class="px-2"> {{ menu_items.name }} </a>
+        
+            <!-- {% if forloop.index == 4 %}
+            <a id="360box" href="#{{ menu_items.link }}" class="px-2">
+              {{ menu_items.name }}
+            </a>
+        
+            {% endif %}  -->
+        
             {% endfor %}
           </div>
     </div>
 
-</div> -->
+</div>
 
-<!-- <div class="container menuContainer sticky-top d-none">
+<div class="container menuContainer sticky-top d-none">
 
     <div class="container px-0">
         <div class="swiper detailsMenuSwiper">
@@ -276,7 +284,7 @@ permalink: /index.html
         </div>
     </div>
 
-</div> -->
+</div>
 
 <div class="container pb-5">
 
@@ -3116,7 +3124,7 @@ permalink: /index.html
     </div>
 </div>
 
-<!-- <div class="modal fade" id="loanPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel"
+<div class="modal fade" id="loanPopup" data-bs-backdrop="static" tabindex="-1" aria-labelledby="detailsPopupLabel"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -3214,7 +3222,7 @@ permalink: /index.html
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 
 <div class="bottomFloat row gx-2">
