@@ -202,10 +202,10 @@ $(document).ready(() => {
     //     }
     // });
 
-    const loanModal = document.getElementById('loanPopup');
-    loanModal.addEventListener('hidden.bs.modal', event => {
-        $("#loanPopup .modal-content").removeClass('success-content');
-    })
+    // const loanModal = document.getElementById('loanPopup');
+    // loanModal.addEventListener('hidden.bs.modal', event => {
+    //     $("#loanPopup .modal-content").removeClass('success-content');
+    // })
 
     //$("#loanPopup .modal-content").addClass('success-content');
 
