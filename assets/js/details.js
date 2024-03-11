@@ -1070,69 +1070,69 @@ $(document).ready(() => {
     //menu activate when scroll
 
 
-    onScroll();
-    $(document).on("scroll", onScroll);
+    // onScroll();
+    // $(document).on("scroll", onScroll);
 
-    function onScroll(event) {
-      var scrollPos = $(document).scrollTop();
-      const vh = Math.max(
-        document.documentElement.clientHeight || 0,
-        window.innerHeight || 0
-      );
-      const vw = Math.max(
-        document.documentElement.clientWidth || 0,
-        window.innerWidth || 0
-      );
+    // function onScroll(event) {
+    //   var scrollPos = $(document).scrollTop();
+    //   const vh = Math.max(
+    //     document.documentElement.clientHeight || 0,
+    //     window.innerHeight || 0
+    //   );
+    //   const vw = Math.max(
+    //     document.documentElement.clientWidth || 0,
+    //     window.innerWidth || 0
+    //   );
 
-      let isActived = false;
-      let PrevElement = null;
+    //   let isActived = false;
+    //   let PrevElement = null;
   
-      $("#new_scroll_menu a").each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
+    //   $("#new_scroll_menu a").each(function () {
+    //     var currLink = $(this);
+    //     var refElement = $(currLink.attr("href"));
   
-        var elementHeight = refElement.height();
-        var elementPosition = refElement.position().top;
+    //     var elementHeight = refElement.height();
+    //     var elementPosition = refElement.position().top;
   
-        // console.log(vh,vw);
+    //     // console.log(vh,vw);
   
-        if (vw >= 576) {
-          elementPosition -= vh / 4;
-        } else {
-          elementPosition -= 120;
-        }
+    //     if (vw >= 576) {
+    //       elementPosition -= vh / 4;
+    //     } else {
+    //       elementPosition -= 120;
+    //     }
   
-        if (
-          elementPosition <= scrollPos &&
-          elementPosition + elementHeight > scrollPos
-        ) {
+    //     if (
+    //       elementPosition <= scrollPos &&
+    //       elementPosition + elementHeight > scrollPos
+    //     ) {
 
-        $(".menu_container").scrollTo(currLink[0]);
+    //     $(".menu_container").scrollTo(currLink[0]);
 
 
-          if(PrevElement){
+    //       if(PrevElement){
 
-            $(PrevElement).removeClass("active");
-            PrevElement = null;
-          }
+    //         $(PrevElement).removeClass("active");
+    //         PrevElement = null;
+    //       }
 
-          $(currLink[0]).addClass("active");
-          isActived = true;
+    //       $(currLink[0]).addClass("active");
+    //       isActived = true;
 
-        } else {
+    //     } else {
   
-          if(isActived){
-                     $(currLink[0]).removeClass("active");
-          }else{
-            PrevElement = currLink[0];
-          }
-        }
-      });
+    //       if(isActived){
+    //                  $(currLink[0]).removeClass("active");
+    //       }else{
+    //         PrevElement = currLink[0];
+    //       }
+    //     }
+    //   });
   
-      if (scrollPos == 0) {
-        // $(".detailsMenuSwiper a:first-child").addClass("active");
-      }
-    }
+    //   if (scrollPos == 0) {
+    //     // $(".detailsMenuSwiper a:first-child").addClass("active");
+    //   }
+    // }
 
 
     $("#propertyValueSlider").slider({
@@ -1547,36 +1547,35 @@ $(document).ready(() => {
     // });
 
 
-    //new meny dragable 
+    //new menu dragable 
 
-    let mouseDown = false;
-let startX, scrollLeft;
-// const slider = document.querySelector('#new_scroll_menu .container');
-const slider = document.querySelector('.menu_container');
+//     let mouseDown = false;
+// let startX, scrollLeft;
+// const slider = document.querySelector('.menu_container');
 
-const startDragging = (e) => {
-  mouseDown = true;
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-}
+// const startDragging = (e) => {
+//   mouseDown = true;
+//   startX = e.pageX - slider.offsetLeft;
+//   scrollLeft = slider.scrollLeft;
+// }
 
-const stopDragging = (e) => {
-  mouseDown = false;
-}
+// const stopDragging = (e) => {
+//   mouseDown = false;
+// }
 
-const move = (e) => {
-  e.preventDefault();
-  if(!mouseDown) { return; }
-  const x = e.pageX - slider.offsetLeft;
-  const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
-}
+// const move = (e) => {
+//   e.preventDefault();
+//   if(!mouseDown) { return; }
+//   const x = e.pageX - slider.offsetLeft;
+//   const scroll = x - startX;
+//   slider.scrollLeft = scrollLeft - scroll;
+// }
 
-// Add the event listeners
-slider.addEventListener('mousemove', move, false);
-slider.addEventListener('mousedown', startDragging, false);
-slider.addEventListener('mouseup', stopDragging, false);
-slider.addEventListener('mouseleave', stopDragging, false);
+// // Add the event listeners
+// slider.addEventListener('mousemove', move, false);
+// slider.addEventListener('mousedown', startDragging, false);
+// slider.addEventListener('mouseup', stopDragging, false);
+// slider.addEventListener('mouseleave', stopDragging, false);
 
 });
 
