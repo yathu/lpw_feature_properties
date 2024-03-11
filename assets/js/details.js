@@ -2,10 +2,10 @@ $(document).ready(() => {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     isMobileView = vw < 768;
 
-    $('.spec-grid').masonry({
-        // options
-        itemSelector: '.spec-grid-item',
-    });
+    // $('.spec-grid').masonry({
+    //     // options
+    //     itemSelector: '.spec-grid-item',
+    // });
 
     $('.menuContainer .swiper-slide').on("click", function (e) {
         e.preventDefault();
@@ -238,7 +238,7 @@ $(document).ready(() => {
         var name = $(this).attr('name');
         var value = $('input[name=' + name + ']:checked').val();
 
-        console.log(value);
+        //console.log(value);
 
         if (value == '3d') {
             $(this).closest('.image-container').find(".img-2d").addClass('d-none');
@@ -480,7 +480,7 @@ $(document).ready(() => {
     });
 
     const filterSimilar = (filterPrice) => {
-        console.log("filter Similar ==>", filterPrice);
+        //console.log("filter Similar ==>", filterPrice);
         $('.other-project-swiper').find('.swiper-slide-item').each((i, el) => {
 
             const priceData = $(el).data("price");
@@ -837,7 +837,7 @@ $(document).ready(() => {
     var bannerModal = document.querySelector('#bannerModal');
     //
     bannerModal.addEventListener('show.bs.modal', function (event) {
-        console.log(event.relatedTarget);
+        //console.log(event.relatedTarget);
         const element = event.relatedTarget;
 
         var index = $(element).data("index") || 0;
@@ -878,7 +878,7 @@ $(document).ready(() => {
             if (!isHide) {
                 img_path = $(obj).attr('src');
             }
-            console.log("isHide==>", isHide);
+            //console.log("isHide==>", isHide);
         });
 
 //         console.log("checked==>",checked);
@@ -967,9 +967,10 @@ $(document).ready(() => {
         setTimeout(() => DetailsPhoneNoModal.show(), 0);
     });
 
-    // setTimeout(() => {
-    //     detailsInitPopup.show();
-    // }, 30000);
+    setTimeout(() => {
+        detailsInitPopup.show();
+        window.localStorage.setItem('popupShowed', true);
+    }, 3000);
 
     $('#showSpecification').on("click", function () {
         $('#specContent').toggleClass('show-less');
@@ -1050,20 +1051,21 @@ $(document).ready(() => {
     }, 500);
 
 
-    var lastScrollTop = 0;
-    $(window).scroll(function (event) {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop) {
-            // downscroll code
-        } else {
+    //show popup on scrollUP
+    // var lastScrollTop = 0;
+    // $(window).scroll(function (event) {
+    //     var st = $(this).scrollTop();
+    //     if (st > lastScrollTop) {
+    //         // downscroll code
+    //     } else {
 
-            if (localStorage.getItem("popupShowed") === null) {
-                detailsInitPopup.show();
-                window.localStorage.setItem('popupShowed', true);
-            }
-        }
-        lastScrollTop = st;
-    });
+    //         if (localStorage.getItem("popupShowed") === null) {
+    //             detailsInitPopup.show();
+    //             window.localStorage.setItem('popupShowed', true);
+    //         }
+    //     }
+    //     lastScrollTop = st;
+    // });
 
     //menu activate when scroll
 
@@ -1232,12 +1234,12 @@ $(document).ready(() => {
 
 
         if (newDownPercentage >= 20 && newDownPercentage <= 100) {
-            console.log("new");
+            //console.log("new");
             $("#downPaymentSlider").slider('value', newDownPercentage);
             $("#downPayPer").text(newDownPercentage);
 
         } else {
-            console.log("new old");
+            //console.log("new old");
             var downPay = (propertyValue / 100) * OlddownPercentage;
             $("#downPayment").val(downPay);
             $("#downPayPer").text(OlddownPercentage);
@@ -1393,7 +1395,7 @@ $(document).ready(() => {
     let myIntervel;
 
     const isWAPShowed = localStorage.getItem("WAPShowed");
-    console.log("isWAPShowed==>", isWAPShowed);
+    //console.log("isWAPShowed==>", isWAPShowed);
 
     setTimeout(() => {
         if (!isWAPShowed) {
@@ -1426,15 +1428,15 @@ $(document).ready(() => {
     // })
 
     const levelLength = $('#nav_breadcrumb').children().length;
-    console.log("levelLength", levelLength);
+    //console.log("levelLength", levelLength);
 
     if (levelLength > 2) {
         $('#nav_breadcrumb li').each((index, item) => {
 
-            console.log("index=========>", index);
+            //console.log("index=========>", index);
 
             if (index > 0 && index < levelLength - 1) {
-                console.log("item==>", item);
+                //console.log("item==>", item);
 
                 if ($(item).attr('id') == 'show_breadcrumb') {
                     $(item).removeClass('d-none');
@@ -1462,15 +1464,15 @@ $(document).ready(() => {
     //mobile version
 
     const mobilelevelLength = $('#nav_breadcrumb_mobile').children().length;
-    console.log("mobilelevelLength==>", mobilelevelLength);
+    //console.log("mobilelevelLength==>", mobilelevelLength);
 
     if (mobilelevelLength > 2) {
         $('#nav_breadcrumb_mobile li').each((index, item) => {
 
-            console.log("index=========>", index);
+            //console.log("index=========>", index);
 
             if (index > 0 && index < mobilelevelLength - 1) {
-                console.log("item==>", item);
+                //console.log("item==>", item);
 
                 if ($(item).attr('id') == 'show_breadcrumb_mobile') {
                     $(item).removeClass('d-none');
@@ -1516,7 +1518,7 @@ $(document).ready(() => {
 
 
         let isCloseShowed = localStorage.getItem("closeModalShowed");
-        console.log("isCloseShowed==>", isCloseShowed);
+       // console.log("isCloseShowed==>", isCloseShowed);
 
         if (!isCloseShowed) {
             saveModal.show();
@@ -1655,7 +1657,7 @@ const showWhatsApp = (id) => {
 }
 
 const setTime = () => {
-    console.log("time called ==>")
+    //console.log("time called ==>")
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes();
 
@@ -1663,46 +1665,47 @@ const setTime = () => {
 }
 
 //detail map code
-let map;
-let service;
-let infowindow;
-let sydney;
+// let map;
+// let service;
+// let infowindow;
+// let sydney;
 
-function initMap() {
+// function initMap() {
 
-    var locations = $('#map').data("location").split(",");
+//     var locations = $('#map').data("location").split(",");
 
-    sydney = new google.maps.LatLng(parseFloat(locations[0]), parseFloat(locations[1]));
+//     sydney = new google.maps.LatLng(parseFloat(locations[0]), parseFloat(locations[1]));
 
-    infowindow = new google.maps.InfoWindow();
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: sydney,
-        zoom: 15,
-    });
+//     infowindow = new google.maps.InfoWindow();
+//     map = new google.maps.Map(document.getElementById("map"), {
+//         center: sydney,
+//         zoom: 15,
+//     });
 
-    new google.maps.Marker({
-        position: sydney,
-        map: map,
-    });
+//     new google.maps.Marker({
+//         position: sydney,
+//         map: map,
+//     });
 
-    var request = {
-        location: sydney,
-        radius: '500',
-        type: ['bus_station']
-    };
+//     var request = {
+//         location: sydney,
+//         radius: '500',
+//         type: ['bus_station']
+//     };
 
-    service = new google.maps.places.PlacesService(map);
-    // service.nearbySearch(request, callback);
-}
+//     service = new google.maps.places.PlacesService(map);
+//     // service.nearbySearch(request, callback);
+// }
 
-function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            // console.log(results[i]);
-            createMarker(results[i]);
-        }
-    }
-}
+// function callback(results, status) {
+//     if (status == google.maps.places.PlacesServiceStatus.OK) {
+//         for (var i = 0; i < results.length; i++) {
+//             // console.log(results[i]);
+//             createMarker(results[i]);
+//         }
+//     }
+// }
+
 
 // $('.mapview-swiper .swiper-slide').on("click", function () {
 //
@@ -1717,98 +1720,99 @@ function callback(results, status) {
 //     $(this).addClass('active');
 // });
 
-function changeMarkerPlaces(place) {
-    clearOverlays();
 
-    var request = {
-        location: sydney,
-        radius: '500',
-        type: [place]
-    };
+// function changeMarkerPlaces(place) {
+//     clearOverlays();
 
-
-    service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
-}
-
-let markers = [];
-
-function createMarker(place) {
-    if (!place.geometry || !place.geometry.location) return;
-
-    console.log(place);
-
-    const getIcon = () => {
-        if (place.types[0] == "bus_station") {
-            return "assets/img/details/mapview/locationiconspin/Bus-stops-02.png";
-        } else if (place.types[0] == "bank") {
-            return "assets/img/details/mapview/locationiconspin/Bank.png";
-        } else if (place.types[0] == "movie_theater") {
-            return "assets/img/details/mapview/locationiconspin/Cinemas-02.png";
-        } else if (place.types.includes("restaurant")) {
-            return "assets/img/details/mapview/locationiconspin/Restaurant-02.png";
-        } else if (place.types[0] == "supermarket") {
-            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
-        } else if (place.types[0] == "hospital") {
-            return "assets/img/details/mapview/locationiconspin/Hospital-02.png";
-        } else if (place.types[0] == "shopping_mall") {
-            return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
-        } else if (place.types[0] == "park") {
-            return "assets/img/details/mapview/locationiconspin/Parks-02.png";
-        } else if (place.types[0] == "gas_station") {
-            return "assets/img/details/mapview/locationiconspin/Fuel-station-02.png";
-        } else if (place.types[0] == "police") {
-            return "assets/img/details/mapview/locationiconspin/Police-station-03.png";
-        } else return ''
-    }
-
-    console.log("get==>", getIcon());
-
-    const marker = new google.maps.Marker({
-        map,
-        position: place.geometry.location,
-        icon: getIcon(),
-
-    });
-
-    marker.addListener('mouseover', function () {
-        try {
-            infowindow.setContent(place.name || "");
-            infowindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
-            });
-
-        } catch (e) {
-            console.log("create Info error ==>")
-        }
-    });
+//     var request = {
+//         location: sydney,
+//         radius: '500',
+//         type: [place]
+//     };
 
 
-    google.maps.event.addListener(marker, "click", () => {
-        try {
-            infowindow.setContent(place.name || "");
-            infowindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
-            });
+//     service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch(request, callback);
+// }
 
-        } catch (e) {
-            console.log("create Info error ==>")
-        }
-    });
+// let markers = [];
 
-    markers.push(marker);
-}
+// function createMarker(place) {
+//     if (!place.geometry || !place.geometry.location) return;
 
-function clearOverlays() {
-    if (markers) {
-        for (i in markers) {
-            markers[i].setMap(null);
-        }
-    }
-}
+//     //console.log(place);
 
-window.initMap = initMap;
+//     const getIcon = () => {
+//         if (place.types[0] == "bus_station") {
+//             return "assets/img/details/mapview/locationiconspin/Bus-stops-02.png";
+//         } else if (place.types[0] == "bank") {
+//             return "assets/img/details/mapview/locationiconspin/Bank.png";
+//         } else if (place.types[0] == "movie_theater") {
+//             return "assets/img/details/mapview/locationiconspin/Cinemas-02.png";
+//         } else if (place.types.includes("restaurant")) {
+//             return "assets/img/details/mapview/locationiconspin/Restaurant-02.png";
+//         } else if (place.types[0] == "supermarket") {
+//             return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+//         } else if (place.types[0] == "hospital") {
+//             return "assets/img/details/mapview/locationiconspin/Hospital-02.png";
+//         } else if (place.types[0] == "shopping_mall") {
+//             return "assets/img/details/mapview/locationiconspin/Shopping-02.png";
+//         } else if (place.types[0] == "park") {
+//             return "assets/img/details/mapview/locationiconspin/Parks-02.png";
+//         } else if (place.types[0] == "gas_station") {
+//             return "assets/img/details/mapview/locationiconspin/Fuel-station-02.png";
+//         } else if (place.types[0] == "police") {
+//             return "assets/img/details/mapview/locationiconspin/Police-station-03.png";
+//         } else return ''
+//     }
+
+//     //console.log("get==>", getIcon());
+
+//     const marker = new google.maps.Marker({
+//         map,
+//         position: place.geometry.location,
+//         icon: getIcon(),
+
+//     });
+
+//     marker.addListener('mouseover', function () {
+//         try {
+//             infowindow.setContent(place.name || "");
+//             infowindow.open({
+//                 anchor: marker,
+//                 map,
+//                 shouldFocus: false,
+//             });
+
+//         } catch (e) {
+//             console.log("create Info error ==>")
+//         }
+//     });
+
+
+//     google.maps.event.addListener(marker, "click", () => {
+//         try {
+//             infowindow.setContent(place.name || "");
+//             infowindow.open({
+//                 anchor: marker,
+//                 map,
+//                 shouldFocus: false,
+//             });
+
+//         } catch (e) {
+//             console.log("create Info error ==>")
+//         }
+//     });
+
+//     markers.push(marker);
+// }
+
+// function clearOverlays() {
+//     if (markers) {
+//         for (i in markers) {
+//             markers[i].setMap(null);
+//         }
+//     }
+// }
+
+// window.initMap = initMap;
